@@ -56,7 +56,7 @@ One row per harness/tool × best-model combination. Times are medians across all
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
 | **browser-control** | [keon/browser-control](https://github.com/keon/browser-control) | 3 | 1/2 | **5.5s** | ~13.2k / ~180 | ~$0.0014 |
-| **Browser Harness** | [browser-harness](https://github.com/Rajeev-SG/web-automation-microbench/tree/main/artifacts/2026-09-11) | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
+| **Browser Harness** | [in-repo (artifacts/2026-09-11)](https://github.com/Rajeev-SG/web-automation-microbench/tree/main/artifacts/2026-09-11) | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
 | **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 3 | 2/2 | 10.7s | ~6.3k / ~250 | ~$0.0007 |
 | **jarvis-browser** | [bridge25/jarvis-browser](https://github.com/bridge25/jarvis-browser) | 3 | 2/2 | 11.2s | ~8.5k / ~100 | ~$0.0005 |
 | **Stagehand v4** | [browserbase/stagehand](https://github.com/browserbase/stagehand) | 2 | 1/4 | 13.1s | ~6.7k / 300–3,400 | ~$0.0007 |
@@ -74,7 +74,7 @@ One row per harness/tool × best-model combination. Times are medians across all
 | Harness | Repo | Best model combo | Pass | Median time |
 |---|---|---|---:|---:|
 | **browser-use** | [browser-use/browser-use](https://github.com/browser-use/browser-use) | GLM 5.3-Flash | 2/2 | **8.7s** |
-| **Playwriter** | [playwriter/playwriter](https://github.com/playwriter/playwriter) | DeepSeek V4.1-Flash | 2/2 | 10.1s |
+| **Playwriter** | [playwriter](https://github.com/remorses/playwriter) | DeepSeek V4.1-Flash | 2/2 | 10.1s |
 
 ### Excluded after genuine attempts (Round 3)
 
