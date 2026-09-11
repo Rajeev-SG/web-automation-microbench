@@ -126,13 +126,13 @@
     "contender": "webctl",
     "reps": 2,
     "passes": 0,
-    "median_s": 60.7,
+    "median_s": 19.1,
     "times_s": [
-      53.3,
-      68.0
+      19.8,
+      18.3
     ],
-    "tok_in_avg": 13780,
-    "tok_cached_avg": 0,
-    "tok_out_avg": 134
+    "tok_in_avg": 5845,
+    "tok_cached_avg": 2880,
+    "tok_out_avg": 282
   }
 ]

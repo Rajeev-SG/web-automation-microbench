@@ -18,21 +18,22 @@ This is an extension of the repo (Round 3). Rounds 1–2 artifacts untouched.
 ## Results so far (artifacts/2026-09-12/results/, summary.json)
 | contender | reps | pass | median_s | notes |
 |---|---|---|---|---|
-| agent-chrome-cli (v0.1.0 @ da6edc5) | 2 | 2/2 | 17.4 | 2/2 PASS |
-| jarvis-browser (v1.4.0 @ ec19a46) | 2 | 2/2 | 11.2 | 2/2 PASS |
-| lightpanda (v0.4.0 @ f3a775f) | 2 | 2/2 | 22.7 | 2/2 PASS |
-| cdp-browser (@ 857a8ba) | 2 | 2/2 | 10.7 | 2/2 PASS |
+| cdp-browser (@ 857a8ba, npm 0.1.3) | 2 | 2/2 | 10.7 | PASS |
+| jarvis-browser (v1.4.0 @ ec19a46) | 2 | 2/2 | 11.2 | PASS |
+| agent-chrome-cli (v0.1.0 @ da6edc5) | 2 | 2/2 | 17.4 | PASS |
+| lightpanda (v0.4.0 @ f3a775f) | 2 | 2/2 | 22.7 | PASS |
 | browser-control (@ b352a1a) | 2 | 1/2 | 5.5 | rep1 step-limit fail |
-| agent-browser (@ 8c15ff9) | 2 | 0/2 | 13.7 | state reached, model never signalled done |
 | raw-playwright (npm 1.63.0) | 4 | 3/4 | 42.7 | baseline; rep2 model error |
-| pinchtab (@ 3771028) | 6 | 0/6 | 75.4 | literal-type quoting bug + step limits |
-| webctl (@ a03aa7b) | 2 | 0/2 | 60.7 | adapter bugs found mid-flight; rerun in progress |
-| browser-agent (@ a7a6169) | 2 | 0/2 | 240.8 | BROKEN runs: OpenRouter adapter not wired (240s timeouts, ~174 tok, one 401) |
+| agent-browser (npm 0.37.1 @ 8c15ff9) | 2 | 0/2 | 13.7 | state reached, done-signal missed |
+| webctl (0.4.2 @ a03aa7b) | 2 | 0/2 | 19.1 | toggle ambiguity, step limits |
+| pinchtab (@ 3771028) | 6 | 0/6 | 75.4 | literal-type quoting + step limits |
+| browser-agent (@ a7a6169) | 2 | 0/2 | 240.8 | BROKEN adapter loop; EXCLUDED via browser-agent-EXCLUDED.json |
 | page-agent (npm 1.12.4 @ 9eb6b66) | 0 | — | — | EXCLUDED: hub approval gate + Chrome hub-slot race |
 | browser-cli (@ cb39806) | 0 | — | — | EXCLUDED: extension install not automatable headlessly |
-| sitegeist (@ 104788c) | 0 | — | — | NOT RUN: built OK (build in work/sitegeist/dist-chrome, needs pi-ai npm 0.73.1 not pi-mono HEAD), extension loaded in Chrome on port 9252, model config not yet wired |
-| BrowserSkill (@ 7dc8b01) | 0 | — | — | NOT RUN: agent 2 pending |
-| browser-relay (@ a147768) | 0 | — | — | NOT RUN: agent 2 pending |
+| BrowserSkill (@ 7dc8b01) | 0 | — | — | EXCLUDED: extension install not completed in budget |
+| browser-relay (@ a147768) | 0 | — | — | EXCLUDED: no attached tab, extension never loaded |
+| sitegeist (@ 104788c) | 0 | — | — | NOT RUN: built OK (dist-chrome ready, pi-ai must be npm 0.73.1), extension in Chrome port 9252, model config not wired |
+| Notte (@ 9e8915c) | 0 | — | — | NOT STARTED |
 
 ## Known adapter gotchas (do not rediscover)
 - pinchtab `type` treats text literally → quoted strings become todo titles. Also stderr leaks into CLI output; parse stdout only.
@@ -43,13 +44,15 @@ This is an extension of the repo (Round 3). Rounds 1–2 artifacts untouched.
 - browser-agent: providers registry is mutable; custom 'openrouter' adapter must be registered (lib/providers/index.js); openai-compat via OPENAI_BASE_URL works but agent's own loop needs the provider.sort body injected — UNRESOLVED (this is the broken piece).
 
 ## Remaining work to finish Round 3
-1. webctl rerun (adapter bugs fixed; in flight at checkpoint time) OR record as failure/exclude.
-2. browser-agent: fix OpenRouter provider adapter OR exclude.
-3. BrowserSkill, browser-relay: attempt or exclude (extension-based; use rajeev.sgill@gmail.com profile / native computer use if needed).
-4. sitegeist: wire GLM key via its chrome.storage providerKeys + select model, run 2 reps (extension build done).
-5. Notte: pip install in py3.12 venv, litellm openrouter/z-ai/glm-5.3-flash, 2 reps. NOT STARTED.
-6. README: append all Round 3 contenders to the comparison table (same columns), short Pareto/verdict update, round report in artifacts/2026-09-12/report.md.
-7. Commit (git add bench-ext minus node_modules/work) and push.
+1. sitegeist: wire GLM key via its chrome.storage providerKeys + select model, run 2 reps (extension build done, Chrome on port 9252).
+2. Notte: pip install in py3.12 venv, litellm openrouter/z-ai/glm-5.3-flash, 2 reps. NOT STARTED.
+3. README: append all Round 3 contenders to the comparison table (same columns), short Pareto/verdict update, round report in artifacts/2026-09-12/report.md.
+4. Commit final artifacts and push.
+
+## Final subagent outcomes
+- Agent 1 (Linnaeus) CLOSED: agent-browser 0/2 (done-signal missed), browser-control 1/2, cdp-browser 2/2, webctl 0/2. Versions pinned in runner headers.
+- Agent 2 (Huygens) CLOSED: browser-agent EXCLUDED (adapter loop never wired; 2 broken runs kept as evidence), BrowserSkill EXCLUDED (extension install), browser-relay EXCLUDED (no attached tab), browser-cli EXCLUDED (extension install).
+- Agent 3 (Fermat) CLOSED: agent-chrome-cli 2/2, jarvis-browser 2/2, lightpanda 2/2, page-agent EXCLUDED.
 
 ## Subagent state at checkpoint
 - Agent 1 (Linnaeus, 01a091cf-f8e2-7871-8a1e-d533850b3824): agent-browser/browser-control/cdp-browser DONE; webctl rerun in flight.

@@ -5,14 +5,14 @@
   "events": [
     {
       "step": 1,
-      "api_s": 4.893,
-      "provider": "Friendli",
-      "request_id": "gen-1789159969-4K9iKRVzIFP0IDv500K4",
+      "api_s": 0.709,
+      "provider": "Modal",
+      "request_id": "gen-1789163870-yTlqJyzTILM6tnGHPjlp",
       "usage": {
-        "prompt_tokens": 398,
+        "prompt_tokens": 250,
         "completion_tokens": 9,
-        "total_tokens": 407,
-        "cost": 6.3558e-05,
+        "total_tokens": 259,
+        "cost": 0.00012474,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -21,9 +21,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 6.42e-05,
-          "upstream_inference_prompt_cost": 5.97e-05,
-          "upstream_inference_completions_cost": 4.5e-06
+          "upstream_inference_cost": 0.000126,
+          "upstream_inference_prompt_cost": 0.0001125,
+          "upstream_inference_completions_cost": 1.35e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -32,57 +32,57 @@
         }
       },
       "answer": {
-        "code": "webctl setup"
+        "code": "webctl snapshot"
       },
-      "browser_s": 0.22,
-      "code": "webctl setup",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.671,
+      "code": "webctl snapshot",
+      "observation": "12 elements (3 text, 3 link, 3 paragraph, 1 heading, 1 textbox, 1 contentinfo)\n12 elements (3 text, 3 link, 3 paragraph, 1 heading, 1 textbox, 1 contentinfo)"
     },
     {
       "step": 2,
-      "api_s": 3.399,
-      "provider": "Friendli",
-      "request_id": "gen-1789159974-901uK47K00v6Ek7j6jxB",
+      "api_s": 0.592,
+      "provider": "Modal",
+      "request_id": "gen-1789163871-WBgsr9MD1E0O4aj4Dmjr",
       "usage": {
-        "prompt_tokens": 613,
-        "completion_tokens": 11,
-        "total_tokens": 624,
-        "cost": 9.64755e-05,
+        "prompt_tokens": 318,
+        "completion_tokens": 35,
+        "total_tokens": 353,
+        "cost": 0.0001024056,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 256,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 9.745e-05,
-          "upstream_inference_prompt_cost": 9.195e-05,
-          "upstream_inference_completions_cost": 5.5e-06
+          "upstream_inference_cost": 0.00010344,
+          "upstream_inference_prompt_cost": 5.094e-05,
+          "upstream_inference_completions_cost": 5.25e-05
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 0,
+          "reasoning_tokens": 17,
           "image_tokens": 0,
           "audio_tokens": 0
         }
       },
       "answer": {
-        "code": "webctl setup --force"
+        "code": "webctl type \"What needs to be done?\" \"Email supplier\""
       },
-      "browser_s": 0.219,
-      "code": "webctl setup --force",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.679,
+      "code": "webctl type \"What needs to be done?\" \"Email supplier\"",
+      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n12 elements (3 text, 3 link, 3 paragraph, 1 heading, 1 textbox, 1 contentinfo)"
     },
     {
       "step": 3,
-      "api_s": 6.393,
-      "provider": "Friendli",
-      "request_id": "gen-1789159978-Hbiqx3A2LWLz7H147lLJ",
+      "api_s": 0.481,
+      "provider": "Modal",
+      "request_id": "gen-1789163872-9Yy4cSjsI8lEEj30QveA",
       "usage": {
-        "prompt_tokens": 830,
-        "completion_tokens": 11,
-        "total_tokens": 841,
-        "cost": 0.0001287,
+        "prompt_tokens": 404,
+        "completion_tokens": 10,
+        "total_tokens": 414,
+        "cost": 0.000194832,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -91,9 +91,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00013,
-          "upstream_inference_prompt_cost": 0.0001245,
-          "upstream_inference_completions_cost": 5.5e-06
+          "upstream_inference_cost": 0.0001968,
+          "upstream_inference_prompt_cost": 0.0001818,
+          "upstream_inference_completions_cost": 1.5e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -102,33 +102,33 @@
         }
       },
       "answer": {
-        "code": "npx playwright install chromium"
+        "code": "webctl press Enter"
       },
-      "browser_s": 0.233,
-      "code": "npx playwright install chromium",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.691,
+      "code": "webctl press Enter",
+      "observation": "\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
     },
     {
       "step": 4,
-      "api_s": 4.249,
-      "provider": "Friendli",
-      "request_id": "gen-1789159984-kFgz7LTaUk2ZbPqNfZeQ",
+      "api_s": 0.58,
+      "provider": "Modal",
+      "request_id": "gen-1789163873-WO1Zb0iV0oVMIlQPKUkQ",
       "usage": {
-        "prompt_tokens": 1047,
-        "completion_tokens": 10,
-        "total_tokens": 1057,
-        "cost": 0.0001604295,
+        "prompt_tokens": 450,
+        "completion_tokens": 21,
+        "total_tokens": 471,
+        "cost": 0.0001404216,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 256,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00016205,
-          "upstream_inference_prompt_cost": 0.00015705,
-          "upstream_inference_completions_cost": 5e-06
+          "upstream_inference_cost": 0.00014184,
+          "upstream_inference_prompt_cost": 0.00011034,
+          "upstream_inference_completions_cost": 3.15e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -137,22 +137,22 @@
         }
       },
       "answer": {
-        "code": "playwright install chromium"
+        "code": "webctl type \"What needs to be done?\" \"Review invoice\""
       },
-      "browser_s": 0.221,
-      "code": "playwright install chromium",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.674,
+      "code": "webctl type \"What needs to be done?\" \"Review invoice\"",
+      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
     },
     {
       "step": 5,
-      "api_s": 4.673,
-      "provider": "Friendli",
-      "request_id": "gen-1789159989-bUgS66JLhueonDch1dde",
+      "api_s": 0.684,
+      "provider": "Modal",
+      "request_id": "gen-1789163875-b3dm4x7HqTMkP4lvb2oe",
       "usage": {
-        "prompt_tokens": 1263,
-        "completion_tokens": 19,
-        "total_tokens": 1282,
-        "cost": 0.0001969605,
+        "prompt_tokens": 540,
+        "completion_tokens": 10,
+        "total_tokens": 550,
+        "cost": 0.00025542,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -161,9 +161,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00019895,
-          "upstream_inference_prompt_cost": 0.00018945,
-          "upstream_inference_completions_cost": 9.5e-06
+          "upstream_inference_cost": 0.000258,
+          "upstream_inference_prompt_cost": 0.000243,
+          "upstream_inference_completions_cost": 1.5e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -172,57 +172,57 @@
         }
       },
       "answer": {
-        "code": "webctl setup && webctl navigate http://localhost:3000"
+        "code": "webctl press Enter"
       },
-      "browser_s": 0.215,
-      "code": "webctl setup && webctl navigate http://localhost:3000",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.673,
+      "code": "webctl press Enter",
+      "observation": "\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     },
     {
       "step": 6,
-      "api_s": 4.286,
-      "provider": "Friendli",
-      "request_id": "gen-1789159994-GVY1g8E6JK2Ji036eGfg",
+      "api_s": 0.811,
+      "provider": "Modal",
+      "request_id": "gen-1789163876-z78cpOlCrEjiqaPJLaex",
       "usage": {
-        "prompt_tokens": 1488,
-        "completion_tokens": 11,
-        "total_tokens": 1499,
-        "cost": 0.000226413,
+        "prompt_tokens": 586,
+        "completion_tokens": 20,
+        "total_tokens": 606,
+        "cost": 0.0001995246,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 256,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0002287,
-          "upstream_inference_prompt_cost": 0.0002232,
-          "upstream_inference_completions_cost": 5.5e-06
+          "upstream_inference_cost": 0.00020154,
+          "upstream_inference_prompt_cost": 0.00017154,
+          "upstream_inference_completions_cost": 3e-05
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 0,
+          "reasoning_tokens": 14,
           "image_tokens": 0,
           "audio_tokens": 0
         }
       },
       "answer": {
-        "code": "webctl setup --verbose"
+        "code": "webctl snapshot"
       },
-      "browser_s": 0.219,
-      "code": "webctl setup --verbose",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.679,
+      "code": "webctl snapshot",
+      "observation": "30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     },
     {
       "step": 7,
-      "api_s": 4.959,
-      "provider": "Friendli",
-      "request_id": "gen-1789159998-0gEB89KXeKCyJdNIVvhz",
+      "api_s": 1.204,
+      "provider": "Modal",
+      "request_id": "gen-1789163877-MYt9caVjxV1gFpTEYfhr",
       "usage": {
-        "prompt_tokens": 1705,
-        "completion_tokens": 13,
-        "total_tokens": 1718,
-        "cost": 0.0002596275,
+        "prompt_tokens": 662,
+        "completion_tokens": 28,
+        "total_tokens": 690,
+        "cost": 0.000336501,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -231,68 +231,68 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00026225,
-          "upstream_inference_prompt_cost": 0.00025575,
-          "upstream_inference_completions_cost": 6.5e-06
+          "upstream_inference_cost": 0.0003399,
+          "upstream_inference_prompt_cost": 0.0002979,
+          "upstream_inference_completions_cost": 4.2e-05
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 0,
+          "reasoning_tokens": 17,
           "image_tokens": 0,
           "audio_tokens": 0
         }
       },
       "answer": {
-        "code": "webctl setup; webctl doctor"
+        "code": "webctl click \"Email supplier\""
       },
-      "browser_s": 0.216,
-      "code": "webctl setup; webctl doctor",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 1.752,
+      "code": "webctl click \"Email supplier\"",
+      "observation": "ERROR [no_match] No element matching 'Email supplier'\n  -> Did you mean: \u276fMark all as complete\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     },
     {
       "step": 8,
-      "api_s": 6.25,
-      "provider": "Friendli",
-      "request_id": "gen-1789160003-qVOkDQEZ4ZbY05E7QBU7",
+      "api_s": 3.262,
+      "provider": "Modal",
+      "request_id": "gen-1789163880-592VKxF0f1UjKWBt4iXn",
       "usage": {
-        "prompt_tokens": 1924,
-        "completion_tokens": 12,
-        "total_tokens": 1936,
-        "cost": 0.000291654,
+        "prompt_tokens": 736,
+        "completion_tokens": 142,
+        "total_tokens": 878,
+        "cost": 0.0004019004,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 384,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0002946,
-          "upstream_inference_prompt_cost": 0.0002886,
-          "upstream_inference_completions_cost": 6e-06
+          "upstream_inference_cost": 0.00040596,
+          "upstream_inference_prompt_cost": 0.00019296,
+          "upstream_inference_completions_cost": 0.000213
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 0,
+          "reasoning_tokens": 136,
           "image_tokens": 0,
           "audio_tokens": 0
         }
       },
       "answer": {
-        "code": "webctl setup --browser chromium"
+        "code": "webctl snapshot --refs"
       },
-      "browser_s": 0.217,
-      "code": "webctl setup --browser chromium",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.692,
+      "code": "webctl snapshot --refs",
+      "observation": "Usage: webctl snapshot [OPTIONS]\nTry 'webctl snapshot --help' for help.\n\u256d\u2500 Error \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 No such option: --refs (Possible options: --grep, --read, --roles)           \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     },
     {
       "step": 9,
-      "api_s": 8.505,
-      "provider": "Makora",
-      "request_id": "gen-1789160011-vmYyEnVQOa95PqY8zr7N",
+      "api_s": 0.991,
+      "provider": "Modal",
+      "request_id": "gen-1789163884-33uAYCNMFzoa3kgdKveX",
       "usage": {
-        "prompt_tokens": 2142,
-        "completion_tokens": 24,
-        "total_tokens": 2166,
-        "cost": 0.0003080484,
+        "prompt_tokens": 860,
+        "completion_tokens": 11,
+        "total_tokens": 871,
+        "cost": 0.000399465,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -301,44 +301,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00031116,
-          "upstream_inference_prompt_cost": 0.00029988,
-          "upstream_inference_completions_cost": 1.128e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 12,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "webctl navigate http://localhost:3000"
-      },
-      "browser_s": 0.216,
-      "code": "webctl navigate http://localhost:3000",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
-    },
-    {
-      "step": 10,
-      "api_s": 3.546,
-      "provider": "Friendli",
-      "request_id": "gen-1789160019-2tIWgolxMW7JBl68W0xn",
-      "usage": {
-        "prompt_tokens": 2363,
-        "completion_tokens": 25,
-        "total_tokens": 2388,
-        "cost": 0.0003632805,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00036695,
-          "upstream_inference_prompt_cost": 0.00035445,
-          "upstream_inference_completions_cost": 1.25e-05
+          "upstream_inference_cost": 0.0004035,
+          "upstream_inference_prompt_cost": 0.000387,
+          "upstream_inference_completions_cost": 1.65e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -347,25 +312,60 @@
         }
       },
       "answer": {
-        "code": "webctl setup 2>&1 | tee /tmp/setup.log; cat /tmp/setup.log"
+        "code": "webctl snapshot --read"
       },
-      "browser_s": 0.216,
-      "code": "webctl setup 2>&1 | tee /tmp/setup.log; cat /tmp/setup.log",
-      "observation": "ERROR [session_start_failed] Failed to start session: Browser launch failed: BrowserType.launch: Executable doesn't exist at /Users/rajeev/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nRun 'webctl setup' to install the browser."
+      "browser_s": 0.706,
+      "code": "webctl snapshot --read",
+      "observation": "\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
+    },
+    {
+      "step": 10,
+      "api_s": 2.61,
+      "provider": "Modal",
+      "request_id": "gen-1789163886-XeUnRg9LQaZfCNfEdzar",
+      "usage": {
+        "prompt_tokens": 907,
+        "completion_tokens": 11,
+        "total_tokens": 918,
+        "cost": 0.0001694979,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017121,
+          "upstream_inference_prompt_cost": 0.00015471,
+          "upstream_inference_completions_cost": 1.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "webctl snapshot --roles"
+      },
+      "browser_s": 0.683,
+      "code": "webctl snapshot --roles",
+      "observation": "\u256d\u2500 Error \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 Option '--roles' requires an argument.                                       \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     }
   ],
-  "setup_s": 0.328,
-  "total_s": 53.346,
-  "api_s": 51.154,
+  "setup_s": 10.801,
+  "total_s": 19.825,
+  "api_s": 11.924,
   "model_calls": 10,
   "tokens": {
-    "input": 13773,
-    "output": 145,
-    "cached": 0,
-    "reasoning": 12
+    "input": 5713,
+    "output": 297,
+    "cached": 1856,
+    "reasoning": 184
   },
   "done": false,
   "error": null,
-  "verification": "{}",
+  "verification": "{\"saved\": [{\"title\": \"Email supplier\", \"completed\": false}, {\"title\": \"Review invoice\", \"completed\": false}], \"items\": [{\"text\": \"Email supplier\", \"completed\": false}, {\"text\": \"Review invoice\", \"completed\": false}], \"url\": \"https://demo.playwright.dev/todomvc/#/\"}",
   "pass": false
 }
