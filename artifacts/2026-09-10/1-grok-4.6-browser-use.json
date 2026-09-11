@@ -1,0 +1,85 @@
+{
+  "id": "1-grok-4.6-browser-use",
+  "model": "x-ai/grok-4.6",
+  "tool": "browser-use",
+  "rep": 1,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 2.2747212080284953,
+      "response_model": "x-ai/grok-4.6",
+      "provider": "xAI",
+      "request_id": "gen-1789054541-C7sSzMo07fxipM7MudlK",
+      "answer": {
+        "code": "trusted_click('.new-todo')\ntype_text('Email supplier')\npress_key('Enter')",
+        "done": false
+      },
+      "browser_s": 1.0149913749773987,
+      "code": "trusted_click('.new-todo')\ntype_text('Email supplier')\npress_key('Enter')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\n1 item left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 2,
+      "api_s": 1.9002770830411464,
+      "response_model": "x-ai/grok-4.6",
+      "provider": "xAI",
+      "request_id": "gen-1789054544-J3qDgH0RNbcP7YC9oMx1",
+      "answer": {
+        "code": "trusted_click('.new-todo')\ntype_text('Review invoice')\npress_key('Enter')",
+        "done": false
+      },
+      "browser_s": 1.030344208003953,
+      "code": "trusted_click('.new-todo')\ntype_text('Review invoice')\npress_key('Enter')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n2 items left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 3,
+      "api_s": 2.7536784170079045,
+      "response_model": "x-ai/grok-4.6",
+      "provider": "xAI",
+      "request_id": "gen-1789054547-u5ziyCiwQ2crpx4iZeVz",
+      "answer": {
+        "code": "trusted_click('.todo-list li:nth-child(1) .toggle')",
+        "done": false
+      },
+      "browser_s": 1.1213321249815635,
+      "code": "trusted_click('.todo-list li:nth-child(1) .toggle')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":true,\"value\":\"on\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"destroy\",\"text\":\"\",\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"value\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"completed\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 4,
+      "api_s": 1.4324268329655752,
+      "response_model": "x-ai/grok-4.6",
+      "provider": "xAI",
+      "request_id": "gen-1789054551-F6NZtmmLMp9woVWVgUSk",
+      "answer": {
+        "code": "trusted_click('a', text='Active')",
+        "done": false
+      },
+      "browser_s": 0.981984999962151,
+      "code": "trusted_click('a', text='Active')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"value\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 5,
+      "api_s": 1.6864810000406578,
+      "response_model": "x-ai/grok-4.6",
+      "provider": "xAI",
+      "request_id": "gen-1789054553-yKuj49iI47juOKcCqvSI",
+      "answer": {
+        "done": true,
+        "result": "Active filter shows only Review invoice, 1 item left"
+      }
+    }
+  ],
+  "setup_s": 0.5913460840238258,
+  "total_s": 14.196480167040136,
+  "api_s": 10.04758454108378,
+  "browser_s": 4.148652707925066,
+  "model_calls": 5,
+  "done": true,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":\"[{\\\"id\\\":\\\"2319949f-e324-40a1-8768-4be1b6aa294c\\\",\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"id\\\":\\\"15115eb4-ff08-4b09-9409-3db926e431f2\\\",\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]\"}\n",
+  "pass": true,
+  "screenshot": "/tmp/web-auto-microbench/1-grok-4.6-browser-use.png",
+  "screenshot_output": ""
+}

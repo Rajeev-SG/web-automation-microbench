@@ -1,0 +1,251 @@
+{
+  "id": "1-stagehand",
+  "contender": "stagehand",
+  "rep": 1,
+  "events": [
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148676-4RlgRc5movFM7VCe8Qlg",
+      "usage": {
+        "prompt_tokens": 470,
+        "completion_tokens": 36,
+        "total_tokens": 506,
+        "cost": 0.0000818928,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00008272,
+          "upstream_inference_prompt_cost": 0.0000658,
+          "upstream_inference_completions_cost": 0.00001692
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"elements\":[{\"elementId\":\"0-5\",\"description\":\"New todo input field with placeholder 'What needs to be done?'\",\"method\":\"fill\",\"arguments\":[]}]}"
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148677-iHVlQQV853VUJBlW6iWJ",
+      "usage": {
+        "prompt_tokens": 917,
+        "completion_tokens": 48,
+        "total_tokens": 965,
+        "cost": 0.0001494306,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00015094,
+          "upstream_inference_prompt_cost": 0.00012838,
+          "upstream_inference_completions_cost": 0.00002256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"action\": {\"elementId\": \"0-5\", \"description\": \"textbox: What needs to be done?\", \"method\": \"fill\", \"arguments\": [\"Email supplier\\nEnter\"]}, \"twoStep\": false}"
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148678-3frUx9WnJ2joYV3anVzw",
+      "usage": {
+        "prompt_tokens": 915,
+        "completion_tokens": 42,
+        "total_tokens": 957,
+        "cost": 0.0001463616,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014784,
+          "upstream_inference_prompt_cost": 0.0001281,
+          "upstream_inference_completions_cost": 0.00001974
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"action\": {\"elementId\": \"0-5\", \"description\": \"New todo input field\", \"method\": \"press\", \"arguments\": [\"Enter\"]}, \"twoStep\": false}"
+    },
+    {
+      "phase": "act",
+      "action": "add:Email supplier",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148680-kiyJIKDmxz4oC4NkliOB",
+      "usage": {
+        "prompt_tokens": 1160,
+        "completion_tokens": 49,
+        "total_tokens": 1209,
+        "cost": 0.0001835757,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018543,
+          "upstream_inference_prompt_cost": 0.0001624,
+          "upstream_inference_completions_cost": 0.00002303
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"action\": {\"elementId\": \"0-5\", \"description\": \"Textbox: What needs to be done?\", \"method\": \"fill\", \"arguments\": [\"Review invoice\", \"Enter\"]}, \"twoStep\": false}"
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148681-XXLrZoxgkXiY0cUD3gav",
+      "usage": {
+        "prompt_tokens": 1157,
+        "completion_tokens": 47,
+        "total_tokens": 1204,
+        "cost": 0.0001822293,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018407,
+          "upstream_inference_prompt_cost": 0.00016198,
+          "upstream_inference_completions_cost": 0.00002209
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"action\": {\"elementId\": \"0-5\", \"description\": \"New todo input field containing 'Review invoice'\", \"method\": \"press\", \"arguments\": [\"Enter\"]}, \"twoStep\": false}"
+    },
+    {
+      "phase": "act",
+      "action": "add:Review invoice",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148682-L0PNUyKqBfy7lnTJoljg",
+      "usage": {
+        "prompt_tokens": 766,
+        "completion_tokens": 32,
+        "total_tokens": 798,
+        "cost": 0.0001210572,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012228,
+          "upstream_inference_prompt_cost": 0.00010724,
+          "upstream_inference_completions_cost": 0.00001504
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"elements\":[{\"elementId\":\"0-43\",\"description\":\"Checkbox toggle for todo item 'Email supplier'\",\"method\":\"click\",\"arguments\":[]}]}"
+    },
+    {
+      "phase": "act",
+      "action": "complete"
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "Makora",
+      "request_id": "gen-1789148683-LAmVEi3jJ5xWxAKdd2DH",
+      "usage": {
+        "prompt_tokens": 1218,
+        "completion_tokens": 41,
+        "total_tokens": 1259,
+        "cost": 0.0001878921,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018979,
+          "upstream_inference_prompt_cost": 0.00017052,
+          "upstream_inference_completions_cost": 0.00001927
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "structured": true,
+      "text": "{\"action\": {\"elementId\": \"0-55\", \"description\": \"Active filter link\", \"method\": \"click\", \"arguments\": [\"left\"]}, \"twoStep\": false}"
+    },
+    {
+      "phase": "act",
+      "action": "filter"
+    }
+  ],
+  "errors": [],
+  "setup_s": 1.216,
+  "total_s": 8.745,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier Enter\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "tokens": {
+    "input": 6603,
+    "output": 295,
+    "reasoning": 0,
+    "cached": 0
+  },
+  "model_calls": 7,
+  "cost": 0,
+  "pass": false,
+  "wall_s": 10.9
+}

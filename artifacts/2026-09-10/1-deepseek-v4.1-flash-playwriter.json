@@ -1,0 +1,85 @@
+{
+  "id": "1-deepseek-v4.1-flash-playwriter",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "tool": "playwriter",
+  "rep": 1,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 4.654852874984499,
+      "response_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "request_id": "gen-1789054529-QQU2o4g5W3E1hYCOUWVm",
+      "answer": {
+        "code": "const input = state.page.getByRole('textbox', { name: 'What needs to be done?' }); await input.fill('Email supplier'); await input.press('Enter');",
+        "done": false
+      },
+      "browser_s": 0.16346241597784683,
+      "code": "const input = state.page.getByRole('textbox', { name: 'What needs to be done?' }); await input.fill('Email supplier'); await input.press('Enter');",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"]\n            - labeltext:\n              - text: \"Email supplier\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 2,
+      "api_s": 1.4015024169930257,
+      "response_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "request_id": "gen-1789054534-rPUd3PFjQlSsvUsDkGgl",
+      "answer": {
+        "code": "const input = state.page.getByRole('textbox', { name: 'What needs to be done?' }); await input.fill('Review invoice'); await input.press('Enter');",
+        "done": false
+      },
+      "browser_s": 0.16544049995718524,
+      "code": "const input = state.page.getByRole('textbox', { name: 'What needs to be done?' }); await input.fill('Review invoice'); await input.press('Enter');",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=0\n            - labeltext:\n              - text: \"Email supplier\"\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=1\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"2\"\n          - text: \"items\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 3,
+      "api_s": 1.1155743330018595,
+      "response_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "request_id": "gen-1789054536-QQKlBMZMabBQmxP891w5",
+      "answer": {
+        "code": "await state.page.locator('li').filter({ hasText: 'Email supplier' }).getByRole('checkbox', { name: 'Toggle Todo' }).check();",
+        "done": false
+      },
+      "browser_s": 0.20178966695675626,
+      "code": "await state.page.locator('li').filter({ hasText: 'Email supplier' }).getByRole('checkbox', { name: 'Toggle Todo' }).check();",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=0\n            - labeltext:\n              - text: \"Email supplier\"\n            - role=button[name=\"Delete\"]:\n                - text: \"\u00d7\"\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=1\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n        - role=button[name=\"Clear completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 4,
+      "api_s": 1.4720349999843165,
+      "response_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "request_id": "gen-1789054537-dRRxCHuqFTLXwv699qeW",
+      "answer": {
+        "code": "await state.page.getByRole('link', { name: 'Active' }).click();",
+        "done": false
+      },
+      "browser_s": 0.21114924998255447,
+      "code": "await state.page.getByRole('link', { name: 'Active' }).click();",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/active\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"]\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n        - role=button[name=\"Clear completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 5,
+      "api_s": 1.2146417920012027,
+      "response_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "DeepSeek",
+      "request_id": "gen-1789054539-rdHS4FBikojVyk5Ur5Wt",
+      "answer": {
+        "done": true,
+        "result": "Active filter shows only 'Review invoice' with '1 item left'; 'Email supplier' is completed and hidden."
+      }
+    }
+  ],
+  "setup_s": 0.18817475001560524,
+  "total_s": 10.600743375020102,
+  "api_s": 9.858606416964903,
+  "browser_s": 0.7418418328743428,
+  "model_calls": 5,
+  "done": true,
+  "verification": "Console output:\n[log] {\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[\"Review invoice\"],\"saved\":\"[{\\\"id\\\":\\\"13786e7d-82e4-4fd6-8ee5-fe070a047e92\\\",\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"id\\\":\\\"8acfbbd0-bca3-4018-aac7-dc00b38454dc\\\",\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]\"}\n",
+  "pass": true,
+  "screenshot": "/tmp/web-auto-microbench/1-deepseek-v4.1-flash-playwriter.png",
+  "screenshot_output": "[return value] <Buffer 35110 bytes>\n"
+}

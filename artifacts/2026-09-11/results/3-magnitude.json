@@ -1,0 +1,109 @@
+{
+  "id": "3-magnitude",
+  "contender": "magnitude",
+  "rep": 3,
+  "events": [
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 1695,
+      "outputTokens": 612
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 2904,
+      "outputTokens": 215
+    },
+    {
+      "phase": "act",
+      "action": "add1"
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 1695,
+      "outputTokens": 503
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 2917,
+      "outputTokens": 289
+    },
+    {
+      "phase": "act",
+      "action": "add2"
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 1699,
+      "outputTokens": 460
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 2843,
+      "outputTokens": 298
+    },
+    {
+      "phase": "act",
+      "action": "complete"
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 1697,
+      "outputTokens": 400
+    },
+    {
+      "phase": "tokens",
+      "llm": {
+        "provider": "openai-generic",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "inputTokens": 2870,
+      "outputTokens": 344
+    },
+    {
+      "phase": "act",
+      "action": "filter"
+    }
+  ],
+  "errors": [],
+  "setup_s": 1.711,
+  "total_s": 52.455,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "tokens": {
+    "input": 18320,
+    "output": 3121,
+    "reasoning": 0,
+    "cached": 0
+  },
+  "model_calls": 8,
+  "cost": 0,
+  "pass": true,
+  "wall_s": 55.237
+}
