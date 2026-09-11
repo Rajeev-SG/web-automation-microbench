@@ -1,0 +1,5 @@
+{
+  "contender": "browser-cli",
+  "excluded": true,
+  "reason": "Extension-based runtime only: load-unpacked install via chrome://extensions file-picker cannot be automated headlessly and Developer mode toggle + file-picker dialogs have not yielded to AppleScript/cliclick automation in this environment after repeated attempts. No programmatic install path is documented in the README/SETUP.md."
+}

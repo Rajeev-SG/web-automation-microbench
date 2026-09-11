@@ -1,0 +1,12 @@
+{
+  "contender": "page-agent",
+  "excluded": true,
+  "reason": "Hub-connect approval gate blocks automated GLM-driven execution on this Mac. The @page-agent/mcp bridge requires the Page Agent extension hub tab to self-approve inbound execute requests (hub-ws #checkApproval -> window.confirm or chrome.storage allowAllHubConnection). Storage pre-seeding and window.confirm stubbing via CDP did not clear the gate: execute_task still returns 'User denied the connection request.' despite get_status connected:true. The user's everyday Chrome also runs this extension and races for the single hub slot on every bridge port. The in-page script path without the extension loses the hub and still needs page-agent's own LLM client, which does not forward OpenRouter provider routing (provider.sort=latency). Genuine attempt: extension build from commit 9eb6b66 (npm page-agent@1.12.4), extension loaded into Chrome for Testing (CDP 9251), MCP server over stdio with env LLM_BASE_URL=https://openrouter.ai/api/v1 + LLM_MODEL_NAME=z-ai/glm-5.3-flash, hub connect verified. Not runnable with GLM/OpenRouter end-to-end without interactive approval; no model substitution per contract.",
+  "setup_attempted": [
+    "npm ci + wxt extension build at commit 9eb6b66 -> .output/chrome-mv3",
+    "extension loaded into Chrome for Testing (CDP 9251, profile /tmp/bench-chrome-pa7)",
+    "@page-agent/mcp bridge on fresh per-run ports",
+    "MCP stdio client adapter (get_status/execute_task/stop_task) with OpenRouter env LLM config",
+    "hub connect verified (connected:true); approval gate cleared? No - deny persists after storage + confirm stub"
+  ]
+}

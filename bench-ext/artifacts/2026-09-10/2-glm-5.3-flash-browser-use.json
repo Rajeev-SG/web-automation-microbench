@@ -1,0 +1,99 @@
+{
+  "id": "2-glm-5.3-flash-browser-use",
+  "model": "z-ai/glm-5.3-flash",
+  "tool": "browser-use",
+  "rep": 2,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.1401833340059966,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054656-RyVtwZNB0Y70tCNuwPYO",
+      "answer": {
+        "code": "trusted_click('.new-todo'); type_text('Email supplier'); press_key('Enter')",
+        "done": false
+      },
+      "browser_s": 0.9807204160024412,
+      "code": "trusted_click('.new-todo'); type_text('Email supplier'); press_key('Enter')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\n1 item left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 2,
+      "api_s": 0.9513249580049887,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054658-Ntx2JxKh8Wvck3O6eoKZ",
+      "answer": {
+        "code": "trusted_click('.new-todo'); type_text('Review invoice'); press_key('Enter')",
+        "done": false
+      },
+      "browser_s": 0.99223766598152,
+      "code": "trusted_click('.new-todo'); type_text('Review invoice'); press_key('Enter')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n2 items left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 3,
+      "api_s": 0.75128758297069,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054660-rcC2RXtgxigWnA6JdBtq",
+      "answer": {
+        "code": "trusted_click('li:has-text(\"Email supplier\") .toggle')",
+        "done": false
+      },
+      "browser_s": 0.3237845420371741,
+      "code": "trusted_click('li:has-text(\"Email supplier\") .toggle')",
+      "observation": "Traceback (most recent call last):\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/bin/browser-use\", line 10, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_use/cli.py\", line 433, in main\n    result, command = _dispatch(args)\n                      ~~~~~~~~~^^^^^^\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_use/cli.py\", line 391, in _dispatch\n    return _run_browser_harness(), args[0] if args else 'run'\n           ~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_use/cli.py\", line 201, in _run_browser_harness\n    run.main()\n    ~~~~~~~~^^\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_harness/run.py\", line 252, in main\n    _run(args)\n    ~~~~^^^^^^\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_harness/run.py\", line 403, in _run\n    exec(code, globals())\n    ~~~~^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 2, in <module>\n  File \"/Users/rajeev/.local/share/uv/tools/browser-use/lib/python3.14/site-packages/browser_harness/run.py\", line 165, in wrapper\n    result = fn(*args, **kwargs)\n  File \"/Users/rajeev/.config/browser-harness/agent-workspace/agent_helpers.py\", line 134, in trusted_click\n    raise RuntimeError(f\"trusted_click: no visible match for {selector!r} text={text!r}\")\nRuntimeError: trusted_click: no visible match for 'li:has-text(\"Email supplier\") .toggle' text=None\n"
+    },
+    {
+      "step": 4,
+      "api_s": 1.737000374996569,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054661-k5AZT7MvQUOVqJwqcrxW",
+      "answer": {
+        "code": "trusted_click('.toggle', match_index=0)",
+        "done": false
+      },
+      "browser_s": 0.9750373749993742,
+      "code": "trusted_click('.toggle', match_index=0)",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":true,\"value\":\"on\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"destroy\",\"text\":\"\",\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"value\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"completed\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 5,
+      "api_s": 0.5609049589838833,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054664-kql6SUJlaslKlanEvrhO",
+      "answer": {
+        "code": "trusted_click('a[href=\"#/active\"]')",
+        "done": false
+      },
+      "browser_s": 0.9953036250080913,
+      "code": "trusted_click('a[href=\"#/active\"]')",
+      "observation": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"value\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"value\":\"on\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"All\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"Active\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"value\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\"}],\"items\":[{\"text\":\"Review invoice\",\"class\":\"\"}]}\n"
+    },
+    {
+      "step": 6,
+      "api_s": 0.670385624980554,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054665-WmPcS1HiIK24302PMc8t",
+      "answer": {
+        "done": true,
+        "result": "Verified: Active filter shows only 'Review invoice' with '1 item left'; 'Email supplier' is completed (not cleared)."
+      }
+    }
+  ],
+  "setup_s": 0.6450605840072967,
+  "total_s": 10.078441832971293,
+  "api_s": 5.8110868339426816,
+  "browser_s": 4.267083624028601,
+  "model_calls": 6,
+  "done": true,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":\"[{\\\"id\\\":\\\"27511a49-ea3a-424e-840b-27fb89c60327\\\",\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"id\\\":\\\"f1b0003f-86eb-4d0d-af89-1641043d371c\\\",\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]\"}\n",
+  "pass": true,
+  "screenshot": "/tmp/web-auto-microbench/2-glm-5.3-flash-browser-use.png",
+  "screenshot_output": ""
+}

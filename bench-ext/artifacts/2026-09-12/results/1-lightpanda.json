@@ -1,0 +1,333 @@
+{
+  "id": "1-lightpanda",
+  "contender": "lightpanda",
+  "rep": 1,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.58,
+      "provider": "Makora",
+      "request_id": "gen-1789157929-t1Z33k8e9MksCkjgsXKJ",
+      "usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 55,
+        "total_tokens": 479,
+        "cost": 8.43579e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.521e-05,
+          "upstream_inference_prompt_cost": 5.936e-05,
+          "upstream_inference_completions_cost": 2.585e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"const i=document.querySelector('.new-todo'); i.value='Email supplier'; i.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true})); 'ok'\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.002,
+      "code": "Runtime.evaluate {\"expression\":\"const i=document.querySelector('.new-todo'); i.value='Email supplier'; i.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true})); 'ok'\",\"returnByValue\":true}",
+      "observation": "\"ok\""
+    },
+    {
+      "step": 2,
+      "api_s": 4.129,
+      "provider": "Together",
+      "request_id": "gen-1789157930-kesj7EDbH0jQLZWbtCYf",
+      "usage": {
+        "prompt_tokens": 487,
+        "completion_tokens": 42,
+        "total_tokens": 529,
+        "cost": 9.31095e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 9.405e-05,
+          "upstream_inference_prompt_cost": 7.305e-05,
+          "upstream_inference_completions_cost": 2.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent))\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.001,
+      "code": "Runtime.evaluate {\"expression\":\"JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent))\",\"returnByValue\":true}",
+      "observation": "\"[]\""
+    },
+    {
+      "step": 3,
+      "api_s": 1.74,
+      "provider": "Makora",
+      "request_id": "gen-1789157934-0gXesGSvjhsKn77ePlUa",
+      "usage": {
+        "prompt_tokens": 531,
+        "completion_tokens": 130,
+        "total_tokens": 661,
+        "cost": 0.0001340856,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00013544,
+          "upstream_inference_prompt_cost": 7.434e-05,
+          "upstream_inference_completions_cost": 6.11e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 55,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"const i=document.querySelector('.new-todo'); i.value='Email supplier'; i.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent))\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.001,
+      "code": "Runtime.evaluate {\"expression\":\"const i=document.querySelector('.new-todo'); i.value='Email supplier'; i.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent))\",\"returnByValue\":true}",
+      "observation": "EVAL ERROR: {\"exceptionId\": 1, \"text\": \"Uncaught\", \"lineNumber\": 0, \"columnNumber\": 0, \"scriptId\": \"11\", \"exception\": {\"type\": \"object\", \"subtype\": \"error\", \"className\": \"SyntaxError\", \"description\": \"SyntaxError: Identifier 'i' has already been declared\", \"objectId\": \"2.2.2\"}}"
+    },
+    {
+      "step": 4,
+      "api_s": 2.165,
+      "provider": "Makora",
+      "request_id": "gen-1789157936-1qPDJnjIj8jCZVnwXyh2",
+      "usage": {
+        "prompt_tokens": 698,
+        "completion_tokens": 81,
+        "total_tokens": 779,
+        "cost": 0.0001344321,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00013579,
+          "upstream_inference_prompt_cost": 9.772e-05,
+          "upstream_inference_completions_cost": 3.807e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"(()=>{const el=document.querySelector('.new-todo'); el.value='Email supplier'; el.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); return JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent));})()\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.006,
+      "code": "Runtime.evaluate {\"expression\":\"(()=>{const el=document.querySelector('.new-todo'); el.value='Email supplier'; el.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); return JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent));})()\",\"returnByValue\":true}",
+      "observation": "\"[\\\"Email supplier\\\"]\""
+    },
+    {
+      "step": 5,
+      "api_s": 1.258,
+      "provider": "Makora",
+      "request_id": "gen-1789157938-BrfNEDngciUd7v9EdnKZ",
+      "usage": {
+        "prompt_tokens": 790,
+        "completion_tokens": 81,
+        "total_tokens": 871,
+        "cost": 0.0001471833,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014867,
+          "upstream_inference_prompt_cost": 0.0001106,
+          "upstream_inference_completions_cost": 3.807e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"(()=>{const el=document.querySelector('.new-todo'); el.value='Review invoice'; el.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); return JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent));})()\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.003,
+      "code": "Runtime.evaluate {\"expression\":\"(()=>{const el=document.querySelector('.new-todo'); el.value='Review invoice'; el.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true})); return JSON.stringify([...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent));})()\",\"returnByValue\":true}",
+      "observation": "\"[\\\"Email supplier\\\",\\\"Review invoice\\\"]\""
+    },
+    {
+      "step": 6,
+      "api_s": 2.896,
+      "provider": "Makora",
+      "request_id": "gen-1789157941-xlx94uuwmUBGM5sv20av",
+      "usage": {
+        "prompt_tokens": 885,
+        "completion_tokens": 40,
+        "total_tokens": 925,
+        "cost": 0.000141273,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001427,
+          "upstream_inference_prompt_cost": 0.0001239,
+          "upstream_inference_completions_cost": 1.88e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"(()=>{document.querySelectorAll('.todo-list li .toggle')[0].click(); return 'ok';})()\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.002,
+      "code": "Runtime.evaluate {\"expression\":\"(()=>{document.querySelectorAll('.todo-list li .toggle')[0].click(); return 'ok';})()\",\"returnByValue\":true}",
+      "observation": "\"ok\""
+    },
+    {
+      "step": 7,
+      "api_s": 2.966,
+      "provider": "Together",
+      "request_id": "gen-1789157943-tW66NLdXZadCYLmXArcl",
+      "usage": {
+        "prompt_tokens": 933,
+        "completion_tokens": 42,
+        "total_tokens": 975,
+        "cost": 0.0001593405,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016095,
+          "upstream_inference_prompt_cost": 0.00013995,
+          "upstream_inference_completions_cost": 2.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"(()=>{document.querySelector('.filters a[href=\\\"#/active\\\"]').click(); return 'ok';})()\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.001,
+      "code": "Runtime.evaluate {\"expression\":\"(()=>{document.querySelector('.filters a[href=\\\"#/active\\\"]').click(); return 'ok';})()\",\"returnByValue\":true}",
+      "observation": "\"ok\""
+    },
+    {
+      "step": 8,
+      "api_s": 13.017,
+      "provider": "Together",
+      "request_id": "gen-1789157946-cjat7dO4kI1PaFEvsGyl",
+      "usage": {
+        "prompt_tokens": 983,
+        "completion_tokens": 52,
+        "total_tokens": 1035,
+        "cost": 0.0001260963,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012737,
+          "upstream_inference_prompt_cost": 0.00010137,
+          "upstream_inference_completions_cost": 2.6e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "Runtime.evaluate {\"expression\":\"JSON.stringify({items:[...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent), left:document.querySelector('.todo-count').textContent.trim()})\",\"returnByValue\":true}"
+      },
+      "browser_s": 0.001,
+      "code": "Runtime.evaluate {\"expression\":\"JSON.stringify({items:[...document.querySelectorAll('.todo-list li label')].map(e=>e.textContent), left:document.querySelector('.todo-count').textContent.trim()})\",\"returnByValue\":true}",
+      "observation": "{\"items\":[\"Review invoice\"],\"left\":\"1 item left\"}"
+    },
+    {
+      "step": 9,
+      "api_s": 0.493,
+      "provider": "Together",
+      "request_id": "gen-1789157958-FcxQ3r7aWnBYo9BNIOTD",
+      "usage": {
+        "prompt_tokens": 1052,
+        "completion_tokens": 7,
+        "total_tokens": 1059,
+        "cost": 5.32422e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 896,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.378e-05,
+          "upstream_inference_prompt_cost": 5.028e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 0,
+  "total_s": 30.259,
+  "api_s": 30.243,
+  "model_calls": 9,
+  "tokens": {
+    "input": 6783,
+    "output": 530,
+    "cached": 1280,
+    "reasoning": 60
+  },
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

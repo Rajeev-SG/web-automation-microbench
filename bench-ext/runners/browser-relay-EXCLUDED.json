@@ -1,0 +1,1 @@
+{"contender": "browser-relay", "excluded": true, "reason": "Relay server runs but the bundled extension was never loaded into an attached Chrome tab, so no tabs were controllable; no scored reps."}

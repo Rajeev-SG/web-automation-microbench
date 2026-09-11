@@ -1,0 +1,85 @@
+{
+  "id": "1-glm-5.3-flash-playwriter",
+  "model": "z-ai/glm-5.3-flash",
+  "tool": "playwriter",
+  "rep": 1,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.9376202080165967,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Parasail",
+      "request_id": "gen-1789054556-FMIHJGvM2YTxeOYeEJJM",
+      "answer": {
+        "code": "await state.page.getByRole('textbox',{name:'What needs to be done?'}).fill('Email supplier'); await state.page.getByRole('textbox',{name:'What needs to be done?'}).press('Enter');",
+        "done": false
+      },
+      "browser_s": 0.1626702079665847,
+      "code": "await state.page.getByRole('textbox',{name:'What needs to be done?'}).fill('Email supplier'); await state.page.getByRole('textbox',{name:'What needs to be done?'}).press('Enter');",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"]\n            - labeltext:\n              - text: \"Email supplier\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 2,
+      "api_s": 0.9311594169703312,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Parasail",
+      "request_id": "gen-1789054557-FSn7L1xsC64rytuQhoSI",
+      "answer": {
+        "code": "await state.page.getByRole('textbox',{name:'What needs to be done?'}).fill('Review invoice'); await state.page.getByRole('textbox',{name:'What needs to be done?'}).press('Enter');",
+        "done": false
+      },
+      "browser_s": 0.17046729201683775,
+      "code": "await state.page.getByRole('textbox',{name:'What needs to be done?'}).fill('Review invoice'); await state.page.getByRole('textbox',{name:'What needs to be done?'}).press('Enter');",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=0\n            - labeltext:\n              - text: \"Email supplier\"\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=1\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"2\"\n          - text: \"items\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 3,
+      "api_s": 1.1175449580186978,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Parasail",
+      "request_id": "gen-1789054558-qFTN6MK7Rxh36uf89KBd",
+      "answer": {
+        "code": "await state.page.getByRole('listitem').filter({hasText:'Email supplier'}).getByRole('checkbox',{name:'Toggle Todo'}).click();",
+        "done": false
+      },
+      "browser_s": 0.19964441697811708,
+      "code": "await state.page.getByRole('listitem').filter({hasText:'Email supplier'}).getByRole('checkbox',{name:'Toggle Todo'}).click();",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=0\n            - labeltext:\n              - text: \"Email supplier\"\n            - role=button[name=\"Delete\"]:\n                - text: \"\u00d7\"\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"] >> nth=1\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n        - role=button[name=\"Clear completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 4,
+      "api_s": 1.0724780830205418,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Parasail",
+      "request_id": "gen-1789054559-Cs3uZxIeAelzbdgc8tXx",
+      "answer": {
+        "code": "await state.page.getByRole('link',{name:'Active'}).click();",
+        "done": false
+      },
+      "browser_s": 0.21021333301905543,
+      "code": "await state.page.getByRole('link',{name:'Active'}).click();",
+      "observation": "Console output:\n[log] https://demo.playwright.dev/todomvc/#/active\n[log]     - text: \"This is just a demo of TodoMVC for testing, not the\"\n    - role=link[name=\"real TodoMVC app.\"]\n      - sectionheader:\n        - heading \"todos\"\n        - role=textbox[name=\"What needs to be done?\"]\n      - checkbox \"\u276fMark all as complete\" [id=\"toggle-all\"]\n      - list:\n        - listitem:\n            - role=checkbox[name=\"Toggle Todo\"]\n            - labeltext:\n              - text: \"Review invoice\"\n      - sectionfooter:\n          - strong:\n            - text: \"1\"\n          - text: \"item\"\n          - text: \"left\"\n        - list:\n          - listitem:\n            - role=link[name=\"All\"]\n          - listitem:\n            - role=link[name=\"Active\"]\n          - listitem:\n            - role=link[name=\"Completed\"]\n        - role=button[name=\"Clear completed\"]\n    - contentinfo:\n      - paragraph:\n        - text: \"Double-click to edit a todo\"\n      - paragraph:\n        - text: \"Created by\"\n        - role=link[name=\"Remo H. Jansen\"]\n      - paragraph:\n        - text: \"Part of\"\n        - role=link[name=\"TodoMVC\"]\n\nuse refToLocator({ ref: 'e3' }) to get locators for ref strings.\n[log] []\n"
+    },
+    {
+      "step": 5,
+      "api_s": 12.587556833983399,
+      "response_model": "z-ai/glm-5.3-flash",
+      "provider": "Together",
+      "request_id": "gen-1789054561-oTEJlEhJPetwbA56hHrK",
+      "answer": {
+        "done": true,
+        "result": "Verified: Active filter shows only 'Review invoice' with 1 item left; 'Email supplier' completed and hidden."
+      }
+    }
+  ],
+  "setup_s": 0.18811250000726432,
+  "total_s": 17.389604666968808,
+  "api_s": 16.646359500009567,
+  "browser_s": 0.742995249980595,
+  "model_calls": 5,
+  "done": true,
+  "verification": "Console output:\n[log] {\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[\"Review invoice\"],\"saved\":\"[{\\\"id\\\":\\\"61ce0cdc-f11f-4e6e-8de3-f9187393501b\\\",\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"id\\\":\\\"80940dd9-590f-420d-8f78-bbb94911c4fb\\\",\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]\"}\n",
+  "pass": true,
+  "screenshot": "/tmp/web-auto-microbench/1-glm-5.3-flash-playwriter.png",
+  "screenshot_output": "[return value] <Buffer 33775 bytes>\n"
+}

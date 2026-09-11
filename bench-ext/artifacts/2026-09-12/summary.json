@@ -1,0 +1,138 @@
+[
+  {
+    "contender": "agent-browser",
+    "reps": 2,
+    "passes": 0,
+    "median_s": 13.7,
+    "times_s": [
+      16.4,
+      11.0
+    ],
+    "tok_in_avg": 23060,
+    "tok_cached_avg": 4032,
+    "tok_out_avg": 213
+  },
+  {
+    "contender": "agent-chrome-cli",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 17.4,
+    "times_s": [
+      10.8,
+      24.1
+    ],
+    "tok_in_avg": 7574,
+    "tok_cached_avg": 5248,
+    "tok_out_avg": 175
+  },
+  {
+    "contender": "browser-agent",
+    "reps": 2,
+    "passes": 0,
+    "median_s": 240.8,
+    "times_s": [
+      240.7,
+      240.9
+    ],
+    "tok_in_avg": 174,
+    "tok_cached_avg": 0,
+    "tok_out_avg": 20
+  },
+  {
+    "contender": "browser-control",
+    "reps": 2,
+    "passes": 1,
+    "median_s": 5.5,
+    "times_s": [
+      5.9,
+      5.1
+    ],
+    "tok_in_avg": 13229,
+    "tok_cached_avg": 9280,
+    "tok_out_avg": 182
+  },
+  {
+    "contender": "cdp-browser",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 10.7,
+    "times_s": [
+      12.0,
+      9.3
+    ],
+    "tok_in_avg": 6278,
+    "tok_cached_avg": 4928,
+    "tok_out_avg": 246
+  },
+  {
+    "contender": "jarvis-browser",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 11.2,
+    "times_s": [
+      13.9,
+      8.5
+    ],
+    "tok_in_avg": 8481,
+    "tok_cached_avg": 3872,
+    "tok_out_avg": 104
+  },
+  {
+    "contender": "lightpanda",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 22.7,
+    "times_s": [
+      15.2,
+      30.3
+    ],
+    "tok_in_avg": 7118,
+    "tok_cached_avg": 3008,
+    "tok_out_avg": 594
+  },
+  {
+    "contender": "pinchtab",
+    "reps": 6,
+    "passes": 0,
+    "median_s": 75.4,
+    "times_s": [
+      108.2,
+      10.9,
+      13.9,
+      46.4,
+      104.5,
+      242.9
+    ],
+    "tok_in_avg": 7449,
+    "tok_cached_avg": 2688,
+    "tok_out_avg": 1547
+  },
+  {
+    "contender": "raw-playwright",
+    "reps": 4,
+    "passes": 3,
+    "median_s": 42.7,
+    "times_s": [
+      73.2,
+      40.8,
+      44.7,
+      14.0
+    ],
+    "tok_in_avg": 18092,
+    "tok_cached_avg": 11552,
+    "tok_out_avg": 412
+  },
+  {
+    "contender": "webctl",
+    "reps": 2,
+    "passes": 0,
+    "median_s": 60.7,
+    "times_s": [
+      53.3,
+      68.0
+    ],
+    "tok_in_avg": 13780,
+    "tok_cached_avg": 0,
+    "tok_out_avg": 134
+  }
+]

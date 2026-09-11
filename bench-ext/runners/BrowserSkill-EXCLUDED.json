@@ -1,0 +1,1 @@
+{"contender": "BrowserSkill", "excluded": true, "reason": "Rust bsk CLI + Chrome Web Store extension. Extension install into the real Chrome profile was not completed in the time budget; no scored reps."}

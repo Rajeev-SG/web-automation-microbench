@@ -1,0 +1,381 @@
+{
+  "id": "2-pinchtab",
+  "contender": "pinchtab",
+  "rep": 2,
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.327,
+      "provider": "Together",
+      "request_id": "gen-1789153671-U4jGELkn6ZRGwLg5O6Tr",
+      "usage": {
+        "prompt_tokens": 483,
+        "completion_tokens": 20,
+        "total_tokens": 503,
+        "cost": 8.16255e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.245e-05,
+          "upstream_inference_prompt_cost": 7.245e-05,
+          "upstream_inference_completions_cost": 1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type e2 'Email supplier' && press Enter",
+        "done": false
+      },
+      "browser_s": 0.077,
+      "code": "type e2 'Email supplier' && press Enter",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier' && press Enter\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 2,
+      "api_s": 3.824,
+      "provider": "Together",
+      "request_id": "gen-1789153673-qfXIhENccVSYfsnJ9DvC",
+      "usage": {
+        "prompt_tokens": 568,
+        "completion_tokens": 91,
+        "total_tokens": 659,
+        "cost": 8.37738e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.462e-05,
+          "upstream_inference_prompt_cost": 3.912e-05,
+          "upstream_inference_completions_cost": 4.55e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 74,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type e2 'Email supplier'",
+        "done": false
+      },
+      "browser_s": 0.067,
+      "code": "type e2 'Email supplier'",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier' && press Enter'Email supplier'\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 3,
+      "api_s": 9.994,
+      "provider": "Together",
+      "request_id": "gen-1789153676-tSDRj4091OlFdIaok4OJ",
+      "usage": {
+        "prompt_tokens": 653,
+        "completion_tokens": 257,
+        "total_tokens": 910,
+        "cost": 0.0001709631,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017269,
+          "upstream_inference_prompt_cost": 4.419e-05,
+          "upstream_inference_completions_cost": 0.0001285
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 229,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval \"document.querySelector('.new-todo').value='Email supplier'\" && press Enter",
+        "done": false
+      },
+      "browser_s": 0.06,
+      "code": "eval \"document.querySelector('.new-todo').value='Email supplier'\" && press Enter",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier' && press Enter'Email supplier'\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 4,
+      "api_s": 7.146,
+      "provider": "Together",
+      "request_id": "gen-1789153686-c8pT7v5HkrxFrwzzOOno",
+      "usage": {
+        "prompt_tokens": 749,
+        "completion_tokens": 290,
+        "total_tokens": 1039,
+        "cost": 0.0001863477,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 576,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018823,
+          "upstream_inference_prompt_cost": 4.323e-05,
+          "upstream_inference_completions_cost": 0.000145
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 268,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval \"document.querySelector('.new-todo').value=''\"",
+        "done": false
+      },
+      "browser_s": 0.081,
+      "code": "eval \"document.querySelector('.new-todo').value=''\"",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier' && press Enter'Email supplier'\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 5,
+      "api_s": 64.998,
+      "provider": "Wafer",
+      "request_id": "gen-1789153693-r7pkBjv9nLk6ILlUevzx",
+      "usage": {
+        "prompt_tokens": 839,
+        "completion_tokens": 1038,
+        "total_tokens": 1877,
+        "cost": 0.000442728,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004472,
+          "upstream_inference_prompt_cost": 8.39e-05,
+          "upstream_inference_completions_cost": 0.0003633
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1026,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Control+a",
+        "done": false
+      },
+      "browser_s": 0.071,
+      "code": "press Control+a",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier' && press Enter'Email supplier'\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 6,
+      "api_s": 0.948,
+      "provider": "Together",
+      "request_id": "gen-1789153758-DcltaTGmalGX9ie4UyYZ",
+      "usage": {
+        "prompt_tokens": 920,
+        "completion_tokens": 17,
+        "total_tokens": 937,
+        "cost": 0.000145035,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001465,
+          "upstream_inference_prompt_cost": 0.000138,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type e2 'Email supplier'",
+        "done": false
+      },
+      "browser_s": 0.065,
+      "code": "type e2 'Email supplier'",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Email supplier'\" *\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 7,
+      "api_s": 0.553,
+      "provider": "Together",
+      "request_id": "gen-1789153759-fGtuILGaEKgbkXy9Ive8",
+      "usage": {
+        "prompt_tokens": 998,
+        "completion_tokens": 12,
+        "total_tokens": 1010,
+        "cost": 0.000154143,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001557,
+          "upstream_inference_prompt_cost": 0.0001497,
+          "upstream_inference_completions_cost": 6e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter",
+        "done": false
+      },
+      "browser_s": 0.083,
+      "code": "press Enter",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" *\ne5:checkbox \"\u276fMark all as complete\" [ ]\ne6:checkbox \"Toggle Todo\" [ ]\ne7:link \"All\"\ne8:link \"Active\"\ne9:link \"Completed\"\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 8,
+      "api_s": 1.053,
+      "provider": "Together",
+      "request_id": "gen-1789153760-iQv8iQqCYSa8rmAZLxLD",
+      "usage": {
+        "prompt_tokens": 1111,
+        "completion_tokens": 17,
+        "total_tokens": 1128,
+        "cost": 6.69537e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 896,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.763e-05,
+          "upstream_inference_prompt_cost": 5.913e-05,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type e2 'Review invoice'",
+        "done": false
+      },
+      "browser_s": 0.103,
+      "code": "type e2 'Review invoice'",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" val=\"'Review invoice'\" *\ne5:checkbox \"\u276fMark all as complete\" [ ]\ne6:checkbox \"Toggle Todo\" [ ]\ne7:link \"All\"\ne8:link \"Active\"\ne9:link \"Completed\"\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 9,
+      "api_s": 6.499,
+      "provider": "Friendli",
+      "request_id": "gen-1789153761-K5lEZCXV6bRyh33Wd0qQ",
+      "usage": {
+        "prompt_tokens": 1234,
+        "completion_tokens": 12,
+        "total_tokens": 1246,
+        "cost": 0.000189189,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001911,
+          "upstream_inference_prompt_cost": 0.0001851,
+          "upstream_inference_completions_cost": 6e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter",
+        "done": false
+      },
+      "browser_s": 0.086,
+      "code": "press Enter",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" *\ne5:checkbox \"\u276fMark all as complete\" [ ]\ne6:checkbox \"Toggle Todo\" [ ]\ne10:checkbox \"Toggle Todo\" [ ]\ne7:link \"All\"\ne8:link \"Active\"\ne9:link \"Completed\"\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    },
+    {
+      "step": 10,
+      "api_s": 7.389,
+      "provider": "Friendli",
+      "request_id": "gen-1789153768-tHWtiwhIphgsa9CG2l7a",
+      "usage": {
+        "prompt_tokens": 1357,
+        "completion_tokens": 13,
+        "total_tokens": 1370,
+        "cost": 0.0002079495,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00021005,
+          "upstream_inference_prompt_cost": 0.00020355,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click e6",
+        "done": false
+      },
+      "browser_s": 0.087,
+      "code": "click e6",
+      "observation": "e0:link \"real TodoMVC app.\"\ne1:heading \"todos\"\ne2:textbox \"What needs to be done?\" *\ne5:checkbox \"\u276fMark all as complete\" [ ]\ne6:checkbox \"Toggle Todo\" [ ]\ne10:checkbox \"Toggle Todo\" [ ]\ne7:link \"All\"\ne8:link \"Active\"\ne9:link \"Completed\"\ne3:link \"Remo H. Jansen\"\ne4:link \"TodoMVC\""
+    }
+  ],
+  "setup_s": 0.5511712500010617,
+  "total_s": 104.511,
+  "api_s": 103.73,
+  "model_calls": 10,
+  "tokens": {
+    "input": 8912,
+    "output": 1767,
+    "cached": 2304,
+    "reasoning": 1597
+  },
+  "done": false,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[{\"text\":\"'Email supplier'\",\"completed\":false},{\"text\":\"'Review invoice'\",\"completed\":false}],\"saved\":[{\"title\":\"'Email supplier'\",\"completed\":false},{\"title\":\"'Review invoice'\",\"completed\":false}]}",
+  "pass": false
+}

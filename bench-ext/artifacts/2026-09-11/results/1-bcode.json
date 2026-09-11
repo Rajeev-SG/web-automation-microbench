@@ -1,0 +1,18 @@
+{
+  "id": "1-bcode",
+  "contender": "bcode",
+  "rep": 1,
+  "events": [],
+  "stdout_len": 76133,
+  "tokens": {
+    "input": 73483,
+    "output": 3127,
+    "cached": 477632,
+    "reasoning": 2347
+  },
+  "cost": 0.02808841,
+  "steps": 15,
+  "total_s": 126.66409075000047,
+  "verification": "{\"matchedTab\": \"6340D476D7DB3FCCDD974304D7E9CE54\", \"state\": \"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]}\"}",
+  "pass": true
+}

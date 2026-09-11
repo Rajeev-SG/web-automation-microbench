@@ -1,0 +1,54 @@
+{
+  "id": "2-browser-agent",
+  "contender": "browser-agent",
+  "rep": "2",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.74,
+      "provider": "Makora",
+      "request_id": "gen-1789160459-aPayLE4hHkWRQPE59thU",
+      "usage": {
+        "prompt_tokens": 174,
+        "completion_tokens": 21,
+        "total_tokens": 195,
+        "cost": 3.38877e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.423e-05,
+          "upstream_inference_prompt_cost": 2.436e-05,
+          "upstream_inference_completions_cost": 9.87e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.goto('http://localhost:3000');",
+        "done": false
+      }
+    }
+  ],
+  "setup_s": 0.003,
+  "total_s": 240.743,
+  "api_s": 0.74,
+  "model_calls": 1,
+  "tokens": {
+    "input": 174,
+    "output": 21,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "done": false,
+  "error": "TimeoutExpired: Command '['node', 'run-openrouter.js', '--task', 'Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.']' timed out after 240 seconds",
+  "verification": "",
+  "pass": false
+}
