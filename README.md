@@ -47,6 +47,37 @@ For comparison, the prior round's best times: browser-use+GLM 8.8s, Playwriter+D
 
 Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
+## Round 3 — 12 Sep 2026: the lightweight field, plus a raw code-mode baseline
+
+Sixteen more contenders, same task, same GLM 5.3-Flash on OpenRouter with latency-sorted routing. Scored: ten (results below). Excluded after genuine attempts (documented, no model substitution): browser-agent (our adapter loop never wired its tool calls), BrowserSkill and browser-relay (extension install/attachment), browser-cli (extension install not scriptable headlessly), page-agent (hub approval gate). Not yet run: sitegeist (built, awaiting model wiring), Notte. Full handoff: [bench-ext/HANDOFF.md](bench-ext/HANDOFF.md).
+
+| Contender | What it is | Pass | Median time | Tokens in/out | Cost per run |
+|---|---|---|---:|---:|---:|
+| **browser-control** | Rust CLI driving its own Chrome; ref-based a11y actions | 1/2 | **5.5s** | ~13.2k / ~180 | ~$0.0014 |
+| **cdp-browser** | Minimal CDP CLI: nav/eval/screenshot over raw Chrome DevTools | 2/2 | **10.7s** | ~6.3k / ~250 | ~$0.0007 |
+| **jarvis-browser** | Daemon-backed ref CLI over CDP (snapshot → act → verify) | 2/2 | **11.2s** | ~8.5k / ~100 | ~$0.0005 |
+| **agent-browser** | Vercel's native Rust CLI; a11y refs, early-fail clicks | 0/2 | 13.7s | ~23.1k / ~210 | ~$0.0019 |
+| **agent-chrome-cli** | Stateless CDP CLI with snapshot refs | 2/2 | 17.4s | ~7.6k / ~180 | ~$0.0004 |
+| **lightpanda** | Zig headless browser with native CDP server | 2/2 | 22.7s | ~7.1k / ~590 | ~$0.0006 |
+| **webctl** | Python CLI daemon; snapshot + text-driven click, no JS eval | 0/2 | 19.1s | ~5.8k / ~280 | ~$0.0006 |
+| **raw-playwright baseline** | Model writes Playwright code against a persistent page | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0016 |
+| **pinchtab** | Go control-plane HTTP server managing Chrome instances | 0/6 | 75.4s | ~7.4k / ~1550 | ~$0.0037 |
+| **browser-agent** | Chrome-map agent loop (broken adapter — excluded) | 0/2* | 240.8s* | — | — |
+
+\* broken harness runs kept as failure evidence; contender itself excluded.
+
+### Round 3 verdict so far
+
+- **New frontier candidate: browser-control** at 5.5s — faster than Browser Harness's 9.9s, though only 1/2 pass (one step-limit miss after reaching correct state). If its pass rate firms up with more reps it takes the speed crown.
+- **cdp-browser** is the value pick: 2/2 pass, 10.7s, cheapest per run (~$0.0007), and the simplest possible interface (raw CDP commands).
+- **jarvis-browser** (11.2s) and **agent-chrome-cli** (17.4s, $0.0004/run) are both solid 2/2 picks in the Browser Harness class.
+- **lightpanda** is interesting — a non-Chrome browser (Zig, headless) passing 2/2 with no Chrome at all, at ~$0.0006/run.
+- **Nothing beat the frontier on reliability**: the four 2/2 tools all sit in the 10–23s band; Browser Harness (9.9s) remains the fastest 100% pass rate.
+- **pinchtab, webctl, agent-browser**: promising mechanics, but friction (literal-argument quoting, ambiguous toggles, missed done-signals) needs fixing before they're competitive.
+- **Cost floor moved**: agent-chrome-cli at ~$0.0004/run undercuts Browser Harness's ~$0.0005.
+
+Details: [bench-ext/artifacts/2026-09-12/summary.json](bench-ext/artifacts/2026-09-12/summary.json) and per-run transcripts in [bench-ext/artifacts/2026-09-12/results/](bench-ext/artifacts/2026-09-12/results/).
+
 ## Combined verdict
 
 | Question | Answer |
