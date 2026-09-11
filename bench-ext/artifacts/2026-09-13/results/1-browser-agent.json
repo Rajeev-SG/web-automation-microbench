@@ -1,0 +1,21 @@
+{
+  "id": "1-browser-agent",
+  "contender": "browser-agent",
+  "rep": 1,
+  "events": [],
+  "setup_s": 0.0,
+  "total_s": 32.0,
+  "model_calls": 8,
+  "tokens": {
+    "input": 36299,
+    "output": 1243,
+    "cached": 8256,
+    "reasoning": null
+  },
+  "done": true,
+  "verification": "agent self-reported verified final state; final projection (console-observed): Active view, Review invoice, 1 item left",
+  "pass": true,
+  "error": null,
+  "screenshot_error": "screenshot not captured; final projection recorded in transcript",
+  "notes": "Rep 1 detailed step transcript not retained (overwritten by rep 2 run); totals from console output at run time."
+}
