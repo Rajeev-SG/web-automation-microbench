@@ -1,0 +1,21 @@
+{
+  "id": "2-browser-agent",
+  "contender": "browser-agent",
+  "rep": 2,
+  "events": [],
+  "setup_s": 0.0,
+  "total_s": 33.0,
+  "model_calls": 13,
+  "tokens": {
+    "input": 49844,
+    "output": 1469,
+    "cached": 18112,
+    "reasoning": 399
+  },
+  "done": true,
+  "verification": "independent projection read (in 2-steps.jsonl last step): Active view shows Review invoice only, 1 item left, Clear completed untouched; agent return_results completed",
+  "pass": true,
+  "error": null,
+  "screenshot_error": "screenshot not captured; final projection recorded in transcript",
+  "notes": "Full 10-step transcript in 2-steps.jsonl; token totals from 2-token-usage.json"
+}

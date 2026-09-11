@@ -49,9 +49,9 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
 ## All-round comparison — every benchmarked tool
 
-One row per harness/tool × best-model combination. Times are medians across all scored runs of that combination; pass rate is aggregate. Round 1 ran three models per harness (routing was default, not latency-sorted); Rounds 2–3 ran GLM 5.3-Flash with `provider.sort: latency`. Cost = tokens × latency-sorted provider rate (Makora: $0.075/M in, half-rate cached, $0.25/M out) where not OpenRouter-reported. Round 1 token counts were not recorded (timing-only round).
+One row per harness/tool × best-model combination. Times are medians across all scored runs of that combination; pass rate is aggregate. Round 1 ran three models per harness (routing was default, not latency-sorted); Rounds 2–3 ran GLM 5.3-Flash with `provider.sort: latency`; Round 4 (browser-agent) ran GLM 5.3-Flash with default routing (no latency pass-through available in that CLI). Cost = tokens × latency-sorted provider rate (Makora: $0.075/M in, half-rate cached, $0.25/M out) where not OpenRouter-reported. Round 1 token counts were not recorded (timing-only round).
 
-### Rounds 2–3 (GLM 5.3-Flash, latency-sorted — directly comparable)
+### Rounds 2–4 (GLM 5.3-Flash — directly comparable; Round 4 browser-agent row used default routing, see its report)
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
@@ -63,6 +63,7 @@ One row per harness/tool × best-model combination. Times are medians across all
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 3 | 0/2 | 13.7s | ~23.1k / ~210 | ~$0.0019 |
 | **agent-chrome-cli** | [gxbvc/agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | 3 | 2/2 | 17.4s | ~7.6k / ~180 | ~$0.0004 |
 | **lightpanda** | [lightpanda-io/browser](https://github.com/lightpanda-io/browser) | 3 | 2/2 | 22.7s | ~7.1k / ~590 | ~$0.0006 |
+| **browser-agent** | [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) | 4 | 2/2 | 32.5s | ~43.1k / ~1,360 | ~$0.0036 |
 | **Magnitude** | [magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0016 |
 | **webctl** | [cosinusalpha/webctl](https://github.com/cosinusalpha/webctl) | 3 | 0/2 | 19.1s | ~5.8k / ~280 | ~$0.0006 |
@@ -81,6 +82,8 @@ One row per harness/tool × best-model combination. Times are medians across all
 | Tool | Repo | Reason |
 |---|---|---|
 | browser-agent | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | OpenRouter adapter loop never wired its tool calls (2 runs recorded as evidence) |
+
+Re-run: the tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 — see the comparison table and [artifacts/2026-09-13/report.md](artifacts/2026-09-13/report.md).
 | page-agent | [alibaba/page-agent](https://github.com/alibaba/page-agent) | Hub approval gate + Chrome hub-slot race; no provider.sort pass-through |
 | browser-cli | [six-ddc/browser-cli](https://github.com/six-ddc/browser-cli) | Extension install not automatable headlessly |
 | BrowserSkill | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | Extension install not completed in budget |
@@ -88,7 +91,7 @@ One row per harness/tool × best-model combination. Times are medians across all
 | sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Built and loaded (port 9252); model config wiring not finished — pending |
 | Notte | [nottelabs/notte](https://github.com/nottelabs/notte) | Not started — pending |
 
-## Combined verdict (through Round 3)
+## Combined verdict (through Round 4)
 
 | Question | Answer |
 |---|---|
@@ -98,18 +101,20 @@ One row per harness/tool × best-model combination. Times are medians across all
 | Most token-efficient | **agent-chrome-cli** (~7.6k in / ~180 out, ~$0.0004/run) — undercuts Browser Harness on cost. jarvis-browser is close (~8.5k / ~100). |
 | Most reliable | Magnitude — 4/4 (Round 2). Among Round 3 tools: cdp-browser, jarvis-browser, agent-chrome-cli, lightpanda all 2/2. |
 | Best for complex SPAs | Magnitude (vision-first). lightpanda is a promising DOM-only alternative that passed without Chrome. |
+| Round 4 addition | **browser-agent** ([visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent)) — reliable (2/2, 32.5s median) but ~3× slower and ~7× the tokens of Browser Harness; no capability gain on a plain DOM task, so it stays off the stack for simple jobs. |
 | New in Round 3 | lightpanda passes 2/2 with a non-Chromium engine; raw-playwright baseline confirms the code-mode pattern is cheap but slower than ref-CLIs. |
 | **Drop from the stack** | **BrowserCode** — 15× slower, ~9× more tokens, ~55× more cost, no capability advantage. Also **pinchtab and webctl** (0 passes each; fixable friction but not competitive as-is). |
 
 ### Notable failure patterns
 
 - **Stagehand + GLM don't mix.** Stagehand demands strict JSON-schema responses; GLM-5.3-Flash intermittently returns malformed output or misfires actions (in one run it literally typed "Email supplier Enter" as a todo title). This is a model-schema mismatch, not a Stagehand bug — with a stronger model, Stagehand's self-healing local-browser support could do much better. Until then, don't pair them.
+- **visnia browser-agent quirks (Round 4).** Its CLI config has no `provider.sort` pass-through (only single-provider `openrouter_provider` pinning), so its rows ran on default routing — a small unfairness in its favour/disfavour either way. It also enforces an extract_data → return_results barrier before finishing, which added 2–4 extra steps per run on this task.
 - **Browser Harness gotchas we fixed during the runs:** pressing `Enter` needs exact case (`press_key('Enter')`, not `'ENTER'`), and re-navigating with `goto_url()` can leave CDP input pointed at a stale session — use `new_tab()` for resets. Both documented in the spec so future runners don't rediscover them.
 
 ## What "cost" means here
 
 - BrowserCode's cost is OpenRouter's own reported number.
-- Everything else is calculated from exact token counts at the latency-sorted provider's published rate (Makora: $0.075 per million input, $0.25 per million output; cached input ≈ half price).
+- Everything else is calculated from exact token counts at the latency-sorted provider's published rate (Makora: $0.075 per million input, $0.25 per million output; cached input ≈ half price). Round 4 browser-agent used default routing (no latency pass-through); its cost uses the same published rate for comparability.
 - No run exceeded a few cents total.
 
 ## Repo layout
@@ -124,6 +129,10 @@ artifacts/
     bench-node.mjs       Round 2 runner (Stagehand, Magnitude)
     report.md            Round 2 full report + Pareto analysis
     acceptance-manifest.md
+  2026-09-12/           Round 3: per-run JSON + screenshots, summary.json (in bench-ext)
+  2026-09-13/
+    report.md           Round 4 report (visnia-ai/browser-agent re-score)
+    results/            Round 4 per-run JSON + step transcripts
 docs/
   benchmark-spec.md      The contract any future round must follow
 .github/workflows/ci.yml  Validates JSON artifacts, screenshot presence, secret scan

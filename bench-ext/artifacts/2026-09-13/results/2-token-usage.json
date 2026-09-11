@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "taskIndex": 1,
+  "task": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Finish only after observing the final state.",
+  "attempts": [
+    {
+      "runIndex": 1,
+      "retryAttempt": 1,
+      "completed": true,
+      "successful": true,
+      "invocations": [
+        {
+          "sequence": 1,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 1,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 3578,
+            "output_tokens": 81,
+            "total_tokens": 3659,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0,
+            "non_reasoning_output_tokens": 81
+          }
+        },
+        {
+          "sequence": 2,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 2,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 3770,
+            "output_tokens": 105,
+            "total_tokens": 3875,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 4,
+            "non_reasoning_output_tokens": 101
+          }
+        },
+        {
+          "sequence": 3,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 3,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 3905,
+            "output_tokens": 89,
+            "total_tokens": 3994,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0,
+            "non_reasoning_output_tokens": 89
+          }
+        },
+        {
+          "sequence": 4,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 4,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4043,
+            "output_tokens": 94,
+            "total_tokens": 4137,
+            "cached_input_tokens": 1984,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0,
+            "non_reasoning_output_tokens": 94
+          }
+        },
+        {
+          "sequence": 5,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 5,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4138,
+            "output_tokens": 182,
+            "total_tokens": 4320,
+            "cached_input_tokens": 1984,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 99,
+            "non_reasoning_output_tokens": 83
+          }
+        },
+        {
+          "sequence": 6,
+          "kind": "stage",
+          "phase": "executor",
+          "stage": "dataExtraction",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 5,
+          "modelAttempt": 1,
+          "usage": {
+            "input_tokens": 376,
+            "output_tokens": 5,
+            "total_tokens": 381,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0,
+            "non_reasoning_output_tokens": 5,
+            "time_to_first_token_ms": 1335,
+            "generation_time_ms": 1345
+          }
+        },
+        {
+          "sequence": 7,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 6,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4292,
+            "output_tokens": 106,
+            "total_tokens": 4398,
+            "cached_input_tokens": 1984,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 24,
+            "non_reasoning_output_tokens": 82
+          }
+        },
+        {
+          "sequence": 8,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 7,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 8818,
+            "output_tokens": 307,
+            "total_tokens": 9125,
+            "cached_input_tokens": 4352,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 117,
+            "non_reasoning_output_tokens": 190
+          }
+        },
+        {
+          "sequence": 9,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 8,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4511,
+            "output_tokens": 141,
+            "total_tokens": 4652,
+            "cached_input_tokens": 2432,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 44,
+            "non_reasoning_output_tokens": 97
+          }
+        },
+        {
+          "sequence": 10,
+          "kind": "stage",
+          "phase": "executor",
+          "stage": "dataExtraction",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 8,
+          "modelAttempt": 1,
+          "usage": {
+            "input_tokens": 376,
+            "output_tokens": 90,
+            "total_tokens": 466,
+            "cached_input_tokens": 256,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 28,
+            "non_reasoning_output_tokens": 62,
+            "time_to_first_token_ms": 606,
+            "generation_time_ms": 1334
+          }
+        },
+        {
+          "sequence": 11,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 9,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4668,
+            "output_tokens": 107,
+            "total_tokens": 4775,
+            "cached_input_tokens": 2432,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 16,
+            "non_reasoning_output_tokens": 91
+          }
+        },
+        {
+          "sequence": 12,
+          "kind": "executor_step",
+          "phase": "executor",
+          "stage": "runAgent",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "step": 10,
+          "stepKind": "executor_step",
+          "usage": {
+            "input_tokens": 4886,
+            "output_tokens": 105,
+            "total_tokens": 4991,
+            "cached_input_tokens": 2688,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 15,
+            "non_reasoning_output_tokens": 90
+          }
+        },
+        {
+          "sequence": 13,
+          "kind": "stage",
+          "phase": "verification",
+          "stage": "verifySuccess",
+          "provider": "openrouter",
+          "model": "z-ai/glm-5.3-flash",
+          "modelAttempt": 1,
+          "usage": {
+            "input_tokens": 2483,
+            "output_tokens": 57,
+            "total_tokens": 2540,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 52,
+            "non_reasoning_output_tokens": 5,
+            "time_to_first_token_ms": 667,
+            "generation_time_ms": 1009
+          }
+        }
+      ],
+      "totals": {
+        "input_tokens": 49844,
+        "cached_input_tokens": 18112,
+        "cache_write_tokens": 0,
+        "reasoning_tokens": 399,
+        "non_reasoning_output_tokens": 1070,
+        "output_tokens": 1469,
+        "total_tokens": 51313,
+        "generation_time_ms": 3688
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 49844,
+    "cached_input_tokens": 18112,
+    "cache_write_tokens": 0,
+    "reasoning_tokens": 399,
+    "non_reasoning_output_tokens": 1070,
+    "output_tokens": 1469,
+    "total_tokens": 51313,
+    "generation_time_ms": 3688
+  }
+}
