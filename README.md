@@ -63,11 +63,11 @@ One row per harness/tool × best-model combination. Times are medians across all
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 3 | 0/2 | 13.7s | ~23.1k / ~210 | ~$0.0019 |
 | **agent-chrome-cli** | [gxbvc/agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | 3 | 2/2 | 17.4s | ~7.6k / ~180 | ~$0.0004 |
 | **lightpanda** | [lightpanda-io/browser](https://github.com/lightpanda-io/browser) | 3 | 2/2 | 22.7s | ~7.1k / ~590 | ~$0.0006 |
-| **Magnitude** | [magnitude](https://github.com/magnitude-systems/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
+| **Magnitude** | [magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0016 |
 | **webctl** | [cosinusalpha/webctl](https://github.com/cosinusalpha/webctl) | 3 | 0/2 | 19.1s | ~5.8k / ~280 | ~$0.0006 |
 | **pinchtab** | [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 3 | 0/6 | 75.4s | ~7.4k / ~1,550 | ~$0.0037 |
-| **BrowserCode** | [BrowserCode](https://github.com/vercel-labs/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
+| **BrowserCode** | [BrowserCode](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
 
 ### Round 1 (three models, default routing — timing-only)
 
