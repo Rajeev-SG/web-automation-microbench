@@ -110,7 +110,7 @@ The extension-backed contenders that Round 3 could not load are now scored. The 
 
 **page-agent scores 0/2, and the reason is the tool, not the harness.** After clearing the approval gate, its built-in action set is `click_element_by_index`, `input_text`, `select_dropdown_option`, `scroll`, `scroll_horizontally`, `execute_javascript`, `wait`, `ask_user`, `done` — there is no key-press action. The TodoMVC task cannot be finished without pressing Enter after typing, and the model filled the field across ~16 attempts on 5 tabs without ever committing a todo (rep 1: 527s, "Task failed"; rep 2: same, cut at the 900s budget).
 
-The **Taylor-Bayouth `browser-agent`** exclusion row is now removed: the tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 (2/2, 32.5s, `bench-ext/artifacts/2026-09-13/`).
+The **Taylor-Bayouth `browser-agent`** exclusion row was removed and the entry replaced by the working [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent), scored in Round 4 (2/2, 32.5s, `bench-ext/artifacts/2026-09-13/`). Note these are **two unrelated projects that share a name**, not a rewrite: neither is a GitHub fork of the other (`fork: false, parent: null`), the contributors and authors are disjoint, and they publish different npm packages. The Taylor-Bayouth entry was non-functional (its adapter loop never wired tool calls), so the row was dropped rather than kept as a dead duplicate.
 
 ## What "cost" means here
 
