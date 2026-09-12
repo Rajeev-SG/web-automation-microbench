@@ -33,3 +33,20 @@ the capability frontier (success/recovery, tasks 5–9).
   dependency in the task itself).
 - `spa-suite` is committed to the repo so the suite is reproducible without
   external sites.
+
+## v1 verification status (2026-09-12)
+
+All five local deterministic/stochastic pages load in a real Chromium via the
+CDP adapter pattern, and their verifiers execute against live DOM:
+
+- `delayed-dashboard` and `infinite-scroll` verifiers fire and correctly report
+  not-yet-passable state before the agent acts.
+- `checkbox-grid`, `file-upload`, `modal-interrupt` verifiers fire and are false
+  until the objective end state is reached.
+- `classify_failure()` maps: agent finished wrong state → `task-state`;
+  control mechanism timeout → `harness-tool`; unfinished without timeout →
+  `adapter-protocol`; unparseable model answer → `model-format`.
+
+Remaining for full v1 acceptance: live model-in-loop scoring runs per contender
+per task, plus real-site tasks 7–9 preflight (network-dependent; deliberately
+not blocking the local suite).
