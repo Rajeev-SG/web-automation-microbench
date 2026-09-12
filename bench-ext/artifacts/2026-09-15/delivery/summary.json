@@ -8,11 +8,13 @@
     "screen": 2,
     "promote": 5
   },
+  "note": "Delivery demonstration for issue #20; both harnesses screened 2 reps then promoted to 5. Not a leaderboard change.",
   "contenders": {
     "BrowserSkill": {
       "reps": 5,
       "passes": 3,
       "pass_rate": 0.6,
+      "screening": "2/2",
       "median_total_s_all": 13.014,
       "median_total_s_pass": 10.41,
       "tokens_in_median": 28041,
@@ -21,7 +23,7 @@
       "tool_calls_median": 6,
       "retries_total": 3,
       "tool_errors_total": 0,
-      "promotion": "promoted to 5 (2/2 screening)",
+      "promotion": "screened 2 -> promoted to 5",
       "reps_detail": [
         {
           "id": "1-BrowserSkill",
@@ -71,18 +73,19 @@
       ]
     },
     "browser-relay": {
-      "reps": 2,
-      "passes": 1,
-      "pass_rate": 0.5,
-      "median_total_s_all": 16.209,
-      "median_total_s_pass": 2.917,
-      "tokens_in_median": 28917,
-      "tokens_out_median": 1270,
-      "cost_per_run_median_usd": 0.003,
-      "tool_calls_median": 5.5,
+      "reps": 5,
+      "passes": 4,
+      "pass_rate": 0.8,
+      "screening": "1/2",
+      "median_total_s_all": 2.917,
+      "median_total_s_pass": 2.725,
+      "tokens_in_median": 2957,
+      "tokens_out_median": 137,
+      "cost_per_run_median_usd": 0.0,
+      "tool_calls_median": 1,
       "retries_total": 0,
       "tool_errors_total": 0,
-      "promotion": "screening only (2 reps)",
+      "promotion": "screened 2 -> promoted to 5",
       "reps_detail": [
         {
           "id": "1-browser-relay",
@@ -97,6 +100,33 @@
           "id": "2-browser-relay",
           "pass": true,
           "total_s": 2.917,
+          "model_calls": 2,
+          "tool_calls": 1,
+          "retries": 0,
+          "done": true
+        },
+        {
+          "id": "3-browser-relay",
+          "pass": true,
+          "total_s": 2.467,
+          "model_calls": 2,
+          "tool_calls": 1,
+          "retries": 0,
+          "done": true
+        },
+        {
+          "id": "4-browser-relay",
+          "pass": true,
+          "total_s": 2.534,
+          "model_calls": 2,
+          "tool_calls": 1,
+          "retries": 0,
+          "done": true
+        },
+        {
+          "id": "5-browser-relay",
+          "pass": true,
+          "total_s": 3.762,
           "model_calls": 2,
           "tool_calls": 1,
           "retries": 0,

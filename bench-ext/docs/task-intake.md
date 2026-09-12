@@ -107,7 +107,8 @@ OPENROUTER_API_KEY=$(security find-generic-password -s codex-openrouter -w) \
   python3 bench-ext/runners/BrowserSkill.py 1 2 3 4 5 --task=chanel-gb-tag-check
 ```
 
-Result: BrowserSkill 3/5 (2/2 screening → promoted to 5), browser-relay 1/2 — see
+Result: both harnesses screened 2 reps then were promoted to 5 — browser-relay 4/5,
+BrowserSkill 3/5; the promotion corrected screening in both directions. See
 `bench-ext/artifacts/2026-09-15/delivery/report.md`. The agent records its finding in
 `window.__bench_finding`; the verifier **independently recomputes** the tag ground truth from
 the live page and compares, so a run passes only when the agent's finding matches objective
