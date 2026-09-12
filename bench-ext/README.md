@@ -101,6 +101,24 @@ docs/
 
 Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass criteria, provider config, timing boundary, required measurements, and the JSON transcript shape. Then follow the runner pattern in `artifacts/2026-09-11/` and add at least two scored reps. Update the README table and add a short Pareto note.
 
+## Task parameterization (#20)
+
+`bench-ext/benchlib.py` is now task-parameterized: a task registry holds tasks
+(`{id, instruction, url, observe_js, verify_js, check, capabilities[], provenance{}}`)
+and `run_rep(adapter, rep, task=..., max_steps=..., timeout=...)` runs one rep of a chosen
+task. TodoMVC stays task `todomvc` with byte-identical text (guarded by a golden-file test);
+all existing runners keep working unchanged. Diagnostics per rep now include the task id,
+tool-call count, retries/recovery, tool errors, provider and cost — and every failed rep is
+kept as evidence.
+
+Rep counts are centralized in `benchlib.REP_TOPOLOGY` (issue #1 topology: 2 screen →
+promote to 5 → 10+ only for near-ties/high variance), so no runner hardcodes reps.
+
+The registry also ingests conformant task specs with **mandatory session provenance**
+(`source_session_id`, `source_url`, `verified_against`, rejected by a test) — see
+[docs/task-intake.md](docs/task-intake.md). The task set stays empty pending
+`codex-session-orchestration-analysis#88`.
+
 ## Status
 
 These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark. That larger effort (real sites, login flows, uploads, multi-tab journeys) lives in a separate project and will use this repo's methodology as its starting point.

@@ -44,6 +44,24 @@ the capability frontier (success/recovery, tasks 5–9).
 - `spa-suite` is committed to the repo so the suite is reproducible without
   external sites.
 
+### Task registry + replication (#20)
+
+The suite no longer shares one hardcoded TodoMVC task. `benchlib` carries a task registry
+and `run_rep(adapter, rep, task=...)`; each task supplies its instruction, URL,
+observation JS, verification JS, pass predicate, capability tags and provenance.
+Provenance is mandatory for every non-TodoMVC task (`source_session_id`, `source_url`,
+`verified_against`) and is enforced by `task_intake.validate_task_spec` +
+`tests/test_task_provenance.py` — never by review alone. Session ids are derived from the
+AgentSessions DB (read-only). See [task-intake.md](task-intake.md).
+
+Rep counts are centralized (`benchlib.REP_TOPOLOGY`: 2 screen → 5 promote → 10+ tiebreak,
+issue #1); runners fall back to `benchlib.reps_from_argv(sys.argv[1:])` instead of a
+hardcoded `['1','2']`. Per-rep diagnostics now include tool-call count, retries/recovery,
+tool errors, provider and cost; every failed rep is preserved, never retried away.
+
+**Task set is empty pending `codex-session-orchestration-analysis#88`.** The tasks table
+above is a record of what *not* to do until harvested, provenance-carrying tasks arrive.
+
 ## v1 verification status (2026-09-12)
 
 All five local deterministic/stochastic pages load in a real Chromium via the
