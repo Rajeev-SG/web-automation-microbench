@@ -75,3 +75,16 @@ Minimum two scored reps per contender (reversed order for the second to cancel o
 - After `goto_url()` re-navigation, Browser Harness CDP input events can target a stale session — use `new_tab()` for resets.
 - Stagehand's strict JSON-schema action format rejects malformed GLM output; plan for model-schema mismatch failures and record them as contender failures, not harness bugs.
 - bcode's own OpenRouter route reports cost; other contenders need token-based estimation at the latency-sorted provider's published rates.
+
+## README publishing rule (enforced by CI)
+
+The README contains exactly ONE results table: the "Master leaderboard — every benchmarked tool" table.
+
+1. **Schema (fixed, in this order):** `Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run`.
+   - Every benchmarked tool must appear in this table and nowhere else as a results table.
+   - One row per harness × best-model combination. No per-round separate results tables in the README — round sections link to their artifact reports instead of duplicating tables.
+2. **No editorial tables.** No "Overall winner / Fastest / Most reliable / Drop from the stack" Q&A-style tables anywhere in the README. Conclusions live in the opening paragraph and in round reports under `artifacts/<date>/report.md`.
+3. **Numbers must come from artifacts.** Every row's values must be derivable from the round's `summary.json` / result JSONs. When adding or re-scoring a contender, regenerate the row from the artifacts — never hand-edit a number without updating the artifact first.
+4. **Single source:** the only allowed results tables in README.md are the master leaderboard and the exclusions table. Adding any other table (per-round, per-model, verdicts) breaks CI.
+
+CI check: `ci.yml` parses the README, finds every Markdown table, and fails if any results table does not use exactly the seven-column header above, or if more than two tables exist.

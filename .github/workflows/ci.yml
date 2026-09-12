@@ -31,3 +31,41 @@ jobs:
         run: |
           if grep -rIn "sk-or-v1-[A-Za-z0-9]\{20,\}" artifacts/; then echo "secret-like token found"; exit 1; fi
           echo "no hardcoded tokens"
+      - name: README publishing rule
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          text = pathlib.Path('README.md').read_text()
+          lines = text.splitlines()
+          tables = []
+          i = 0
+          while i < len(lines):
+              line = lines[i]
+              if line.strip().startswith('|') and i + 1 < len(lines) and re.fullmatch(r'[|:\- ]+', lines[i+1].strip()) and len(line.strip()) > 2:
+                  header = [c.strip() for c in line.strip().strip('|').split('|')]
+                  j = i + 2
+                  rows = 0
+                  while j < len(lines) and lines[j].strip().startswith('|'):
+                      rows += 1; j += 1
+                  tables.append((header, rows))
+                  i = j
+              else:
+                  i += 1
+          if not tables:
+              print('FAIL: no tables found in README'); sys.exit(1)
+          for h, n in tables:
+              if len(h) not in (3, 6, 7):
+                  print(f'FAIL: table with unexpected column count {len(h)}: {h}'); sys.exit(1)
+          # exactly one 7-column master leaderboard with the required header
+          expected = ['Harness', 'Repo', 'Round', 'Pass', 'Median time', 'Tokens in/out', 'Cost per run']
+          sevens = [h for h, n in tables if len(h) == 7]
+          if len(sevens) != 1:
+              print(f'FAIL: expected exactly one 7-column master leaderboard, found {len(sevens)}'); sys.exit(1)
+          if sevens[0] != expected:
+              print(f'FAIL: master leaderboard header {sevens[0]} != required {expected}'); sys.exit(1)
+          # no editorial Q&A verdict tables (two-column "Question | Answer")
+          for h, n in tables:
+              if len(h) == 2:
+                  print('FAIL: editorial verdict-style table found (Question/Answer) — not allowed'); sys.exit(1)
+          print(f'README publishing rule ok: {len(tables)} tables, one master leaderboard')
+          PY
