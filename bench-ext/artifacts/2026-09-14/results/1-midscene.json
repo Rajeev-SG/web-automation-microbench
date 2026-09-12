@@ -1,0 +1,32 @@
+{
+  "id": "1-midscene",
+  "contender": "midscene",
+  "rep": "1",
+  "events": [
+    {
+      "step": 1,
+      "answer": {
+        "runtime": "midscene aiAct"
+      },
+      "usage": {
+        "calls": 42
+      }
+    }
+  ],
+  "setup_s": 0.012,
+  "total_s": 40.863,
+  "api_s": 40.863,
+  "model_calls": 42,
+  "done": true,
+  "error": null,
+  "tokens": {
+    "input": 435291,
+    "output": 59838,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "cost_usd": 0.072074,
+  "tokens_source": "midscene MIDSCENE_RECORD_MODEL_CALL jsonl (OpenRouter usage incl. OpenRouter-reported cost)",
+  "verification": "{\"url\": \"https://demo.playwright.dev/todomvc/#/active\", \"items\": [{\"text\": \"Review invoice\", \"completed\": false}], \"saved\": [{\"title\": \"Email supplier\", \"completed\": true}, {\"title\": \"Review invoice\", \"completed\": false}]}",
+  "pass": true
+}

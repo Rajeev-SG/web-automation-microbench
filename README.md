@@ -17,7 +17,7 @@ not real work, not capability evidence, and must never be cited as such.
 
 Short, practical head-to-head races between browser automation tools. Every tool gets the same task, the same browser situation, and the same success test — then we measure who finishes reliably, quickly, cheaply, and with the least AI overhead.
 
-**Read this if you want the one-paragraph answer:** thin harnesses that let the model issue one native command per step — now the extension-backed CLIs too (BrowserSkill 4.1s, browser-relay 4.3s, browser-cli 6.2s) — beat everything else on speed and cost. A vision-first agent (Magnitude) is the most reliable on messy, JavaScript-heavy sites but costs more tokens and is slower. An agent runtime with only a narrow action set can lose outright: page-agent ships no key-press action, so it cannot commit a TodoMVC todo at all. Anything running its own heavyweight agent loop (BrowserCode, notte, page-agent) costs 10–100× more wall-clock for no accuracy gain.
+**Read this if you want the one-paragraph answer:** thin harnesses that let the model issue one native command per step — now the extension-backed CLIs too (BrowserSkill 4.1s, browser-relay 4.3s, browser-cli 6.2s) — beat everything else on speed and cost. Round 6 tested eleven more contenders (the official Microsoft and Chrome DevTools CLIs, ego-browser, browser-act, surf, bb-browser, opencli, chrome-cdp-skill, hyperagent, midscene, skyvern) and **none displaced the front**: the fastest new arrival (chrome-cdp-skill, 11.5s) was also the least reliable (3/5), and the best new row once reliability is counted was chrome-devtools-mcp (5/5 @ 11.8s). A vision-first agent (Magnitude) is the most reliable on messy, JavaScript-heavy sites but costs more tokens and is slower. An agent runtime with only a narrow action set can lose outright: page-agent ships no key-press action, so it cannot commit a TodoMVC todo at all — and Round 6 found two more tools (opencli, bb-browser) that fail the same way because their key events carry no `keyCode`, so React never commits the todo. Anything running its own heavyweight agent loop (BrowserCode, notte, skyvern, midscene) costs 10–100× more wall-clock for no accuracy gain.
 
 ## The test task
 
@@ -64,7 +64,7 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
 ## Master leaderboard — every benchmarked tool
 
-One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter.
+One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter. **Round 6 rows are mostly 2-rep screening results**, with four promoted to 5 reps (chrome-cdp-skill, chrome-devtools-mcp, ego-browser, playwright-cli) because the 8–16s block was a near-tie and the issue requires promoting plausible frontier candidates. That promotion mattered: **chrome-cdp-skill screened 2/2 at 8.8s and then scored 3/5 over five reps** (reps 4–5 ended at the right persisted state but the wrong URL/filter, and the model reported "done" anyway) — 2-rep screening overstates reliability. Similarly, round-6 rows with only 2 reps should not be ordered finely against each other. Round 6 cost/routing: midscene and skyvern costs are tool-reported and both use default OpenRouter routing (no `provider.sort` pass-through); everything else is latency-sorted. opencli (0/2) and bb-browser (0/2) are **scored tool failures**, not exclusions — both reach the page but their native key event never commits the React todo (see the Round 6 section).
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
@@ -74,22 +74,58 @@ One row per harness × best-model combination. `Median time` is the median acros
 | **browser-cli** | [six-ddc/browser-cli](https://github.com/six-ddc/browser-cli) | 3 | 2/2 | 6.2s | ~8.6k / ~128 | ~$0.0007 |
 | **pinchtab** | [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 3 | 2/2 | 8.3s | ~5.1k / ~200 | ~$0.0003 |
 | **browser-use** | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 1 | 2/2 | 8.7s | n/a | n/a |
-| **Browser Harness** | [in-repo (artifacts/2026-09-11)](https://github.com/Rajeev-SG/web-automation-microbench/tree/main/artifacts/2026-09-11) | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
+| **Browser Harness** | [browser-use/browser-harness](https://github.com/browser-use/browser-harness) v0.1.13 | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 3 | 2/2 | 10.1s | ~20.8k / ~120 | ~$0.0010 |
+| **Playwriter** | [remorses/playwriter](https://github.com/remorses/playwriter) | 1 | 2/2 | 10.1s | n/a | n/a |
 | **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 3 | 2/2 | 10.7s | ~6.3k / ~250 | ~$0.0003 |
 | **jarvis-browser** | [bridge25/jarvis-browser](https://github.com/bridge25/jarvis-browser) | 3 | 2/2 | 11.2s | ~8.5k / ~100 | ~$0.0005 |
+| **chrome-cdp-skill** | [pasky/chrome-cdp-skill](https://github.com/pasky/chrome-cdp-skill) | 6 | 3/5 | 11.5s | ~21.1k / ~323 | ~$0.0083 |
+| **chrome-devtools-mcp** | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 6 | 5/5 | 11.8s | ~12.6k / ~89 | ~$0.0048 |
 | **Stagehand v4** | [browserbase/stagehand](https://github.com/browserbase/stagehand) | 2 | 1/4 | 13.1s | ~6.6k / 300–3,400 | ~$0.0007 |
+| **ego-browser** | [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 6 | 5/5 | 14.2s | ~12.3k / ~99 | ~$0.0048 |
 | **webctl** | [cosinusalpha/webctl](https://github.com/cosinusalpha/webctl) | 3 | 2/2 | 14.5s | ~8.2k / ~100 | ~$0.0006 |
+| **playwright-cli** | [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | 6 | 5/5 | 14.7s | ~21.7k / ~113 | ~$0.0083 |
 | **agent-chrome-cli** | [gxbvc/agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | 3 | 2/2 | 17.4s | ~7.6k / ~180 | ~$0.0004 |
+| **browser-act-skills** | [browser-act/skills](https://github.com/browser-act/skills) | 6 | 2/2 | 18.5s | ~6.0k / ~76 | ~$0.0009 |
 | **lightpanda** | [lightpanda-io/browser](https://github.com/lightpanda-io/browser) | 3 | 2/2 | 22.7s | ~7.1k / ~590 | ~$0.0006 |
+| **page-agent** (patched: `send_keys`) | [alibaba/page-agent](https://github.com/alibaba/page-agent) | 5 | 2/2 | 25.3s | n/a | n/a |
+| **hyperagent** (perform) | [hyperbrowserai/HyperAgent](https://github.com/hyperbrowserai/HyperAgent) | 6 | 3/4 | 28.3s | ~20.8k / ~3.4k | ~$0.0096 |
+| **opencli** | [jackwener/OpenCLI](https://github.com/jackwener/OpenCLI) | 6 | 0/2 | 30.4s | ~20.8k / ~234 | ~$0.0032 |
+| **surf-cli** | [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli) | 6 | 2/2 | 31.8s | ~28.6k / ~519 | ~$0.0046 |
 | **browser-agent** | [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) | 4 | 2/2 | 32.5s | ~43.1k / ~1,360 | ~$0.0036 |
+| **bb-browser** | [epiral/bb-browser](https://github.com/epiral/bb-browser) | 6 | 0/2 | 32.7s | ~12.6k / ~380 | ~$0.0021 |
+| **midscene** | [web-infra-dev/midscene](https://github.com/web-infra-dev/midscene) | 6 | 2/2 | 33.4s | ~444k / ~62k | ~$0.074 |
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 |
 | **Magnitude** | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
-| **Playwriter** | [remorses/playwriter](https://github.com/remorses/playwriter) | 1 | 2/2 | 10.1s | n/a | n/a |
 | **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
 | **notte** | [nottelabs/notte](https://github.com/nottelabs/notte) | 3 | 2/2 | 171.8s | n/a | n/a |
-| **page-agent** (patched: `send_keys`) | [alibaba/page-agent](https://github.com/alibaba/page-agent) | 5 | 2/2 | 25.3s | n/a | n/a |
+| **skyvern** | [Skyvern-AI/skyvern](https://github.com/Skyvern-AI/skyvern) | 6 | 2/2 | 186.5s | ~29.0k / ~4.2k | ~$0.0055 |
 | **browser-agent** (Taylor-Bayouth) | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | 5 | 1/2 | 200.1s | ~19k–782k / ~0.5k–25k | n/a |
+
+## Round 6 — 14 Sep 2026: remaining high-value contenders (issue #17)
+
+Eleven further contenders, all on GLM 5.3-Flash with latency-sorted routing where the tool permits it.
+Full screening table, Pareto analysis, architecture classification, block/defect evidence and
+reproducibility notes: [bench-ext/artifacts/2026-09-14/report.md](bench-ext/artifacts/2026-09-14/report.md).
+
+- **No contender extended the fast-path frontier.** Every Round 6 row is dominated by an existing row on
+  (speed, cost). The closest new arrival, **chrome-cdp-skill**, lands at 11.5s *and only 3/5*; the new
+  official baselines (**chrome-devtools-mcp** 5/5 @ 11.8s, **playwright-cli** 5/5 @ 14.7s) and
+  **ego-browser** (5/5 @ 14.2s) are competitive and reliable but not faster than BrowserSkill.
+- **The near-tie block resolved to: chrome-devtools-mcp 5/5 @ 11.8s, chrome-cdp-skill 3/5 @ 11.5s,
+  ego-browser 5/5 @ 14.2s, playwright-cli 5/5 @ 14.7s.** On 5 reps the fastest new tool is also the
+  least reliable — chrome-devtools-mcp is the strongest new row once reliability is counted.
+- **Two more genuine tool failures: opencli (0/2) and bb-browser (0/2).** Both reach the page and
+  report success, but their native key event carries no `keyCode`/`windowsVirtualKeyCode`, so React
+  never commits the todo. Root cause confirmed by direct probe (a `keyCode: 13` dispatch via the same
+  tool commits correctly). Upstream defect in each, not a harness limitation.
+- **Capability rows, not fast-path rows:** **midscene** (vision, 2/2 @ 33.4s, ~$0.074/run) and
+  **skyvern** (autonomous multi-agent, 2/2 @ 186.5s) preserve their native architectures and belong to
+  the real-work/capability suite, not the latency ranking.
+- **Tier D (nanobrowser, browserable, BrowserOS, steel/pi-steel) was reviewed and not promoted** — none
+  adds an architecture the benchmark lacks, and none has credible Pareto-improvement evidence.
+- With Tier A/B/C covered, the benchmark adopts the admission rule in §10 of the round report: a new
+  tool enters only with a genuinely different architecture, credible Pareto evidence, or a missing capability.
 
 ### Excluded after genuine attempts
 

@@ -1,0 +1,30 @@
+{
+  "id": "2-skyvern",
+  "contender": "skyvern",
+  "rep": "2",
+  "events": [],
+  "setup_s": 2.634,
+  "total_s": 181.476,
+  "model_calls": 1,
+  "tokens": {
+    "input": 29012,
+    "output": 3711,
+    "cached": 0,
+    "reasoning": 1835
+  },
+  "tokens_source": "skyvern steps table (its own telemetry)",
+  "agent_result": {
+    "run_id": "tsk_573587489861786364",
+    "status": "completed",
+    "output": "None",
+    "failure_reason": "None",
+    "step_count": 5,
+    "steps": 0,
+    "steps_token_sum": 0
+  },
+  "done": true,
+  "cost": 0.0054756306,
+  "step_count_db": 5,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

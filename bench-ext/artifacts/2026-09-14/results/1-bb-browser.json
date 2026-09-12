@@ -1,0 +1,581 @@
+{
+  "id": "1-bb-browser",
+  "contender": "bb-browser",
+  "rep": "1",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.196,
+      "provider": "Makora",
+      "request_id": "gen-1789230543-PS0uKvI491EWVclinQUw",
+      "usage": {
+        "prompt_tokens": 479,
+        "completion_tokens": 13,
+        "total_tokens": 492,
+        "cost": 7.24383e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.317e-05,
+          "upstream_inference_prompt_cost": 6.706e-05,
+          "upstream_inference_completions_cost": 6.11e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click @1 --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "click @1 --tab eff3",
+      "observation": "\u5df2\u70b9\u51fb: element"
+    },
+    {
+      "step": 2,
+      "api_s": 0.789,
+      "provider": "Makora",
+      "request_id": "gen-1789230553-V2ZTpSFqio8ENxNFWdO3",
+      "usage": {
+        "prompt_tokens": 501,
+        "completion_tokens": 17,
+        "total_tokens": 518,
+        "cost": 7.73487e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.813e-05,
+          "upstream_inference_prompt_cost": 7.014e-05,
+          "upstream_inference_completions_cost": 7.99e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type @1 \"Email supplier\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "type @1 \"Email supplier\" --tab eff3",
+      "observation": "\u5df2\u8f93\u5165\u5185\u5bb9: \"Email supplier\""
+    },
+    {
+      "step": 3,
+      "api_s": 0.516,
+      "provider": "Makora",
+      "request_id": "gen-1789230554-BaJCufEOiexhoE53z6zK",
+      "usage": {
+        "prompt_tokens": 531,
+        "completion_tokens": 12,
+        "total_tokens": 543,
+        "cost": 7.91802e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.998e-05,
+          "upstream_inference_prompt_cost": 7.434e-05,
+          "upstream_inference_completions_cost": 5.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "press Enter --tab eff3",
+      "observation": "\u5df2\u6309\u4e0b: Enter"
+    },
+    {
+      "step": 4,
+      "api_s": 0.454,
+      "provider": "Makora",
+      "request_id": "gen-1789230555-osVsAtO7Hljsuy0mReva",
+      "usage": {
+        "prompt_tokens": 552,
+        "completion_tokens": 17,
+        "total_tokens": 569,
+        "cost": 8.44173e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.527e-05,
+          "upstream_inference_prompt_cost": 7.728e-05,
+          "upstream_inference_completions_cost": 7.99e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap -i -c --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "snap -i -c --tab eff3",
+      "observation": "\u6807\u9898: React \u2022 TodoMVC\nURL: https://demo.playwright.dev/todomvc/#/\n\nlink [ref=0] \"real TodoMVC app.\"\ntextbox [ref=1] \"What needs to be done?\"\nlink [ref=2] \"Remo H. Jansen\"\nlink [ref=3] \"TodoMVC\""
+    },
+    {
+      "step": 5,
+      "api_s": 0.705,
+      "provider": "Makora",
+      "request_id": "gen-1789230555-tiQj4fIKdm6ZOG1LWkd1",
+      "usage": {
+        "prompt_tokens": 644,
+        "completion_tokens": 26,
+        "total_tokens": 670,
+        "cost": 0.0001013562,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010238,
+          "upstream_inference_prompt_cost": 9.016e-05,
+          "upstream_inference_completions_cost": 1.222e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 9,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill @1 \"Email supplier\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "fill @1 \"Email supplier\" --tab eff3",
+      "observation": "\u5df2\u586b\u5145\u5185\u5bb9: \"Email supplier\""
+    },
+    {
+      "step": 6,
+      "api_s": 0.743,
+      "provider": "Makora",
+      "request_id": "gen-1789230556-dUL64eOv47JlJeYIhj29",
+      "usage": {
+        "prompt_tokens": 674,
+        "completion_tokens": 12,
+        "total_tokens": 686,
+        "cost": 9.9e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001,
+          "upstream_inference_prompt_cost": 9.436e-05,
+          "upstream_inference_completions_cost": 5.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "press Enter --tab eff3",
+      "observation": "\u5df2\u6309\u4e0b: Enter"
+    },
+    {
+      "step": 7,
+      "api_s": 0.637,
+      "provider": "Makora",
+      "request_id": "gen-1789230557-uCPJ57JbfVtpCHOJ4wxj",
+      "usage": {
+        "prompt_tokens": 695,
+        "completion_tokens": 15,
+        "total_tokens": 710,
+        "cost": 0.0001033065,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010435,
+          "upstream_inference_prompt_cost": 9.73e-05,
+          "upstream_inference_completions_cost": 7.05e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap -i -c --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "snap -i -c --tab eff3",
+      "observation": "\u6807\u9898: React \u2022 TodoMVC\nURL: https://demo.playwright.dev/todomvc/#/\n\nlink [ref=0] \"real TodoMVC app.\"\ntextbox [ref=1] \"What needs to be done?\"\nlink [ref=2] \"Remo H. Jansen\"\nlink [ref=3] \"TodoMVC\""
+    },
+    {
+      "step": 8,
+      "api_s": 0.877,
+      "provider": "Makora",
+      "request_id": "gen-1789230558-QRq50BeSBFSFrGRHUvmq",
+      "usage": {
+        "prompt_tokens": 787,
+        "completion_tokens": 25,
+        "total_tokens": 812,
+        "cost": 0.0001207107,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012193,
+          "upstream_inference_prompt_cost": 0.00011018,
+          "upstream_inference_completions_cost": 1.175e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 14,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click @1 --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "click @1 --tab eff3",
+      "observation": "\u5df2\u70b9\u51fb: element"
+    },
+    {
+      "step": 9,
+      "api_s": 1.543,
+      "provider": "Makora",
+      "request_id": "gen-1789230570-9MjTLyD0CUARiiaffTAe",
+      "usage": {
+        "prompt_tokens": 809,
+        "completion_tokens": 17,
+        "total_tokens": 826,
+        "cost": 0.0001200375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012125,
+          "upstream_inference_prompt_cost": 0.00011326,
+          "upstream_inference_completions_cost": 7.99e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type @1 \"Email supplier\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "type @1 \"Email supplier\" --tab eff3",
+      "observation": "\u5df2\u8f93\u5165\u5185\u5bb9: \"Email supplier\""
+    },
+    {
+      "step": 10,
+      "api_s": 0.744,
+      "provider": "Makora",
+      "request_id": "gen-1789230570-cmBkG3fwfWygDco087Uh",
+      "usage": {
+        "prompt_tokens": 839,
+        "completion_tokens": 12,
+        "total_tokens": 851,
+        "cost": 0.000121869,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001231,
+          "upstream_inference_prompt_cost": 0.00011746,
+          "upstream_inference_completions_cost": 5.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "press Enter --tab eff3",
+      "observation": "\u5df2\u6309\u4e0b: Enter"
+    },
+    {
+      "step": 11,
+      "api_s": 0.46,
+      "provider": "Makora",
+      "request_id": "gen-1789230571-qGMWfK8GufR6IDG4lj5e",
+      "usage": {
+        "prompt_tokens": 860,
+        "completion_tokens": 15,
+        "total_tokens": 875,
+        "cost": 0.0001261755,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012745,
+          "upstream_inference_prompt_cost": 0.0001204,
+          "upstream_inference_completions_cost": 7.05e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap -i -c --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "snap -i -c --tab eff3",
+      "observation": "\u6807\u9898: React \u2022 TodoMVC\nURL: https://demo.playwright.dev/todomvc/#/\n\nlink [ref=0] \"real TodoMVC app.\"\ntextbox [ref=1] \"What needs to be done?\"\nlink [ref=2] \"Remo H. Jansen\"\nlink [ref=3] \"TodoMVC\""
+    },
+    {
+      "step": 12,
+      "api_s": 0.952,
+      "provider": "Makora",
+      "request_id": "gen-1789230571-nh2V0yiZ3TWVpgw0JAHt",
+      "usage": {
+        "prompt_tokens": 952,
+        "completion_tokens": 40,
+        "total_tokens": 992,
+        "cost": 0.0001505592,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00015208,
+          "upstream_inference_prompt_cost": 0.00013328,
+          "upstream_inference_completions_cost": 1.88e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 11,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval \"document.querySelector('.new-todo') ? 'input-exists' : 'no-input'\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "eval \"document.querySelector('.new-todo') ? 'input-exists' : 'no-input'\" --tab eff3",
+      "observation": "input-exists"
+    },
+    {
+      "step": 13,
+      "api_s": 0.725,
+      "provider": "Makora",
+      "request_id": "gen-1789230573-F7lOgTcz8KiBumDiHJDk",
+      "usage": {
+        "prompt_tokens": 991,
+        "completion_tokens": 34,
+        "total_tokens": 1025,
+        "cost": 0.0001531728,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00015472,
+          "upstream_inference_prompt_cost": 0.00013874,
+          "upstream_inference_completions_cost": 1.598e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval \"var i=document.querySelector('.new-todo'); i.focus(); i.value='Email supplier'; 'set'\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "eval \"var i=document.querySelector('.new-todo'); i.focus(); i.value='Email supplier'; 'set'\" --tab eff3",
+      "observation": "set"
+    },
+    {
+      "step": 14,
+      "api_s": 0.962,
+      "provider": "Makora",
+      "request_id": "gen-1789230573-XXjlAYWJSIkvvGnI78nL",
+      "usage": {
+        "prompt_tokens": 1031,
+        "completion_tokens": 12,
+        "total_tokens": 1043,
+        "cost": 0.0001484802,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014998,
+          "upstream_inference_prompt_cost": 0.00014434,
+          "upstream_inference_completions_cost": 5.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "press Enter --tab eff3",
+      "observation": "\u5df2\u6309\u4e0b: Enter"
+    },
+    {
+      "step": 15,
+      "api_s": 1.102,
+      "provider": "Together",
+      "request_id": "gen-1789230574-9x6Oz9ZQRUZyl4i0c1de",
+      "usage": {
+        "prompt_tokens": 1052,
+        "completion_tokens": 42,
+        "total_tokens": 1094,
+        "cost": 0.000177012,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001788,
+          "upstream_inference_prompt_cost": 0.0001578,
+          "upstream_inference_completions_cost": 2.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval \"document.querySelectorAll('.todo-list li').length + ':' + Array.from(document.querySelectorAll('.todo-list li label')).map(l=>l.textContent).join(',')\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "eval \"document.querySelectorAll('.todo-list li').length + ':' + Array.from(document.querySelectorAll('.todo-list li label')).map(l=>l.textContent).join(',')\" --tab eff3",
+      "observation": "0:"
+    },
+    {
+      "step": 16,
+      "api_s": 1.223,
+      "provider": "Together",
+      "request_id": "gen-1789230575-V2PrJo75Ug5kbjMjcWpm",
+      "usage": {
+        "prompt_tokens": 1101,
+        "completion_tokens": 62,
+        "total_tokens": 1163,
+        "cost": 8.01405e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 960,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.095e-05,
+          "upstream_inference_prompt_cost": 4.995e-05,
+          "upstream_inference_completions_cost": 3.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 45,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type @1 \"Email supplier\" --tab eff3"
+      },
+      "browser_s": 0.0,
+      "code": "type @1 \"Email supplier\" --tab eff3",
+      "observation": "\u5df2\u8f93\u5165\u5185\u5bb9: \"Email supplier\""
+    }
+  ],
+  "setup_s": 10.79,
+  "total_s": 34.731,
+  "api_s": 13.63,
+  "model_calls": 16,
+  "tokens": {
+    "input": 12498,
+    "output": 371,
+    "cached": 960,
+    "reasoning": 81
+  },
+  "done": false,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[],\"saved\":[]}",
+  "pass": false
+}

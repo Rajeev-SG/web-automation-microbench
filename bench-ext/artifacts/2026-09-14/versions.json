@@ -1,0 +1,97 @@
+{
+  "round": 6,
+  "date": "2026-09-14",
+  "issue": "Rajeev-SG/web-automation-microbench#17",
+  "model": "z-ai/glm-5.3-flash via OpenRouter (temperature 0, reasoning low+excluded, response_format json_object, provider.sort=latency unless noted)",
+  "contenders": {
+    "chrome-cdp-skill": {
+      "repo": "https://github.com/pasky/chrome-cdp-skill",
+      "commit": "ffea76a",
+      "package": "n/a (source clone, no build)"
+    },
+    "chrome-devtools-mcp": {
+      "repo": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "commit": "d9a8cb6",
+      "package": "chrome-devtools-mcp@1.9.0 (npm, global)",
+      "mode": "full toolset (not --slim)"
+    },
+    "ego-browser": {
+      "repo": "https://github.com/citrolabs/ego-lite",
+      "commit": "d01be93",
+      "package": "ego lite app 0.5.0.32",
+      "note": "requires the ego browser app; TaskSpace bench-todomvc"
+    },
+    "playwright-cli": {
+      "repo": "https://github.com/microsoft/playwright-cli",
+      "commit": "655530f",
+      "package": "@playwright/cli 0.1.19 (npm, global)",
+      "mode": "CLI + Skills path (not Playwright MCP)"
+    },
+    "browser-act-skills": {
+      "repo": "https://github.com/browser-act/skills",
+      "commit": "11c057b",
+      "package": "browser-act CLI 1.4.2 / skill 2.0.2 (uv tool)",
+      "mode": "free/local chrome browser, no account"
+    },
+    "hyperagent": {
+      "repo": "https://github.com/hyperbrowserai/HyperAgent",
+      "commit": "a7ec1f4",
+      "package": "@hyperbrowser/agent 1.1.2 (built from source)",
+      "mode": "page.perform() scored; page.ai() = capability mode"
+    },
+    "opencli": {
+      "repo": "https://github.com/jackwener/OpenCLI",
+      "commit": "8271afc",
+      "package": "@jackwener/opencli 1.8.7 (npm, global) + extension v1.0.24",
+      "mode": "generic browser-control path"
+    },
+    "surf-cli": {
+      "repo": "https://github.com/nicobailon/surf-cli",
+      "commit": "56faa5a",
+      "package": "v2.19.0 (built from source)",
+      "note": "1-line local patch: native/socket-path.cjs honours SURF_DEFAULT_SOCKET"
+    },
+    "bb-browser": {
+      "repo": "https://github.com/epiral/bb-browser",
+      "commit": "7975dc7",
+      "package": "bb-browser 0.14.2 (npm, global)"
+    },
+    "midscene": {
+      "repo": "https://github.com/web-infra-dev/midscene",
+      "commit": "e9d2c63",
+      "package": "@midscene/web 1.12.6 (npm)",
+      "mode": "aiAct(), vision; GLM-V family via OpenRouter base URL"
+    },
+    "skyvern": {
+      "repo": "https://github.com/Skyvern-AI/skyvern",
+      "commit": "35cfb31",
+      "package": "skyvern 1.0.52 (pip -e, py3.12)",
+      "mode": "self-hosted server + Postgres 14; LLM_KEY=OPENROUTER"
+    }
+  },
+  "routing_caveats": {
+    "default_routing (no provider.sort pass-through)": [
+      "skyvern",
+      "midscene"
+    ],
+    "latency_sorted": "all others (injected by benchlib.openrouter_payload or a benchmark-side fetch wrapper for hyperagent)"
+  },
+  "failure_classification": {
+    "opencli": "tool failure (key event without keyCode; upstream defect src/browser/dom-helpers.ts)",
+    "bb-browser": "tool failure (Input.dispatchKeyEvent without windowsVirtualKeyCode; upstream defect packages/daemon/src/command-dispatch.ts)"
+  },
+  "rep_counts": {
+    "chrome-cdp-skill": 5,
+    "chrome-devtools-mcp": 5,
+    "ego-browser": 5,
+    "playwright-cli": 5,
+    "hyperagent": 4,
+    "browser-act-skills": 2,
+    "opencli": 2,
+    "surf-cli": 2,
+    "bb-browser": 2,
+    "midscene": 2,
+    "skyvern": 2
+  },
+  "promotion_note": "Four near-tie rows in the 8-16s block were promoted from 2 to 5 reps per issue #1. chrome-cdp-skill regressed from 2/2 (8.8s) to 3/5 (11.5s): reps 4-5 ended with the correct persisted localStorage state but the wrong live view (URL #/, 0 visible items) and the model reported done anyway. chrome-devtools-mcp (5/5 @ 11.8s), ego-browser (5/5 @ 14.2s) and playwright-cli (5/5 @ 14.7s) stayed reliable. 2-rep screening therefore overstates reliability on this task."
+}

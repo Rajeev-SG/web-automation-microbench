@@ -1,0 +1,263 @@
+{
+  "id": "5-chrome-devtools-mcp",
+  "contender": "chrome-devtools-mcp",
+  "rep": "5",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.005,
+      "provider": "Together",
+      "request_id": "gen-1789236347-ViS3LSq3JSYFnevM75Qd",
+      "usage": {
+        "prompt_tokens": 515,
+        "completion_tokens": 17,
+        "total_tokens": 532,
+        "cost": 8.48925e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.575e-05,
+          "upstream_inference_prompt_cost": 7.725e-05,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill 2 1_5 \"Email supplier\""
+      },
+      "browser_s": 0.0,
+      "code": "fill 2 1_5 \"Email supplier\"",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\" focusable focused value=\"Email supplier\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 2,
+      "api_s": 0.479,
+      "provider": "Makora",
+      "request_id": "gen-1789236349-kPEl0I3lUYZI3FgXh0DH",
+      "usage": {
+        "prompt_tokens": 792,
+        "completion_tokens": 11,
+        "total_tokens": 803,
+        "cost": 0.0001148895,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011605,
+          "upstream_inference_prompt_cost": 0.00011088,
+          "upstream_inference_completions_cost": 5.17e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press_key 2 Enter"
+      },
+      "browser_s": 0.0,
+      "code": "press_key 2 Enter",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\" focusable focused\n  uid=3_0 checkbox \"\u276fMark all as complete\"\n  uid=3_1 checkbox \"Toggle Todo\"\n  uid=3_2 StaticText \"Email supplier\"\n  uid=3_3 StaticText \"1\"\n  uid=3_4 StaticText \" \"\n  uid=3_5 StaticText \"item\"\n  uid=3_6 StaticText \" left\"\n  uid=3_7 link \"All\" url=\"https://demo.playwright.dev/todomvc/#/\"\n    uid=3_8 StaticText \"All\"\n  uid=3_9 StaticText \" \"\n  uid=3_10 link \"Active\" url=\"https://demo.playwright.dev/todomvc/#/active\"\n    uid=3_11 StaticText \"Active\"\n  uid=3_12 StaticText \" \"\n  uid=3_13 link \"Completed\" url=\"https://demo.playwright.dev/todomvc/#/completed\"\n    uid=3_14 StaticText \"Completed\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 3,
+      "api_s": 0.562,
+      "provider": "Together",
+      "request_id": "gen-1789236351-6Mt78Pnc4xN5TNR23hrj",
+      "usage": {
+        "prompt_tokens": 1266,
+        "completion_tokens": 17,
+        "total_tokens": 1283,
+        "cost": 5.95584e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.016e-05,
+          "upstream_inference_prompt_cost": 5.166e-05,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill 2 1_5 \"Review invoice\""
+      },
+      "browser_s": 0.0,
+      "code": "fill 2 1_5 \"Review invoice\"",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\" focusable focused value=\"Review invoice\"\n  uid=3_0 checkbox \"\u276fMark all as complete\"\n  uid=3_1 checkbox \"Toggle Todo\"\n  uid=3_2 StaticText \"Email supplier\"\n  uid=3_3 StaticText \"1\"\n  uid=3_4 StaticText \" \"\n  uid=3_5 StaticText \"item\"\n  uid=3_6 StaticText \" left\"\n  uid=3_7 link \"All\" url=\"https://demo.playwright.dev/todomvc/#/\"\n    uid=3_8 StaticText \"All\"\n  uid=3_9 StaticText \" \"\n  uid=3_10 link \"Active\" url=\"https://demo.playwright.dev/todomvc/#/active\"\n    uid=3_11 StaticText \"Active\"\n  uid=3_12 StaticText \" \"\n  uid=3_13 link \"Completed\" url=\"https://demo.playwright.dev/todomvc/#/completed\"\n    uid=3_14 StaticText \"Completed\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 4,
+      "api_s": 0.488,
+      "provider": "Together",
+      "request_id": "gen-1789236353-scGORa8BiEFDfjoitpTg",
+      "usage": {
+        "prompt_tokens": 1750,
+        "completion_tokens": 11,
+        "total_tokens": 1761,
+        "cost": 0.0001284624,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012976,
+          "upstream_inference_prompt_cost": 0.00012426,
+          "upstream_inference_completions_cost": 5.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press_key 2 Enter"
+      },
+      "browser_s": 0.0,
+      "code": "press_key 2 Enter",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\" focusable focused\n  uid=3_0 checkbox \"\u276fMark all as complete\"\n  uid=3_1 checkbox \"Toggle Todo\"\n  uid=3_2 StaticText \"Email supplier\"\n  uid=5_0 checkbox \"Toggle Todo\"\n  uid=5_1 StaticText \"Review invoice\"\n  uid=3_3 StaticText \"2\"\n  uid=3_4 StaticText \" \"\n  uid=3_5 StaticText \"items\"\n  uid=3_6 StaticText \" left\"\n  uid=3_7 link \"All\" url=\"https://demo.playwright.dev/todomvc/#/\"\n    uid=3_8 StaticText \"All\"\n  uid=3_9 StaticText \" \"\n  uid=3_10 link \"Active\" url=\"https://demo.playwright.dev/todomvc/#/active\"\n    uid=3_11 StaticText \"Active\"\n  uid=3_12 StaticText \" \"\n  uid=3_13 link \"Completed\" url=\"https://demo.playwright.dev/todomvc/#/completed\"\n    uid=3_14 StaticText \"Completed\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 5,
+      "api_s": 0.477,
+      "provider": "Together",
+      "request_id": "gen-1789236354-EblQaDobOUjCGUJiF3NR",
+      "usage": {
+        "prompt_tokens": 2247,
+        "completion_tokens": 13,
+        "total_tokens": 2260,
+        "cost": 0.0001424313,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014387,
+          "upstream_inference_prompt_cost": 0.00013737,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 2 3_1"
+      },
+      "browser_s": 0.0,
+      "code": "click 2 3_1",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\"\n  uid=3_0 checkbox \"\u276fMark all as complete\"\n  uid=3_1 checkbox \"Toggle Todo\" checked focusable focused\n  uid=3_2 StaticText \"Email supplier\"\n  uid=6_0 button \"Delete\"\n  uid=5_0 checkbox \"Toggle Todo\"\n  uid=5_1 StaticText \"Review invoice\"\n  uid=3_3 StaticText \"1\"\n  uid=3_4 StaticText \" \"\n  uid=3_5 StaticText \"item\"\n  uid=3_6 StaticText \" left\"\n  uid=3_7 link \"All\" url=\"https://demo.playwright.dev/todomvc/#/\"\n    uid=3_8 StaticText \"All\"\n  uid=3_9 StaticText \" \"\n  uid=3_10 link \"Active\" url=\"https://demo.playwright.dev/todomvc/#/active\"\n    uid=3_11 StaticText \"Active\"\n  uid=3_12 StaticText \" \"\n  uid=3_13 link \"Completed\" url=\"https://demo.playwright.dev/todomvc/#/completed\"\n    uid=3_14 StaticText \"Completed\"\n  uid=6_1 button \"Clear completed\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 6,
+      "api_s": 0.49,
+      "provider": "Together",
+      "request_id": "gen-1789236356-4DCmvBN2anx3t9hjUKCc",
+      "usage": {
+        "prompt_tokens": 2768,
+        "completion_tokens": 13,
+        "total_tokens": 2781,
+        "cost": 0.0001589742,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016058,
+          "upstream_inference_prompt_cost": 0.00015408,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 2 3_10"
+      },
+      "browser_s": 0.0,
+      "code": "click 2 3_10",
+      "observation": "## Latest page snapshot\nuid=1_0 RootWebArea \"React \u2022 TodoMVC\" url=\"https://demo.playwright.dev/todomvc/#/active\"\n  uid=1_1 StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  uid=1_2 link \"real TodoMVC app.\" url=\"https://todomvc.com/\"\n    uid=1_3 StaticText \"real TodoMVC app.\"\n  uid=1_4 heading \"todos\" level=\"1\"\n  uid=1_5 textbox \"What needs to be done?\"\n  uid=3_0 checkbox \"\u276fMark all as complete\"\n  uid=5_0 checkbox \"Toggle Todo\"\n  uid=5_1 StaticText \"Review invoice\"\n  uid=3_3 StaticText \"1\"\n  uid=3_4 StaticText \" \"\n  uid=3_5 StaticText \"item\"\n  uid=3_6 StaticText \" left\"\n  uid=3_7 link \"All\" url=\"https://demo.playwright.dev/todomvc/#/\"\n    uid=3_8 StaticText \"All\"\n  uid=3_9 StaticText \" \"\n  uid=3_10 link \"Active\" focusable focused url=\"https://demo.playwright.dev/todomvc/#/active\"\n    uid=3_11 StaticText \"Active\"\n  uid=3_12 StaticText \" \"\n  uid=3_13 link \"Completed\" url=\"https://demo.playwright.dev/todomvc/#/completed\"\n    uid=3_14 StaticText \"Completed\"\n  uid=6_1 button \"Clear completed\"\n  uid=1_6 contentinfo\n    uid=1_7 StaticText \"Double-click to edit a todo\"\n    uid=1_8 StaticText \"Created by \"\n    uid=1_9 link \"Remo H. Jansen\" url=\"http://github.com/remojansen/\"\n      uid=1_10 StaticText \"Remo H. Jansen\"\n    uid=1_11 StaticText \"Part of \"\n    uid=1_12 link \"TodoMVC\" url=\"http://todomvc.com/\"\n      uid=1_13 StaticText \"TodoMVC\"\n"
+    },
+    {
+      "step": 7,
+      "api_s": 0.494,
+      "provider": "Together",
+      "request_id": "gen-1789236358-C9UsJiNFNTyVGdo2kA89",
+      "usage": {
+        "prompt_tokens": 3256,
+        "completion_tokens": 7,
+        "total_tokens": 3263,
+        "cost": 0.0001676466,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016934,
+          "upstream_inference_prompt_cost": 0.00016584,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 2.619,
+  "total_s": 11.365,
+  "api_s": 3.994,
+  "model_calls": 7,
+  "tokens": {
+    "input": 12594,
+    "output": 89,
+    "cached": 8832,
+    "reasoning": 0
+  },
+  "done": true,
+  "error": null,
+  "verification": "\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]}\"",
+  "pass": true
+}
