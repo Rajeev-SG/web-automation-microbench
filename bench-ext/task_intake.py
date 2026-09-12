@@ -47,22 +47,37 @@ def _connect(db=AGENT_SESSIONS_DB):
 
 
 def session_exists(session_id, db=AGENT_SESSIONS_DB):
-    """True iff the id is a real AgentSessions session (read-only)."""
+    """True iff the id is a real AgentSessions session (read-only).
+
+    CI runners have no AgentSessions DB; a missing/unreadable DB is reported as
+    "not a real session" (never raised), so callers stay hermetic and a spec with no
+    verifiable session is rejected rather than crashing the validator.
+    """
     if not session_id:
         return False
-    with _connect(db) as con:
-        row = con.execute("SELECT 1 FROM session_meta WHERE session_id = ? LIMIT 1", (session_id,)).fetchone()
-    return row is not None
+    if not Path(db).exists():
+        return False
+    try:
+        with _connect(db) as con:
+            row = con.execute("SELECT 1 FROM session_meta WHERE session_id = ? LIMIT 1", (session_id,)).fetchone()
+        return row is not None
+    except sqlite3.Error:
+        return False
 
 
 def find_sessions(keyword, db=AGENT_SESSIONS_DB, limit=20):
     """List real AgentSessions sessions whose title matches a keyword (read-only)."""
+    if not Path(db).exists():
+        return []
     like = f"%{keyword}%"
-    with _connect(db) as con:
-        rows = con.execute(
-            "SELECT session_id, source, start_ts, COALESCE(custom_title, title, '') "
-            "FROM session_meta WHERE lower(COALESCE(title,'') || ' ' || COALESCE(custom_title,'')) LIKE lower(?) "
-            "ORDER BY start_ts DESC LIMIT ?", (like, limit)).fetchall()
+    try:
+        with _connect(db) as con:
+            rows = con.execute(
+                "SELECT session_id, source, start_ts, COALESCE(custom_title, title, '') "
+                "FROM session_meta WHERE lower(COALESCE(title,'') || ' ' || COALESCE(custom_title,'')) LIKE lower(?) "
+                "ORDER BY start_ts DESC LIMIT ?", (like, limit)).fetchall()
+    except sqlite3.Error:
+        return []
     return [{"session_id": r[0], "source": r[1], "start_ts": r[2], "title": r[3]} for r in rows]
 
 
