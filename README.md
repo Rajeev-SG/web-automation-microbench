@@ -219,37 +219,87 @@ The isolated-vs-main-world finding is the general lesson: a synthetic `KeyboardE
 ## Repo layout
 
 ```
-artifacts/
-  2026-09-10/            Round 1: per-run JSON + screenshots, results.json,
-                         bench.py (runner), report.md, acceptance-manifest.md
+artifacts/                 Round 1-2 and Round 4 raw evidence
+  2026-09-10/              Round 1: per-run JSON + screenshots, results.json,
+                           bench.py (runner), report.md, acceptance-manifest.md
   2026-09-11/
-    results/             Round 2 per-run JSON + screenshots
-    bench-py.py          Round 2 runner (Browser Harness, BrowserCode)
-    bench-node.mjs       Round 2 runner (Stagehand, Magnitude)
-    report.md            Round 2 full report + Pareto analysis
+    results/               Round 2 per-run JSON + screenshots
+    bench-py.py            Round 2 runner (Browser Harness, BrowserCode)
+    bench-node.mjs         Round 2 runner (Stagehand, Magnitude)
+    report.md              Round 2 full report + Pareto analysis
     acceptance-manifest.md
-  2026-09-12/           Round 3: per-run JSON + screenshots, summary.json (in bench-ext)
-  2026-09-11-round4/
-    report.md           Round 4 report (visnia-ai/browser-agent re-score)
-    results/            Round 4 per-run JSON + step transcripts
+
+bench-ext/                 everything from Round 3 on
+  benchlib.py              shared library: task registry, model payload, run_rep loop,
+                           token/cost accounting, artifact paths
+  runners/                 one adapter per contender (~30), each driven by benchlib.run_cli
+  tests/                   unit suite + golden TodoMVC fixture
+  pass_rule.py             declarative pass-rule interpreter for harvested tasks
+  task_intake.py           validates a task spec against the #88 contract
+  task_ingest.py           validate -> register as benchlib.Task (no per-task code)
+  corpus/
+    SOURCE.json            producer revision + per-file sha256 pin
+    tasks/*.json           vendored harvested browser tasks (read-only)
+    refresh.py             re-vendor / drift-check against the producer checkout
+    screen.py              screen a harness across the corpus
+    report.py              aggregate runs into the capability scoreboard
+  delivery/                the issue #20 worked example spec
+  docs/                    benchmark-spec.md, task-intake.md, REAL-WORK-MANDATE.md
+  artifacts/
+    2026-09-11-round4/     Round 4: visnia-ai/browser-agent re-score
+    2026-09-12/            Round 3, plus pareto-corpus envelopes
+    2026-09-12-round6/     Round 6: remaining high-value contenders
+    2026-09-12-delivery/   issue #20 delivery run (top-2 on a real task)
+    2026-09-12/corpus/     harvested-corpus screening + capability scoreboard
+
 docs/
-  benchmark-spec.md      The contract any future round must follow
-.github/workflows/ci.yml  Validates JSON artifacts, screenshot presence, secret scan
+  benchmark-spec.md        the TodoMVC round contract
+.github/workflows/ci.yml   JSON artifacts, bench-ext unit tests, synthetic-fixture guard,
+                           corpus validation/ingestion, secret scan, README publishing rule
 ```
+
+New artifacts derive their folder from the wall clock (`benchlib.run_date()`), so a run never
+writes into a future-dated directory; `BENCH_RES` overrides it.
 
 ## Reproducing a round
 
-1. `export OPENROUTER_API_KEY=...` (never committed; CI scans for leaks).
-2. Round 1 runner needs Browser Use + Playwriter sessions running with fresh task tabs — edit the session/target IDs at the top of `artifacts/2026-09-10/bench.py`, then `python3 bench.py`.
-3. Round 2 runners need two isolated headless Chrome instances:
-   - port 9233 with `--user-data-dir=<repo>/bcode-data` (for BrowserCode)
-   - port 9234 with `--user-data-dir=<repo>/harness-data` (for Browser Harness)
-   Then: `python3 artifacts/2026-09-11/bench-py.py <rep> harness|bcode` and `node artifacts/2026-09-11/bench-node.mjs stagehand|magnitude <rep>`.
-4. Each script writes `results/<rep>-<contender>.json` plus a screenshot, and prints a one-line summary.
+**A scored microbenchmark round** (TodoMVC, one controlled instrument):
+
+```bash
+export OPENROUTER_API_KEY=$(security find-generic-password -s codex-openrouter -w)   # never committed
+python3 bench-ext/runners/<harness>.py 1 2                    # rep 1,2 = the screening plan
+python3 bench-ext/runners/<harness>.py 1 2 3 4 5 --task=<id>  # promote, and/or run another task
+```
+
+`benchlib.run_cli` parses reps and `--task=<id>`; the library owns the task text, the timing
+boundary, token accounting and the schema, so a runner only supplies the adapter. Rounds 1–2
+predate `benchlib` and still use their own runners:
+`python3 artifacts/2026-09-11/bench-py.py <rep> harness|bcode` and
+`node artifacts/2026-09-11/bench-node.mjs stagehand|magnitude <rep>` (two isolated Chrome
+instances, ports 9233/9234). Round 1 needs Browser Use + Playwriter sessions with fresh task tabs.
+
+**A real-work capability screen** (the harvested corpus):
+
+```bash
+python3 bench-ext/corpus/screen.py --harness <harness> --reps 1 --all
+python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/<run date>/corpus
+```
+
+Every run writes `<rep>-<harness>.json` plus a screenshot and prints a one-line summary; failed
+reps are kept, never retried away.
 
 ## Adding a new tool
 
-Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass criteria, provider config, timing boundary, required measurements, and the JSON transcript shape. Then follow the runner pattern in `artifacts/2026-09-11/` and add at least two scored reps. Update the README table and add a short Pareto note.
+Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass
+criteria, provider config, timing boundary, required measurements, and the JSON transcript shape.
+Then add `bench-ext/runners/<tool>.py`: an adapter with `name`, `doc`, `start()`, `act()`,
+`verify()`, `screenshot()` and `teardown()`, ending in `benchlib.run_cli(Adapter)`. Do not
+reimplement the task, the timer, the token accounting or the schema — `benchlib` owns those, and
+`bench-ext/tests/test_runner_task_flag.py` fails a runner that bypasses them.
+
+Score at least two reps of the TodoMVC microbenchmark, then screen the harvested corpus
+(`bench-ext/corpus/screen.py`) to see where it lands on real work. Update both tables in this
+README, and add a short Pareto note.
 
 ## Task parameterization — 12 Sep 2026
 

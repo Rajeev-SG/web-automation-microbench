@@ -17,6 +17,9 @@ README = REPO / "README.md"
 SCOREBOARD = REPO / "bench-ext" / "artifacts" / "2026-09-12" / "corpus" / "capability-scoreboard.json"
 
 #: README display name -> scoreboard harness id (the README labels two rows for readers).
+#: README citations that resolve in the producer repo, not this one.
+PRODUCER_CITED = {"docs/implementation/task-harvesting-v1.md"}
+
 HARNESS_ALIASES = {
     "browser-relay": "browser-relay",
     "raw-playwright baseline": "raw-playwright",
@@ -93,6 +96,33 @@ class ReadmeMatchesScoreboard(unittest.TestCase):
             self.assertIn(f"`{task}`", readme, f"{task} missing from the README")
         listed = set(re.findall(r"^\|\s*`([a-z0-9-]+)`\s*\|", readme, re.M))
         self.assertEqual(listed, set(agg["tasks"]))
+
+    def test_every_path_the_readme_cites_exists(self):
+        """A docs path that no longer resolves is how the layout section rotted.
+
+        Scans inline-code spans (the way the README cites paths anywhere in the file) and
+        requires each repo-relative path to exist. Patterns (`<tool>`, `*`) are skipped.
+        """
+        _, readme = _load()
+        cited = set()
+        for span in re.findall(r"`([^`\n]+)`", readme):
+            span = span.strip()
+            if any(ch in span for ch in "<>*|") or not span.startswith(
+                    ("bench-ext/", "artifacts/", "docs/", ".github/")):
+                continue
+            if span in PRODUCER_CITED:
+                continue
+            cited.add(span)
+        self.assertTrue(cited, "no repo paths cited in the README — did the format change?")
+        missing = sorted(p for p in cited if not (REPO / p).exists())
+        self.assertEqual(missing, [], f"README cites paths that do not exist: {missing}")
+
+    def test_repo_layout_lists_bench_ext_and_the_corpus(self):
+        _, readme = _load()
+        rest = readme[readme.index("## Repo layout"):]
+        block = rest[:rest.index("\n## ")]
+        for needed in ("bench-ext/", "benchlib.py", "runners/", "corpus/", "artifacts/", "docs/"):
+            self.assertIn(needed, block, f"Repo layout omits {needed}")
 
     def test_no_future_dated_headings(self):
         """The rig's clock is the only source of a run date (issue #27/#30)."""
