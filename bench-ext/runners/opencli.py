@@ -86,6 +86,6 @@ class OpenCli:
             self.chrome.kill(); self.chrome = None
 
 if __name__ == '__main__':
-    reps = sys.argv[1:] or ['1','2']
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         benchlib.run_rep(OpenCli(), rep, max_steps=12)

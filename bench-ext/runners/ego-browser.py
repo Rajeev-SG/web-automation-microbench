@@ -102,6 +102,6 @@ await page.screenshot({{ path: {json.dumps(path)} }});
             pass
 
 if __name__ == '__main__':
-    reps = sys.argv[1:] or ['1', '2']
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         benchlib.run_rep(EgoBrowser(), rep, max_steps=12)

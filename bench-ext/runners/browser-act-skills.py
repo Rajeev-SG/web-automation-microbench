@@ -76,6 +76,6 @@ class Adapter:
             pass
 
 if __name__ == '__main__':
-    reps = sys.argv[1:] or ['1', '2']
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         benchlib.run_rep(Adapter(), rep, max_steps=12)
