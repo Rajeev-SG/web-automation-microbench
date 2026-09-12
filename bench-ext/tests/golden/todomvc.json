@@ -1,0 +1,111 @@
+{
+  "_comment": "Golden file captured from benchlib.py BEFORE the issue #20 task-registry refactor. test_todomvc_golden.py asserts the refactored todomvc task is byte-identical.",
+  "task_id": "todomvc",
+  "instruction": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+  "url": "https://demo.playwright.dev/todomvc/",
+  "observe_js": "JSON.stringify({url:location.href,text:document.body.innerText,controls:Array.from(document.querySelectorAll('input,button,a,label')).filter(e=>e.getClientRects().length).map(e=>({tag:e.tagName,type:e.type,class:e.className,text:e.textContent.trim().slice(0,60),placeholder:e.placeholder,checked:e.checked,forAttr:e.htmlFor,id:e.id})),items:Array.from(document.querySelectorAll('.todo-list li')).map(e=>({text:e.innerText.trim(),class:e.className}))})",
+  "verify_js": "JSON.stringify({url:location.href,items:Array.from(document.querySelectorAll('.todo-list li')).map(e=>({text:e.innerText.trim(),completed:e.classList.contains('completed')})),saved:JSON.parse(localStorage.getItem('react-todos')||'[]').map(x=>({title:x.title,completed:x.completed}))})",
+  "verify_vectors": [
+    {
+      "name": "pass",
+      "input": {
+        "url": "https://demo.playwright.dev/todomvc/#/active",
+        "items": [
+          {
+            "text": "Review invoice",
+            "completed": false
+          }
+        ],
+        "saved": [
+          {
+            "title": "Email supplier",
+            "completed": true
+          },
+          {
+            "title": "Review invoice",
+            "completed": false
+          }
+        ]
+      },
+      "expect_pass": true
+    },
+    {
+      "name": "wrong-filter",
+      "input": {
+        "url": "https://demo.playwright.dev/todomvc/#/",
+        "items": [
+          {
+            "text": "Review invoice",
+            "completed": false
+          }
+        ],
+        "saved": [
+          {
+            "title": "Email supplier",
+            "completed": true
+          },
+          {
+            "title": "Review invoice",
+            "completed": false
+          }
+        ]
+      },
+      "expect_pass": false
+    },
+    {
+      "name": "two-items-visible",
+      "input": {
+        "url": "https://demo.playwright.dev/todomvc/#/active",
+        "items": [
+          {
+            "text": "Email supplier",
+            "completed": true
+          },
+          {
+            "text": "Review invoice",
+            "completed": false
+          }
+        ],
+        "saved": [
+          {
+            "title": "Email supplier",
+            "completed": true
+          },
+          {
+            "title": "Review invoice",
+            "completed": false
+          }
+        ]
+      },
+      "expect_pass": false
+    },
+    {
+      "name": "nothing-done",
+      "input": {
+        "url": "https://demo.playwright.dev/todomvc/#/active",
+        "items": [
+          {
+            "text": "Review invoice",
+            "completed": false
+          }
+        ],
+        "saved": [
+          {
+            "title": "Email supplier",
+            "completed": false
+          },
+          {
+            "title": "Review invoice",
+            "completed": false
+          }
+        ]
+      },
+      "expect_pass": false
+    },
+    {
+      "name": "empty",
+      "input": null,
+      "expect_pass": false
+    }
+  ]
+}
