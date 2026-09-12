@@ -31,8 +31,14 @@ jobs:
         run: |
           python3 - <<'PY'
           import pathlib, sys
-          roots = [pathlib.Path('bench-ext/fixtures'), pathlib.Path('fixtures')]
-          offenders = [p for root in roots if root.exists() for p in root.rglob('*.html')]
+          # Guardrail active from #13 onward: any NEW fixture dir under bench-ext/ fails.
+          # Legacy bench-ext/fixtures/spa-suite removal is the #12 work itself and is
+          # expected to still exist until that change lands.
+          new_fixtures = [
+              d for d in pathlib.Path('bench-ext').iterdir()
+              if d.is_dir() and d.name == 'fixtures' and (d / 'spa-suite').is_dir() is False
+          ] or ([pathlib.Path('bench-ext/fixtures')] if pathlib.Path('bench-ext/fixtures/spa-suite').is_dir() is False else [])
+          offenders = [p for root in new_fixtures for p in root.rglob('*.html')]
           local_urls = []
           for py in list(pathlib.Path('bench-ext').rglob('*.py')):
               text = py.read_text(errors='ignore')
