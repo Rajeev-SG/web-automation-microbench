@@ -98,6 +98,6 @@ class Adapter:
 
 if __name__ == '__main__':
     # reps 1-2 = screening; 3-5 promote the fastest Round-6 arrival to a >=5-rep row (issue #1)
-    reps = sys.argv[1:] or ['1', '2']
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         benchlib.run_rep(Adapter(), rep, max_steps=18)

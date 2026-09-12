@@ -1,0 +1,99 @@
+{
+  "id": "2-browser-relay",
+  "contender": "browser-relay",
+  "rep": "2",
+  "task": "chanel-gb-tag-check",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.551,
+      "provider": "Modal",
+      "request_id": "gen-1789238430-7Y3GPeZABuLCC7vx4XeX",
+      "usage": {
+        "prompt_tokens": 1036,
+        "completion_tokens": 130,
+        "total_tokens": 1166,
+        "cost": 0.000654588,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0006612,
+          "upstream_inference_prompt_cost": 0.0004662,
+          "upstream_inference_completions_cost": 0.000195
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(function(){var s=document.documentElement.outerHTML;var gtm=[...new Set((s.match(/GTM-[A-Z0-9]+/g)||[]))];var ads=[...new Set((s.match(/AW-[0-9]{6,}/g)||[]))];var pin=typeof window.pintrk!=='undefined'||/ct\\.pinterest\\.com|pintrk/.test(s);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return JSON.stringify(window.__bench_finding)})()\""
+      },
+      "browser_s": 0.129,
+      "code": "browser-relay eval \"(function(){var s=document.documentElement.outerHTML;var gtm=[...new Set((s.match(/GTM-[A-Z0-9]+/g)||[]))];var ads=[...new Set((s.match(/AW-[0-9]{6,}/g)||[]))];var pin=typeof window.pintrk!=='undefined'||/ct\\.pinterest\\.com|pintrk/.test(s);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return JSON.stringify(window.__bench_finding)})()\"",
+      "tool_error": false,
+      "observation": "{\"gtm\":[\"GTM-KNZ4RBR\",\"GTM-5CXVSL2\"],\"googleAds\":[],\"pinterest\":false}\n{\"url\":\"https://www.chanel.com/gb/\",\"title\":\"CHANEL Official Website: Fashion, Fragrance, Beauty, Watches, Fine Jewelry | CHANEL\",\"scripts\":[\"https://www.googletagmanager.com/gtm.js?id=GTM-KNZ4RBR\",\"https://www.googletagmanager.com/gtm.js?id=GTM-5CXVSL2&gtm=4e6992\",\"https://www.googletagmanager.com/gtm.js?id=GTM-KNZ4RBR\",\"https://se.monetate.net/js/3/a-20292224/p/gb.chanel.com/t1782721633/bb39d57ab4159e43/custom.js\",\"https://www.chanel.com/_ui/responsive/theme-onechanel/head-3.91.4.js\",\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\",\"https://se.monetate.net/js/2/a-20292224/p/gb.chanel.com/entry.js\",\"https://www.chanel.com/_ui/responsive/common/js/jquery-3.6.0.min.js?v=3.91.4\",\"https://cdn.cookielaw.org/scripttemplates/202411.1.0/otBannerSdk.js\",\"https://f.monetate.net/trk/4/s/a-20292224/p/gb.chanel.com/1965553658-0?mr=t1782721633&mi=%272.1794417444.1789238396580%27&cs=!t&e=!(viewPage,gt)&pt=main&pc=!(lang_en,country_GB)&cv=(axis:homepage,country:GB,disjointGroup:%274%27,lang:en)&r=%27%27&sw=1512&sh=982&sc=30&j=!f&u=%27https://www.chanel.com/gb/%27&fl=!f&hvc=!t&eoq=!t\",\"https://www.chanel.com/_ui/responsive/theme-onechanel/vendors-3.91.4.js\",\"https://www.chanel.com/_ui/responsive/theme-onechanel/onechanel-3.91.4.js\",\"https://www.chanel.com/ruxitagentjs_ICA15789NPRTUVXfhqux_10343260715123811.js\",\"https://www.chanel.com/iRwpCx39UCOoceZv59zK14gW/L7p7fLDphJJrVD/WHQ5MQ/SV/kKcQtNbycB\",\"https://www.chanel.com/iRwpCx39UCOoceZv59zK14gW/L7/c00sMQ/Gi/NxcxowVHQp\",\"https://www.chanel.com/iRwpCx39UCOoceZv59zK14gW/zJp7fLtE/WmM9MQ/R3/sBPA5eUFUc?v=9e543cc2-5120-5c82-d3d1-275ae9d75f65\",\"https://www.chanel.com/puls-lib/1.46.23/js/main.js\"],\"dataLayer\":5,\"globals\":{\"pintrk\":\"undefined\",\"gtag\":\"undefined\",\"fbq\":\"undefined\"}}"
+    },
+    {
+      "step": 2,
+      "api_s": 1.237,
+      "provider": "Modal",
+      "request_id": "gen-1789238432-SAKHvpCISuR1PbwWyr56",
+      "usage": {
+        "prompt_tokens": 1917,
+        "completion_tokens": 7,
+        "total_tokens": 1924,
+        "cost": 0.0004994649,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00050451,
+          "upstream_inference_prompt_cost": 0.00049401,
+          "upstream_inference_completions_cost": 1.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 1.652,
+  "total_s": 2.917,
+  "api_s": 2.788,
+  "browser_s": 0.129,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Modal"
+  ],
+  "tokens": {
+    "input": 2953,
+    "output": 137,
+    "cached": 1024,
+    "reasoning": 0
+  },
+  "cost": 0.00029413,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.chanel.com/gb/\",\"truth\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-KNZ4RBR\",\"GTM-5CXVSL2\"],\"googleAds\":[],\"pinterest\":false}}",
+  "pass": true
+}

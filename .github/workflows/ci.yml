@@ -20,6 +20,8 @@ jobs:
               print('\n'.join(bad)); sys.exit(1)
           print('all artifact JSON valid')
           PY
+      - name: bench-ext unit tests (TodoMVC golden, provenance rule, replication)
+        run: python3 -m unittest discover -s bench-ext/tests -t bench-ext
       - name: Screenshots present
         run: |
           c1=$(find artifacts/2026-09-10 -name '*.png' | wc -l)

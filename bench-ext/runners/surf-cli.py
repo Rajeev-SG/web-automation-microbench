@@ -76,5 +76,5 @@ def surf(*args, timeout=45):
     return (r.stdout + r.stderr).strip()
 
 if __name__ == '__main__':
-    for rep in ['1', '2']:
+    for rep in benchlib.reps_from_argv(sys.argv[1:]):
         benchlib.run_rep(Adapter(), rep, max_steps=22)

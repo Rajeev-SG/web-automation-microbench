@@ -30,16 +30,17 @@ def ensure_up():
         c = cft_chrome.Chrome(CDP, extensions=[EXT], start_url=benchlib.URL_TASK)
         c.launch()
         _state['chrome'] = c
-    # wait for the extension to attach a tab
+    # wait for the extension to attach a tab hosting the task's site (task-agnostic)
+    host = benchlib.URL_TASK.split('/')[2].lower() if '//' in benchlib.URL_TASK else 'todomvc'
     end = time.time() + 30
     while time.time() < end:
         tabs = br(['tabs'], timeout=30)
-        m = [ln for ln in tabs.splitlines() if 'todomvc' in ln.lower()]
+        m = [ln for ln in tabs.splitlines() if host in ln.lower()]
         if m:
             _state['tab'] = m[0].split('\t')[0].strip()
             return _state['tab']
         time.sleep(1)
-    raise RuntimeError('browser-relay: no todomvc tab attached: ' + tabs[:300])
+    raise RuntimeError(f'browser-relay: no tab for {host} attached: ' + tabs[:300])
 
 def _cleanup():
     try:
@@ -53,12 +54,11 @@ atexit.register(_cleanup)
 class BrowserRelay:
     name = 'browser-relay'
     doc = ('Drive the browser ONLY with the native `browser-relay` CLI (one CLI invocation per step). '
-           'Adding a todo is one action: `type "<text>" --selector .new-todo --submit` commits with Enter. '
-           'Toggle the "Email supplier" checkbox with `click ".todo-list li:nth-child(1) .toggle"`. '
-           'Open the Active filter with `click "a[href=\\"#/active\\"]"`. Read state with '
-           '`eval "document.body.innerText"`. Use `observe` for an accessibility snapshot. '
-           'Respond as JSON {"code":"browser-relay <cmd>"} per step, and {"done":true} once the final state '
-           '(1 item left, only Review invoice shown, Active filter) is observed. Strict JSON only, no prose.')
+           'Useful commands: `navigate <url>`, `type "<text>" --selector "<sel>"` (add `--submit` to press Enter), '
+           '`click "<selector>"`, `key <Key>`, `eval "<js>"`, `observe` (accessibility snapshot), '
+           '`screenshot <path>`, `tabs`, `focus`. Read state with `eval` (e.g. `eval "document.title"`). '
+           'Respond as JSON {"code":"browser-relay <cmd>"} per step, and {"done":true} once the task '
+           'instruction has been carried out and the required end state is observed. Strict JSON only, no prose.')
 
     def start(self):
         t0 = time.perf_counter()
@@ -97,5 +97,8 @@ class BrowserRelay:
 
 
 if __name__ == '__main__':
-    rep = sys.argv[1] if len(sys.argv) > 1 else '1'
-    benchlib.run_rep(BrowserRelay(), rep)
+    args = sys.argv[1:]
+    task = next((a.split('=', 1)[1] for a in args if a.startswith('--task=')), None)
+    reps = benchlib.reps_from_argv([a for a in args if not a.startswith('--task=')])
+    for rep in reps:
+        benchlib.run_rep(BrowserRelay(), rep, task=task)

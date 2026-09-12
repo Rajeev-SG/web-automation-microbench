@@ -182,6 +182,6 @@ await browser.disconnect();
         return log
 
 if __name__ == '__main__':
-    reps = sys.argv[1:] or ['1', '2']
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         NativeRun().run(rep)

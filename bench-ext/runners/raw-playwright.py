@@ -70,6 +70,6 @@ Do not navigate or reload; the harness manages state. Return ONLY JSON: {"code":
         except Exception: pass
 
 if __name__ == '__main__':
-    reps = [int(x) for x in sys.argv[1:]] or [1, 2]
+    reps = benchlib.reps_from_argv(sys.argv[1:])
     for rep in reps:
         benchlib.run_rep(Adapter(), rep)

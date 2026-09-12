@@ -45,14 +45,13 @@ atexit.register(_cleanup)
 
 class BrowserSkill:
     name = 'BrowserSkill'
-    doc = ('Drive the browser ONLY with the native `bsk` CLI. One logical action per step; chain the two '
+    doc = ('Drive the browser ONLY with the native `bsk` CLI. One logical action per step; chain the few '
            'calls one action needs with " && ". '
-           'Add a todo: `fill ".new-todo" --value "Email supplier" && press Enter`. '
-           'Tick the first todo\'s checkbox: `click ".todo-list li:nth-child(1) .toggle"`. '
-           'Open the Active filter: `click "a[href=\\"#/active\\"]"`. '
-           'Inspect with `snapshot` (aria @eN refs) or `evaluate "document.body.innerText"`. '
-           'Respond as JSON {"code":"bsk ..."} for each step and {"done":true} once the final state '
-           '(Active filter showing only "Review invoice", 1 item left) is observed. Strict JSON only.')
+           'Useful verbs: `navigate <url>`, `fill "<selector>" --value "<text>"`, `press <Key>`, '
+           '`click "<selector-or-@ref>"`, `snapshot` (aria @eN refs), `evaluate "<js>"`, `screenshot --out <path>`. '
+           'Read state with `evaluate` (e.g. `evaluate "document.title"`) and `snapshot`. '
+           'Respond as JSON {"code":"bsk ..."} for each step and {"done":true} once the task instruction '
+           'has been carried out and the required end state is observed. Strict JSON only.')
 
     def start(self):
         t0 = time.perf_counter()
@@ -91,5 +90,8 @@ class BrowserSkill:
 
 
 if __name__ == '__main__':
-    rep = sys.argv[1] if len(sys.argv) > 1 else '1'
-    benchlib.run_rep(BrowserSkill(), rep)
+    args = sys.argv[1:]
+    task = next((a.split('=', 1)[1] for a in args if a.startswith('--task=')), None)
+    reps = benchlib.reps_from_argv([a for a in args if not a.startswith('--task=')])
+    for rep in reps:
+        benchlib.run_rep(BrowserSkill(), rep, task=task)
