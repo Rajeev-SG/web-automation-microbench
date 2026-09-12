@@ -66,3 +66,16 @@ Gotchas: (1) hand-rolled MCP stdio clients must use `select.select` for timeouts
 (2) CDP keyboard events only reach a page whose window is foreground — browsers that press keys
 (browser-relay `key`/`--submit`) need an explicit `focus` step; (3) never log seeded provider config
 (contains the API key) into artifacts.
+
+## Round 5 gotchas (2026-09-12)
+- **Persistent-profile tools silently reuse a stale browser.** browser-agent's `launch()` early-returns the existing
+  debug port for its profile, so a browser left over from a previous run (on the wrong page) is reused. Kill that
+  profile's Chrome *before* wiping the profile, then pre-launch and assert the task URL is in front.
+- **Content-script (isolated world) keyboard events do not reach React.** Mouse events do. Dispatch keys from the
+  page's MAIN world (`chrome.scripting.executeScript({world:'MAIN'})` from the background) — and target the tab the
+  agent is driving (`targetTabId`), never `sender.tab.id` (that injects into the agent's own UI tab).
+- **Synthetic Enter commits React inputs fine** when dispatched on the focused (or last-clicked) input; `document.activeElement`
+  is often `<body>` after a tool blurs between actions, and a keydown on `<body>` bubbles *up*, missing React's root listener.
+- page-agent's approval gate is `chrome.storage.local.allowAllHubConnection`, seeded in the **extension's service-worker**
+  context (a web page has no `chrome.storage`), and its MCP bridge auto-`open`s a launcher in the default browser → neuter
+  with a no-op `open` on PATH so the user's Chrome can't race for the hub slot.

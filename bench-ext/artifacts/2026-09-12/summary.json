@@ -157,10 +157,11 @@
     "passes": 0,
     "median_s": null,
     "times_s": [],
-    "tok_in_avg": 0,
-    "tok_out_avg": 0,
-    "tok_cached_avg": 0,
-    "note": "NOT SCORED \u2014 blocked on boot: (1) branded Google Chrome now silently ignores --load-extension (logged: '--load-extension is not allowed in Google Chrome, ignoring'); used Chrome for Testing 153 (~/.agent-browser) where the extension loads ENABLED; (2) sidepanel boot blocks on a userscripts-permission dialog; dismissed programmatically (handleDeny) and IndexedDB storage inits (7 stores verified); GLM key written to provider-keys/openrouter. UI stays 'Loading...' pending full agent init \u2014 needs an interactive first-run (grant Allow User Scripts in chrome://extensions details) before reps can run."
+    "tok_in_avg": null,
+    "tok_out_avg": null,
+    "tok_cached_avg": null,
+    "cost_per_run_usd": null,
+    "note": "UNSCOREABLE at commit 104788c. Builds after pinning @mariozechner/pi-{ai,agent-core,web-ui} to published 0.73.1 + adding @opentelemetry/api, then dies at runtime: 'agent.appendMessage is not a function' (needs pi-agent-core 0.85.x, published nowhere; @mariozechner tops out at 0.73.1). 0.85.1 exists only in the vendored pi-mono clone, whose packages/web-ui is ABSENT and which cannot build here (tsgo missing, unbuilt pi-telemetry). No published+vendored combination both builds and runs."
   },
   {
     "contender": "notte",
@@ -225,16 +226,31 @@
   {
     "contender": "page-agent",
     "reps": 2,
-    "passes": 0,
-    "median_s": 527.0,
+    "passes": 2,
+    "median_s": 25.3,
     "times_s": [
-      526.653,
-      900.0
+      22.605,
+      28.037
     ],
     "tok_in_avg": null,
     "tok_out_avg": null,
     "tok_cached_avg": null,
     "cost_per_run_usd": null,
-    "note": "alibaba/page-agent ext 1.12.4. Approval gate cleared by seeding chrome.storage.local.allowAllHubConnection in the extension SW over CDP; agent runs but has NO key-press action, so it cannot commit a TodoMVC todo. rep1 agent-reported failure at 527s; rep2 exceeded the 900s budget. Issue #11 fix-up."
+    "note": "alibaba/page-agent \u2014 PATCHED build (bench-local fork), not the stock release; stock scores 0/2 because it has no key-press action. Patch: added a `send_keys` tool; background handles press_key by dispatching in the page's MAIN world via chrome.scripting.executeScript against targetTabId; added the `scripting` permission. Isolated-world key events never reach React \u2014 that is the general lesson. Approval gate still cleared by seeding chrome.storage.local.allowAllHubConnection in the extension service worker."
+  },
+  {
+    "contender": "browser-agent-tb",
+    "reps": 2,
+    "passes": 1,
+    "median_s": 200.1,
+    "times_s": [
+      391.027,
+      9.249
+    ],
+    "tok_in_avg": 400354,
+    "tok_out_avg": 12736.5,
+    "tok_cached_avg": 0,
+    "cost_per_run_usd": null,
+    "note": "Taylor-Bayouth/browser-agent (the ORIGINAL of the two same-name projects). Own agent loop, timed as one run. Not an adapter bug \u2014 tool calls parse fine; the real blocker was its PERSISTENT isolated Chrome profile silently reusing a stale browser from a previous run. Fixed by killing that profile's Chrome + wiping it + pre-loading the task URL. rep2 2/2-clean 9.2s; rep1 thrashed 391s and left 4 todos while claiming success. Model timeouts raised 10s->30s for OpenRouter."
   }
 ]

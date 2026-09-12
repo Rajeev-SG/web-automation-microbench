@@ -64,7 +64,7 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
 ## Master leaderboard — every benchmarked tool
 
-One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness and Round 3 page-agent could not use latency routing.
+One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter.
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
@@ -88,13 +88,14 @@ One row per harness × best-model combination. `Median time` is the median acros
 | **Playwriter** | [remorses/playwriter](https://github.com/remorses/playwriter) | 1 | 2/2 | 10.1s | n/a | n/a |
 | **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
 | **notte** | [nottelabs/notte](https://github.com/nottelabs/notte) | 3 | 2/2 | 171.8s | n/a | n/a |
-| **page-agent** | [alibaba/page-agent](https://github.com/alibaba/page-agent) | 3 | 0/2 | 527s+ | n/a | n/a |
+| **page-agent** (patched: `send_keys`) | [alibaba/page-agent](https://github.com/alibaba/page-agent) | 5 | 2/2 | 25.3s | n/a | n/a |
+| **browser-agent** (Taylor-Bayouth) | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | 5 | 1/2 | 200.1s | ~19k–782k / ~0.5k–25k | n/a |
 
 ### Excluded after genuine attempts
 
 | Tool | Repo | Reason |
 |---|---|---|
-| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Not scored. Build blocker **solved locally 2026-09-12** — the earlier "blocked upstream" reading was wrong. `dist-chrome` now builds after (a) pinning `@mariozechner/pi-{ai,agent-core,web-ui}` to the self-consistent published **0.73.1** family and (b) adding the missing `@opentelemetry/api` peer that `@mistralai/mistralai` pulls in. The fresh build failed only because the clone mixed the vendored `pi-mono` 0.85.1 (whose `pi-agent-core` imports `DEFAULT_MAX_AGENT_RETRY_DELAY_MS` / `retryDelayMs`, which **no** published `pi-ai` exports) with a `file:../pi-mono/packages/web-ui` path that does not exist in the vendored tree. Still unscored: the sidepanel first-run (`src/sidepanel.ts` userScripts gate + agent init) has to be driven headlessly. |
+| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Unscoreable at this commit (104788c) — dependency set is not reproducible. **Build** works after pinning `@mariozechner/pi-{ai,agent-core,web-ui}` to the published **0.73.1** family and adding the missing `@opentelemetry/api` peer. **Runtime** then fails: `TypeError: agent.appendMessage is not a function` — sitegeist's code needs `pi-agent-core` 0.85.x, which is published nowhere (`@mariozechner` tops out at 0.73.1). The 0.85.1 sources only exist in the vendored `pi-mono` clone, whose `packages/web-ui` is **absent** and which cannot build here (`tsgo` missing; unbuilt `pi-telemetry`). So there is no combination of published + vendored packages that both builds and runs. Verified 2026-09-12; extension loading itself is solved (Chrome for Testing `--load-extension`). |
 
 ## Round 3 extension fix-up — 12 Sep 2026
 
@@ -111,6 +112,24 @@ The extension-backed contenders that Round 3 could not load are now scored. The 
 **page-agent scores 0/2, and the reason is the tool, not the harness.** After clearing the approval gate, its built-in action set is `click_element_by_index`, `input_text`, `select_dropdown_option`, `scroll`, `scroll_horizontally`, `execute_javascript`, `wait`, `ask_user`, `done` — there is no key-press action. The TodoMVC task cannot be finished without pressing Enter after typing, and the model filled the field across ~16 attempts on 5 tabs without ever committing a todo (rep 1: 527s, "Task failed"; rep 2: same, cut at the 900s budget).
 
 The **Taylor-Bayouth `browser-agent`** exclusion row was removed and the entry replaced by the working [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent), scored in Round 4 (2/2, 32.5s, `bench-ext/artifacts/2026-09-13/`). Note these are **two unrelated projects that share a name**, not a rewrite: neither is a GitHub fork of the other (`fork: false, parent: null`), the contributors and authors are disjoint, and they publish different npm packages. The Taylor-Bayouth entry was non-functional (its adapter loop never wired tool calls), so the row was dropped rather than kept as a dead duplicate.
+
+## Round 5 — 12 Sep 2026: the two `browser-agent` projects, page-agent and sitegeist
+
+Four rows that were open after Round 3, worked with Chrome for Testing + the shared helpers (`bench-ext/cft_chrome.py`, `bench-ext/cdp.mjs`).
+
+| Tool | Result | What was actually wrong |
+|---|---|---|
+| **browser-agent** (Taylor-Bayouth) | **1/2**, median 200.1s | Not an adapter bug: its tool calls parse fine. Its Chrome uses a **persistent isolated profile**, so a stale browser from a previous run was silently reused (it worked a Grafana tab). Fixed by killing that profile's Chrome, wiping the profile, and pre-loading the task URL. Rep 2 then passed in 9.2s; rep 1 thrashed to 391s and left **4 todos** while reporting "Task complete" — a false success claim the shared verifier catches. |
+| **page-agent** (alibaba) | **2/2**, median 25.3s — *patched* | Two real defects. (1) No key-press action at all (upstream `// @todo send_keys`), so it can never commit a TodoMVC todo — stock build scores 0/2. (2) Even once added, key events dispatched from the extension's **isolated** content-script world never reach React; the dispatch has to run in the page's MAIN world via `chrome.scripting.executeScript`. Patch: `send_keys` tool + MAIN-world dispatch + `scripting` permission. |
+| **browser-agent** (visnia-ai) | already scored | Round 4, 2/2 @ 32.5s. Unrelated same-name project. |
+| **sitegeist** (badlogic) | still excluded, new evidence | Builds after pinning the `pi-*` family to 0.73.1, then dies at runtime on `agent.appendMessage` — it needs an unpublished `pi-agent-core` 0.85.x whose sibling `pi-web-ui` is missing from the vendored monorepo, which also won't build here. Not a local fix. |
+
+**page-agent patch** (kept as a bench-local fork; the stock 0/2 is recorded above):
+1. `packages/core/src/tools/index.ts` — add a `send_keys` tool (key + optional element index).
+2. `packages/extension/src/agent/RemotePageController.background.ts` — handle `press_key` by running the key dispatch in the page's **MAIN** world via `chrome.scripting.executeScript`, targeting `targetTabId` (not the caller's tab).
+3. `packages/extension/wxt.config.js` — add the `scripting` permission.
+
+The isolated-vs-main-world finding is the general lesson: a synthetic `KeyboardEvent` from a content script does **not** reach the page's React listener, while the identical dispatch from the main world commits correctly.
 
 ## What "cost" means here
 
