@@ -103,7 +103,7 @@ python3 bench-ext/task_intake.py --validate \
   /Users/rajeev/Code/codex-session-orchestration-analysis/benchmarks/corpus/tasks
 ```
 
-Current result: `{"specs": 14, "valid": 14, "quarantined": 0}` — 9 browser-domain and 5
+Current result: `{"specs": 16, "valid": 16, "quarantined": 0}` — 11 browser-domain and 5
 coding task definitions, every one carrying `source_session_id`, `source_url`,
 `verified_against`, a deterministic verifier and a recoverable pre-state, per
 REAL-WORK-MANDATE.md, with no translation layer required.

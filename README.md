@@ -234,16 +234,16 @@ The scored corpus is harvested in
 (issue #88, closed) and offered to this repo as conformant task specs.
 `bench-ext/task_intake.py` validates them; `benchlib` runs them.
 
-The published corpus holds **14 real task definitions** — 9 browser-domain (marketing-tag
+The published corpus holds **16 real task definitions** — 11 browser-domain (marketing-tag
 inspection, third-party script inventory, SEO/structured-data audits, crawlability,
-canvas diagram creation) and 5 coding (replayable, each proven to fail at its pre-task SHA
+canvas diagram creation, and consent-to-add-to-cart tag checks on two retailers) and 5 coding (replayable, each proven to fail at its pre-task SHA
 and pass at its gold commit). Every one is auth-free with a deterministic verifier.
 
 ```bash
 git clone https://github.com/Rajeev-SG/codex-session-orchestration-analysis
 python3 bench-ext/task_intake.py --validate \
   ./codex-session-orchestration-analysis/benchmarks/corpus/tasks
-# {"schema": "pareto-research-task/v1", "specs": 14, "valid": 14, "quarantined": 0}
+# {"schema": "pareto-research-task/v1", "specs": 16, "valid": 16, "quarantined": 0}
 ```
 
 Their provenance rules, schema and admission gates are documented in
