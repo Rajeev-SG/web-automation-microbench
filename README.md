@@ -9,6 +9,9 @@ defect-case handling). There is no excuse for synthetic benchmark tasks while
 that corpus exists. Full rule, sources and mandatory provenance fields:
 [`bench-ext/docs/REAL-WORK-MANDATE.md`](bench-ext/docs/REAL-WORK-MANDATE.md).
 Tracked in issue #12.
+**Exception, narrow and explicit**: the TodoMVC round stays as a *latency
+microbenchmark* (controlled instrument, deterministic harness check) — it is
+not real work, not capability evidence, and must never be cited as such.
 
 # Web Automation Microbenchmarks
 
