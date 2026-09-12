@@ -35,53 +35,62 @@
   },
   {
     "contender": "chrome-cdp-skill",
-    "reps": 2,
-    "passes": 2,
-    "median_s": 8.8,
+    "reps": 5,
+    "passes": 3,
+    "median_s": 11.53,
     "times_s": [
       7.67,
-      9.92
+      9.92,
+      11.53,
+      13.04,
+      16.27
     ],
-    "tok_in_avg": 18822,
-    "tok_out_avg": 258,
-    "cost_per_run_usd": 0.00295262,
+    "tok_in_avg": 21146,
+    "tok_out_avg": 323,
+    "cost_per_run_usd": 0.00833367,
     "cost_source": "tokens x rate card",
     "inner_llm_calls_avg": null,
-    "tok_cache_avg": 15744,
+    "tok_cache_avg": 15296,
     "note": ""
   },
   {
     "contender": "chrome-devtools-mcp",
-    "reps": 2,
-    "passes": 2,
-    "median_s": 13.11,
+    "reps": 5,
+    "passes": 5,
+    "median_s": 11.8,
     "times_s": [
       11.35,
+      11.37,
+      11.8,
+      13.9,
       14.86
     ],
     "tok_in_avg": 12594,
     "tok_out_avg": 89,
-    "cost_per_run_usd": 0.0019336,
+    "cost_per_run_usd": 0.004834,
     "cost_source": "tokens x rate card",
     "inner_llm_calls_avg": null,
-    "tok_cache_avg": 11968,
+    "tok_cache_avg": 6554,
     "note": ""
   },
   {
     "contender": "ego-browser",
-    "reps": 2,
-    "passes": 2,
-    "median_s": 13.73,
+    "reps": 5,
+    "passes": 5,
+    "median_s": 14.18,
     "times_s": [
+      10.19,
       13.28,
-      14.18
+      14.18,
+      16.04,
+      23.41
     ],
-    "tok_in_avg": 13360,
-    "tok_out_avg": 102,
-    "cost_per_run_usd": 0.00205507,
+    "tok_in_avg": 12344,
+    "tok_out_avg": 99,
+    "cost_per_run_usd": 0.00475318,
     "cost_source": "tokens x rate card",
     "inner_llm_calls_avg": null,
-    "tok_cache_avg": 10752,
+    "tok_cache_avg": 5709,
     "note": ""
   },
   {
@@ -139,19 +148,22 @@
   },
   {
     "contender": "playwright-cli",
-    "reps": 2,
-    "passes": 2,
-    "median_s": 15.19,
+    "reps": 5,
+    "passes": 5,
+    "median_s": 14.72,
     "times_s": [
+      14.43,
       14.46,
-      15.93
+      14.72,
+      15.93,
+      20.18
     ],
-    "tok_in_avg": 21911,
-    "tok_out_avg": 114,
-    "cost_per_run_usd": 0.00334365,
+    "tok_in_avg": 21712,
+    "tok_out_avg": 113,
+    "cost_per_run_usd": 0.00828318,
     "cost_source": "tokens x rate card",
     "inner_llm_calls_avg": null,
-    "tok_cache_avg": 15584,
+    "tok_cache_avg": 14643,
     "note": ""
   },
   {

@@ -19,8 +19,10 @@ latency microbenchmark. All numbers below come from the per-run JSON in
 - **Verification:** the shared `benchlib.VERIFY_JS` + `check_pass` (final URL `#/active`,
   exactly one visible non-completed "Review invoice", and `localStorage["react-todos"]` exactly
   `[{Email supplier,true},{Review invoice,false}]`). The agent's own "done" is never sufficient.
-- **Reps:** ≥2 scored reps per runnable contender; HyperAgent was promoted to 4 reps because its
-  variance was extreme (19s → 241s). Failures are kept as failures.
+- **Reps:** ≥2 scored reps per runnable contender, and the four near-tie rows in the 8–16s block
+  (chrome-cdp-skill, chrome-devtools-mcp, ego-browser, playwright-cli) were promoted to **5 reps** per
+  issue #1. HyperAgent has 4 reps (variance 19s → 241s). Failures are kept as failures. Promoting the
+  near-tie was not academic: **chrome-cdp-skill screened 2/2 and then scored 3/5** — see §2.
 - **Native interfaces preserved:** code-mode tools were allowed to batch; indexed CLIs used indexed
   commands; the vision agent used vision; the autonomous runtimes ran their own loop as a single
   timed run (never flattened into the shared one-command-per-step loop). No contender received a
@@ -38,10 +40,10 @@ calls made by the shared loop (midscene/Skyvern run their own loop, so this is t
 
 | Contender | Architecture | Pass | Median | Calls | Tokens (in/out) | Cost | Notes |
 |---|---|---:|---:|---:|---:|---:|---|
-| chrome-cdp-skill | direct CDP / compact snapshot CLI | 2/2 | **8.8s** | 13 | ~18.8k / ~258 | ~$0.0030 | Fastest of the round; no build, no npm deps, persistent daemon per tab |
-| chrome-devtools-mcp | official CDP CLI/MCP (a11y snapshot + uid) | 2/2 | **13.1s** | 7 | ~12.6k / ~89 | ~$0.0019 | Official baseline; full (non-slim) toolset used |
-| ego-browser | code-mode / browser-product API | 2/2 | **13.7s** | 8–9 | ~13.4k / ~102 | ~$0.0021 | Needs its own ego browser app; one nodejs invocation per step |
-| playwright-cli | official Playwright CLI + Skills | 2/2 | **15.2s** | 9–10 | ~21.9k / ~114 | ~$0.0033 | Microsoft's CLI path (not MCP); launches its own Chromium |
+| chrome-cdp-skill | direct CDP / compact snapshot CLI | **3/5** | **11.5s** | 12–15 | ~21.1k / ~323 | ~$0.0083 | Fast; no build/npm deps. **Screened 2/2, dropped to 3/5 on promotion** (see §2) |
+| chrome-devtools-mcp | official CDP CLI/MCP (a11y snapshot + uid) | **5/5** | **11.8s** | 7 | ~12.6k / ~89 | ~$0.0048 | Official baseline; full (non-slim) toolset; most consistent new row |
+| ego-browser | code-mode / browser-product API | **5/5** | **14.2s** | 8 | ~12.3k / ~99 | ~$0.0048 | Needs its own ego browser app; one nodejs invocation per step |
+| playwright-cli | official Playwright CLI + Skills | **5/5** | **14.7s** | 9–10 | ~21.7k / ~113 | ~$0.0083 | Microsoft's CLI path (not MCP); launches its own Chromium |
 | browser-act-skills | extension-backed indexed CLI | 2/2 | **18.5s** | 7 | ~6.0k / ~76 | ~$0.0009 | Cheapest per run; free local `chrome` browser, no account |
 | hyperagent (perform mode) | Playwright-derived AI SDK | 3/4 | **28.3s** | 5–7 + 6–32 internal | ~20.8k / ~3.4k | ~$0.0096 | Own runtime; rep 1 failed after 4 "no elements found" attempts |
 | opencli | extension-backed CLI | **0/2** | 30.4s | 12 | ~20.8k / ~234 | ~$0.0032 | Native `keys Enter` never commits (keyCode 0) — tool defect |
@@ -54,44 +56,58 @@ calls made by the shared loop (midscene/Skyvern run their own loop, so this is t
 
 **Nothing beat BrowserSkill, and no Round 6 row extends the existing fast-path frontier.** Screening
 the new rows against the current front (BrowserSkill 4.1s / ~$0.0005, browser-relay 4.3s, browser-cli
-6.2s, pinchtab 8.3s / ~$0.0003) on the two axes that define it — wall-clock and cost — gives a blunt
+6.2s, pinchtab 8.3s / ~$0.0003) on the axes that define it — wall-clock and cost — gives a blunt
 result: **every Round 6 contender is dominated by at least one existing row.**
 
-| Round 6 contender | Median | Cost/run | Dominated by |
-|---|---:|---:|---|
-| chrome-cdp-skill | 8.8s | ~$0.0030 | BrowserSkill (4.1s, ~$0.0005) — faster *and* cheaper |
-| chrome-devtools-mcp | 13.1s | ~$0.0019 | BrowserSkill |
-| ego-browser | 13.7s | ~$0.0021 | BrowserSkill |
-| playwright-cli | 15.2s | ~$0.0033 | BrowserSkill |
-| browser-act-skills | 18.5s | ~$0.0009 | pinchtab (8.3s, ~$0.0003) — faster *and* cheaper |
-| hyperagent (perform) | 28.3s | ~$0.0096 | BrowserSkill |
-| opencli / surf-cli / bb-browser | 30–33s | ~$0.002–0.005 | BrowserSkill (and they fail or cost more) |
-| midscene | 33.4s | ~$0.074 | BrowserSkill |
-| skyvern | 186.5s | ~$0.0055 | BrowserSkill |
+| Round 6 contender | Median | Pass | Cost/run | Dominated by |
+|---|---:|---:|---:|---|
+| chrome-cdp-skill | 11.5s | **3/5** | ~$0.0083 | BrowserSkill (4.1s, ~$0.0005) |
+| chrome-devtools-mcp | 11.8s | **5/5** | ~$0.0048 | BrowserSkill |
+| ego-browser | 14.2s | **5/5** | ~$0.0048 | BrowserSkill |
+| playwright-cli | 14.7s | **5/5** | ~$0.0083 | BrowserSkill |
+| browser-act-skills | 18.5s | 2/2 | ~$0.0009 | pinchtab (8.3s, ~$0.0003) — faster *and* cheaper |
+| hyperagent (perform) | 28.3s | 3/4 | ~$0.0096 | BrowserSkill |
+| opencli / surf-cli / bb-browser | 30–33s | 0/2, 2/2, 0/2 | ~$0.002–0.005 | BrowserSkill |
+| midscene | 33.4s | 2/2 | ~$0.074 | BrowserSkill |
+| skyvern | 186.5s | 2/2 | ~$0.0055 | BrowserSkill |
 
-**Is anything cheaper at similar speed/reliability?** No. **browser-act-skills** is the cheapest new
-row (~$0.0009) but is 4.5× slower than BrowserSkill and 2.2× slower than pinchtab, which is itself
-cheaper — so it does not take the cost frontier either. **pinchtab still owns the cost frontier.**
+### The promotion result: 2-rep screening overstated reliability
+
+The 8–16s block looked like a near-tie after screening (chrome-cdp-skill 8.8s 2/2, chrome-devtools-mcp
+13.1s 2/2, ego-browser 13.7s 2/2, playwright-cli 15.2s 2/2). Promoting all four to **5 reps** resolved
+it — and changed the winner:
+
+| Contender | Screen (2 reps) | Promoted (5 reps) | Outcome |
+|---|---|---|---|
+| chrome-cdp-skill | 8.8s, 2/2 | **11.5s, 3/5** | Regressed. Reps 4–5 ended with the *correct persisted state* (`Email supplier` done, `Review invoice` not) but the wrong live view (URL `#/`, 0 visible items) and the model still said "done". |
+| chrome-devtools-mcp | 13.1s, 2/2 | **11.8s, 5/5** | Reliable; fastest **reliable** new row. |
+| ego-browser | 13.7s, 2/2 | **14.2s, 5/5** | Reliable. |
+| playwright-cli | 15.2s, 2/2 | **14.7s, 5/5** | Reliable. |
+
+So the honest Round 6 conclusion is not "chrome-cdp-skill is the fastest new CLI" but **"the fastest
+new CLI is the least reliable, and the best new row is chrome-devtools-mcp (5/5 @ 11.8s)"**. This is a
+direct vindication of the issue's warning against reading 2-rep ordering; the remaining 2-rep rows
+(browser-act, surf-cli, midscene, skyvern, and the two failures) are screening signals only.
+
+**Is anything cheaper at similar speed/reliability?** No. **browser-act-skills** is the cheapest new row
+(~$0.0009) but is 4.5× slower than BrowserSkill and 2.2× slower than pinchtab, which is itself cheaper —
+it does not take the cost frontier either. **pinchtab still owns the cost frontier.**
 
 **Is anything materially more reliable for modest cost?** No. Round 6 produced two more hard failures
-(opencli, bb-browser) and nothing above 3/4 except the thin CLIs, which match BrowserSkill's 2/2
-without beating it. The reliability leader remains Magnitude (4/4, vision) from Round 2.
-
-**Statistically tied pending more reps (do not over-read ordering).** At 2 reps each, the block
-**chrome-cdp-skill (8.8s) / chrome-devtools-mcp (13.1s) / ego-browser (13.7s)** — and marginally
-playwright-cli (15.2s) — is not separable at this sample size. Two-rep medians screen; they do not
-rank. Promote to ≥5 reps (issue #1) before asserting an order inside that block.
+(opencli, bb-browser) and one reliability regression (chrome-cdp-skill 3/5). The reliability leader
+overall remains Magnitude (4/4, vision), though chrome-devtools-mcp's 5/5 on a thin CLI is the best
+*fresh* reliability evidence this round.
 
 **Worth keeping anyway (capability, not fast path).** The value of several Round 6 rows is not their
 TodoMVC time: midscene (vision on weak/canvas/icon-only DOM), skyvern (long-horizon autonomous
 recovery), ego-browser (state-native code-mode), browser-act's advanced modes, and hyperagent's
 `page.ai()` autonomous mode are the arms of the capability suite, and TodoMVC deliberately cannot
-discriminate them. Their 2/2-or-better pass rate on a trivial DOM task is the only thing this round
-can say about them.
+discriminate them.
 
-**No simplistic total score.** Speed, cost and capability stay separate; on the two hard axes Round 6
-was a no-op for the frontier, which is itself a useful result — the thin-CLI family is close to
-exhausted, and the omission risk the issue worried about did not materialise.
+**No simplistic total score.** Speed, cost and capability stay separate. On the two hard axes Round 6
+was a no-op for the frontier, which is itself the useful result: the thin-CLI family is close to
+exhausted, the omission risk the issue worried about did not materialise, and the one new tool that
+looked fastest did not survive five reps.
 
 ## 3. Architecture classification
 
@@ -111,9 +127,11 @@ Two design lessons this round, both from the failures and the token counts:
    fail TodoMVC for the *same* reason — a key event synthesised without `keyCode`/`windowsVirtualKeyCode`
    (bb-browser, opencli) or a missing key action entirely (page-agent, Round 5). Any tool that
    claims keyboard support should be probed for `windowsVirtualKeyCode: 13` before it is trusted.
-2. **Compact observation beats rich observation.** The 8–18s CLIs return a short indexed snapshot;
+2. **Compact observation beats rich observation.** The 11–18s CLIs return a short indexed snapshot;
    surf-cli's verbose auto-`read`/screenshot behaviour roughly doubles its tokens, and midscene's
    per-step screenshots cost ~100× the thin CLIs.
+3. **Two reps cannot measure reliability.** The fastest new contender screened 2/2 at 8.8s and scored
+   3/5 once promoted; a "pass" here is a single-bit observation, so a 2/2 is weak evidence (§2).
 
 ## 4. Exclusions / blocked attempts
 
@@ -142,8 +160,8 @@ architectural limit. (Evidence: `results/{1,2}-{opencli,bb-browser}.json`.)
 ## 5. Tier C — official Chrome DevTools control baseline
 
 **chrome-devtools-mcp / CLI 1.9.0** (commit `d9a8cb6`) is scored as the single official baseline:
-**2/2, 13.1s median, ~12.6k/~89 tokens, ~$0.0019** using the full (non-slim) official CLI against
-Chrome for Testing. The low-schema `--slim` mode was evaluated and rejected for the row: it exposes
+**5/5, 11.8s median, ~12.6k/~89 tokens, ~$0.0048** using the full (non-slim) official CLI against
+Chrome for Testing — the best reliability of any Round 6 row and the fastest reliable new arrival. The low-schema `--slim` mode was evaluated and rejected for the row: it exposes
 only `navigate`/`evaluate`/`screenshot` — no snapshot/click/fill — so it cannot complete a generic
 agent task and would not be a meaningful baseline. This gives the benchmark one modern official
 control surface without multiplying official-protocol variants.
