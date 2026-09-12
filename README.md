@@ -208,6 +208,20 @@ docs/
 
 Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass criteria, provider config, timing boundary, required measurements, and the JSON transcript shape. Then follow the runner pattern in `artifacts/2026-09-11/` and add at least two scored reps. Update the README table and add a short Pareto note.
 
+## Task parameterization — 15 Sep 2026
+
+The benchmark is no longer TodoMVC-only. `bench-ext/benchlib.py` now holds a **task
+registry** and `run_rep(adapter, rep, task=…)`; TodoMVC stays the latency microbenchmark
+(byte-identical, golden-tested). Rep counts are centralized with the issue #1 topology
+(2 screen → 5 promote → 10+ tiebreak), and a task must carry session provenance
+(`source_session_id`, `source_url`, `verified_against`) or the intake validator rejects it.
+
+Delivery evidence: the top two harnesses were run on a real, auth-free, session-derived task
+(`chanel-gb-tag-check` — inspect the CHANEL UK homepage for its marketing tags). **BrowserSkill
+screened 2/2, was promoted to 5 reps, and scored 3/5; browser-relay screened 1/2.** The
+promotion is the point: 2-rep screening overstates reliability, exactly as Round 6 found.
+Report: [bench-ext/artifacts/2026-09-15/delivery/report.md](bench-ext/artifacts/2026-09-15/delivery/report.md).
+
 ## Status
 
 These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark. That larger effort (real sites, login flows, uploads, multi-tab journeys) lives in a separate project and will use this repo's methodology as its starting point.

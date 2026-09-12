@@ -5,8 +5,10 @@ harvested in `Rajeev-SG/codex-session-orchestration-analysis` (issue #88) and of
 to this repo as **conformant task specs**; `bench-ext/task_intake.py` validates them and
 the `benchlib` task registry can run them.
 
-This repo does **not** mine, invent, or hand-author tasks. The task set stays **empty**
-pending #88 output — `bench-ext/tasks_v1.py` tasks 2–9 remain invalid records.
+This repo does **not** mine, invent, or hand-author tasks. The harvested **corpus** stays
+empty pending #88 output — `bench-ext/tasks_v1.py` tasks 2–9 remain invalid records. The only
+task present is the one issue #20 delivery demonstration (`chanel-gb-tag-check`), kept as
+worked evidence, not as corpus.
 
 ## The registry
 
@@ -92,3 +94,21 @@ publishes, its harvested task definitions must carry, per REAL-WORK-MANDATE.md, 
 `source_session_id`, `source_url`, `verified_against`, a deterministic verifier, a
 recoverable pre-state, and no unrecoverable secret dependency — those map directly onto the
 spec shape above with no translation layer required.
+
+## Worked example (delivery, issue #20)
+
+`bench-ext/delivery/chanel-gb-tag-check.json` is a conformant spec (validated by
+`task_intake.py`) for a real, auth-free task derived from the CHANEL tag-QA session; it is
+registered by `bench-ext/tasks_real.py` and run with:
+
+```bash
+OPENROUTER_API_KEY=$(security find-generic-password -s codex-openrouter -w) \
+  BENCH_RES=bench-ext/artifacts/2026-09-15/delivery \
+  python3 bench-ext/runners/BrowserSkill.py 1 2 3 4 5 --task=chanel-gb-tag-check
+```
+
+Result: BrowserSkill 3/5 (2/2 screening → promoted to 5), browser-relay 1/2 — see
+`bench-ext/artifacts/2026-09-15/delivery/report.md`. The agent records its finding in
+`window.__bench_finding`; the verifier **independently recomputes** the tag ground truth from
+the live page and compares, so a run passes only when the agent's finding matches objective
+page state *and* the agent signalled done.
