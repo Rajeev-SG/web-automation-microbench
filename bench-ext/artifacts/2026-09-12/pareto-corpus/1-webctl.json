@@ -1,0 +1,29 @@
+{
+  "cache_read_tokens": 0,
+  "configuration": {
+    "harness": "webctl",
+    "model": "z-ai/glm-5.3-flash",
+    "provider": "openrouter"
+  },
+  "elapsed_seconds": 10.736,
+  "evidence_type": "observed",
+  "input_tokens": 8204,
+  "metered_cost_usd": 0.00118547,
+  "model_calls": 7,
+  "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/task-suite-v1.md)",
+  "outcome": {
+    "success": true
+  },
+  "outcome_evidence": {
+    "done_protocol": true,
+    "passed": true,
+    "source_run": "web-automation-microbench/results/1-webctl.json",
+    "verifier": "benchlib.check_pass(dom-state)"
+  },
+  "output_tokens": 104,
+  "provider_route": "Makora",
+  "schema": "pareto-research-task/v1",
+  "task_class": "web-automation",
+  "task_id": "web-automation-microbench/2026-09-12/1-webctl",
+  "total_tokens": 8308
+}

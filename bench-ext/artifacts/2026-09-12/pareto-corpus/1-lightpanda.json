@@ -1,0 +1,32 @@
+{
+  "cache_read_tokens": 1280,
+  "configuration": {
+    "harness": "lightpanda",
+    "model": "z-ai/glm-5.3-flash",
+    "provider": "openrouter"
+  },
+  "elapsed_seconds": 30.259,
+  "evidence_type": "observed",
+  "input_tokens": 6783,
+  "metered_cost_usd": 0.00107312,
+  "model_calls": 9,
+  "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/task-suite-v1.md)",
+  "outcome": {
+    "success": true
+  },
+  "outcome_evidence": {
+    "done_protocol": true,
+    "passed": true,
+    "source_run": "web-automation-microbench/results/1-lightpanda.json",
+    "verifier": "benchlib.check_pass(dom-state)"
+  },
+  "output_tokens": 530,
+  "provider_route": [
+    "Makora",
+    "Together"
+  ],
+  "schema": "pareto-research-task/v1",
+  "task_class": "web-automation",
+  "task_id": "web-automation-microbench/2026-09-12/1-lightpanda",
+  "total_tokens": 7313
+}

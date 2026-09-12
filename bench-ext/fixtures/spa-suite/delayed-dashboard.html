@@ -1,0 +1,8 @@
+<!doctype html><title>Delayed Dashboard</title>
+<style>body{font-family:sans-serif;margin:2rem}.card{border:1px solid #ccc;padding:1rem;margin:.5rem 0}</style>
+<h1>Region status</h1><div id=out>Loading…</div>
+<script>
+setTimeout(()=>{const regions=['eu-west','eu-north','us-east','us-west','ap-south'];
+out.innerHTML=regions.map((r,i)=>`<div class="card" data-ok="${i!==2}"><b>${r}</b>: ${i===2?'DEGRADED':'healthy'}</div>`).join('');
+window.__ready=true},1200)
+</script>
