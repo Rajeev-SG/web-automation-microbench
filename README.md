@@ -106,7 +106,7 @@ One row per harness × best-model combination. `Median time` is the median acros
 
 Eleven further contenders, all on GLM 5.3-Flash with latency-sorted routing where the tool permits it.
 Full screening table, Pareto analysis, architecture classification, block/defect evidence and
-reproducibility notes: [bench-ext/artifacts/2026-09-14/report.md](bench-ext/artifacts/2026-09-14/report.md).
+reproducibility notes: [bench-ext/artifacts/2026-09-12-round6/report.md](bench-ext/artifacts/2026-09-12-round6/report.md).
 
 - **No contender extended the fast-path frontier.** Every Round 6 row is dominated by an existing row on
   (speed, cost). The closest new arrival, **chrome-cdp-skill**, lands at 11.5s *and only 3/5*; the new
@@ -186,7 +186,7 @@ artifacts/
     report.md            Round 2 full report + Pareto analysis
     acceptance-manifest.md
   2026-09-12/           Round 3: per-run JSON + screenshots, summary.json (in bench-ext)
-  2026-09-13/
+  2026-09-11-round4/
     report.md           Round 4 report (visnia-ai/browser-agent re-score)
     results/            Round 4 per-run JSON + step transcripts
 docs/
@@ -221,31 +221,44 @@ Delivery evidence: the top two harnesses were run on a real, auth-free, session-
 at 2 reps then promoted to 5. **browser-relay screened 1/2 then scored 4/5; BrowserSkill
 screened 2/2 then scored 3/5.** The promotion is the point: 2 reps understated browser-relay
 and overstated BrowserSkill, so screening alone would have mis-ordered them.
-Report: [bench-ext/artifacts/2026-09-15/delivery/report.md](bench-ext/artifacts/2026-09-15/delivery/report.md).
+Report: [bench-ext/artifacts/2026-09-12-delivery/delivery/report.md](bench-ext/artifacts/2026-09-12-delivery/delivery/report.md).
 
 ## Status
 
-These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark.
+Two separate claims, from two separate task sets:
 
-## The real-world corpus
+- **Fast-path latency/cost** — the TodoMVC microbenchmark (one controlled instrument, golden-tested).
+  Good enough to rank tools for speed and cost, and to rule out clear losers.
+- **Real-work capability/reliability** — the harvested browser corpus below. This is the capability
+  claim; TodoMVC never feeds it.
 
-The scored corpus is harvested in
+## The harvested browser corpus (issue #27)
+
+The capability suite is **not written here**. It is harvested from real AgentSessions work in
 [`Rajeev-SG/codex-session-orchestration-analysis`](https://github.com/Rajeev-SG/codex-session-orchestration-analysis)
-(issue #88, closed) and offered to this repo as conformant task specs.
-`bench-ext/task_intake.py` validates them; `benchlib` runs them.
+(issue #88) and vendored read-only into `bench-ext/corpus/` with a producer revision + per-file
+sha256 pin. Only `task_class == "web-automation"` tasks are consumed — coding/desktop/document
+tasks the harvester also emits are out of scope.
 
-The published corpus holds **16 real task definitions** — 11 browser-domain (marketing-tag
-inspection, third-party script inventory, SEO/structured-data audits, crawlability,
-canvas diagram creation, and consent-to-add-to-cart tag checks on two retailers) and 5 coding (replayable, each proven to fail at its pre-task SHA
-and pass at its gold commit). Every one is auth-free with a deterministic verifier.
+**11 browser tasks**, each auth-free with a deterministic page-recomputed verifier and a declarative
+pass rule: marketing-tag inspection (CHANEL PDP, Porsche UK, PUMA UK), third-party script
+inventory (Porsche UK, PUMA UK), SEO/structured-data audit (rajeevg.com, PUMA UK), crawlability
+(rajeevg.com), canvas diagram creation (tldraw), and consent → find product → add to cart → tag
+check (Allbirds UK, Gymshark UK). There is no fixed suite size: the corpus is however many
+browser tasks the producer has admitted.
 
 ```bash
-git clone https://github.com/Rajeev-SG/codex-session-orchestration-analysis
-python3 bench-ext/task_intake.py --validate \
-  ./codex-session-orchestration-analysis/benchmarks/corpus/tasks
-# {"schema": "pareto-research-task/v1", "specs": 16, "valid": 16, "quarantined": 0}
+# re-vendor / drift-check the corpus against the producer checkout
+python3 bench-ext/corpus/refresh.py --from ./codex-session-orchestration-analysis
+# validate + register every task as a benchlib.Task, then screen the representative harness set
+python3 bench-ext/task_ingest.py
+python3 bench-ext/corpus/screen.py --harness raw-playwright --reps 1 --all
+python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/2026-09-12/corpus
 ```
 
-Their provenance rules, schema and admission gates are documented in
+Capability scoreboard and the two harness defects this exposed:
+[bench-ext/artifacts/2026-09-12/corpus/capability-scoreboard.md](bench-ext/artifacts/2026-09-12/corpus/capability-scoreboard.md).
+
+Provenance rules, the ingestion contract and admission gates:
 [`bench-ext/docs/task-intake.md`](bench-ext/docs/task-intake.md) and the producer's
 `docs/implementation/task-harvesting-v1.md`.

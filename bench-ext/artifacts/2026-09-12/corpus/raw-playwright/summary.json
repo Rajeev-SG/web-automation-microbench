@@ -1,0 +1,488 @@
+{
+  "by_task": {
+    "allbirds-uk-add-to-cart-tag-check": {
+      "passes": 0,
+      "reps": 2
+    },
+    "chanel-gb-pdp-tag-inspection": {
+      "passes": 2,
+      "reps": 2
+    },
+    "gymshark-uk-add-to-cart-tag-check": {
+      "passes": 0,
+      "reps": 2
+    },
+    "porsche-uk-script-inventory": {
+      "passes": 1,
+      "reps": 2
+    },
+    "porsche-uk-tag-inspection": {
+      "passes": 2,
+      "reps": 2
+    },
+    "puma-uk-script-inventory": {
+      "passes": 2,
+      "reps": 2
+    },
+    "puma-uk-seo-metadata-audit": {
+      "passes": 0,
+      "reps": 2
+    },
+    "puma-uk-tag-inspection": {
+      "passes": 2,
+      "reps": 2
+    },
+    "rajeevg-crawlability-audit": {
+      "passes": 1,
+      "reps": 2
+    },
+    "rajeevg-seo-metadata-audit": {
+      "passes": 2,
+      "reps": 2
+    },
+    "tldraw-three-shape-diagram": {
+      "passes": 0,
+      "reps": 2
+    }
+  },
+  "harness": "raw-playwright",
+  "model": "z-ai/glm-5.3-flash",
+  "reps": [
+    "2",
+    "3"
+  ],
+  "results": [
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/allbirds-uk-add-to-cart-tag-check/2-raw-playwright.json",
+      "cost_usd": 0.00565972,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "2",
+      "task": "allbirds-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 42688,
+        "input": 50709,
+        "output": 1023,
+        "reasoning": 270
+      },
+      "tool_calls": 14,
+      "total_s": 123.021,
+      "wall_s": 126.33
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/allbirds-uk-add-to-cart-tag-check/3-raw-playwright.json",
+      "cost_usd": 0.004442,
+      "done": true,
+      "error": null,
+      "model_calls": 12,
+      "pass": false,
+      "rep": "3",
+      "task": "allbirds-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 33408,
+        "input": 40066,
+        "output": 737,
+        "reasoning": 192
+      },
+      "tool_calls": 11,
+      "total_s": 115.272,
+      "wall_s": 120.43
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/chanel-gb-pdp-tag-inspection/2-raw-playwright.json",
+      "cost_usd": 0.00026835,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "2",
+      "task": "chanel-gb-pdp-tag-inspection",
+      "tokens": {
+        "cached": 832,
+        "input": 1942,
+        "output": 366,
+        "reasoning": 43
+      },
+      "tool_calls": 2,
+      "total_s": 4.639,
+      "wall_s": 6.85
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/chanel-gb-pdp-tag-inspection/3-raw-playwright.json",
+      "cost_usd": 0.00028518,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "3",
+      "task": "chanel-gb-pdp-tag-inspection",
+      "tokens": {
+        "cached": 1088,
+        "input": 1955,
+        "output": 391,
+        "reasoning": 37
+      },
+      "tool_calls": 2,
+      "total_s": 5.08,
+      "wall_s": 7.22
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/gymshark-uk-add-to-cart-tag-check/2-raw-playwright.json",
+      "cost_usd": 0.0068031,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "2",
+      "task": "gymshark-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 51648,
+        "input": 60944,
+        "output": 1182,
+        "reasoning": 310
+      },
+      "tool_calls": 14,
+      "total_s": 88.742,
+      "wall_s": 92.89
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/gymshark-uk-add-to-cart-tag-check/3-raw-playwright.json",
+      "cost_usd": 0.0069204,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "3",
+      "task": "gymshark-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 52544,
+        "input": 61090,
+        "output": 1473,
+        "reasoning": 291
+      },
+      "tool_calls": 14,
+      "total_s": 59.968,
+      "wall_s": 64.18
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/porsche-uk-script-inventory/2-raw-playwright.json",
+      "cost_usd": 0.00021335,
+      "done": true,
+      "error": null,
+      "model_calls": 2,
+      "pass": true,
+      "rep": "2",
+      "task": "porsche-uk-script-inventory",
+      "tokens": {
+        "cached": 704,
+        "input": 2186,
+        "output": 92,
+        "reasoning": 0
+      },
+      "tool_calls": 1,
+      "total_s": 1.741,
+      "wall_s": 3.92
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/porsche-uk-script-inventory/3-raw-playwright.json",
+      "cost_usd": 0.00695108,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "3",
+      "task": "porsche-uk-script-inventory",
+      "tokens": {
+        "cached": 54080,
+        "input": 63351,
+        "output": 687,
+        "reasoning": 23
+      },
+      "tool_calls": 14,
+      "total_s": 13.578,
+      "wall_s": 15.54
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/porsche-uk-tag-inspection/2-raw-playwright.json",
+      "cost_usd": 0.00208902,
+      "done": true,
+      "error": null,
+      "model_calls": 7,
+      "pass": true,
+      "rep": "2",
+      "task": "porsche-uk-tag-inspection",
+      "tokens": {
+        "cached": 13184,
+        "input": 18635,
+        "output": 788,
+        "reasoning": 263
+      },
+      "tool_calls": 6,
+      "total_s": 12.864,
+      "wall_s": 14.83
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/porsche-uk-tag-inspection/3-raw-playwright.json",
+      "cost_usd": 0.00131267,
+      "done": true,
+      "error": null,
+      "model_calls": 5,
+      "pass": true,
+      "rep": "3",
+      "task": "porsche-uk-tag-inspection",
+      "tokens": {
+        "cached": 10176,
+        "input": 10321,
+        "output": 628,
+        "reasoning": 273
+      },
+      "tool_calls": 4,
+      "total_s": 8.683,
+      "wall_s": 10.65
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-script-inventory/2-raw-playwright.json",
+      "cost_usd": 0.00221445,
+      "done": true,
+      "error": null,
+      "model_calls": 4,
+      "pass": true,
+      "rep": "2",
+      "task": "puma-uk-script-inventory",
+      "tokens": {
+        "cached": 13184,
+        "input": 21824,
+        "output": 333,
+        "reasoning": 118
+      },
+      "tool_calls": 3,
+      "total_s": 9.073,
+      "wall_s": 11.92
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-script-inventory/3-raw-playwright.json",
+      "cost_usd": 0.00202785,
+      "done": true,
+      "error": null,
+      "model_calls": 4,
+      "pass": true,
+      "rep": "3",
+      "task": "puma-uk-script-inventory",
+      "tokens": {
+        "cached": 8896,
+        "input": 21810,
+        "output": 234,
+        "reasoning": 54
+      },
+      "tool_calls": 3,
+      "total_s": 11.467,
+      "wall_s": 14.16
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-seo-metadata-audit/2-raw-playwright.json",
+      "cost_usd": 0.0014173,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": false,
+      "rep": "2",
+      "task": "puma-uk-seo-metadata-audit",
+      "tokens": {
+        "cached": 7232,
+        "input": 13898,
+        "output": 415,
+        "reasoning": 25
+      },
+      "tool_calls": 2,
+      "total_s": 4.934,
+      "wall_s": 7.63
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-seo-metadata-audit/3-raw-playwright.json",
+      "cost_usd": 0.00073147,
+      "done": true,
+      "error": null,
+      "model_calls": 2,
+      "pass": false,
+      "rep": "3",
+      "task": "puma-uk-seo-metadata-audit",
+      "tokens": {
+        "cached": 2688,
+        "input": 7119,
+        "output": 387,
+        "reasoning": 0
+      },
+      "tool_calls": 1,
+      "total_s": 9.207,
+      "wall_s": 11.88
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-tag-inspection/2-raw-playwright.json",
+      "cost_usd": 0.00131245,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "2",
+      "task": "puma-uk-tag-inspection",
+      "tokens": {
+        "cached": 6656,
+        "input": 13488,
+        "output": 205,
+        "reasoning": 23
+      },
+      "tool_calls": 2,
+      "total_s": 5.408,
+      "wall_s": 8.11
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/puma-uk-tag-inspection/3-raw-playwright.json",
+      "cost_usd": 0.00140042,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "3",
+      "task": "puma-uk-tag-inspection",
+      "tokens": {
+        "cached": 8896,
+        "input": 13491,
+        "output": 220,
+        "reasoning": 27
+      },
+      "tool_calls": 2,
+      "total_s": 3.496,
+      "wall_s": 6.17
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/rajeevg-crawlability-audit/2-raw-playwright.json",
+      "cost_usd": 0.01780105,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "2",
+      "task": "rajeevg-crawlability-audit",
+      "tokens": {
+        "cached": 140800,
+        "input": 162104,
+        "output": 1453,
+        "reasoning": 79
+      },
+      "tool_calls": 14,
+      "total_s": 31.415,
+      "wall_s": 33.79
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/rajeevg-crawlability-audit/3-raw-playwright.json",
+      "cost_usd": 0.00059687,
+      "done": true,
+      "error": null,
+      "model_calls": 2,
+      "pass": true,
+      "rep": "3",
+      "task": "rajeevg-crawlability-audit",
+      "tokens": {
+        "cached": 3328,
+        "input": 5071,
+        "output": 367,
+        "reasoning": 10
+      },
+      "tool_calls": 1,
+      "total_s": 11.939,
+      "wall_s": 14.44
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/rajeevg-seo-metadata-audit/2-raw-playwright.json",
+      "cost_usd": 0.00111535,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "2",
+      "task": "rajeevg-seo-metadata-audit",
+      "tokens": {
+        "cached": 5184,
+        "input": 9976,
+        "output": 691,
+        "reasoning": 49
+      },
+      "tool_calls": 2,
+      "total_s": 8.632,
+      "wall_s": 10.67
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/rajeevg-seo-metadata-audit/3-raw-playwright.json",
+      "cost_usd": 0.00053485,
+      "done": true,
+      "error": null,
+      "model_calls": 2,
+      "pass": true,
+      "rep": "3",
+      "task": "rajeevg-seo-metadata-audit",
+      "tokens": {
+        "cached": 1920,
+        "input": 5118,
+        "output": 316,
+        "reasoning": 5
+      },
+      "tool_calls": 1,
+      "total_s": 3.054,
+      "wall_s": 5.17
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/tldraw-three-shape-diagram/2-raw-playwright.json",
+      "cost_usd": 0.01727295,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "2",
+      "task": "tldraw-three-shape-diagram",
+      "tokens": {
+        "cached": 132608,
+        "input": 156042,
+        "output": 2388,
+        "reasoning": 184
+      },
+      "tool_calls": 14,
+      "total_s": 24.101,
+      "wall_s": 26.24
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/raw-playwright/tldraw-three-shape-diagram/3-raw-playwright.json",
+      "cost_usd": 0.01579185,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "3",
+      "task": "tldraw-three-shape-diagram",
+      "tokens": {
+        "cached": 122688,
+        "input": 143564,
+        "output": 1695,
+        "reasoning": 657
+      },
+      "tool_calls": 14,
+      "total_s": 85.424,
+      "wall_s": 87.66
+    }
+  ],
+  "run_date": "2026-09-12",
+  "tasks": [
+    "allbirds-uk-add-to-cart-tag-check",
+    "chanel-gb-pdp-tag-inspection",
+    "gymshark-uk-add-to-cart-tag-check",
+    "porsche-uk-script-inventory",
+    "porsche-uk-tag-inspection",
+    "puma-uk-script-inventory",
+    "puma-uk-seo-metadata-audit",
+    "puma-uk-tag-inspection",
+    "rajeevg-crawlability-audit",
+    "rajeevg-seo-metadata-audit",
+    "tldraw-three-shape-diagram"
+  ]
+}

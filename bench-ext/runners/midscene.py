@@ -18,7 +18,7 @@ import sys, os, json, time, glob, pathlib
 sys.path.insert(0, '/Users/rajeev/Code/web-automation-microbench/bench-ext')
 import benchlib, cft_chrome
 
-benchlib.RES = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-14/results')
+benchlib.RES = benchlib.artifacts_dir('results')   # run-time date, or BENCH_RES
 benchlib.RES.mkdir(parents=True, exist_ok=True)
 
 PORT = 9309

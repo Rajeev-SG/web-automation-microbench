@@ -1,19 +1,56 @@
 {
   "schema": "pareto-research-task/v1",
+  "definition_schema": "pareto-research-task-definition/v1",
+  "definition_version": 1,
   "task_id": "chanel-gb-tag-check",
   "task_class": "web-automation",
   "evidence_type": "controlled",
   "objective": "On the public CHANEL UK homepage, record which marketing tags the page actually carries: the GTM container id set, Google Ads (AW-) presence and Pinterest tag presence.",
   "url": "https://www.chanel.com/gb/",
   "instruction": "Open the CHANEL UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
-  "capabilities": ["tag-inspection", "dom-script-audit", "real-site"],
+  "capabilities": [
+    "tag-inspection",
+    "dom-script-audit",
+    "real-site"
+  ],
   "verification": {
     "description": "Independent recomputation of tag ground truth from the live page, compared to the agent's window.__bench_finding.",
-    "verify_js": "(()=>{const html=document.documentElement.innerHTML;const gtm=[...new Set(html.match(/GTM-[A-Z0-9]+/g)||[])].sort();const aw=[...new Set(html.match(/AW-[0-9]{6,}/g)||[])].sort();const pinterest=(typeof window.pintrk!=='undefined')||/ct\\.pinterest\\.com|pintrk/i.test(html);let f=null;try{f=window.__bench_finding||null;}catch(e){}return JSON.stringify({url:location.href,truth:{gtm:gtm,aw:aw,pinterest:pinterest},finding:f});})()"
+    "verify_js": "(()=>{const html=document.documentElement.innerHTML;const gtm=[...new Set(html.match(/GTM-[A-Z0-9]+/g)||[])].sort();const aw=[...new Set(html.match(/AW-[0-9]{6,}/g)||[])].sort();const pinterest=(typeof window.pintrk!=='undefined')||/ct\\.pinterest\\.com|pintrk/i.test(html);let f=null;try{f=window.__bench_finding||null;}catch(e){}return JSON.stringify({url:location.href,truth:{gtm:gtm,aw:aw,pinterest:pinterest},finding:f});})()",
+    "authority": "page-recomputed",
+    "pass_rule": {
+      "kind": "finding_matches_truth",
+      "fields": [
+        "gtm",
+        "aw"
+      ],
+      "finding_fields": {
+        "aw": "googleAds"
+      },
+      "presence_fields": [
+        "pinterest"
+      ],
+      "require_any_of": [
+        "gtm",
+        "aw",
+        "pinterest"
+      ]
+    },
+    "test_command": null
   },
   "provenance": {
     "source_session_id": "01a08735-b2b1-7000-bad9-87ceabb4aa1a",
     "source_url": "https://www.chanel.com/",
     "verified_against": "window.__bench_finding matches the independently recomputed tag ground truth (GTM id set, Google Ads AW- presence, Pinterest presence)"
-  }
+  },
+  "pre_state": {
+    "kind": "fresh-page-load",
+    "detail": "navigate to the public UK homepage in a fresh browser context; no account, no login, no prior state"
+  },
+  "deterministic_evidence": {
+    "kind": "page-recomputed-ground-truth",
+    "detail": "tag truth is recomputed from the live DOM at verify time; the agent's finding is compared against it"
+  },
+  "secret_dependency": null,
+  "blocked_reason": null,
+  "derivation": null
 }

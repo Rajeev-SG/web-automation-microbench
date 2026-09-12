@@ -1,0 +1,278 @@
+{
+  "by_task": {
+    "allbirds-uk-add-to-cart-tag-check": {
+      "passes": 0,
+      "reps": 1
+    },
+    "chanel-gb-pdp-tag-inspection": {
+      "passes": 0,
+      "reps": 1
+    },
+    "gymshark-uk-add-to-cart-tag-check": {
+      "passes": 0,
+      "reps": 1
+    },
+    "porsche-uk-script-inventory": {
+      "passes": 1,
+      "reps": 1
+    },
+    "porsche-uk-tag-inspection": {
+      "passes": 1,
+      "reps": 1
+    },
+    "puma-uk-script-inventory": {
+      "passes": 1,
+      "reps": 1
+    },
+    "puma-uk-seo-metadata-audit": {
+      "passes": 0,
+      "reps": 1
+    },
+    "puma-uk-tag-inspection": {
+      "passes": 1,
+      "reps": 1
+    },
+    "rajeevg-crawlability-audit": {
+      "passes": 1,
+      "reps": 1
+    },
+    "rajeevg-seo-metadata-audit": {
+      "passes": 1,
+      "reps": 1
+    },
+    "tldraw-three-shape-diagram": {
+      "passes": 0,
+      "reps": 1
+    }
+  },
+  "harness": "agent-browser",
+  "model": "z-ai/glm-5.3-flash",
+  "reps": [
+    "1"
+  ],
+  "results": [
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/allbirds-uk-add-to-cart-tag-check/1-agent-browser.json",
+      "cost_usd": 0.0082845,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "1",
+      "task": "allbirds-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 58432,
+        "input": 77334,
+        "output": 1173,
+        "reasoning": 281
+      },
+      "tool_calls": 14,
+      "total_s": 18.266,
+      "wall_s": 23.81
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/chanel-gb-pdp-tag-inspection/1-agent-browser.json",
+      "cost_usd": 0.0003637,
+      "done": true,
+      "error": null,
+      "model_calls": 4,
+      "pass": false,
+      "rep": "1",
+      "task": "chanel-gb-pdp-tag-inspection",
+      "tokens": {
+        "cached": 1984,
+        "input": 3384,
+        "output": 142,
+        "reasoning": 49
+      },
+      "tool_calls": 3,
+      "total_s": 3.61,
+      "wall_s": 7.42
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/gymshark-uk-add-to-cart-tag-check/1-agent-browser.json",
+      "cost_usd": 0.00923975,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "1",
+      "task": "gymshark-uk-add-to-cart-tag-check",
+      "tokens": {
+        "cached": 72768,
+        "input": 84596,
+        "output": 665,
+        "reasoning": 85
+      },
+      "tool_calls": 14,
+      "total_s": 15.729,
+      "wall_s": 23.11
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/porsche-uk-script-inventory/1-agent-browser.json",
+      "cost_usd": 0.00049277,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": true,
+      "rep": "1",
+      "task": "porsche-uk-script-inventory",
+      "tokens": {
+        "cached": 2496,
+        "input": 5019,
+        "output": 91,
+        "reasoning": 0
+      },
+      "tool_calls": 2,
+      "total_s": 2.152,
+      "wall_s": 6.66
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/porsche-uk-tag-inspection/1-agent-browser.json",
+      "cost_usd": 0.00028395,
+      "done": true,
+      "error": null,
+      "model_calls": 2,
+      "pass": true,
+      "rep": "1",
+      "task": "porsche-uk-tag-inspection",
+      "tokens": {
+        "cached": 960,
+        "input": 2866,
+        "output": 132,
+        "reasoning": 0
+      },
+      "tool_calls": 1,
+      "total_s": 1.583,
+      "wall_s": 12.5
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/puma-uk-script-inventory/1-agent-browser.json",
+      "cost_usd": 0.0020524,
+      "done": true,
+      "error": null,
+      "model_calls": 4,
+      "pass": true,
+      "rep": "1",
+      "task": "puma-uk-script-inventory",
+      "tokens": {
+        "cached": 12224,
+        "input": 20530,
+        "output": 217,
+        "reasoning": 77
+      },
+      "tool_calls": 3,
+      "total_s": 3.333,
+      "wall_s": 7.27
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/puma-uk-seo-metadata-audit/1-agent-browser.json",
+      "cost_usd": 0.0013089,
+      "done": true,
+      "error": null,
+      "model_calls": 3,
+      "pass": false,
+      "rep": "1",
+      "task": "puma-uk-seo-metadata-audit",
+      "tokens": {
+        "cached": 6528,
+        "input": 13078,
+        "output": 333,
+        "reasoning": 59
+      },
+      "tool_calls": 2,
+      "total_s": 3.918,
+      "wall_s": 13.09
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/puma-uk-tag-inspection/1-agent-browser.json",
+      "cost_usd": 0.00446945,
+      "done": true,
+      "error": null,
+      "model_calls": 6,
+      "pass": true,
+      "rep": "1",
+      "task": "puma-uk-tag-inspection",
+      "tokens": {
+        "cached": 30464,
+        "input": 43044,
+        "output": 395,
+        "reasoning": 74
+      },
+      "tool_calls": 5,
+      "total_s": 6.636,
+      "wall_s": 12.2
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/rajeevg-crawlability-audit/1-agent-browser.json",
+      "cost_usd": 0.00261982,
+      "done": true,
+      "error": null,
+      "model_calls": 5,
+      "pass": true,
+      "rep": "1",
+      "task": "rajeevg-crawlability-audit",
+      "tokens": {
+        "cached": 16320,
+        "input": 24771,
+        "output": 600,
+        "reasoning": 196
+      },
+      "tool_calls": 4,
+      "total_s": 6.689,
+      "wall_s": 11.45
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/rajeevg-seo-metadata-audit/1-agent-browser.json",
+      "cost_usd": 0.00169105,
+      "done": true,
+      "error": null,
+      "model_calls": 4,
+      "pass": true,
+      "rep": "1",
+      "task": "rajeevg-seo-metadata-audit",
+      "tokens": {
+        "cached": 9920,
+        "input": 16664,
+        "output": 277,
+        "reasoning": 5
+      },
+      "tool_calls": 3,
+      "total_s": 4.313,
+      "wall_s": 9.05
+    },
+    {
+      "artifact": "/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12/corpus/agent-browser/tldraw-three-shape-diagram/1-agent-browser.json",
+      "cost_usd": 0.01575063,
+      "done": false,
+      "error": null,
+      "model_calls": 14,
+      "pass": false,
+      "rep": "1",
+      "task": "tldraw-three-shape-diagram",
+      "tokens": {
+        "cached": 122816,
+        "input": 144047,
+        "output": 1366,
+        "reasoning": 917
+      },
+      "tool_calls": 14,
+      "total_s": 17.961,
+      "wall_s": 22.86
+    }
+  ],
+  "run_date": "2026-09-12",
+  "tasks": [
+    "allbirds-uk-add-to-cart-tag-check",
+    "chanel-gb-pdp-tag-inspection",
+    "gymshark-uk-add-to-cart-tag-check",
+    "porsche-uk-script-inventory",
+    "porsche-uk-tag-inspection",
+    "puma-uk-script-inventory",
+    "puma-uk-seo-metadata-audit",
+    "puma-uk-tag-inspection",
+    "rajeevg-crawlability-audit",
+    "rajeevg-seo-metadata-audit",
+    "tldraw-three-shape-diagram"
+  ]
+}

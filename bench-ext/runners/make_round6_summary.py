@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Round 6 summary builder: reads artifacts/2026-09-14/results/*.json and emits summary.json."""
+"""Round 6 summary builder: reads artifacts/2026-09-12-round6/results/*.json and emits summary.json."""
 import json, pathlib, statistics
 
-RES = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-14/results')
+RES = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12-round6/results')
 IN_RATE, OUT_RATE = 0.075 / 1e6, 0.25 / 1e6
 
 

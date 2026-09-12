@@ -30,15 +30,27 @@ def ensure_up():
         c = cft_chrome.Chrome(CDP, extensions=[EXT], start_url=benchlib.URL_TASK)
         c.launch()
         _state['chrome'] = c
-    # wait for the extension to attach a tab hosting the task's site (task-agnostic)
+    # The browser is launched once per process, so a later task's tab will not exist yet.
+    # Find a tab already on the task's host, else drive an existing tab to the task URL
+    # (re-launching the browser per task would defeat the warm-start timing).
     host = benchlib.URL_TASK.split('/')[2].lower() if '//' in benchlib.URL_TASK else 'todomvc'
     end = time.time() + 30
+    tabs = ''
     while time.time() < end:
         tabs = br(['tabs'], timeout=30)
-        m = [ln for ln in tabs.splitlines() if host in ln.lower()]
+        rows = [ln for ln in tabs.splitlines() if '\t' in ln]
+        m = [ln for ln in rows if host in ln.lower()]
         if m:
             _state['tab'] = m[0].split('\t')[0].strip()
             return _state['tab']
+        if rows:
+            tab0 = rows[0].split('\t')[0].strip()
+            try:
+                br(['navigate', benchlib.URL_TASK, '--tab', tab0], timeout=30)
+                _state['tab'] = tab0
+                return tab0
+            except Exception:
+                pass
         time.sleep(1)
     raise RuntimeError(f'browser-relay: no tab for {host} attached: ' + tabs[:300])
 

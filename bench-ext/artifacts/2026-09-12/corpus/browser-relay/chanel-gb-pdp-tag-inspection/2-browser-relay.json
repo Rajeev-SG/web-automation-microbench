@@ -1,0 +1,243 @@
+{
+  "id": "2-browser-relay",
+  "contender": "browser-relay",
+  "rep": "2",
+  "task": "chanel-gb-pdp-tag-inspection",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.215,
+      "provider": "Together",
+      "request_id": "gen-1789252893-6CW67N1qMxs4CAWlBaBp",
+      "usage": {
+        "prompt_tokens": 1824,
+        "completion_tokens": 131,
+        "total_tokens": 1955,
+        "cost": 0.000335709,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003391,
+          "upstream_inference_prompt_cost": 0.0002736,
+          "upstream_inference_completions_cost": 6.55e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(function(){var h=document.documentElement.outerHTML;var gtm=[...new Set((h.match(/GTM-[A-Z0-9]+/g)||[]))];var ads=[...new Set((h.match(/AW-[0-9]{6,}/g)||[]))];var pin=(typeof window.pintrk!=='undefined')||/pintrk|ct\\.pinterest\\.com/.test(h);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return JSON.stringify(window.__bench_finding)})()\""
+      },
+      "browser_s": 0.118,
+      "code": "browser-relay eval \"(function(){var h=document.documentElement.outerHTML;var gtm=[...new Set((h.match(/GTM-[A-Z0-9]+/g)||[]))];var ads=[...new Set((h.match(/AW-[0-9]{6,}/g)||[]))];var pin=(typeof window.pintrk!=='undefined')||/pintrk|ct\\.pinterest\\.com/.test(h);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return JSON.stringify(window.__bench_finding)})()\"",
+      "tool_error": false,
+      "observation": "\",\"text\":\"Earrings\",\"id\":\"\",\"cls\":\"cc-link cc-footer-breadcrumb__link\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"cc-link cc-footer__link\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Haute Couture\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fashion\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"High Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fine Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Watches\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Eyewear\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fragrance\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Makeup\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Skincare\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sitemap\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Payment Methods\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shipping Options\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"My Account\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Returns\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Care & Services\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"FAQ\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Find a Boutique\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Book an appointment\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Careers\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Legal Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy Policy\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Report to Society\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fighting Counterfeits\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sustainability-Linked Bond Update\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Responsible Jewellery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Modern Slavery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Enable high contrast\",\"id\":\"\",\"cls\":\"cc-toggle\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Change location and language\\nUnited Kingdom - English (UK)\",\"id\":\"change-location-button\",\"cls\":\"cc-footer-location__label\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Instagram - Chanel\",\"id\":\"Instagram\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Facebook - Chanel\",\"id\":\"facebook\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Youtube - Chanel\",\"id\":\"youtube\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Linkedin - Chanel\",\"id\":\"\",\"cls\":\"cc-icon-label-button\"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.891,
+      "provider": "Together",
+      "request_id": "gen-1789252894-0t9wobv0zpDxDYLiMlTJ",
+      "usage": {
+        "prompt_tokens": 3463,
+        "completion_tokens": 24,
+        "total_tokens": 3487,
+        "cost": 0.0003208491,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1728,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00032409,
+          "upstream_inference_prompt_cost": 0.00031209,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"JSON.stringify(window.__bench_finding)\""
+      },
+      "browser_s": 0.111,
+      "code": "browser-relay eval \"JSON.stringify(window.__bench_finding)\"",
+      "tool_error": false,
+      "observation": "tion-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"High Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fine Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Watches\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Eyewear\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fragrance\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Makeup\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Skincare\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sitemap\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Payment Methods\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shipping Options\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"My Account\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Returns\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Care & Services\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"FAQ\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Find a Boutique\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Book an appointment\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Careers\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Legal Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy Policy\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Report to Society\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fighting Counterfeits\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sustainability-Linked Bond Update\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Responsible Jewellery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Modern Slavery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Enable high contrast\",\"id\":\"\",\"cls\":\"cc-toggle\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Change location and language\\nUnited Kingdom - English (UK)\",\"id\":\"change-location-button\",\"cls\":\"cc-footer-location__label\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Instagram - Chanel\",\"id\":\"Instagram\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Facebook - Chanel\",\"id\":\"facebook\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Youtube - Chanel\",\"id\":\"youtube\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Linkedin - Chanel\",\"id\":\"\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy policy\",\"id\":\"\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"REJECT ALL\",\"id\":\"onetrust-reject-all-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"ACCEPT ALL\",\"id\":\"onetrust-accept-btn-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Cookie Settings\",\"id\":\"onetrust-pc-btn-handler\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 3,
+      "api_s": 0.798,
+      "provider": "Together",
+      "request_id": "gen-1789252895-G7ATOEJmlZibK8KCs7ET",
+      "usage": {
+        "prompt_tokens": 4949,
+        "completion_tokens": 46,
+        "total_tokens": 4995,
+        "cost": 0.0003547269,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3392,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00035831,
+          "upstream_inference_prompt_cost": 0.00033531,
+          "upstream_inference_completions_cost": 2.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"window.__bench_finding ? 'SET:'+JSON.stringify(window.__bench_finding) : 'UNSET'\""
+      },
+      "browser_s": 0.112,
+      "code": "browser-relay eval \"window.__bench_finding ? 'SET:'+JSON.stringify(window.__bench_finding) : 'UNSET'\"",
+      "tool_error": false,
+      "observation": "tion-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"High Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fine Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Watches\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Eyewear\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fragrance\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Makeup\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Skincare\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sitemap\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Payment Methods\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shipping Options\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"My Account\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Returns\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Care & Services\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"FAQ\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Find a Boutique\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Book an appointment\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Careers\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Legal Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy Policy\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Report to Society\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fighting Counterfeits\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sustainability-Linked Bond Update\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Responsible Jewellery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Modern Slavery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Enable high contrast\",\"id\":\"\",\"cls\":\"cc-toggle\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Change location and language\\nUnited Kingdom - English (UK)\",\"id\":\"change-location-button\",\"cls\":\"cc-footer-location__label\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Instagram - Chanel\",\"id\":\"Instagram\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Facebook - Chanel\",\"id\":\"facebook\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Youtube - Chanel\",\"id\":\"youtube\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Linkedin - Chanel\",\"id\":\"\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy policy\",\"id\":\"\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"REJECT ALL\",\"id\":\"onetrust-reject-all-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"ACCEPT ALL\",\"id\":\"onetrust-accept-btn-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Cookie Settings\",\"id\":\"onetrust-pc-btn-handler\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 4,
+      "api_s": 1.784,
+      "provider": "Together",
+      "request_id": "gen-1789252896-6Hbm5gKr7KPEihBPpRpx",
+      "usage": {
+        "prompt_tokens": 6449,
+        "completion_tokens": 194,
+        "total_tokens": 6643,
+        "cost": 0.0004758633,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4864,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00048067,
+          "upstream_inference_prompt_cost": 0.00038367,
+          "upstream_inference_completions_cost": 9.7e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(function(){var h=document.documentElement.outerHTML;var gtm=[...new Set(h.match(/GTM-[A-Z0-9]+/g)||[])];var ads=[...new Set(h.match(/AW-[0-9]{6,}/g)||[])];var pin=(typeof window.pintrk!=='undefined')||/pintrk|ct\\.pinterest\\.com/.test(h);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return 'OK'})()\""
+      },
+      "browser_s": 0.11,
+      "code": "browser-relay eval \"(function(){var h=document.documentElement.outerHTML;var gtm=[...new Set(h.match(/GTM-[A-Z0-9]+/g)||[])];var ads=[...new Set(h.match(/AW-[0-9]{6,}/g)||[])];var pin=(typeof window.pintrk!=='undefined')||/pintrk|ct\\.pinterest\\.com/.test(h);window.__bench_finding={gtm:gtm,googleAds:ads,pinterest:pin};return 'OK'})()\"",
+      "tool_error": false,
+      "observation": "tion-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"High Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fine Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Watches\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Eyewear\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fragrance\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Makeup\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Skincare\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sitemap\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Payment Methods\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shipping Options\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"My Account\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Returns\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Care & Services\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"FAQ\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Find a Boutique\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Book an appointment\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Careers\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Legal Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy Policy\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Report to Society\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fighting Counterfeits\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sustainability-Linked Bond Update\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Responsible Jewellery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Modern Slavery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Enable high contrast\",\"id\":\"\",\"cls\":\"cc-toggle\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Change location and language\\nUnited Kingdom - English (UK)\",\"id\":\"change-location-button\",\"cls\":\"cc-footer-location__label\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Instagram - Chanel\",\"id\":\"Instagram\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Facebook - Chanel\",\"id\":\"facebook\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Youtube - Chanel\",\"id\":\"youtube\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Linkedin - Chanel\",\"id\":\"\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy policy\",\"id\":\"\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"REJECT ALL\",\"id\":\"onetrust-reject-all-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"ACCEPT ALL\",\"id\":\"onetrust-accept-btn-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Cookie Settings\",\"id\":\"onetrust-pc-btn-handler\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 5,
+      "api_s": 0.612,
+      "provider": "Together",
+      "request_id": "gen-1789252898-DPpkjxY0CytQPNWOWpGu",
+      "usage": {
+        "prompt_tokens": 8037,
+        "completion_tokens": 20,
+        "total_tokens": 8057,
+        "cost": 0.0004506777,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6336,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00045523,
+          "upstream_inference_prompt_cost": 0.00044523,
+          "upstream_inference_completions_cost": 1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"JSON.stringify(window.__bench_finding)\""
+      },
+      "browser_s": 0.108,
+      "code": "browser-relay eval \"JSON.stringify(window.__bench_finding)\"",
+      "tool_error": false,
+      "observation": "tion-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"High Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fine Jewellery\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Watches\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Eyewear\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fragrance\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Makeup\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Skincare\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sitemap\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Payment Methods\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shipping Options\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"My Account\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Returns\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Care & Services\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"FAQ\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Find a Boutique\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Book an appointment\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Careers\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Legal Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy Policy\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Report to Society\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Fighting Counterfeits\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sustainability-Linked Bond Update\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Responsible Jewellery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Modern Slavery Statement\",\"id\":\"\",\"cls\":\"cc-link cc-navigation-item cc-navigation-item__container cc-\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Enable high contrast\",\"id\":\"\",\"cls\":\"cc-toggle\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Change location and language\\nUnited Kingdom - English (UK)\",\"id\":\"change-location-button\",\"cls\":\"cc-footer-location__label\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Instagram - Chanel\",\"id\":\"Instagram\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Facebook - Chanel\",\"id\":\"facebook\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Youtube - Chanel\",\"id\":\"youtube\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Linkedin - Chanel\",\"id\":\"\",\"cls\":\"cc-icon-label-button\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy policy\",\"id\":\"\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"REJECT ALL\",\"id\":\"onetrust-reject-all-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"ACCEPT ALL\",\"id\":\"onetrust-accept-btn-handler\",\"cls\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"text\":\"Cookie Settings\",\"id\":\"onetrust-pc-btn-handler\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 6,
+      "api_s": 0.674,
+      "provider": "Together",
+      "request_id": "gen-1789252899-Nz2bH8CqHTBsAp7LRm6R",
+      "usage": {
+        "prompt_tokens": 9523,
+        "completion_tokens": 24,
+        "total_tokens": 9547,
+        "cost": 0.0004832487,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7936,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00048813,
+          "upstream_inference_prompt_cost": 0.00047613,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 2.617,
+  "total_s": 6.532,
+  "api_s": 5.974,
+  "browser_s": 0.559,
+  "model_calls": 6,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 34245,
+    "output": 439,
+    "cached": 24256,
+    "reasoning": 105
+  },
+  "cost": 0.00358772,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.chanel.com/gb/fine-jewellery/p/J13850/bouton-de-camelia-earrings/\",\"truth\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"googleAds\":[],\"pinterest\":false}}",
+  "pass": true
+}

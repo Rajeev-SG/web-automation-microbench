@@ -1,0 +1,547 @@
+{
+  "harnesses": [
+    "BrowserSkill",
+    "agent-browser",
+    "browser-relay",
+    "cdp-browser",
+    "raw-playwright"
+  ],
+  "model": "z-ai/glm-5.3-flash",
+  "pass_source": "recomputed from the stored verification with each task's declarative rule",
+  "promotion": {
+    "BrowserSkill": {
+      "reason": "2/11 passed screening",
+      "reps": 5,
+      "stage": "promote"
+    },
+    "agent-browser": {
+      "reason": "6/11 passed screening",
+      "reps": 5,
+      "stage": "promote"
+    },
+    "browser-relay": {
+      "reason": "22/33 passed screening",
+      "reps": 5,
+      "stage": "promote"
+    },
+    "cdp-browser": {
+      "reason": "6/11 passed screening",
+      "reps": 5,
+      "stage": "promote"
+    },
+    "raw-playwright": {
+      "reason": "17/33 passed screening",
+      "reps": 5,
+      "stage": "promote"
+    }
+  },
+  "providers_seen": [
+    "Friendli",
+    "Makora",
+    "Modal",
+    "Together"
+  ],
+  "reps": {
+    "BrowserSkill": [
+      "1"
+    ],
+    "agent-browser": [
+      "1"
+    ],
+    "browser-relay": [
+      "1",
+      "2",
+      "3"
+    ],
+    "cdp-browser": [
+      "1"
+    ],
+    "raw-playwright": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "run_dir": "bench-ext/artifacts/2026-09-12/corpus",
+  "stored_vs_recomputed_divergences": [
+    {
+      "artifact": "bench-ext/artifacts/2026-09-12/corpus/raw-playwright/chanel-gb-pdp-tag-inspection/1-raw-playwright.json",
+      "harness": "raw-playwright",
+      "recomputed": false,
+      "rep": "1",
+      "stored": true,
+      "task": "chanel-gb-pdp-tag-inspection"
+    },
+    {
+      "artifact": "bench-ext/artifacts/2026-09-12/corpus/raw-playwright/chanel-gb-pdp-tag-inspection/2-raw-playwright.json",
+      "harness": "raw-playwright",
+      "recomputed": false,
+      "rep": "2",
+      "stored": true,
+      "task": "chanel-gb-pdp-tag-inspection"
+    },
+    {
+      "artifact": "bench-ext/artifacts/2026-09-12/corpus/raw-playwright/chanel-gb-pdp-tag-inspection/3-raw-playwright.json",
+      "harness": "raw-playwright",
+      "recomputed": false,
+      "rep": "3",
+      "stored": true,
+      "task": "chanel-gb-pdp-tag-inspection"
+    }
+  ],
+  "table": {
+    "BrowserSkill": {
+      "allbirds-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "chanel-gb-pdp-tag-inspection": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "gymshark-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-script-inventory": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-tag-inspection": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-script-inventory": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-seo-metadata-audit": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-tag-inspection": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-crawlability-audit": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-seo-metadata-audit": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "tldraw-three-shape-diagram": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      }
+    },
+    "agent-browser": {
+      "allbirds-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "chanel-gb-pdp-tag-inspection": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "gymshark-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-script-inventory": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-tag-inspection": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-script-inventory": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-seo-metadata-audit": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-tag-inspection": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-crawlability-audit": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-seo-metadata-audit": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "tldraw-three-shape-diagram": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      }
+    },
+    "browser-relay": {
+      "allbirds-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "chanel-gb-pdp-tag-inspection": {
+        "passes": 2,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "gymshark-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "porsche-uk-script-inventory": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "porsche-uk-tag-inspection": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-script-inventory": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-seo-metadata-audit": {
+        "passes": 1,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-tag-inspection": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "rajeevg-crawlability-audit": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "rajeevg-seo-metadata-audit": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "tldraw-three-shape-diagram": {
+        "passes": 1,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    },
+    "cdp-browser": {
+      "allbirds-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "chanel-gb-pdp-tag-inspection": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "gymshark-uk-add-to-cart-tag-check": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-script-inventory": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "porsche-uk-tag-inspection": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-script-inventory": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-seo-metadata-audit": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "puma-uk-tag-inspection": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-crawlability-audit": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "rajeevg-seo-metadata-audit": {
+        "passes": 1,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      },
+      "tldraw-three-shape-diagram": {
+        "passes": 0,
+        "reps": 1,
+        "reps_used": [
+          "1"
+        ]
+      }
+    },
+    "raw-playwright": {
+      "allbirds-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "chanel-gb-pdp-tag-inspection": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "gymshark-uk-add-to-cart-tag-check": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "porsche-uk-script-inventory": {
+        "passes": 2,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "porsche-uk-tag-inspection": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-script-inventory": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-seo-metadata-audit": {
+        "passes": 0,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "puma-uk-tag-inspection": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "rajeevg-crawlability-audit": {
+        "passes": 2,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "rajeevg-seo-metadata-audit": {
+        "passes": 3,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "tldraw-three-shape-diagram": {
+        "passes": 1,
+        "reps": 3,
+        "reps_used": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    }
+  },
+  "tasks": [
+    "allbirds-uk-add-to-cart-tag-check",
+    "chanel-gb-pdp-tag-inspection",
+    "gymshark-uk-add-to-cart-tag-check",
+    "porsche-uk-script-inventory",
+    "porsche-uk-tag-inspection",
+    "puma-uk-script-inventory",
+    "puma-uk-seo-metadata-audit",
+    "puma-uk-tag-inspection",
+    "rajeevg-crawlability-audit",
+    "rajeevg-seo-metadata-audit",
+    "tldraw-three-shape-diagram"
+  ],
+  "total_runs": 99
+}

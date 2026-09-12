@@ -11,7 +11,39 @@
 import os, sys, json, time, subprocess, pathlib, re, urllib.request
 
 BASE = pathlib.Path(__file__).parent
-RES = pathlib.Path(os.environ.get('BENCH_RES', BASE / 'artifacts' / '2026-09-12' / 'results'))
+# --- default per-rep budgets + never-frozen observation --------------------------------------------
+DEFAULT_MAX_STEPS = 10
+DEFAULT_TIMEOUT = 180
+
+# Generic observation for a harvested task whose spec declares no `observation_js`: enough for a
+# model to orient (URL, title, visible text, interactive controls) without site-specific code.
+GENERIC_OBS_JS = (
+    "JSON.stringify({url:location.href,title:document.title,"
+    "text:document.body.innerText.slice(0,4000),"
+    "controls:[...document.querySelectorAll('a,button,input,select,textarea,label')]"
+    ".filter(e=>e.getClientRects().length).map(e=>({tag:e.tagName,type:e.type,"
+    "text:(e.innerText||e.value||'').trim().slice(0,60),id:e.id,"
+    "cls:(e.className||'').toString().slice(0,60)})).slice(0,150)})"
+)
+
+
+def run_date(when=None):
+    """Artifact/report folder date, derived from the actual run time (issue #27).
+
+    Earlier rounds hardcoded a *future* date into runner scripts, so the artifacts
+    landed in folders named after days that had not happened. New artifacts derive
+    the folder from the clock instead.
+    """
+    import datetime
+    return (when or datetime.datetime.now()).strftime('%Y-%m-%d')
+
+
+def artifacts_dir(sub='results', when=None):
+    """Default artifact directory for the current run: ``<BASE>/artifacts/<today>/<sub>``."""
+    return BASE / 'artifacts' / run_date(when) / sub
+
+
+RES = pathlib.Path(os.environ.get('BENCH_RES', artifacts_dir('results')))
 RES.mkdir(exist_ok=True, parents=True)
 KEY = os.environ.get('OPENROUTER_API_KEY', '')
 ENV = {k: v for k, v in os.environ.items() if not any(x in k.upper() for x in ['KEY','TOKEN','SECRET','PASSWORD'])}
@@ -129,7 +161,8 @@ class Task:
     REQUIRED_PROVENANCE = ('source_session_id', 'source_url', 'verified_against')
 
     def __init__(self, id, instruction, url, observe_js, verify_js, check,
-                 capabilities=(), provenance=None, reset=None, level='deterministic'):
+                 capabilities=(), provenance=None, reset=None, level='deterministic',
+                 max_steps=None, timeout=None):
         self.id = id
         self.instruction = instruction
         self.url = url
@@ -140,6 +173,10 @@ class Task:
         self.provenance = dict(provenance or {})
         self.reset_override = reset
         self.level = level
+        # Optional per-task execution budget (harvested real-work tasks need more than the
+        # TodoMVC microbenchmark's 10 steps); None falls back to the caller's default.
+        self.max_steps = max_steps
+        self.timeout = timeout
 
     # --- spec-facing helpers (default to the adapter's own mechanics) ---
     def reset(self, adapter):
@@ -167,13 +204,13 @@ def register(task):
     return task
 
 
-_TASK_MODULES = ('tasks_real',)
+_TASK_MODULES = ('task_ingest',)
 
 
 def get_task(task=None):
     """Resolve a task id (or Task, or None -> the default TodoMVC task).
 
-    Real-work tasks live in separate modules (e.g. `tasks_real`); they are imported
+    Harvested real-work tasks are ingested from JSON by `task_ingest`; it is imported
     lazily the first time an unknown id is requested, so runners can name any task id.
     """
     if isinstance(task, Task):
@@ -190,7 +227,7 @@ def get_task(task=None):
 
 DEFAULT_TASK_ID = 'todomvc'
 
-# TodoMVC: latency microbenchmark only, never capability evidence (see docs/task-suite-v1.md).
+# TodoMVC: latency microbenchmark only, never capability evidence (see docs/benchmark-spec.md).
 register(Task(
     id='todomvc',
     instruction=TASK,
@@ -227,7 +264,7 @@ def cli_reps_and_task(argv):
     return reps_from_argv(reps), task
 
 
-def run_cli(factory, argv=None, max_steps=10, timeout=180):
+def run_cli(factory, argv=None, max_steps=None, timeout=None):
     """Standard runner entrypoint: reps + `--task=<id>` from argv, one run_rep per rep.
 
     `factory` is any zero-argument callable returning a fresh adapter (usually the class).
@@ -239,9 +276,11 @@ def run_cli(factory, argv=None, max_steps=10, timeout=180):
     return [run_rep(factory(), rep, task=task, max_steps=max_steps, timeout=timeout) for rep in reps]
 
 
-def run_rep(adapter, rep, task=None, max_steps=10, timeout=180):
+def run_rep(adapter, rep, task=None, max_steps=None, timeout=None):
     task = get_task(task)
     task.bind()
+    max_steps = max_steps if max_steps is not None else (task.max_steps or DEFAULT_MAX_STEPS)
+    timeout = timeout if timeout is not None else (task.timeout or DEFAULT_TIMEOUT)
     rid = f'{rep}-{adapter.name}'
     log = {'id': rid, 'contender': adapter.name, 'rep': rep, 'task': task.id, 'events': []}
     if task.reset_override:

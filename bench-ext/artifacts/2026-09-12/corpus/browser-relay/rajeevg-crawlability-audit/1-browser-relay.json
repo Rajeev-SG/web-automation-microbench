@@ -1,0 +1,172 @@
+{
+  "id": "1-browser-relay",
+  "contender": "browser-relay",
+  "rep": "1",
+  "task": "rajeevg-crawlability-audit",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.859,
+      "provider": "Friendli",
+      "request_id": "gen-1789251841-78FHoA4gZhJS5dGEeed3",
+      "usage": {
+        "prompt_tokens": 1690,
+        "completion_tokens": 58,
+        "total_tokens": 1748,
+        "cost": 0.000279675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002825,
+          "upstream_inference_prompt_cost": 0.0002535,
+          "upstream_inference_completions_cost": 2.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"fetch('/robots.txt').then(r=>r.text()).then(t=>{window.__rt=t;return fetch('/sitemap.xml')}).then(r=>r.text()).then(s=>{window.__sx=s;return 'ok'})\""
+      },
+      "browser_s": 0.192,
+      "code": "browser-relay eval \"fetch('/robots.txt').then(r=>r.text()).then(t=>{window.__rt=t;return fetch('/sitemap.xml')}).then(r=>r.text()).then(s=>{window.__sx=s;return 'ok'})\"",
+      "tool_error": false,
+      "observation": "flow I now run end to end: ChatGPT plans and reviews, GitHub holds the durable task state, Remote Desktop Commander bridges to the Mac, and a local OMP worker on GLM-5.3-Flash does the implementation.\\n\\n6 Sept 2026\\nHave something useful to build?\\n\\nI am always interested in thoughtful software, analytics, and AI work where the practical details matter.\\n\\nEmail me\\n\\n\u00a9 2026 Rajeev Gill\\n\\nPrivacy\\nPrivacy settings\\nAnalytics preferences\\n\\nOptional analytics helps me understand which writing people use. Advertising tracking stays off.\\n\\nRead the privacy policy\\nNecessary only\\nAllow analytics\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"Rajeev Gill\",\"id\":\"\",\"cls\":\"text-base font-semibold tracking-tight\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Home\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Solutions\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Writing\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"About\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Toggle theme\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"View selected solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read my writing\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Get in touch\",\"id\":\"\",\"cls\":\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"See all solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Local model write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Build write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Browse all writing\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I moved the waiting out of my coding agent and into CI\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I Built a Remote Control Plane for Cheap Coding Workers\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Email me\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy\",\"id\":\"\",\"cls\":\"transition-colors hover:text-foreground\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Privacy settings\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap fo\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read the privacy policy\",\"id\":\"\",\"cls\":\"inline-flex text-sm text-muted-foreground underline underlin\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Necessary only\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Allow analytics\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.663,
+      "provider": "Together",
+      "request_id": "gen-1789251842-f5gvDfoSSfsn4aNzRkip",
+      "usage": {
+        "prompt_tokens": 3142,
+        "completion_tokens": 33,
+        "total_tokens": 3175,
+        "cost": 0.000482922,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004878,
+          "upstream_inference_prompt_cost": 0.0004713,
+          "upstream_inference_completions_cost": 1.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"JSON.stringify({rt:window.__rt,sx:window.__sx.slice(0,3000)})\""
+      },
+      "browser_s": 0.124,
+      "code": "browser-relay eval \"JSON.stringify({rt:window.__rt,sx:window.__sx.slice(0,3000)})\"",
+      "tool_error": false,
+      "observation": "flow I now run end to end: ChatGPT plans and reviews, GitHub holds the durable task state, Remote Desktop Commander bridges to the Mac, and a local OMP worker on GLM-5.3-Flash does the implementation.\\n\\n6 Sept 2026\\nHave something useful to build?\\n\\nI am always interested in thoughtful software, analytics, and AI work where the practical details matter.\\n\\nEmail me\\n\\n\u00a9 2026 Rajeev Gill\\n\\nPrivacy\\nPrivacy settings\\nAnalytics preferences\\n\\nOptional analytics helps me understand which writing people use. Advertising tracking stays off.\\n\\nRead the privacy policy\\nNecessary only\\nAllow analytics\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"Rajeev Gill\",\"id\":\"\",\"cls\":\"text-base font-semibold tracking-tight\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Home\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Solutions\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Writing\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"About\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Toggle theme\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"View selected solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read my writing\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Get in touch\",\"id\":\"\",\"cls\":\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"See all solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Local model write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Build write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Browse all writing\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I moved the waiting out of my coding agent and into CI\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I Built a Remote Control Plane for Cheap Coding Workers\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Email me\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy\",\"id\":\"\",\"cls\":\"transition-colors hover:text-foreground\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Privacy settings\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap fo\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read the privacy policy\",\"id\":\"\",\"cls\":\"inline-flex text-sm text-muted-foreground underline underlin\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Necessary only\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Allow analytics\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"}]}"
+    },
+    {
+      "step": 3,
+      "api_s": 1.487,
+      "provider": "Friendli",
+      "request_id": "gen-1789251843-Uro32bvjQc6dPhihrKqp",
+      "usage": {
+        "prompt_tokens": 4624,
+        "completion_tokens": 171,
+        "total_tokens": 4795,
+        "cost": 0.000771309,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0007791,
+          "upstream_inference_prompt_cost": 0.0006936,
+          "upstream_inference_completions_cost": 8.55e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(()=>{const rt=window.__rt,sx=window.__sx;const sm=[...rt.matchAll(/^Sitemap:\\s*(\\S+)/gim)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...sx.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:!!rt&&rt.length>0,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})};return JSON.stringify(window.__bench_finding)})()\""
+      },
+      "browser_s": 0.132,
+      "code": "browser-relay eval \"(()=>{const rt=window.__rt,sx=window.__sx;const sm=[...rt.matchAll(/^Sitemap:\\s*(\\S+)/gim)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...sx.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:!!rt&&rt.length>0,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})};return JSON.stringify(window.__bench_finding)})()\"",
+      "tool_error": false,
+      "observation": "flow I now run end to end: ChatGPT plans and reviews, GitHub holds the durable task state, Remote Desktop Commander bridges to the Mac, and a local OMP worker on GLM-5.3-Flash does the implementation.\\n\\n6 Sept 2026\\nHave something useful to build?\\n\\nI am always interested in thoughtful software, analytics, and AI work where the practical details matter.\\n\\nEmail me\\n\\n\u00a9 2026 Rajeev Gill\\n\\nPrivacy\\nPrivacy settings\\nAnalytics preferences\\n\\nOptional analytics helps me understand which writing people use. Advertising tracking stays off.\\n\\nRead the privacy policy\\nNecessary only\\nAllow analytics\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"Rajeev Gill\",\"id\":\"\",\"cls\":\"text-base font-semibold tracking-tight\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Home\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Solutions\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Writing\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"About\",\"id\":\"\",\"cls\":\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Toggle theme\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"View selected solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read my writing\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Get in touch\",\"id\":\"\",\"cls\":\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"See all solutions\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Local model write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Build write-up\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"GitHub\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Live site\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Browse all writing\",\"id\":\"\",\"cls\":\"inline-flex items-center gap-2 text-sm font-medium hover:und\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I moved the waiting out of my coding agent and into CI\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"I Built a Remote Control Plane for Cheap Coding Workers\",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \",\"id\":\"\",\"cls\":\"hover:underline\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Email me\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Privacy\",\"id\":\"\",\"cls\":\"transition-colors hover:text-foreground\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Privacy settings\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center whitespace-nowrap fo\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Read the privacy policy\",\"id\":\"\",\"cls\":\"inline-flex text-sm text-muted-foreground underline underlin\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Necessary only\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Allow analytics\",\"id\":\"\",\"cls\":\"inline-flex items-center justify-center gap-2 whitespace-now\"}]}"
+    },
+    {
+      "step": 4,
+      "api_s": 0.6,
+      "provider": "Together",
+      "request_id": "gen-1789251845-2N4yAWLedGuTxxO6ghCm",
+      "usage": {
+        "prompt_tokens": 6214,
+        "completion_tokens": 7,
+        "total_tokens": 6221,
+        "cost": 0.0005612904,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00056696,
+          "upstream_inference_prompt_cost": 0.00056346,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 2.224,
+  "total_s": 4.057,
+  "api_s": 3.609,
+  "browser_s": 0.448,
+  "model_calls": 4,
+  "tool_calls": 3,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Friendli",
+    "Together"
+  ],
+  "tokens": {
+    "input": 15670,
+    "output": 269,
+    "cached": 3072,
+    "reasoning": 7
+  },
+  "cost": 0.0013577,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":76,\"allSameHost\":true},\"finding\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":76,\"allSameHost\":true},\"error\":null}",
+  "pass": true
+}

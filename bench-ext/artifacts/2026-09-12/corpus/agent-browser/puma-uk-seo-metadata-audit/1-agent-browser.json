@@ -1,0 +1,135 @@
+{
+  "id": "1-agent-browser",
+  "contender": "agent-browser",
+  "rep": "1",
+  "task": "puma-uk-seo-metadata-audit",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.974,
+      "provider": "Together",
+      "request_id": "gen-1789251484-7Kdgzm7IwcioXWK3wCQ3",
+      "usage": {
+        "prompt_tokens": 2302,
+        "completion_tokens": 250,
+        "total_tokens": 2552,
+        "cost": 0.000465597,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004703,
+          "upstream_inference_prompt_cost": 0.0003453,
+          "upstream_inference_completions_cost": 0.000125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval (() => { const c=document.querySelector(\"link[rel=canonical]\"); const og=s=>{const m=document.querySelector(`meta[property='${s}']`);return m?m.getAttribute(\"content\"):null}; const types=[]; document.querySelectorAll(\"script[type='application/ld+json']\").forEach(s=>{try{const d=JSON.parse(s.textContent); const walk=o=>{if(!o)return; if(Array.isArray(o)){o.forEach(walk);return;} if(o[\"@type\"]){(Array.isArray(o[\"@type\"])?o[\"@type\"]:[o[\"@type\"]]).forEach(t=>types.push(t));} Object.values(o).forEach(walk);}; walk(d);}catch(e){}}); const f={canonical:c?c.href:null,ogTitle:og(\"og:title\"),ogType:og(\"og:type\"),hasOgImage:!!og(\"og:image\"),hasH1:!!Array.from(document.querySelectorAll(\"h1\")).find(h=>h.textContent.trim()),jsonldTypes:[...new Set(types)].sort()}; window.__bench_finding=f; return JSON.stringify(f); })()"
+      },
+      "browser_s": 0.025,
+      "code": "agent-browser eval (() => { const c=document.querySelector(\"link[rel=canonical]\"); const og=s=>{const m=document.querySelector(`meta[property='${s}']`);return m?m.getAttribute(\"content\"):null}; const types=[]; document.querySelectorAll(\"script[type='application/ld+json']\").forEach(s=>{try{const d=JSON.parse(s.textContent); const walk=o=>{if(!o)return; if(Array.isArray(o)){o.forEach(walk);return;} if(o[\"@type\"]){(Array.isArray(o[\"@type\"])?o[\"@type\"]:[o[\"@type\"]]).forEach(t=>types.push(t));} Object.values(o).forEach(walk);}; walk(d);}catch(e){}}); const f={canonical:c?c.href:null,ogTitle:og(\"og:title\"),ogType:og(\"og:type\"),hasOgImage:!!og(\"og:image\"),hasH1:!!Array.from(document.querySelectorAll(\"h1\")).find(h=>h.textContent.trim()),jsonldTypes:[...new Set(types)].sort()}; window.__bench_finding=f; return JSON.stringify(f); })()",
+      "tool_error": false,
+      "observation": "xt\\\":\\\"New Arrivals\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-70 hover:tex\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sports\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football Boots\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football Clothing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Motorsport\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"All Sports\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Boys\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Trainers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Coats & Jackets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Hoodies & Sweatshirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Tracksuits\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Joggers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"T-Shirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Shorts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Socks\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Accessories\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sale\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Girls\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Trainers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Coats & Jackets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Hoodies & Sweatshirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Joggers & Leggings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Matching Sets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"T-Shirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Shorts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Socks\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Accessories\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sale\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"}]}\""
+    },
+    {
+      "step": 2,
+      "api_s": 0.587,
+      "provider": "Together",
+      "request_id": "gen-1789251486-SxhNRWqnPvTi0q2Tuwpa",
+      "usage": {
+        "prompt_tokens": 4437,
+        "completion_tokens": 22,
+        "total_tokens": 4459,
+        "cost": 0.0004112757,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00041543,
+          "upstream_inference_prompt_cost": 0.00040443,
+          "upstream_inference_completions_cost": 1.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval JSON.stringify(window.__bench_finding)"
+      },
+      "browser_s": 0.016,
+      "code": "agent-browser eval JSON.stringify(window.__bench_finding)",
+      "tool_error": false,
+      "observation": "xt\\\":\\\"New Arrivals\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-70 hover:tex\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sports\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football Boots\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Football Clothing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Motorsport\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"All Sports\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Boys\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Trainers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Coats & Jackets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Hoodies & Sweatshirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Tracksuits\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Joggers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"T-Shirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Shorts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Socks\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Accessories\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sale\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Girls\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Trainers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Coats & Jackets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Hoodies & Sweatshirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Joggers & Leggings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Matching Sets\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"T-Shirts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Shorts\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Socks\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Accessories\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Sale\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \\\"}]}\""
+    },
+    {
+      "step": 3,
+      "api_s": 1.316,
+      "provider": "Together",
+      "request_id": "gen-1789251486-6u8pOWEN4dyqc5DhQ8M8",
+      "usage": {
+        "prompt_tokens": 6339,
+        "completion_tokens": 61,
+        "total_tokens": 6400,
+        "cost": 0.0004545189,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4352,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00045911,
+          "upstream_inference_prompt_cost": 0.00042861,
+          "upstream_inference_completions_cost": 3.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 5.092,
+  "total_s": 3.918,
+  "api_s": 3.877,
+  "browser_s": 0.041,
+  "model_calls": 3,
+  "tool_calls": 2,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 13078,
+    "output": 333,
+    "cached": 6528,
+    "reasoning": 59
+  },
+  "cost": 0.0013089,
+  "done": true,
+  "error": null,
+  "verification": "\"{\\\"url\\\":\\\"https://uk.puma.com/uk/en\\\",\\\"truth\\\":{\\\"canonical\\\":\\\"https://uk.puma.com/uk/en\\\",\\\"ogTitle\\\":\\\"PUMA.com | Clothing, Shoes, Accessories | PUMA\\\",\\\"ogType\\\":\\\"website\\\",\\\"hasOgImage\\\":true,\\\"hasH1\\\":true,\\\"jsonldTypes\\\":[\\\"Corporation\\\",\\\"WebSite\\\"]},\\\"finding\\\":null}\"",
+  "pass": false
+}

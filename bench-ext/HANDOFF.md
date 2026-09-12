@@ -100,7 +100,7 @@ matched by URL (used for page-agent seeding + verification).
 | notte | `runners/notte.py` | 2/2 | 171.8s | Python 3.12 uv venv (`/tmp/notte-venv`) + `notte` 1.9.0; agent on OpenRouter/GLM via `NOTTE_CONFIG_PATH` → `reasoning_model = "openrouter/z-ai/glm-5.3-flash"` + `ENABLE_OPENROUTER=true`. Screenshot bytes are `session.screenshot().raw`. High variance (116–228s). |
 
 **Taylor-Bayouth browser-agent:** exclusion row removed — tool rewritten as `visnia-ai/browser-agent`
-and re-scored 2/2 @ 32.5s in Round 4 (`bench-ext/artifacts/2026-09-13/`).
+and re-scored 2/2 @ 32.5s in Round 4 (`bench-ext/artifacts/2026-09-11-round4/`).
 
 **Still excluded:** sitegeist. Build blocked upstream — `@mariozechner/pi-agent-core@0.85.1` imports
 `DEFAULT_MAX_AGENT_RETRY_DELAY_MS` / `retryDelayMs` from `@earendil-works/pi-ai@0.85.1`, which exports

@@ -2,7 +2,7 @@
 
 Repo (real path): `/Users/rajeev/Code/web-automation-microbench`  · bench-ext worktree: `bench-ext/`
 Shared lib: `bench-ext/benchlib.py` (task text, observation JS, verify JS, model payload, pass predicate, `run_rep`).
-Round 6 results dir: `bench-ext/artifacts/2026-09-14/results/`  · Round report: `bench-ext/artifacts/2026-09-14/report.md`
+Round 6 results dir: `bench-ext/artifacts/2026-09-12-round6/results/`  · Round report: `bench-ext/artifacts/2026-09-12-round6/report.md`
 
 ## Hard rules
 - Model is fixed: `z-ai/glm-5.3-flash` via OpenRouter, temp 0, reasoning low+excluded, `response_format json_object`, `provider {"sort":"latency"}`. `benchlib.openrouter_payload()` already enforces it. Never `:nitro`. Never substitute another model.
@@ -12,7 +12,7 @@ Round 6 results dir: `bench-ext/artifacts/2026-09-14/results/`  · Round report:
 - Timing boundary: setup/reset before the timer, verify+screenshot after. `run_rep` already does this.
 - Every runnable contender: ≥2 scored reps, rep ids `1` and `2`. Keep failures as failures.
 - If a tool genuinely cannot be installed/configured/run after a reasonable attempt, write `bench-ext/runners/<name>-EXCLUDED.json` = `{"contender":name,"excluded":true,"reason":"...","version":"...","commands":"...","error":"..."}` and report it. That satisfies the acceptance criterion ("scored or evidenced as blocked").
-- No fabricated numbers. Every reported number must be derivable from a real result JSON in `artifacts/2026-09-14/results/`.
+- No fabricated numbers. Every reported number must be derivable from a real result JSON in `artifacts/2026-09-12-round6/results/`.
 - Never log the OpenRouter key into any artifact (CI scans for `sk-or-v1-`).
 
 ## How to write a runner
@@ -27,7 +27,7 @@ Skeleton:
 import sys, time, pathlib
 sys.path.insert(0, '/Users/rajeev/Code/web-automation-microbench/bench-ext')
 import benchlib
-benchlib.RES = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-14/results')
+benchlib.RES = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/artifacts/2026-09-12-round6/results')
 benchlib.RES.mkdir(parents=True, exist_ok=True)
 
 class MyTool:
@@ -58,6 +58,6 @@ if __name__ == '__main__':
 Cost = tokens × published latency-sorted provider rate (Makora: $0.075/M input, cached ≈ half, $0.25/M output) unless the tool reports its own cost. Record `cost` in the JSON if the tool reports it.
 
 ## Deliverable per contender
-Runner script in `bench-ext/runners/`, ≥2 result JSONs + PNGs in `artifacts/2026-09-14/results/`, and a final one-line record:
+Runner script in `bench-ext/runners/`, ≥2 result JSONs + PNGs in `artifacts/2026-09-12-round6/results/`, and a final one-line record:
 `{contender, version_or_commit, passes "x/y", median_s, tokens_in/out per run, cost_per_run_usd, setup_notes}`
 plus any blocked JSON. Report the exact install commands and version/commit SHA you used.
