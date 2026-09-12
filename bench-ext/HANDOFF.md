@@ -113,3 +113,37 @@ the sidepanel-first-run patch can't be applied. Needs a pi-ai/pi-agent-core vers
 2. Background `nohup ... &` processes are reaped when the tool call returns; run long installs in a
    foreground session instead.
 3. Never log the seeded `llmConfig` — it carries the OpenRouter key (CI scans artifacts for `sk-or-v1-`).
+
+## Correction + recipe: sitegeist builds (2026-09-12, end of session)
+
+The earlier "build blocked upstream / needs dependency realignment" reading in the README was **wrong**.
+sitegeist's `dist-chrome` builds in this clone after two changes:
+
+1. Pin the pi-* packages to the self-consistent **published 0.73.1** family instead of the broken mix:
+   ```json
+   "@mariozechner/pi-agent-core": "0.73.1",
+   "@mariozechner/pi-ai": "0.73.1",
+   "@mariozechner/pi-web-ui": "0.73.1"
+   ```
+   Why the mix breaks: sitegeist points `pi-agent-core` at the vendored `../pi-mono/packages/agent`
+   (0.85.1), whose `dist/harness/config.js` imports `DEFAULT_MAX_AGENT_RETRY_DELAY_MS` /
+   `retryDelayMs` from `@earendil-works/pi-ai` — and **no published `pi-ai` exports those symbols**
+   (the vendored `pi-mono/packages/ai/dist/utils/retry.js` does, at lines 78-79, but npm resolves the
+   stale nested copy instead). `pi-web-ui` additionally points at `file:../pi-mono/packages/web-ui`,
+   which **does not exist** in the vendored tree at all. Aligning all three to npm 0.73.1 removes both.
+2. `npm i @opentelemetry/api` — required by `@mistralai/mistralai` (transitive via `pi-web-ui`).
+
+Then `npm run build:chrome` succeeds (`Built for chrome in .../dist-chrome`).
+
+**Still unscored** (the only remaining work): the sidepanel first-run. Needs `src/sidepanel.ts`'s
+`if (!chrome.userScripts) await UserScriptsPermissionDialog.request()` replaced with warn+continue for
+headless, the OpenRouter key + `z-ai/glm-5.3-flash` seeded (`sitegeist-storage` → `provider-keys` → openrouter,
+and `DEFAULT_MODELS` at `src/sidepanel.ts:108`), and the sidepanel driven headlessly (open
+`chrome-extension://<id>/sidepanel.html` as a tab and drive the Lit UI over CDP). Cache-bust with
+`rm -rf` is avoided; the clone's `package.json` is tracked, so `git checkout -- package.json` restores it.
+
+**page-agent**: would pass if it had a key-press action — its source even carries `// @todo send_keys`
+next to the tool table (`packages/core/src/tools/index.ts`). Two reportable upstream findings:
+(a) missing `send_keys` tool (its `execute_javascript` could dispatch the key, but the model never tried);
+(b) sending LLM `config` over the hub wire makes `useHubWs` call `configure()` → `useAgent` re-renders →
+the in-flight agent is disposed ("Task aborted"); seed `chrome.storage.local.llmConfig` and send no config.
