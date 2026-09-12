@@ -65,6 +65,8 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 ## Master leaderboard — every benchmarked tool
 
 One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter. **Round 6 rows are mostly 2-rep screening results**, with four promoted to 5 reps (chrome-cdp-skill, chrome-devtools-mcp, ego-browser, playwright-cli) because the 8–16s block was a near-tie and the issue requires promoting plausible frontier candidates. That promotion mattered: **chrome-cdp-skill screened 2/2 at 8.8s and then scored 3/5 over five reps** (reps 4–5 ended at the right persisted state but the wrong URL/filter, and the model reported "done" anyway) — 2-rep screening overstates reliability. Similarly, round-6 rows with only 2 reps should not be ordered finely against each other. Round 6 cost/routing: midscene and skyvern costs are tool-reported and both use default OpenRouter routing (no `provider.sort` pass-through); everything else is latency-sorted. opencli (0/2) and bb-browser (0/2) are **scored tool failures**, not exclusions — both reach the page but their native key event never commits the React todo (see the Round 6 section).
+This table is the **fast-path latency/cost** claim only; the separate **real-work capability** claim
+is the next table.
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
@@ -102,7 +104,48 @@ One row per harness × best-model combination. `Median time` is the median acros
 | **skyvern** | [Skyvern-AI/skyvern](https://github.com/Skyvern-AI/skyvern) | 6 | 2/2 | 186.5s | ~29.0k / ~4.2k | ~$0.0055 |
 | **browser-agent** (Taylor-Bayouth) | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | 5 | 1/2 | 200.1s | ~19k–782k / ~0.5k–25k | n/a |
 
-## Round 6 — 14 Sep 2026: remaining high-value contenders (issue #17)
+### Real-work capability leaderboard
+
+The table above ranks the **latency microbenchmark** (TodoMVC, one controlled instrument). It says
+nothing about whether a harness can do real work, and the two orderings genuinely disagree. Below is
+the same harness set scored on the **harvested browser corpus** — 11 real, provenance-backed browser
+tasks vendored from `codex-session-orchestration-analysis#88` (issue #27). Full per-task scoreboard
+and the defects the runs exposed:
+[`bench-ext/artifacts/2026-09-12/corpus/report.md`](bench-ext/artifacts/2026-09-12/corpus/report.md).
+
+| Harness | Repo | Fast-path (TodoMVC) | Real-work capability | Capability reps | Note |
+|---|---|---|---|---|---|
+| **browser-relay** | [reliefeai/browser-relay](https://github.com/reliefeai/browser-relay) | 2/2 · 4.3s | **22/33** | 1, 2, 3 | strongest on real work; promoted past screening |
+| **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3/4 · 42.7s | 17/33 | 1, 2, 3 | promoted past screening |
+| **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 2/2 · 10.1s | 6/11 | 1 | |
+| **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 2/2 · 10.7s | 6/11 | 1 | |
+| **BrowserSkill** | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | 2/2 · **4.1s** | 2/11 | 1 | **fastest fast-path, weakest real work** — the orderings invert |
+
+Five harness architectures, 99 runs, model `z-ai/glm-5.3-flash`. Cells are `passes / reps`; every
+number is recomputed from the per-rep JSON in `bench-ext/artifacts/2026-09-12/corpus/`, and nothing is
+retried away. Screening was 1 rep per task; the two leaders were then promoted to 3 reps, which
+exposed failures a single rep understated.
+
+| Task | Capability | Passes (all harnesses) |
+|---|---|---|
+| `allbirds-uk-add-to-cart-tag-check` | consent → add to cart → tags | 0/9 |
+| `gymshark-uk-add-to-cart-tag-check` | consent → add to cart → tags | 1/9 |
+| `puma-uk-seo-metadata-audit` | SEO / structured data | 1/9 |
+| `chanel-gb-pdp-tag-inspection` | tag inspection (anti-bot boundary) | 2/9 |
+| `tldraw-three-shape-diagram` | canvas UI creation | 2/9 |
+| `rajeevg-crawlability-audit` | robots.txt + sitemap | 7/9 |
+| `porsche-uk-script-inventory` | third-party script inventory | 8/9 |
+| `porsche-uk-tag-inspection` | tag inspection | 8/9 |
+| `puma-uk-script-inventory` | third-party script inventory | 8/9 |
+| `puma-uk-tag-inspection` | tag inspection | 8/9 |
+| `rajeevg-seo-metadata-audit` | SEO / structured data | 8/9 |
+
+**Read it as:** the one-shot "inspect the live page and report" audits converge (8-9/9) on any harness
+that can evaluate JS in the page; the multi-step journeys (add-to-cart) and canvas construction sit
+above the current frontier (0-2/9). `puma-uk-seo-metadata-audit` fails because models over-report
+nested JSON-LD types. Discriminating difficulty, not broken tasks.
+
+## Round 6 — 12 Sep 2026: remaining high-value contenders (issue #17)
 
 Eleven further contenders, all on GLM 5.3-Flash with latency-sorted routing where the tool permits it.
 Full screening table, Pareto analysis, architecture classification, block/defect evidence and
@@ -208,7 +251,7 @@ docs/
 
 Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass criteria, provider config, timing boundary, required measurements, and the JSON transcript shape. Then follow the runner pattern in `artifacts/2026-09-11/` and add at least two scored reps. Update the README table and add a short Pareto note.
 
-## Task parameterization — 15 Sep 2026
+## Task parameterization — 12 Sep 2026
 
 The benchmark is no longer TodoMVC-only. `bench-ext/benchlib.py` now holds a **task
 registry** and `run_rep(adapter, rep, task=…)`; TodoMVC stays the latency microbenchmark
@@ -256,8 +299,11 @@ python3 bench-ext/corpus/screen.py --harness raw-playwright --reps 1 --all
 python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/2026-09-12/corpus
 ```
 
-Capability scoreboard and the two harness defects this exposed:
-[bench-ext/artifacts/2026-09-12/corpus/capability-scoreboard.md](bench-ext/artifacts/2026-09-12/corpus/capability-scoreboard.md).
+Scored results — 5 harness architectures x 11 tasks, 99 runs — are in the
+**Real-work capability leaderboard** above. Full per-task scoreboard, the three harness defects
+the runs exposed, and the promotion evidence:
+[bench-ext/artifacts/2026-09-12/corpus/report.md](bench-ext/artifacts/2026-09-12/corpus/report.md)
+· [capability-scoreboard.json](bench-ext/artifacts/2026-09-12/corpus/capability-scoreboard.json).
 
 Provenance rules, the ingestion contract and admission gates:
 [`bench-ext/docs/task-intake.md`](bench-ext/docs/task-intake.md) and the producer's
