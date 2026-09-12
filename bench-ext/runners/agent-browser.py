@@ -20,7 +20,10 @@ class AgentBrowser:
            'and the code string MUST be EXACTLY ONE CLI invocation: `fill <selector> "<text>"` fills the '
            'new-todo field (does NOT commit), then `press Enter` commits the todo; `click <selector-or-@ref>`, '
            '`snapshot`, `get text`, `eval`. Never chain with && or ; and do not wrap todo text in quotes '
-           'beyond the CLI syntax. Example: fill .new-todo "Email supplier". Respond as JSON '
+           'beyond the CLI syntax. IMPORTANT: to tick a todo checkbox or open the Active filter, first run '
+           '`snapshot`, then click the printed @ref (e.g. `click @e7` for the checkbox next to the todo label, '
+           '`@eN` for the "Active" link). CSS .toggle selectors and text= links are unreliable here. '
+           'Example: fill .new-todo "Email supplier". Respond as JSON '
            '{"code":"agent-browser ..."} for each step, and {"done":true} IMMEDIATELY once the final state is '
            'observed (items, completed flags, Active filter). Respond ONLY with strict JSON; no extra keys, '
            'no markdown, no prose. Never send None or empty code.')

@@ -58,3 +58,27 @@ This is an extension of the repo (Round 3). Rounds 1–2 artifacts untouched.
 - Agent 1 (Linnaeus, 01a091cf-f8e2-7871-8a1e-d533850b3824): agent-browser/browser-control/cdp-browser DONE; webctl rerun in flight.
 - Agent 2 (Huygens, 01a091d0-4311-74a2-9c2d-806eaba99609): browser-agent broken (2 runs recorded), browser-cli excluded; BrowserSkill/browser-relay unattempted at checkpoint.
 - Agent 3 (Fermat, 01a091d0-806a-7721-9230-35470238a173): CLOSED after delivering agent-chrome-cli, jarvis-browser, lightpanda scored + page-agent excluded.
+
+
+## Round 3 completion addendum (2026-09-12, gh-6-round3-rebench)
+
+Failing-but-scored contenders fixed and re-scored (2 reps each, GLM 5.3-Flash, latency-sorted):
+
+| contender | before | after | root causes fixed |
+|---|---|---|---|
+| agent-browser | 0/2 (13.7s) | 2/2 (10.1s median) | adapter doc now forces snapshot @refs for the per-todo checkbox + Active filter (CSS `.toggle` and `text=` selectors unreliable); benchlib.parse_verify peels the quoted/escaped JSON string that `agent-browser eval` returns |
+| webctl | 0/2 (19.1s) | 2/2 (14.5s median) | observation snapshot must run non-quiet + `--format full` or @refs are hidden; `check` rejects @refs — needs `role=checkbox name~="Toggle Todo" nth=0`; verify() reads completed flags from the profile state.json and the URL from `reload --format kv` (webctl has no JS eval) |
+| pinchtab | 0/6 (75.4s) | 2/2 (8.3s median) | pinchtab `type <ref> <text>` is LITERAL — adapter strips the model's wrapping quotes and never sends quote chars; also required a fresh pinchtab server instance (the old one OOM'd on new-tab) |
+
+Exclusions stand, all with evidence JSON in bench-ext/runners/*-EXCLUDED.json: browser-agent (broken Taylor-Bayouth adapter; re-scored Round 4 as visnia-ai/browser-agent), page-agent (hub approval gate), BrowserSkill / browser-cli / browser-relay (extension install not automatable headlessly).
+
+sitegeist: NOT SCORED. Root causes documented in summary.json — branded Chrome silently ignores `--load-extension` (the smoking gun is in the verbose log: "--load-extension is not allowed in Google Chrome, ignoring"); Chrome for Testing loads the extension fine; sidepanel boot needs an interactive first-run (userscripts permission dialog + full agent init) before reps can run. GLM key + model preference are pre-seeded in its IndexedDB.
+
+Notte: NOT RUN (budget closed); next step is a py3.12 venv + litellm openrouter/z-ai/glm-5.3-flash.
+
+Slick solutions worth remembering:
+1. Chrome's "Developer mode" tooltip claiming admin management is a red herring — no policy blocks dev mode; the real blocker is the branded-Chrome --load-extension removal. Check for a Chrome for Testing binary (agent-browser ships one) before debugging extension load failures.
+2. MV3 extension dialogs can be dismissed headlessly by calling the Lit component's own methods over CDP (e.g. `document.querySelector('userscripts-permission-dialog').handleDeny()`), no OS automation needed.
+3. A stuck "Loading..." extension page can mask a pending IDB versionchange lock — deleting the database while blocked, then reopening in a fresh tab, recovers cleanly.
+
+Branch: gh-6-round3-rebench. Artifacts rewritten in place (results 1/2 per contender; stale pinchtab reps 3–8 removed).

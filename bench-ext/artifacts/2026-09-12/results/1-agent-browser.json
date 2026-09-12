@@ -5,14 +5,14 @@
   "events": [
     {
       "step": 1,
-      "api_s": 1.285,
-      "provider": "Makora",
-      "request_id": "gen-1789157702-VAC8BFgqpaaQEOszQ6XN",
+      "api_s": 0.943,
+      "provider": "Modal",
+      "request_id": "gen-1789168042-BlO4Pox6w0MxXpC2xRnn",
       "usage": {
-        "prompt_tokens": 451,
+        "prompt_tokens": 518,
         "completion_tokens": 17,
-        "total_tokens": 468,
-        "cost": 7.04187e-05,
+        "total_tokens": 535,
+        "cost": 0.000256014,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -21,9 +21,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 7.113e-05,
-          "upstream_inference_prompt_cost": 6.314e-05,
-          "upstream_inference_completions_cost": 7.99e-06
+          "upstream_inference_cost": 0.0002586,
+          "upstream_inference_prompt_cost": 0.0002331,
+          "upstream_inference_completions_cost": 2.55e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -34,31 +34,31 @@
       "answer": {
         "code": "agent-browser fill .new-todo \"Email supplier\""
       },
-      "browser_s": 0.021,
+      "browser_s": 0.04,
       "code": "agent-browser fill .new-todo \"Email supplier\"",
       "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[]}\""
     },
     {
       "step": 2,
-      "api_s": 1.428,
-      "provider": "Makora",
-      "request_id": "gen-1789157703-iVKWNCX2oEqddH3Pcq8R",
+      "api_s": 0.919,
+      "provider": "Modal",
+      "request_id": "gen-1789168043-Te5mOH62Zhx5DuU8AfuK",
       "usage": {
-        "prompt_tokens": 663,
+        "prompt_tokens": 730,
         "completion_tokens": 10,
-        "total_tokens": 673,
-        "cost": 9.65448e-05,
+        "total_tokens": 740,
+        "cost": 0.0001575882,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 512,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 9.752e-05,
-          "upstream_inference_prompt_cost": 9.282e-05,
-          "upstream_inference_completions_cost": 4.7e-06
+          "upstream_inference_cost": 0.00015918,
+          "upstream_inference_prompt_cost": 0.00014418,
+          "upstream_inference_completions_cost": 1.5e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -69,31 +69,31 @@
       "answer": {
         "code": "agent-browser press Enter"
       },
-      "browser_s": 0.059,
+      "browser_s": 0.065,
       "code": "agent-browser press Enter",
       "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\n1 item left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"}]}\""
     },
     {
       "step": 3,
-      "api_s": 1.889,
-      "provider": "Makora",
-      "request_id": "gen-1789157705-UkvSnDLSkZvf1nHGDjMq",
+      "api_s": 0.795,
+      "provider": "Modal",
+      "request_id": "gen-1789168043-d6vmgy2SAKIER9G9QYcR",
       "usage": {
-        "prompt_tokens": 1059,
+        "prompt_tokens": 1126,
         "completion_tokens": 17,
-        "total_tokens": 1076,
-        "cost": 0.0001546875,
+        "total_tokens": 1143,
+        "cost": 0.0002759724,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 704,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00015625,
-          "upstream_inference_prompt_cost": 0.00014826,
-          "upstream_inference_completions_cost": 7.99e-06
+          "upstream_inference_cost": 0.00027876,
+          "upstream_inference_prompt_cost": 0.00025326,
+          "upstream_inference_completions_cost": 2.55e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -104,20 +104,20 @@
       "answer": {
         "code": "agent-browser fill .new-todo \"Review invoice\""
       },
-      "browser_s": 0.031,
+      "browser_s": 0.033,
       "code": "agent-browser fill .new-todo \"Review invoice\"",
       "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\n1 item left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"}]}\""
     },
     {
       "step": 4,
-      "api_s": 1.306,
+      "api_s": 0.732,
       "provider": "Makora",
-      "request_id": "gen-1789157706-P35MwEUpqsHJmivjNuA3",
+      "request_id": "gen-1789168044-ugs94zYTGrSeuerW9vAB",
       "usage": {
-        "prompt_tokens": 1462,
+        "prompt_tokens": 1529,
         "completion_tokens": 10,
-        "total_tokens": 1472,
-        "cost": 0.0002072862,
+        "total_tokens": 1539,
+        "cost": 0.0002165724,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -126,8 +126,8 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00020938,
-          "upstream_inference_prompt_cost": 0.00020468,
+          "upstream_inference_cost": 0.00021876,
+          "upstream_inference_prompt_cost": 0.00021406,
           "upstream_inference_completions_cost": 4.7e-06
         },
         "completion_tokens_details": {
@@ -139,20 +139,20 @@
       "answer": {
         "code": "agent-browser press Enter"
       },
-      "browser_s": 0.032,
+      "browser_s": 0.033,
       "code": "agent-browser press Enter",
       "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
     },
     {
       "step": 5,
-      "api_s": 0.898,
+      "api_s": 2.171,
       "provider": "Makora",
-      "request_id": "gen-1789157707-lCkaZ7oESpbB1mw9GvOu",
+      "request_id": "gen-1789168045-hbWRJukOCtSmhXuAHyoO",
       "usage": {
-        "prompt_tokens": 1920,
-        "completion_tokens": 17,
-        "total_tokens": 1937,
-        "cost": 0.0002740221,
+        "prompt_tokens": 1987,
+        "completion_tokens": 30,
+        "total_tokens": 2017,
+        "cost": 0.0002893572,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -161,117 +161,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00027679,
-          "upstream_inference_prompt_cost": 0.0002688,
-          "upstream_inference_completions_cost": 7.99e-06
+          "upstream_inference_cost": 0.00029228,
+          "upstream_inference_prompt_cost": 0.00027818,
+          "upstream_inference_completions_cost": 1.41e-05
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 0,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "agent-browser click li:nth-child(1) .toggle"
-      },
-      "browser_s": 0.013,
-      "code": "agent-browser click li:nth-child(1) .toggle",
-      "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
-    },
-    {
-      "step": 6,
-      "api_s": 1.278,
-      "provider": "Makora",
-      "request_id": "gen-1789157708-REneK3dd5n0xY9IdbnPn",
-      "usage": {
-        "prompt_tokens": 2405,
-        "completion_tokens": 40,
-        "total_tokens": 2445,
-        "cost": 0.000351945,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.0003555,
-          "upstream_inference_prompt_cost": 0.0003367,
-          "upstream_inference_completions_cost": 1.88e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 23,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "agent-browser click ul.todo-list li:nth-child(1) .toggle"
-      },
-      "browser_s": 0.033,
-      "code": "agent-browser click ul.todo-list li:nth-child(1) .toggle",
-      "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
-    },
-    {
-      "step": 7,
-      "api_s": 1.255,
-      "provider": "Makora",
-      "request_id": "gen-1789157710-X8sivNnssuOvSbWsRZ3Y",
-      "usage": {
-        "prompt_tokens": 2893,
-        "completion_tokens": 33,
-        "total_tokens": 2926,
-        "cost": 0.0004163247,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00042053,
-          "upstream_inference_prompt_cost": 0.00040502,
-          "upstream_inference_completions_cost": 1.551e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 14,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "agent-browser eval document.querySelector('.todo-list li:first-child .toggle').click()"
-      },
-      "browser_s": 0.031,
-      "code": "agent-browser eval document.querySelector('.todo-list li:first-child .toggle').click()",
-      "observation": "\u2717 Evaluation error: SyntaxError: Unexpected token '.'\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
-    },
-    {
-      "step": 8,
-      "api_s": 1.954,
-      "provider": "Makora",
-      "request_id": "gen-1789157711-ryqNkBCTqVR3rZ0xeexo",
-      "usage": {
-        "prompt_tokens": 3391,
-        "completion_tokens": 9,
-        "total_tokens": 3400,
-        "cost": 0.0004741803,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00047897,
-          "upstream_inference_prompt_cost": 0.00047474,
-          "upstream_inference_completions_cost": 4.23e-06
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 0,
+          "reasoning_tokens": 25,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -279,20 +174,20 @@
       "answer": {
         "code": "agent-browser snapshot"
       },
-      "browser_s": 0.017,
+      "browser_s": 0.049,
       "code": "agent-browser snapshot",
-      "observation": "- generic\n  - StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  - link \"real TodoMVC app.\" [ref=e1]\n- sectionheader\n  - heading \"todos\" [level=1, ref=e2]\n  - textbox \"What needs to be done?\" [ref=e3]\n- generic\n  - checkbox \"\u276fMark all as complete\" [checked=false, ref=e4]\n  - list\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=false, ref=e7]\n      - LabelText\n        - StaticText \"Email supplier\"\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=false, ref=e8]\n      - LabelText\n        - StaticText \"Review invoice\"\n      - button \"Delete\" [ref=e9]\n        - StaticText \"\u00d7\"\n- sectionfooter\n  - strong\n    - StaticText \"2\"\n  - StaticText \" \"\n  - StaticText \"items\"\n  - StaticText \" left\"\n  - list\n    - listitem [level=1]\n      - link \"All\" [ref=e10]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Active\" [ref=e11]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Completed\" [ref=e12]\n- contentinfo\n  - paragraph\n    - StaticText \"Double-click to edit a todo\"\n  - paragraph\n    - StaticText \"Created by \"\n    - link \"Remo H. Jansen\" [ref=e5]\n  - paragraph\n    - StaticText \"Part of \"\n    - link \"TodoMVC\" [ref=e6]\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
+      "observation": "- generic\n  - StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  - link \"real TodoMVC app.\" [ref=e1]\n- sectionheader\n  - heading \"todos\" [level=1, ref=e2]\n  - textbox \"What needs to be done?\" [ref=e3]\n- generic\n  - checkbox \"\u276fMark all as complete\" [checked=false, ref=e4]\n  - list\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=false, ref=e7]\n      - LabelText\n        - StaticText \"Email supplier\"\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=false, ref=e8]\n      - LabelText\n        - StaticText \"Review invoice\"\n- sectionfooter\n  - strong\n    - StaticText \"2\"\n  - StaticText \" \"\n  - StaticText \"items\"\n  - StaticText \" left\"\n  - list\n    - listitem [level=1]\n      - link \"All\" [ref=e9]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Active\" [ref=e10]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Completed\" [ref=e11]\n- contentinfo\n  - paragraph\n    - StaticText \"Double-click to edit a todo\"\n  - paragraph\n    - StaticText \"Created by \"\n    - link \"Remo H. Jansen\" [ref=e5]\n  - paragraph\n    - StaticText \"Part of \"\n    - link \"TodoMVC\" [ref=e6]\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n2 items left\\\\nAll Active Completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
     },
     {
-      "step": 9,
-      "api_s": 2.176,
-      "provider": "Makora",
-      "request_id": "gen-1789157713-XHBa5cRuVkYUdo6wgVoC",
+      "step": 6,
+      "api_s": 0.627,
+      "provider": "Modal",
+      "request_id": "gen-1789168047-V0EHruYYxuWinj4dPPHF",
       "usage": {
-        "prompt_tokens": 4238,
+        "prompt_tokens": 2796,
         "completion_tokens": 12,
-        "total_tokens": 4250,
-        "cost": 0.0005929704,
+        "total_tokens": 2808,
+        "cost": 0.001263438,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -301,9 +196,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00059896,
-          "upstream_inference_prompt_cost": 0.00059332,
-          "upstream_inference_completions_cost": 5.64e-06
+          "upstream_inference_cost": 0.0012762,
+          "upstream_inference_prompt_cost": 0.0012582,
+          "upstream_inference_completions_cost": 1.8e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -314,31 +209,31 @@
       "answer": {
         "code": "agent-browser click @e7"
       },
-      "browser_s": 0.046,
+      "browser_s": 0.048,
       "code": "agent-browser click @e7",
       "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n1 item left\\\\nAll Active Completed\\\\nClear completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":true,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"clear-completed\\\",\\\"text\\\":\\\"Clear completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"completed\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
     },
     {
-      "step": 10,
-      "api_s": 2.612,
-      "provider": "Makora",
-      "request_id": "gen-1789157716-mvP070ZYCHhLCMqKGS37",
+      "step": 7,
+      "api_s": 1.736,
+      "provider": "Modal",
+      "request_id": "gen-1789168048-vTMKBqPLyPIlRNROOwWs",
       "usage": {
-        "prompt_tokens": 4747,
-        "completion_tokens": 12,
-        "total_tokens": 4759,
-        "cost": 0.0006635178,
+        "prompt_tokens": 3305,
+        "completion_tokens": 9,
+        "total_tokens": 3314,
+        "cost": 0.0005049297,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 0,
+          "cached_tokens": 2752,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00067022,
-          "upstream_inference_prompt_cost": 0.00066458,
-          "upstream_inference_completions_cost": 5.64e-06
+          "upstream_inference_cost": 0.00051003,
+          "upstream_inference_prompt_cost": 0.00049653,
+          "upstream_inference_completions_cost": 1.35e-05
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -347,25 +242,92 @@
         }
       },
       "answer": {
-        "code": "agent-browser click text=Active"
+        "code": "agent-browser snapshot"
       },
-      "browser_s": 0.014,
-      "code": "agent-browser click text=Active",
-      "observation": "\u2717 Element not found: text=Active. Verify the selector, role, or name is correct and the element exists in the DOM.\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n1 item left\\\\nAll Active Completed\\\\nClear completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":true,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"clear-completed\\\",\\\"text\\\":\\\"Clear completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"completed\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
+      "browser_s": 0.036,
+      "code": "agent-browser snapshot",
+      "observation": "- generic\n  - StaticText \"This is just a demo of TodoMVC for testing, not the \"\n  - link \"real TodoMVC app.\" [ref=e1]\n- sectionheader\n  - heading \"todos\" [level=1, ref=e2]\n  - textbox \"What needs to be done?\" [ref=e3]\n- generic\n  - checkbox \"\u276fMark all as complete\" [checked=false, ref=e4]\n  - list\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=true, ref=e8]\n      - LabelText\n        - StaticText \"Email supplier\"\n      - button \"Delete\" [ref=e9]\n        - StaticText \"\u00d7\"\n    - listitem [level=1]\n      - checkbox \"Toggle Todo\" [checked=false, ref=e10]\n      - LabelText\n        - StaticText \"Review invoice\"\n- sectionfooter\n  - strong\n    - StaticText \"1\"\n  - StaticText \" \"\n  - StaticText \"item\"\n  - StaticText \" left\"\n  - list\n    - listitem [level=1]\n      - link \"All\" [ref=e11]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Active\" [ref=e12]\n    - StaticText \" \"\n    - listitem [level=1]\n      - link \"Completed\" [ref=e13]\n  - button \"Clear completed\" [ref=e5]\n- contentinfo\n  - paragraph\n    - StaticText \"Double-click to edit a todo\"\n  - paragraph\n    - StaticText \"Created by \"\n    - link \"Remo H. Jansen\" [ref=e6]\n  - paragraph\n    - StaticText \"Part of \"\n    - link \"TodoMVC\" [ref=e7]\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nEmail supplier\\\\nReview invoice\\\\n1 item left\\\\nAll Active Completed\\\\nClear completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":true,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Email supplier\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"destroy\\\",\\\"text\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"clear-completed\\\",\\\"text\\\":\\\"Clear completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"class\\\":\\\"completed\\\"},{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
+    },
+    {
+      "step": 8,
+      "api_s": 0.888,
+      "provider": "Modal",
+      "request_id": "gen-1789168050-M5fWgoVHxtERUmfvgEzr",
+      "usage": {
+        "prompt_tokens": 4193,
+        "completion_tokens": 12,
+        "total_tokens": 4205,
+        "cost": 0.0007225119,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3264,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00072981,
+          "upstream_inference_prompt_cost": 0.00071181,
+          "upstream_inference_completions_cost": 1.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser click @e12"
+      },
+      "browser_s": 0.053,
+      "code": "agent-browser click @e12",
+      "observation": "\u2713 Done\n\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"text\\\":\\\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\\\ntodos\\\\nMark all as complete\\\\nReview invoice\\\\n1 item left\\\\nAll Active Completed\\\\nClear completed\\\\n\\\\nDouble-click to edit a todo\\\\n\\\\nCreated by Remo H. Jansen\\\\n\\\\nPart of TodoMVC\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"real TodoMVC app.\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"text\\\",\\\"class\\\":\\\"new-todo\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"What needs to be done?\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle-all\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"toggle-all\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Mark all as complete\\\",\\\"forAttr\\\":\\\"toggle-all\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"INPUT\\\",\\\"type\\\":\\\"checkbox\\\",\\\"class\\\":\\\"toggle\\\",\\\"text\\\":\\\"\\\",\\\"placeholder\\\":\\\"\\\",\\\"checked\\\":false,\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"LABEL\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Review invoice\\\",\\\"forAttr\\\":\\\"\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"All\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"selected\\\",\\\"text\\\":\\\"Active\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"submit\\\",\\\"class\\\":\\\"clear-completed\\\",\\\"text\\\":\\\"Clear completed\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"Remo H. Jansen\\\",\\\"id\\\":\\\"\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"class\\\":\\\"\\\",\\\"text\\\":\\\"TodoMVC\\\",\\\"id\\\":\\\"\\\"}],\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"class\\\":\\\"\\\"}]}\""
+    },
+    {
+      "step": 9,
+      "api_s": 0.556,
+      "provider": "Modal",
+      "request_id": "gen-1789168051-EdgI7H0D3P8ibahGJDAE",
+      "usage": {
+        "prompt_tokens": 4620,
+        "completion_tokens": 7,
+        "total_tokens": 4627,
+        "cost": 0.000585981,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4160,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005919,
+          "upstream_inference_prompt_cost": 0.0005814,
+          "upstream_inference_completions_cost": 1.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
     }
   ],
-  "setup_s": 5.645,
-  "total_s": 16.377,
-  "api_s": 16.079,
-  "model_calls": 10,
+  "setup_s": 2.592,
+  "total_s": 9.724,
+  "api_s": 9.367,
+  "model_calls": 9,
   "tokens": {
-    "input": 23229,
-    "output": 177,
-    "cached": 0,
-    "reasoning": 37
+    "input": 20804,
+    "output": 124,
+    "cached": 11392,
+    "reasoning": 25
   },
-  "done": false,
+  "done": true,
   "error": null,
-  "verification": "\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]}\"",
-  "pass": false
+  "verification": "\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]}\"",
+  "pass": true
 }

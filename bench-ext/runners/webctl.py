@@ -18,11 +18,13 @@ def wc(*args, timeout=60, quiet=True):
 class Webctl:
     name = 'webctl'
     doc = ('Drive the browser ONLY with the native `webctl` CLI. One logical action per step. '
-           'Get @refs from `webctl snapshot` first. Type into the new-todo field ONLY via its @ref or its '
-           'placeholder text, e.g. `webctl type @e4 "Email supplier"` or `webctl type "What needs to be done?" '
-           '"Email supplier"`; plain CSS like input[type=text] does NOT match. Commit with '
-           '`webctl press Enter`. Click the Active filter with `webctl click "Active"` or its @ref. '
-           'Respond as JSON {"code":"webctl ..."} or {"done":true}.')
+           'Type todos with `webctl type "What needs to be done?" "<text>"` and commit with `webctl press Enter`. '
+           'Snapshot responses list @refs (@eN). IMPORTANT: `check` does NOT accept @refs. Tick the FIRST todo '
+           '(Email supplier) with: webctl check \'role=checkbox name~="Toggle Todo" nth=0\' '
+           '(nth=0 is first, nth=1 second). Activate the filter with the @ref of the link named Active from the '
+           'latest snapshot (e.g. `webctl click @e19`) or `webctl click \'role=link name~="Active"\'`. '
+           'Text like "Email supplier" is a non-interactive text node and will NOT match. '
+           'Respond as JSON {"code":"webctl ..."} or {"done":true} once the final state is observed.')
 
     def start(self):
         t0 = time.perf_counter()
@@ -36,7 +38,7 @@ class Webctl:
         # navigate to about:blank, use do with a no-op, then rely on fresh profile (stop/start) for hygiene.
         wc('navigate', benchlib.URL_TASK)
         wc('save')
-        obs = wc('snapshot')
+        obs = wc('--format', 'full', 'snapshot', quiet=False)
         return {'setup_s': round(time.perf_counter()-t0, 3)}, obs
 
     def act(self, handle, code):
@@ -49,21 +51,20 @@ class Webctl:
         try: out = wc(*toks)
         except Exception as e: out = f'error: {e}'
         import time as _t; _t.sleep(0.4)
-        obs = wc('snapshot')
+        # observation snapshot must be non-quiet AND --format full or webctl hides the @refs
+        obs = wc('--format', 'full', 'snapshot', quiet=False)
         return (out + '\n' + obs), time.perf_counter()-t
 
     def verify(self, handle):
         # webctl exposes no JS eval; read localStorage via session state.json + parse snapshot
         import json as _j, pathlib as _p, time as _t, re
         out = {'saved': [], 'items': [], 'url': ''}
+        saved_map = {}
         try:
-            pages_out = wc('pages')
-            m = re.search(r'https?://[^\s\x22\x27,]+', pages_out)
-            if m: out['url'] = m.group(0)
-            else:
-                nav = wc('navigate', benchlib.URL_TASK)
-                m2 = re.search(r'https?://[^\s\x22\x27,]+', nav)
-                out['url'] = m2.group(0) if m2 else ''
+            # `reload` reports the current URL in its summary (webctl has no JS eval)
+            rl = wc('--format', 'kv', 'reload', timeout=90)
+            m = re.search(r'url.{0,4}(https?://\S+)', rl)
+            if m: out['url'] = m.group(1).strip('"{}')
             snap = wc('--format', 'full', 'snapshot', quiet=False)
             items = []
             lines = snap.splitlines()
@@ -72,8 +73,21 @@ class Webctl:
                     txt = lines[i+2].split(' ', 1)[-1].replace('text ', '', 1).strip()
                     if txt and txt not in ('Mark all as complete',):
                         items.append(txt)
-            out['items'] = [{'text': t, 'completed': False} for t in items]
             wc('save')
+            sf = _p.Path.home() / 'Library' / 'Application Support' / 'webctl' / 'profiles' / 'default' / 'state.json'
+            if sf.exists():
+                state = _j.loads(sf.read_text())
+                for o in state.get('origins', []):
+                    if 'demo.playwright.dev' in o.get('origin', ''):
+                        for kv in o.get('localStorage', []):
+                            if kv.get('name') == 'react-todos':
+                                try:
+                                    saved = _j.loads(kv.get('value', '[]'))
+                                    out['saved'] = [{'title': x.get('title', ''), 'completed': bool(x.get('completed'))} for x in saved]
+                                    saved_map.update({x.get('title', ''): bool(x.get('completed')) for x in saved})
+                                except Exception:
+                                    pass
+            out['items'] = [{'text': t, 'completed': saved_map.get(t, False)} for t in items]
             sf = _p.Path.home() / 'Library' / 'Application Support' / 'webctl' / 'profiles' / 'default' / 'state.json'
             if sf.exists():
                 state = _j.loads(sf.read_text())

@@ -31,7 +31,18 @@ def openrouter_call(msgs):
         return json.load(response)
 
 def parse_verify(out):
-    m = re.search(r'\{.*\}', out, re.S)
+    # agent-browser eval returns the VERIFY_JS JSON as a quoted/escaped string: peel the
+    # outer quotes first, then unescape \" so the regex sees a plain object.
+    s = (out or '').strip()
+    if len(s) >= 2 and s[0] == s[-1] == '"':
+        try:
+            inner = json.loads(s)  # strip one layer of quoting
+            if isinstance(inner, str):
+                s = inner
+        except Exception:
+            s = s[1:-1]
+        s = s.replace('\\"', '"')
+    m = re.search(r'\{.*\}', s, re.S)
     if not m: return None
     try: return json.loads(m.group(0))
     except Exception: return None
