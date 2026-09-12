@@ -11,7 +11,7 @@
 import os, json, time, subprocess, pathlib, re, urllib.request
 
 BASE = pathlib.Path(__file__).parent
-RES = BASE / 'artifacts' / '2026-09-12' / 'results'
+RES = pathlib.Path(os.environ.get('BENCH_RES', BASE / 'artifacts' / '2026-09-12' / 'results'))
 RES.mkdir(exist_ok=True, parents=True)
 KEY = os.environ.get('OPENROUTER_API_KEY', '')
 ENV = {k: v for k, v in os.environ.items() if not any(x in k.upper() for x in ['KEY','TOKEN','SECRET','PASSWORD'])}
@@ -167,11 +167,25 @@ def register(task):
     return task
 
 
+_TASK_MODULES = ('tasks_real',)
+
+
 def get_task(task=None):
-    """Resolve a task id (or Task, or None -> the default TodoMVC task)."""
+    """Resolve a task id (or Task, or None -> the default TodoMVC task).
+
+    Real-work tasks live in separate modules (e.g. `tasks_real`); they are imported
+    lazily the first time an unknown id is requested, so runners can name any task id.
+    """
     if isinstance(task, Task):
         return task
-    return TASKS[task or DEFAULT_TASK_ID]
+    tid = task or DEFAULT_TASK_ID
+    if tid not in TASKS:
+        for mod in _TASK_MODULES:
+            try:
+                __import__(mod)
+            except Exception:
+                continue
+    return TASKS[tid]
 
 
 DEFAULT_TASK_ID = 'todomvc'

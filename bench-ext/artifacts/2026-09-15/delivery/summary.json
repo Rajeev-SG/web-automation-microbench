@@ -1,0 +1,108 @@
+{
+  "task": "chanel-gb-tag-check",
+  "task_url": "https://www.chanel.com/gb/",
+  "model": "z-ai/glm-5.3-flash",
+  "provider": "openrouter",
+  "date": "2026-09-15",
+  "topology": {
+    "screen": 2,
+    "promote": 5
+  },
+  "contenders": {
+    "BrowserSkill": {
+      "reps": 5,
+      "passes": 3,
+      "pass_rate": 0.6,
+      "median_total_s_all": 13.014,
+      "median_total_s_pass": 10.41,
+      "tokens_in_median": 28041,
+      "tokens_out_median": 753,
+      "cost_per_run_median_usd": 0.003,
+      "tool_calls_median": 6,
+      "retries_total": 3,
+      "tool_errors_total": 0,
+      "promotion": "promoted to 5 (2/2 screening)",
+      "reps_detail": [
+        {
+          "id": "1-BrowserSkill",
+          "pass": true,
+          "total_s": 15.357,
+          "model_calls": 9,
+          "tool_calls": 8,
+          "retries": 2,
+          "done": true
+        },
+        {
+          "id": "2-BrowserSkill",
+          "pass": true,
+          "total_s": 4.971,
+          "model_calls": 5,
+          "tool_calls": 4,
+          "retries": 0,
+          "done": true
+        },
+        {
+          "id": "3-BrowserSkill",
+          "pass": false,
+          "total_s": 27.136,
+          "model_calls": 10,
+          "tool_calls": 10,
+          "retries": 0,
+          "done": false
+        },
+        {
+          "id": "4-BrowserSkill",
+          "pass": false,
+          "total_s": 13.014,
+          "model_calls": 7,
+          "tool_calls": 6,
+          "retries": 1,
+          "done": true
+        },
+        {
+          "id": "5-BrowserSkill",
+          "pass": true,
+          "total_s": 10.41,
+          "model_calls": 5,
+          "tool_calls": 4,
+          "retries": 0,
+          "done": true
+        }
+      ]
+    },
+    "browser-relay": {
+      "reps": 2,
+      "passes": 1,
+      "pass_rate": 0.5,
+      "median_total_s_all": 16.209,
+      "median_total_s_pass": 2.917,
+      "tokens_in_median": 28917,
+      "tokens_out_median": 1270,
+      "cost_per_run_median_usd": 0.003,
+      "tool_calls_median": 5.5,
+      "retries_total": 0,
+      "tool_errors_total": 0,
+      "promotion": "screening only (2 reps)",
+      "reps_detail": [
+        {
+          "id": "1-browser-relay",
+          "pass": false,
+          "total_s": 29.5,
+          "model_calls": 10,
+          "tool_calls": 10,
+          "retries": 0,
+          "done": false
+        },
+        {
+          "id": "2-browser-relay",
+          "pass": true,
+          "total_s": 2.917,
+          "model_calls": 2,
+          "tool_calls": 1,
+          "retries": 0,
+          "done": true
+        }
+      ]
+    }
+  }
+}
