@@ -15,7 +15,6 @@ benchlib.RES.mkdir(parents=True, exist_ok=True)
 PORT = 9309
 PROFILE = f'/tmp/bench6-cdm-cft-{PORT}'
 CLI = ['chrome-devtools']
-URL = benchlib.URL_TASK
 
 def cdm(args, timeout=60):
     p = subprocess.run(CLI + args, capture_output=True, text=True, timeout=timeout)
@@ -53,7 +52,7 @@ class Adapter:
         m = re.search(r'(\d+):', pages)
         self.pid = m.group(1) if m else '1'
         self.handle = {'pid': self.pid, 'setup_s': round(time.perf_counter() - t0, 3)}
-        out = cdm(['navigate_page', self.pid, '--url', URL])
+        out = cdm(['navigate_page', self.pid, '--url', benchlib.URL_TASK])
         time.sleep(1.5)
         cdm(['evaluate_script', "() => { localStorage.removeItem('react-todos'); return 'cleared'; }", '--pageId', self.pid])
         cdm(['navigate_page', self.pid, '--type', 'reload'])
@@ -114,6 +113,4 @@ class Adapter:
             pass
 
 if __name__ == '__main__':
-    reps = benchlib.reps_from_argv(sys.argv[1:])
-    for rep in reps:
-        benchlib.run_rep(Adapter(), rep, max_steps=12)
+    benchlib.run_cli(Adapter, max_steps=12)

@@ -97,8 +97,4 @@ class BrowserRelay:
 
 
 if __name__ == '__main__':
-    args = sys.argv[1:]
-    task = next((a.split('=', 1)[1] for a in args if a.startswith('--task=')), None)
-    reps = benchlib.reps_from_argv([a for a in args if not a.startswith('--task=')])
-    for rep in reps:
-        benchlib.run_rep(BrowserRelay(), rep, task=task)
+    benchlib.run_cli(BrowserRelay)

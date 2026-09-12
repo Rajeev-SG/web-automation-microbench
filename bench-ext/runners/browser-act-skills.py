@@ -13,7 +13,6 @@ benchlib.RES.mkdir(parents=True, exist_ok=True)
 
 BROWSER_ID = 'chrome_local_117890237102817394'
 SESSION = 'r6-ba'
-URL = benchlib.URL_TASK
 SHOT_DIR = '/tmp/bench6-ba-shots'
 pathlib.Path(SHOT_DIR).mkdir(exist_ok=True)
 
@@ -35,7 +34,7 @@ class Adapter:
 
     def start(self):
         t0 = time.perf_counter()
-        ba(['browser', 'open', BROWSER_ID, URL])
+        ba(['browser', 'open', BROWSER_ID, benchlib.URL_TASK])
         time.sleep(1.0)
         ba(['eval', "localStorage.removeItem('react-todos')"])
         ba(['reload'])
@@ -76,6 +75,4 @@ class Adapter:
             pass
 
 if __name__ == '__main__':
-    reps = benchlib.reps_from_argv(sys.argv[1:])
-    for rep in reps:
-        benchlib.run_rep(Adapter(), rep, max_steps=12)
+    benchlib.run_cli(Adapter, max_steps=12)

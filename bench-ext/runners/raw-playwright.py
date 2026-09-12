@@ -35,14 +35,25 @@ const { chromium } = require('playwright');
   await browser.close();
 })().catch(e => { console.error(String(e)); process.exit(1); });
 '''
-REPL_JS = REPL_JS.replace('URL_TASK', json.dumps(benchlib.URL_TASK)).replace('VERIFY_JS', json.dumps(benchlib.VERIFY_JS))
+REPL_JS_TEMPLATE = REPL_JS
+
+
+def build_repl_js():
+    """Substitute the CURRENT task globals at call time (run_rep binds them per task).
+
+    Substituting at import time froze TodoMVC into every rep regardless of --task; that
+    silently drove the wrong page for a non-TodoMVC task.
+    """
+    return (REPL_JS_TEMPLATE
+            .replace('URL_TASK', json.dumps(benchlib.URL_TASK))
+            .replace('VERIFY_JS', json.dumps(benchlib.VERIFY_JS)))
 
 class Adapter:
     name = 'raw-playwright'
-    doc = '''You drive a persistent Playwright page directly. The page is already navigated to the task URL.
+    doc = '''You drive a persistent Playwright page directly. The page is already navigated to the task URL in the instruction.
 Write plain JavaScript using the `page` object (Playwright API). One logical UI action per response; the harness returns an observation after your code. Code is wrapped in an async IIFE: await is available; do not use top-level `return`.
-Examples: await page.fill('.new-todo', 'Email supplier'); await page.keyboard.press('Enter');
-await page.click('.todo-list li:nth-child(1) .toggle'); await page.click('a[href="#/active"]');
+Examples: await page.fill('<selector>', '<text>'); await page.keyboard.press('Enter'); await page.click('<selector>'); await page.evaluate(() => document.title);
+Base every selector on the live observation the harness returns, not on a remembered app.
 Do not navigate or reload; the harness manages state. Return ONLY JSON: {"code":"...","done":false} or {"done":true,"result":"..."}. No markdown.'''
     def __init__(self):
         self.p = None
@@ -50,7 +61,7 @@ Do not navigate or reload; the harness manages state. Return ONLY JSON: {"code":
         self.p.stdin.write(json.dumps(req) + '\n'); self.p.stdin.flush()
         return json.loads(self.p.stdout.readline())
     def start(self):
-        self.p = subprocess.Popen(['node', '-e', REPL_JS], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+        self.p = subprocess.Popen(['node', '-e', build_repl_js()], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                   text=True, cwd='/Users/rajeev/Code/web-automation-microbench/bench-ext')
         t0 = time.perf_counter()
         r = self._send({'reset': True, 'js': benchlib.OBS_JS})
@@ -70,6 +81,4 @@ Do not navigate or reload; the harness manages state. Return ONLY JSON: {"code":
         except Exception: pass
 
 if __name__ == '__main__':
-    reps = benchlib.reps_from_argv(sys.argv[1:])
-    for rep in reps:
-        benchlib.run_rep(Adapter(), rep)
+    benchlib.run_cli(Adapter)
