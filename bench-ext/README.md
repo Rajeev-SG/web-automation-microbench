@@ -115,10 +115,11 @@ Rep counts are centralized in `benchlib.REP_TOPOLOGY` (issue #1 topology: 2 scre
 promote to 5 → 10+ only for near-ties/high variance), so no runner hardcodes reps.
 
 The delivery demonstration ran the top two harnesses on a real, auth-free, session-derived
-task (`chanel-gb-tag-check`) — see
+task (`chanel-gb-tag-check`), each screened at 2 reps then promoted to 5 — see
 [artifacts/2026-09-15/delivery/report.md](artifacts/2026-09-15/delivery/report.md).
-**BrowserSkill screened 2/2 and was promoted to 5, scoring 3/5; browser-relay screened 1/2.**
-The promotion reproduced the Round 6 lesson: 2-rep screening overstates reliability.
+**browser-relay screened 1/2 then scored 4/5; BrowserSkill screened 2/2 then scored 3/5.**
+The promotion corrected screening in both directions: 2 reps understated browser-relay and
+overstated BrowserSkill.
 
 The registry also ingests conformant task specs with **mandatory session provenance**
 (`source_session_id`, `source_url`, `verified_against`, rejected by a test) — see

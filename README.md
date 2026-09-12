@@ -217,9 +217,10 @@ registry** and `run_rep(adapter, rep, task=…)`; TodoMVC stays the latency micr
 (`source_session_id`, `source_url`, `verified_against`) or the intake validator rejects it.
 
 Delivery evidence: the top two harnesses were run on a real, auth-free, session-derived task
-(`chanel-gb-tag-check` — inspect the CHANEL UK homepage for its marketing tags). **BrowserSkill
-screened 2/2, was promoted to 5 reps, and scored 3/5; browser-relay screened 1/2.** The
-promotion is the point: 2-rep screening overstates reliability, exactly as Round 6 found.
+(`chanel-gb-tag-check` — inspect the CHANEL UK homepage for its marketing tags), each screened
+at 2 reps then promoted to 5. **browser-relay screened 1/2 then scored 4/5; BrowserSkill
+screened 2/2 then scored 3/5.** The promotion is the point: 2 reps understated browser-relay
+and overstated BrowserSkill, so screening alone would have mis-ordered them.
 Report: [bench-ext/artifacts/2026-09-15/delivery/report.md](bench-ext/artifacts/2026-09-15/delivery/report.md).
 
 ## Status
