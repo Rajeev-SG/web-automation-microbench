@@ -5,14 +5,14 @@
   "events": [
     {
       "step": 1,
-      "api_s": 0.822,
-      "provider": "Modal",
-      "request_id": "gen-1789163835-KwZitESUu6J11uaw4h1b",
+      "api_s": 0.914,
+      "provider": "Makora",
+      "request_id": "gen-1789167986-Zg1sdXiakH86rMABaLLu",
       "usage": {
-        "prompt_tokens": 250,
+        "prompt_tokens": 414,
         "completion_tokens": 21,
-        "total_tokens": 271,
-        "cost": 0.00014256,
+        "total_tokens": 435,
+        "cost": 6.71517e-05,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -21,9 +21,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.000144,
-          "upstream_inference_prompt_cost": 0.0001125,
-          "upstream_inference_completions_cost": 3.15e-05
+          "upstream_inference_cost": 6.783e-05,
+          "upstream_inference_prompt_cost": 5.796e-05,
+          "upstream_inference_completions_cost": 9.87e-06
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -34,31 +34,31 @@
       "answer": {
         "code": "webctl type \"What needs to be done?\" \"Email supplier\""
       },
-      "browser_s": 0.667,
+      "browser_s": 0.677,
       "code": "webctl type \"What needs to be done?\" \"Email supplier\"",
-      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n12 elements (3 text, 3 link, 3 paragraph, 1 heading, 1 textbox, 1 contentinfo)"
+      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 contentinfo \n@e6 paragraph Double-click to edit a todo\n@e7 paragraph \n@e8 text Created by\n@e9 link Remo H. Jansen\n@e10 paragraph \n@e11 text Part of\n@e12 link TodoMVC\n12 elements (3 text, 3 link, 3 paragraph, 1 heading, 1 textbox, 1 contentinfo)"
     },
     {
       "step": 2,
-      "api_s": 0.961,
-      "provider": "Modal",
-      "request_id": "gen-1789163837-0DcuPF2K5StZ6bwrfRxo",
+      "api_s": 0.877,
+      "provider": "Makora",
+      "request_id": "gen-1789167988-WxhUGXvmNdtpDjhyvQDL",
       "usage": {
-        "prompt_tokens": 336,
+        "prompt_tokens": 605,
         "completion_tokens": 10,
-        "total_tokens": 346,
-        "cost": 7.32996e-05,
+        "total_tokens": 615,
+        "cost": 8.8506e-05,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 256,
+          "cached_tokens": 0,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 7.404e-05,
-          "upstream_inference_prompt_cost": 5.904e-05,
-          "upstream_inference_completions_cost": 1.5e-05
+          "upstream_inference_cost": 8.94e-05,
+          "upstream_inference_prompt_cost": 8.47e-05,
+          "upstream_inference_completions_cost": 4.7e-06
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -69,20 +69,20 @@
       "answer": {
         "code": "webctl press Enter"
       },
-      "browser_s": 0.669,
+      "browser_s": 0.698,
       "code": "webctl press Enter",
-      "observation": "\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
+      "observation": "\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 checkbox \u276fMark all as complete\n@e6 text \u276fMark all as complete\n@e7 list \n@e8 listitem \n@e9 checkbox Toggle Todo\n@e10 text Email supplier\n@e11 strong \"1\"\n@e12 text item left\n@e13 list \n@e14 listitem \n@e15 link All\n@e16 listitem \n@e17 link Active\n@e18 listitem \n@e19 link Completed\n@e20 contentinfo \n@e21 paragraph Double-click to edit a todo\n@e22 paragraph \n@e23 text Created by\n@e24 link Remo H. Jansen\n@e25 paragraph \n@e26 text Part of\n@e27 link TodoMVC\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
     },
     {
       "step": 3,
-      "api_s": 0.553,
-      "provider": "Modal",
-      "request_id": "gen-1789163839-dmbCkBbYEIz5Lot4WWZf",
+      "api_s": 0.879,
+      "provider": "Makora",
+      "request_id": "gen-1789167989-AklcdBng0gCyzmZo1H4L",
       "usage": {
-        "prompt_tokens": 382,
+        "prompt_tokens": 858,
         "completion_tokens": 21,
-        "total_tokens": 403,
-        "cost": 0.000201366,
+        "total_tokens": 879,
+        "cost": 0.0001286901,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -91,9 +91,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0002034,
-          "upstream_inference_prompt_cost": 0.0001719,
-          "upstream_inference_completions_cost": 3.15e-05
+          "upstream_inference_cost": 0.00012999,
+          "upstream_inference_prompt_cost": 0.00012012,
+          "upstream_inference_completions_cost": 9.87e-06
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -104,31 +104,31 @@
       "answer": {
         "code": "webctl type \"What needs to be done?\" \"Review invoice\""
       },
-      "browser_s": 0.681,
+      "browser_s": 0.684,
       "code": "webctl type \"What needs to be done?\" \"Review invoice\"",
-      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
+      "observation": "OK {\"typed\": {\"role\": \"textbox\", \"name\": \"What needs to be done?\", \"text_length\": 14, \"action\": \"fill\"}}\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 checkbox \u276fMark all as complete\n@e6 text \u276fMark all as complete\n@e7 list \n@e8 listitem \n@e9 checkbox Toggle Todo\n@e10 text Email supplier\n@e11 strong \"1\"\n@e12 text item left\n@e13 list \n@e14 listitem \n@e15 link All\n@e16 listitem \n@e17 link Active\n@e18 listitem \n@e19 link Completed\n@e20 contentinfo \n@e21 paragraph Double-click to edit a todo\n@e22 paragraph \n@e23 text Created by\n@e24 link Remo H. Jansen\n@e25 paragraph \n@e26 text Part of\n@e27 link TodoMVC\n27 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 4 other)"
     },
     {
       "step": 4,
-      "api_s": 0.638,
-      "provider": "Modal",
-      "request_id": "gen-1789163840-aGsKHW415Yn8Udgnfju6",
+      "api_s": 1.285,
+      "provider": "Makora",
+      "request_id": "gen-1789167991-ZOYqXJ8dKPCv8JL5yHwz",
       "usage": {
-        "prompt_tokens": 472,
+        "prompt_tokens": 1155,
         "completion_tokens": 10,
-        "total_tokens": 482,
-        "cost": 0.000111078,
+        "total_tokens": 1165,
+        "cost": 0.000164736,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 320,
+          "cached_tokens": 0,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0001122,
-          "upstream_inference_prompt_cost": 9.72e-05,
-          "upstream_inference_completions_cost": 1.5e-05
+          "upstream_inference_cost": 0.0001664,
+          "upstream_inference_prompt_cost": 0.0001617,
+          "upstream_inference_completions_cost": 4.7e-06
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -139,55 +139,20 @@
       "answer": {
         "code": "webctl press Enter"
       },
-      "browser_s": 0.67,
+      "browser_s": 0.676,
       "code": "webctl press Enter",
-      "observation": "\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
+      "observation": "\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 checkbox \u276fMark all as complete\n@e6 text \u276fMark all as complete\n@e7 list \n@e8 listitem \n@e9 checkbox Toggle Todo\n@e10 text Email supplier\n@e11 listitem \n@e12 checkbox Toggle Todo\n@e13 text Review invoice\n@e14 strong \"2\"\n@e15 text items left\n@e16 list \n@e17 listitem \n@e18 link All\n@e19 listitem \n@e20 link Active\n@e21 listitem \n@e22 link Completed\n@e23 contentinfo \n@e24 paragraph Double-click to edit a todo\n@e25 paragraph \n@e26 text Created by\n@e27 link Remo H. Jansen\n@e28 paragraph \n@e29 text Part of\n@e30 link TodoMVC\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
     },
     {
       "step": 5,
-      "api_s": 0.58,
-      "provider": "Modal",
-      "request_id": "gen-1789163841-dnG4WCiRdMc1MZO3MugF",
+      "api_s": 1.083,
+      "provider": "Makora",
+      "request_id": "gen-1789167993-ZWV3651EyUDnjxB91LvW",
       "usage": {
-        "prompt_tokens": 518,
-        "completion_tokens": 19,
-        "total_tokens": 537,
-        "cost": 9.93168e-05,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 448,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00010032,
-          "upstream_inference_prompt_cost": 7.182e-05,
-          "upstream_inference_completions_cost": 2.85e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 14,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "webctl snapshot"
-      },
-      "browser_s": 0.674,
-      "code": "webctl snapshot",
-      "observation": "30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
-    },
-    {
-      "step": 6,
-      "api_s": 0.826,
-      "provider": "Modal",
-      "request_id": "gen-1789163842-EFCx9UxLkhCgl8qIp0E1",
-      "usage": {
-        "prompt_tokens": 594,
-        "completion_tokens": 45,
-        "total_tokens": 639,
-        "cost": 0.000331452,
+        "prompt_tokens": 1428,
+        "completion_tokens": 23,
+        "total_tokens": 1451,
+        "cost": 0.0002086227,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -196,79 +161,79 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0003348,
-          "upstream_inference_prompt_cost": 0.0002673,
-          "upstream_inference_completions_cost": 6.75e-05
+          "upstream_inference_cost": 0.00021073,
+          "upstream_inference_prompt_cost": 0.00019992,
+          "upstream_inference_completions_cost": 1.081e-05
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 37,
+          "reasoning_tokens": 0,
           "image_tokens": 0,
           "audio_tokens": 0
         }
       },
       "answer": {
-        "code": "webctl click \"Email supplier\""
+        "code": "webctl check 'role=checkbox name~=\"Toggle Todo\" nth=0'"
       },
-      "browser_s": 1.749,
-      "code": "webctl click \"Email supplier\"",
-      "observation": "ERROR [no_match] No element matching 'Email supplier'\n  -> Did you mean: \u276fMark all as complete\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
+      "browser_s": 0.713,
+      "code": "webctl check 'role=checkbox name~=\"Toggle Todo\" nth=0'",
+      "observation": "OK {\"checked\": true}\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 checkbox \u276fMark all as complete\n@e6 text \u276fMark all as complete\n@e7 list \n@e8 listitem \n@e9 checkbox Toggle Todo\n@e10 text Email supplier\n@e11 button Delete\n@e12 listitem \n@e13 checkbox Toggle Todo\n@e14 text Review invoice\n@e15 strong \"1\"\n@e16 text item left\n@e17 list \n@e18 listitem \n@e19 link All\n@e20 listitem \n@e21 link Active\n@e22 listitem \n@e23 link Completed\n@e24 button Clear completed\n@e25 contentinfo \n@e26 paragraph Double-click to edit a todo\n@e27 paragraph \n@e28 text Created by\n@e29 link Remo H. Jansen\n@e30 paragraph \n@e31 text Part of\n@e32 link TodoMVC\n32 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 6 other)"
+    },
+    {
+      "step": 6,
+      "api_s": 0.888,
+      "provider": "Makora",
+      "request_id": "gen-1789167994-TDVVSO9pJi1ZRIxLNpAw",
+      "usage": {
+        "prompt_tokens": 1733,
+        "completion_tokens": 12,
+        "total_tokens": 1745,
+        "cost": 0.0002457774,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00024826,
+          "upstream_inference_prompt_cost": 0.00024262,
+          "upstream_inference_completions_cost": 5.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "webctl click @e21"
+      },
+      "browser_s": 0.739,
+      "code": "webctl click @e21",
+      "observation": "OK {\"clicked\": {\"role\": \"link\", \"name\": \"Active\"}}\n@e1 text This is just a demo of TodoMVC for testing, not the\n@e2 link real TodoMVC app.\n@e3 heading todos\n@e4 textbox What needs to be done?\n@e5 checkbox \u276fMark all as complete\n@e6 text \u276fMark all as complete\n@e7 list \n@e8 listitem \n@e9 checkbox Toggle Todo\n@e10 text Review invoice\n@e11 strong \"1\"\n@e12 text item left\n@e13 list \n@e14 listitem \n@e15 link All\n@e16 listitem \n@e17 link Active\n@e18 listitem \n@e19 link Completed\n@e20 button Clear completed\n@e21 contentinfo \n@e22 paragraph Double-click to edit a todo\n@e23 paragraph \n@e24 text Created by\n@e25 link Remo H. Jansen\n@e26 paragraph \n@e27 text Part of\n@e28 link TodoMVC\n28 elements (6 text, 6 link, 4 listitem, 3 paragraph, 2 checkbox, 2 list, 5 other)"
     },
     {
       "step": 7,
-      "api_s": 2.244,
-      "provider": "Modal",
-      "request_id": "gen-1789163845-6czU2aJX4p6WFaWuYXbH",
+      "api_s": 0.621,
+      "provider": "Makora",
+      "request_id": "gen-1789167996-qtOWpWenDn0FO9xf2iS1",
       "usage": {
-        "prompt_tokens": 668,
-        "completion_tokens": 100,
-        "total_tokens": 768,
-        "cost": 0.0002408076,
+        "prompt_tokens": 2011,
+        "completion_tokens": 7,
+        "total_tokens": 2018,
+        "cost": 0.0002819817,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 576,
+          "cached_tokens": 0,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.00024324,
-          "upstream_inference_prompt_cost": 9.324e-05,
-          "upstream_inference_completions_cost": 0.00015
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 97,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "webctl check \"Email supplier\""
-      },
-      "browser_s": 0.676,
-      "code": "webctl check \"Email supplier\"",
-      "observation": "ERROR [check_failed] Check failed: Unexpected token Token('IDENTIFIER', 'Email') at line 1, column 1.\nExpected one of: \n\t* TEXT\n\t* NAME\n\t* ID\n\t* EXPANDED\n\t* REQUIRED\n\t* CHECKED\n\t* NTH\n\t* ENABLED\n\t* LPAR\n\t* NEAR\n\t* WITHIN\n\t* ROLE\nPrevious tokens: [None]\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
-    },
-    {
-      "step": 8,
-      "api_s": 1.219,
-      "provider": "Modal",
-      "request_id": "gen-1789163848-OYkKiZeZaXY6EORkV0lE",
-      "usage": {
-        "prompt_tokens": 811,
-        "completion_tokens": 14,
-        "total_tokens": 825,
-        "cost": 0.0001539945,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 640,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00015555,
-          "upstream_inference_prompt_cost": 0.00013455,
-          "upstream_inference_completions_cost": 2.1e-05
+          "upstream_inference_cost": 0.00028483,
+          "upstream_inference_prompt_cost": 0.00028154,
+          "upstream_inference_completions_cost": 3.29e-06
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -277,95 +242,22 @@
         }
       },
       "answer": {
-        "code": "webctl click checkbox \"Email supplier\""
-      },
-      "browser_s": 0.676,
-      "code": "webctl click checkbox \"Email supplier\"",
-      "observation": "Usage: webctl click [OPTIONS] {query}\nTry 'webctl click --help' for help.\n\u256d\u2500 Error \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 Got unexpected extra argument(s) (Email supplier)                            \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
-    },
-    {
-      "step": 9,
-      "api_s": 0.699,
-      "provider": "Modal",
-      "request_id": "gen-1789163850-i0b4gUhGUdHWpvpmOVks",
-      "usage": {
-        "prompt_tokens": 932,
-        "completion_tokens": 17,
-        "total_tokens": 949,
-        "cost": 0.0001667358,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 768,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00016842,
-          "upstream_inference_prompt_cost": 0.00014292,
-          "upstream_inference_completions_cost": 2.55e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 0,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "webctl click \"checkbox near 'Email supplier'\""
-      },
-      "browser_s": 1.739,
-      "code": "webctl click \"checkbox near 'Email supplier'\"",
-      "observation": "ERROR [no_match] No interactive element matching 'checkbox near 'Email supplier''\n  -> Run 'webctl snapshot' to see available elements\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
-    },
-    {
-      "step": 10,
-      "api_s": 0.858,
-      "provider": "Modal",
-      "request_id": "gen-1789163852-OkWRfkaT4yNJLWpUj0oH",
-      "usage": {
-        "prompt_tokens": 1014,
-        "completion_tokens": 11,
-        "total_tokens": 1025,
-        "cost": 0.0001487376,
-        "is_byok": false,
-        "prompt_tokens_details": {
-          "cached_tokens": 896,
-          "cache_write_tokens": 0,
-          "audio_tokens": 0,
-          "video_tokens": 0
-        },
-        "cost_details": {
-          "upstream_inference_cost": 0.00015024,
-          "upstream_inference_prompt_cost": 0.00013374,
-          "upstream_inference_completions_cost": 1.65e-05
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 0,
-          "image_tokens": 0,
-          "audio_tokens": 0
-        }
-      },
-      "answer": {
-        "code": "webctl snapshot --refs"
-      },
-      "browser_s": 0.683,
-      "code": "webctl snapshot --refs",
-      "observation": "Usage: webctl snapshot [OPTIONS]\nTry 'webctl snapshot --help' for help.\n\u256d\u2500 Error \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 No such option: --refs (Possible options: --grep, --read, --roles)           \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n30 elements (7 text, 6 link, 5 listitem, 3 checkbox, 3 paragraph, 2 list, 4 other)"
+        "done": true
+      }
     }
   ],
-  "setup_s": 10.913,
-  "total_s": 18.285,
-  "api_s": 9.401,
-  "model_calls": 10,
+  "setup_s": 10.764,
+  "total_s": 10.736,
+  "api_s": 6.548,
+  "model_calls": 7,
   "tokens": {
-    "input": 5977,
-    "output": 268,
-    "cached": 3904,
-    "reasoning": 148
+    "input": 8204,
+    "output": 104,
+    "cached": 0,
+    "reasoning": 0
   },
-  "done": false,
+  "done": true,
   "error": null,
-  "verification": "{\"saved\": [{\"title\": \"Email supplier\", \"completed\": false}, {\"title\": \"Review invoice\", \"completed\": false}], \"items\": [{\"text\": \"Email supplier\", \"completed\": false}, {\"text\": \"Review invoice\", \"completed\": false}], \"url\": \"https://demo.playwright.dev/todomvc/#/\"}",
-  "pass": false
+  "verification": "{\"saved\": [{\"title\": \"Email supplier\", \"completed\": true}, {\"title\": \"Review invoice\", \"completed\": false}], \"items\": [{\"text\": \"Review invoice\", \"completed\": false}], \"url\": \"https://demo.playwright.dev/todomvc/#/active\"}",
+  "pass": true
 }

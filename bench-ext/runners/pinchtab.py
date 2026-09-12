@@ -49,12 +49,24 @@ Return ONLY JSON: {"code":"<one command>","done":false} or {"done":true,"result"
     def act(self, handle, code):
         t0 = time.perf_counter()
         parts = [p.strip() for p in code.strip().split(';') if p.strip()]
-        # strip accidental outer quotes around command text
-        parts = [p[1:-1] if len(p) > 1 and p[0] == p[-1] and p[0] in ('"', "'") else p for p in parts]
         if len(parts) > 2: parts = parts[:2]
         out = ''
         for part in parts:
-            args = part.split()
+            import shlex
+            try: args = shlex.split(part)
+            except ValueError: args = part.split()
+            # pinchtab `type <ref> <text...>` is LITERAL: text must be UNQUOTED.
+            # strip wrapping quotes the model adds; never send quote characters to type.
+            if len(args) >= 3 and args[0] == 'type':
+                text = ' '.join(args[2:])
+                if len(text) >= 2 and text[0] == text[-1] and text[0] in ('"', "'"):
+                    text = text[1:-1]
+                args = args[:2] + [text]
+            elif len(args) >= 2 and args[0] == 'eval':
+                js = ' '.join(args[1:])
+                if len(js) >= 2 and js[0] == js[-1] and js[0] in ('"', "'"):
+                    js = js[1:-1]
+                args = args[:1] + [js]
             out = pt(*args, tab=handle['tab'], timeout=40, stdout_only=True)
         obs = out if (parts and parts[0].split()[0] == 'snap') else snap_refs(handle['tab'])
         return obs, time.perf_counter() - t0

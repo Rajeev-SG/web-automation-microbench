@@ -2,15 +2,17 @@
   {
     "contender": "agent-browser",
     "reps": 2,
-    "passes": 0,
-    "median_s": 13.7,
+    "passes": 2,
+    "median_s": 10.1,
     "times_s": [
-      16.4,
-      11.0
+      9.7,
+      10.5
     ],
-    "tok_in_avg": 23060,
-    "tok_cached_avg": 4032,
-    "tok_out_avg": 213
+    "tok_in_avg": 20804,
+    "tok_out_avg": 120,
+    "tok_cached_avg": 14656,
+    "note": "vercel-labs/agent-browser npm 0.37.1 @ 8c15ff9; re-run after adapter doc fix (use snapshot @refs for checkbox/Active) + benchlib JSON-peel fix for eval-quoted verify output",
+    "cost_per_run_usd": 0.00104
   },
   {
     "contender": "agent-chrome-cli",
@@ -22,8 +24,10 @@
       24.1
     ],
     "tok_in_avg": 7574,
+    "tok_out_avg": 175,
     "tok_cached_avg": 5248,
-    "tok_out_avg": 175
+    "note": "",
+    "cost_per_run_usd": 0.00041
   },
   {
     "contender": "browser-agent",
@@ -31,12 +35,14 @@
     "passes": 0,
     "median_s": 240.8,
     "times_s": [
-      240.7,
-      240.9
+      240.9,
+      240.7
     ],
     "tok_in_avg": 174,
+    "tok_out_avg": 20,
     "tok_cached_avg": 0,
-    "tok_out_avg": 20
+    "note": "BROKEN adapter (Taylor-Bayouth/browser-agent OpenRouter loop never wired); EXCLUDED \u2014 see runners/browser-agent-EXCLUDED.json; re-scored Round 4 as visnia-ai/browser-agent",
+    "cost_per_run_usd": 2e-05
   },
   {
     "contender": "browser-control",
@@ -48,8 +54,10 @@
       5.1
     ],
     "tok_in_avg": 13229,
+    "tok_out_avg": 182,
     "tok_cached_avg": 9280,
-    "tok_out_avg": 182
+    "note": "",
+    "cost_per_run_usd": 0.00069
   },
   {
     "contender": "cdp-browser",
@@ -61,8 +69,10 @@
       9.3
     ],
     "tok_in_avg": 6278,
+    "tok_out_avg": 246,
     "tok_cached_avg": 4928,
-    "tok_out_avg": 246
+    "note": "",
+    "cost_per_run_usd": 0.00035
   },
   {
     "contender": "jarvis-browser",
@@ -73,9 +83,11 @@
       13.9,
       8.5
     ],
-    "tok_in_avg": 8481,
+    "tok_in_avg": 8482,
+    "tok_out_avg": 104,
     "tok_cached_avg": 3872,
-    "tok_out_avg": 104
+    "note": "",
+    "cost_per_run_usd": 0.00052
   },
   {
     "contender": "lightpanda",
@@ -83,29 +95,29 @@
     "passes": 2,
     "median_s": 22.7,
     "times_s": [
-      15.2,
-      30.3
+      30.3,
+      15.2
     ],
     "tok_in_avg": 7118,
+    "tok_out_avg": 594,
     "tok_cached_avg": 3008,
-    "tok_out_avg": 594
+    "note": "",
+    "cost_per_run_usd": 0.00057
   },
   {
     "contender": "pinchtab",
-    "reps": 6,
-    "passes": 0,
-    "median_s": 75.4,
+    "reps": 2,
+    "passes": 2,
+    "median_s": 8.3,
     "times_s": [
-      108.2,
-      10.9,
-      13.9,
-      46.4,
-      104.5,
-      242.9
+      9.3,
+      7.3
     ],
-    "tok_in_avg": 7449,
-    "tok_cached_avg": 2688,
-    "tok_out_avg": 1547
+    "tok_in_avg": 5070,
+    "tok_out_avg": 200,
+    "tok_cached_avg": 3392,
+    "note": "pinchtab @ 3771028; re-run after adapter fix (type is literal \u2014 strip model quotes) + fresh server instance",
+    "cost_per_run_usd": 0.0003
   },
   {
     "contender": "raw-playwright",
@@ -113,26 +125,52 @@
     "passes": 3,
     "median_s": 42.7,
     "times_s": [
-      73.2,
       40.8,
+      14.0,
       44.7,
-      14.0
+      73.2
     ],
-    "tok_in_avg": 18092,
+    "tok_in_avg": 18093,
+    "tok_out_avg": 413,
     "tok_cached_avg": 11552,
-    "tok_out_avg": 412
+    "note": "",
+    "cost_per_run_usd": 0.00103
   },
   {
     "contender": "webctl",
     "reps": 2,
-    "passes": 0,
-    "median_s": 19.1,
+    "passes": 2,
+    "median_s": 14.5,
     "times_s": [
-      19.8,
+      10.7,
       18.3
     ],
-    "tok_in_avg": 5845,
-    "tok_cached_avg": 2880,
-    "tok_out_avg": 282
+    "tok_in_avg": 8204,
+    "tok_out_avg": 104,
+    "tok_cached_avg": 0,
+    "note": "cosinusalpha/webctl 0.4.2 @ a03aa7b; re-run after runner fixes (quiet snapshot hid @refs; check needs nth= query, not @ref; verify reads profile state.json + reload-summary URL)",
+    "cost_per_run_usd": 0.00064
+  },
+  {
+    "contender": "sitegeist",
+    "reps": 0,
+    "passes": 0,
+    "median_s": null,
+    "times_s": [],
+    "tok_in_avg": 0,
+    "tok_out_avg": 0,
+    "tok_cached_avg": 0,
+    "note": "NOT SCORED \u2014 blocked on boot: (1) branded Google Chrome now silently ignores --load-extension (logged: '--load-extension is not allowed in Google Chrome, ignoring'); used Chrome for Testing 153 (~/.agent-browser) where the extension loads ENABLED; (2) sidepanel boot blocks on a userscripts-permission dialog; dismissed programmatically (handleDeny) and IndexedDB storage inits (7 stores verified); GLM key written to provider-keys/openrouter. UI stays 'Loading...' pending full agent init \u2014 needs an interactive first-run (grant Allow User Scripts in chrome://extensions details) before reps can run."
+  },
+  {
+    "contender": "notte",
+    "reps": 0,
+    "passes": 0,
+    "median_s": null,
+    "times_s": [],
+    "tok_in_avg": 0,
+    "tok_out_avg": 0,
+    "tok_cached_avg": 0,
+    "note": "NOT RUN \u2014 Round 3 budget closed before install; pip/venv + litellm openrouter wiring remains the documented next step"
   }
 ]
