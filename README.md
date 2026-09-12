@@ -1,3 +1,15 @@
+# ⚠️ REAL WORK ONLY
+
+**Every task in this benchmark must come from real recorded session history —
+never invented, never approximated, never hand-authored.** We have a rich corpus
+of genuinely messy, authenticated, multi-tab, recovery-heavy browser work
+(Pinterest Ads Manager across US/UK/MENA accounts, GA4/Google Ads property and
+conversion-config flows, CHANEL tag QA via authenticated Chrome, Amazon UK
+defect-case handling). There is no excuse for synthetic benchmark tasks while
+that corpus exists. Full rule, sources and mandatory provenance fields:
+[`bench-ext/docs/REAL-WORK-MANDATE.md`](bench-ext/docs/REAL-WORK-MANDATE.md).
+Tracked in issue #12.
+
 # Web Automation Microbenchmarks
 
 Short, practical head-to-head races between browser automation tools. Every tool gets the same task, the same browser situation, and the same success test — then we measure who finishes reliably, quickly, cheaply, and with the least AI overhead.

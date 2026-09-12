@@ -1,3 +1,13 @@
+> **⚠️ STATUS: PARTIALLY INVALID — DO NOT EXTEND THIS SUITE AS WRITTEN.**
+> Tasks 2–9 below were hand-authored or generic public-site stand-ins, which
+> violates the real-work mandate
+> ([REAL-WORK-MANDATE.md](REAL-WORK-MANDATE.md), issue #12). Only task 1
+> (TodoMVC) and the 22 measured envelopes in
+> `artifacts/2026-09-12/pareto-corpus/` are legitimate real-work evidence.
+> Task 2–9 will be replaced by session-derived tasks with mandatory
+> provenance (`source_session_id`, `source_url`, `verified_against`) under
+> issue #12. Until that lands, this file is a record of what **not** to do.
+
 # Browser task suite v1 (issues #2 + #3)
 
 Compact orthogonal suite. TodoMVC stays the **latency microbenchmark**.
