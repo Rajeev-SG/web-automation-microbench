@@ -16,7 +16,7 @@ Machine-readable evidence for the three steps plus the delivery run. Verified 20
 | 10 | Intake/validation command + docs | `bench-ext/task_intake.py`, `bench-ext/docs/task-intake.md` | PASS |
 | 11 | Task set empty pending #88 | registry has only `todomvc` + the one delivery task | PASS |
 | 12 | CI guardrails unchanged and green | `py -m unittest discover -s bench-ext/tests -t bench-ext`; synthetic-fixture guard still clean | PASS |
-| 13 | Delivery: top-2 harnesses on a real auth-free task | `summary.json`, `report.md`, 7 rep JSONs + 7 screenshots | PASS |
+| 13 | Delivery: top-2 harnesses on a real auth-free task | `summary.json`, `report.md`, 10 rep JSONs + 10 screenshots | PASS |
 
 ## Commands (reproducible)
 
@@ -32,6 +32,6 @@ OPENROUTER_API_KEY=$(...) BENCH_RES=bench-ext/artifacts/2026-09-15/delivery \
 
 ## Result at a glance
 
+- browser-relay: 4/5 (screening 1/2 → promoted to 5 → **4/5**; 2-rep screening understated it).
 - BrowserSkill: 3/5 (screening 2/2 → promoted to 5 → **3/5**; 2-rep screening overstated it).
-- browser-relay: 1/2 (screening only; failure = repeated JS SyntaxError on `eval`).
-- 7 rep JSONs + 7 screenshots; all failures preserved.
+- 10 rep JSONs + 10 screenshots; all failures preserved. Promotion corrected screening in both directions.
