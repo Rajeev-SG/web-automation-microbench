@@ -1,0 +1,272 @@
+{
+  "id": "4-hyperagent",
+  "contender": "hyperagent",
+  "rep": "4",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.446,
+      "provider": "Together",
+      "request_id": "gen-1789232156-phXUaiGrRUh0uPGVdm7V",
+      "usage": {
+        "prompt_tokens": 375,
+        "completion_tokens": 14,
+        "total_tokens": 389,
+        "cost": 3.22047e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.253e-05,
+          "upstream_inference_prompt_cost": 2.553e-05,
+          "upstream_inference_completions_cost": 7e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill the new todo input with Email supplier"
+      },
+      "browser_s": 2.504,
+      "code": "fill the new todo input with Email supplier",
+      "observation": "{\"taskId\":\"72881d1a-d52d-4901-9899-294dacb079a5\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: fill the new todo input with Email supplier\",\"actionCache\":{\"taskId\":\"72881d1a-d52d-4901-9899-294dacb079a5\",\"createdAt\":\"2026-09-12T16:55:57.272Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-14\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    },
+    {
+      "step": 2,
+      "api_s": 1.661,
+      "provider": "Together",
+      "request_id": "gen-1789232160-B5LQ64Ac0es7Murmwnqm",
+      "usage": {
+        "prompt_tokens": 725,
+        "completion_tokens": 8,
+        "total_tokens": 733,
+        "cost": 8.12097e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.203e-05,
+          "upstream_inference_prompt_cost": 7.803e-05,
+          "upstream_inference_completions_cost": 4e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter"
+      },
+      "browser_s": 2.415,
+      "code": "press Enter",
+      "observation": "{\"taskId\":\"9fcc52b8-e14b-4b9b-b589-113730ceab4b\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: press Enter\",\"actionCache\":{\"taskId\":\"9fcc52b8-e14b-4b9b-b589-113730ceab4b\",\"createdAt\":\"2026-09-12T16:56:01.437Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-14\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\n1 item left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"toggle-all\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Mark all as complete\",\"forAttr\":\"toggle-all\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Email supplier\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"}]}"
+    },
+    {
+      "step": 3,
+      "api_s": 1.461,
+      "provider": "Together",
+      "request_id": "gen-1789232164-0PFE8Q9VBmGGYXNix76D",
+      "usage": {
+        "prompt_tokens": 1218,
+        "completion_tokens": 14,
+        "total_tokens": 1232,
+        "cost": 0.000111771,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 640,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001129,
+          "upstream_inference_prompt_cost": 0.0001059,
+          "upstream_inference_completions_cost": 7e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill the new todo input with Review invoice"
+      },
+      "browser_s": 2.666,
+      "code": "fill the new todo input with Review invoice",
+      "observation": "{\"taskId\":\"351c770c-1407-4794-8559-8a92c7652baa\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: fill the new todo input with Review invoice\",\"actionCache\":{\"taskId\":\"351c770c-1407-4794-8559-8a92c7652baa\",\"createdAt\":\"2026-09-12T16:56:05.313Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-14\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\n1 item left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"toggle-all\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Mark all as complete\",\"forAttr\":\"toggle-all\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Email supplier\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"}]}"
+    },
+    {
+      "step": 4,
+      "api_s": 1.027,
+      "provider": "Together",
+      "request_id": "gen-1789232168-QeoJDMlcJT7zCiPail63",
+      "usage": {
+        "prompt_tokens": 1729,
+        "completion_tokens": 8,
+        "total_tokens": 1737,
+        "cost": 0.0001238589,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012511,
+          "upstream_inference_prompt_cost": 0.00012111,
+          "upstream_inference_completions_cost": 4e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "press Enter"
+      },
+      "browser_s": 2.624,
+      "code": "press Enter",
+      "observation": "{\"taskId\":\"1c34d738-ac7e-4ed2-9523-1909c351b93e\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: press Enter\",\"actionCache\":{\"taskId\":\"1c34d738-ac7e-4ed2-9523-1909c351b93e\",\"createdAt\":\"2026-09-12T16:56:09.006Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-14\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n2 items left\\nAll Active Completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"toggle-all\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Mark all as complete\",\"forAttr\":\"toggle-all\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Email supplier\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Review invoice\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}"
+    },
+    {
+      "step": 5,
+      "api_s": 0.518,
+      "provider": "Together",
+      "request_id": "gen-1789232171-4WYGlsW0fJJDSHmHX7G9",
+      "usage": {
+        "prompt_tokens": 2277,
+        "completion_tokens": 13,
+        "total_tokens": 2290,
+        "cost": 0.0001468863,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014837,
+          "upstream_inference_prompt_cost": 0.00014187,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click the checkbox next to Email supplier"
+      },
+      "browser_s": 11.068,
+      "code": "click the checkbox next to Email supplier",
+      "observation": "{\"taskId\":\"ad1601f8-2524-4bb2-842a-f77a90bc59e2\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: click the checkbox next to Email supplier\",\"actionCache\":{\"taskId\":\"ad1601f8-2524-4bb2-842a-f77a90bc59e2\",\"createdAt\":\"2026-09-12T16:56:12.148Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/section[1]/ul[1]/li[1]/div[1]/input[1]\",\"fallbackElementId\":\"0-52\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nEmail supplier\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"toggle-all\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Mark all as complete\",\"forAttr\":\"toggle-all\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":true,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Email supplier\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"destroy\",\"text\":\"\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Review invoice\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"All\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Active\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\",\"id\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[{\"text\":\"Email supplier\",\"class\":\"completed\"},{\"text\":\"Review invoice\",\"class\":\"\"}]}"
+    },
+    {
+      "step": 6,
+      "api_s": 0.537,
+      "provider": "Together",
+      "request_id": "gen-1789232183-XaajyQIGJiLE2OeBOsBB",
+      "usage": {
+        "prompt_tokens": 2887,
+        "completion_tokens": 11,
+        "total_tokens": 2898,
+        "cost": 0.0001756557,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017743,
+          "upstream_inference_prompt_cost": 0.00017193,
+          "upstream_inference_completions_cost": 5.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click the Active filter link"
+      },
+      "browser_s": 2.105,
+      "code": "click the Active filter link",
+      "observation": "{\"taskId\":\"eb8c69e2-7c22-4af4-b674-41a11d5b9462\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: click the Active filter link\",\"actionCache\":{\"taskId\":\"eb8c69e2-7c22-4af4-b674-41a11d5b9462\",\"createdAt\":\"2026-09-12T16:56:23.753Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/footer[1]/ul[1]/li[2]/a[1]\",\"fallbackElementId\":\"0-64\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\nMark all as complete\\nReview invoice\\n1 item left\\nAll Active Completed\\nClear completed\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle-all\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"toggle-all\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Mark all as complete\",\"forAttr\":\"toggle-all\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"checkbox\",\"class\":\"toggle\",\"text\":\"\",\"placeholder\":\"\",\"checked\":false,\"id\":\"\"},{\"tag\":\"LABEL\",\"class\":\"\",\"text\":\"Review invoice\",\"forAttr\":\"\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"All\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"selected\",\"text\":\"Active\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Completed\",\"id\":\"\"},{\"tag\":\"BUTTON\",\"type\":\"submit\",\"class\":\"clear-completed\",\"text\":\"Clear completed\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[{\"text\":\"Review invoice\",\"class\":\"\"}]}"
+    },
+    {
+      "step": 7,
+      "api_s": 0.482,
+      "provider": "Together",
+      "request_id": "gen-1789232185-APTw7JqY0uz506sbNLxL",
+      "usage": {
+        "prompt_tokens": 3426,
+        "completion_tokens": 7,
+        "total_tokens": 3433,
+        "cost": 0.0001776852,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2816,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017948,
+          "upstream_inference_prompt_cost": 0.00017598,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 0.174,
+  "total_s": 29.515,
+  "api_s": 6.133,
+  "model_calls": 7,
+  "tokens": {
+    "input": 12637,
+    "output": 75,
+    "cached": 8960,
+    "reasoning": 0
+  },
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true,
+  "tool_internal_llm": {
+    "inputTokens": 5481,
+    "outputTokens": 957,
+    "calls": 6,
+    "providers": {
+      "Together": 6
+    }
+  },
+  "note": "HyperAgent opens its own local Playwright Chromium (headless); bench-side fetch wrapper injects provider.sort=latency and tallies tool-internal usage. Extra reps for variance."
+}

@@ -1,0 +1,473 @@
+{
+  "id": "1-chrome-cdp-skill",
+  "contender": "chrome-cdp-skill",
+  "rep": "1",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.376,
+      "provider": "Together",
+      "request_id": "gen-1789230359-vVvKojbhzjZT1H2GeeKe",
+      "usage": {
+        "prompt_tokens": 549,
+        "completion_tokens": 7,
+        "total_tokens": 556,
+        "cost": 8.49915e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.585e-05,
+          "upstream_inference_prompt_cost": 8.235e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "list"
+      },
+      "browser_s": 0.0,
+      "code": "list",
+      "observation": "8F44D3CA  about:blank                                             about:blank\n524FDC61  about:blank                                             about:blank\n7C09FB26  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nED9E9CCD  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n86667FC6  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\nD7868298  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n1B191ADD  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nD0F987AF  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n71B7932D  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n7792D63E  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n6889DA96  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nE27711FC  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n55C1E7F8  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nAE958DC8  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nED226AD0  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\n06AD910F  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\nDF6F015B  about:blank                                             about:blank\n17C6C5BC  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\n0BF94183  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\nD064C3E0  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active\nA79F2691  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\n1F0BB5C7  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/\nD26DC5E5  React \u2022 TodoMVC                                         https://demo.playwright.dev/todomvc/#/active"
+    },
+    {
+      "step": 2,
+      "api_s": 0.579,
+      "provider": "Together",
+      "request_id": "gen-1789230359-M8TzJF3MkblC0E3itTkx",
+      "usage": {
+        "prompt_tokens": 1106,
+        "completion_tokens": 13,
+        "total_tokens": 1119,
+        "cost": 0.0001174536,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011864,
+          "upstream_inference_prompt_cost": 0.00011214,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap 86667FC6"
+      },
+      "browser_s": 0.0,
+      "code": "snap 86667FC6",
+      "observation": "[RootWebArea] React \u2022 TodoMVC\n        [StaticText] This is just a demo of TodoMVC for testing, not the \n        [link] real TodoMVC app.\n          [StaticText] real TodoMVC app.\n            [heading] todos\n              [StaticText] todos\n            [textbox] What needs to be done?\n          [StaticText] Double-click to edit a todo\n          [StaticText] Created by \n          [link] Remo H. Jansen\n            [StaticText] Remo H. Jansen\n          [StaticText] Part of \n          [link] TodoMVC\n            [StaticText] TodoMVC"
+    },
+    {
+      "step": 3,
+      "api_s": 0.459,
+      "provider": "Together",
+      "request_id": "gen-1789230360-QpguAAtME5bQW5IKtvqY",
+      "usage": {
+        "prompt_tokens": 1266,
+        "completion_tokens": 19,
+        "total_tokens": 1285,
+        "cost": 7.57548e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.652e-05,
+          "upstream_inference_prompt_cost": 6.702e-05,
+          "upstream_inference_completions_cost": 9.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 86667FC6 \".new-todo\""
+      },
+      "browser_s": 0.0,
+      "code": "click 86667FC6 \".new-todo\"",
+      "observation": "Clicked <INPUT> \"\""
+    },
+    {
+      "step": 4,
+      "api_s": 0.551,
+      "provider": "Together",
+      "request_id": "gen-1789230360-tuBZDr1gPoUekDaY7hAW",
+      "usage": {
+        "prompt_tokens": 1295,
+        "completion_tokens": 17,
+        "total_tokens": 1312,
+        "cost": 6.38649e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.451e-05,
+          "upstream_inference_prompt_cost": 5.601e-05,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type 86667FC6 \"Email supplier\""
+      },
+      "browser_s": 0.0,
+      "code": "type 86667FC6 \"Email supplier\"",
+      "observation": "Typed 14 characters"
+    },
+    {
+      "step": 5,
+      "api_s": 0.761,
+      "provider": "Together",
+      "request_id": "gen-1789230361-ACbXpIprbdJoUR7UBP8b",
+      "usage": {
+        "prompt_tokens": 1321,
+        "completion_tokens": 40,
+        "total_tokens": 1361,
+        "cost": 7.15077e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1216,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.223e-05,
+          "upstream_inference_prompt_cost": 5.223e-05,
+          "upstream_inference_completions_cost": 2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval 86667FC6 \"document.activeElement.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true}))\""
+      },
+      "browser_s": 0.0,
+      "code": "eval 86667FC6 \"document.activeElement.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true}))\"",
+      "observation": "true"
+    },
+    {
+      "step": 6,
+      "api_s": 0.561,
+      "provider": "Together",
+      "request_id": "gen-1789230362-xUdCinLKBDL3EtcWgEAN",
+      "usage": {
+        "prompt_tokens": 1367,
+        "completion_tokens": 19,
+        "total_tokens": 1386,
+        "cost": 6.79437e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1216,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.863e-05,
+          "upstream_inference_prompt_cost": 5.913e-05,
+          "upstream_inference_completions_cost": 9.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 86667FC6 \".new-todo\""
+      },
+      "browser_s": 0.0,
+      "code": "click 86667FC6 \".new-todo\"",
+      "observation": "Clicked <INPUT> \"\""
+    },
+    {
+      "step": 7,
+      "api_s": 0.513,
+      "provider": "Together",
+      "request_id": "gen-1789230362-fIWpOZPavxK96jf6Lyrz",
+      "usage": {
+        "prompt_tokens": 1396,
+        "completion_tokens": 17,
+        "total_tokens": 1413,
+        "cost": 6.3657e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.43e-05,
+          "upstream_inference_prompt_cost": 5.58e-05,
+          "upstream_inference_completions_cost": 8.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type 86667FC6 \"Review invoice\""
+      },
+      "browser_s": 0.0,
+      "code": "type 86667FC6 \"Review invoice\"",
+      "observation": "Typed 14 characters"
+    },
+    {
+      "step": 8,
+      "api_s": 0.621,
+      "provider": "Together",
+      "request_id": "gen-1789230363-tZuCinRO7givchFMPXfx",
+      "usage": {
+        "prompt_tokens": 1422,
+        "completion_tokens": 40,
+        "total_tokens": 1462,
+        "cost": 7.8903e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.97e-05,
+          "upstream_inference_prompt_cost": 5.97e-05,
+          "upstream_inference_completions_cost": 2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "eval 86667FC6 \"document.activeElement.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true}))\""
+      },
+      "browser_s": 0.0,
+      "code": "eval 86667FC6 \"document.activeElement.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,which:13,bubbles:true}))\"",
+      "observation": "true"
+    },
+    {
+      "step": 9,
+      "api_s": 0.812,
+      "provider": "Together",
+      "request_id": "gen-1789230364-HCD0YRVE3AyNHLoTK8xB",
+      "usage": {
+        "prompt_tokens": 1468,
+        "completion_tokens": 13,
+        "total_tokens": 1481,
+        "cost": 6.47658e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1344,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.542e-05,
+          "upstream_inference_prompt_cost": 5.892e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap 86667FC6"
+      },
+      "browser_s": 0.0,
+      "code": "snap 86667FC6",
+      "observation": "[RootWebArea] React \u2022 TodoMVC\n        [StaticText] This is just a demo of TodoMVC for testing, not the \n        [link] real TodoMVC app.\n          [StaticText] real TodoMVC app.\n            [heading] todos\n              [StaticText] todos\n            [textbox] What needs to be done?\n            [checkbox] \u276fMark all as complete\n                  [checkbox] Toggle Todo\n                    [StaticText] Email supplier\n                  [checkbox] Toggle Todo\n                    [StaticText] Review invoice\n                [StaticText] 2\n              [StaticText]  \n              [StaticText] items\n              [StaticText]  left\n                [link] All\n                  [StaticText] All\n              [StaticText]  \n                [link] Active\n                  [StaticText] Active\n              [StaticText]  \n                [link] Completed\n                  [StaticText] Completed\n          [StaticText] Double-click to edit a todo\n          [StaticText] Created by \n          [link] Remo H. Jansen\n            [StaticText] Remo H. Jansen\n          [StaticText] Part of \n          [link] TodoMVC\n            [StaticText] TodoMVC"
+    },
+    {
+      "step": 10,
+      "api_s": 0.494,
+      "provider": "Together",
+      "request_id": "gen-1789230364-dh7wFVpiZssu0KC67DUi",
+      "usage": {
+        "prompt_tokens": 1749,
+        "completion_tokens": 20,
+        "total_tokens": 1769,
+        "cost": 0.0001099593,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1344,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011107,
+          "upstream_inference_prompt_cost": 0.00010107,
+          "upstream_inference_completions_cost": 1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 86667FC6 \"li:first-child .toggle\""
+      },
+      "browser_s": 0.0,
+      "code": "click 86667FC6 \"li:first-child .toggle\"",
+      "observation": "Clicked <INPUT> \"\""
+    },
+    {
+      "step": 11,
+      "api_s": 0.569,
+      "provider": "Together",
+      "request_id": "gen-1789230365-Gg8JS8dH1ZajCWPNufRw",
+      "usage": {
+        "prompt_tokens": 1779,
+        "completion_tokens": 24,
+        "total_tokens": 1803,
+        "cost": 7.83783e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.917e-05,
+          "upstream_inference_prompt_cost": 6.717e-05,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 86667FC6 \"a[href=\\\"#/active\\\"]\""
+      },
+      "browser_s": 0.0,
+      "code": "click 86667FC6 \"a[href=\\\"#/active\\\"]\"",
+      "observation": "Clicked <A> \"Active\""
+    },
+    {
+      "step": 12,
+      "api_s": 1.011,
+      "provider": "Together",
+      "request_id": "gen-1789230366-Mnyh843DefAThi0kuEz9",
+      "usage": {
+        "prompt_tokens": 1815,
+        "completion_tokens": 13,
+        "total_tokens": 1828,
+        "cost": 7.82793e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.907e-05,
+          "upstream_inference_prompt_cost": 7.257e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "snap 86667FC6"
+      },
+      "browser_s": 0.0,
+      "code": "snap 86667FC6",
+      "observation": "[RootWebArea] React \u2022 TodoMVC\n        [StaticText] This is just a demo of TodoMVC for testing, not the \n        [link] real TodoMVC app.\n          [StaticText] real TodoMVC app.\n            [heading] todos\n              [StaticText] todos\n            [textbox] What needs to be done?\n            [checkbox] \u276fMark all as complete\n                  [checkbox] Toggle Todo\n                    [StaticText] Review invoice\n                [StaticText] 1\n              [StaticText]  \n              [StaticText] item\n              [StaticText]  left\n                [link] All\n                  [StaticText] All\n              [StaticText]  \n                [link] Active\n                  [StaticText] Active\n              [StaticText]  \n                [link] Completed\n                  [StaticText] Completed\n            [button] Clear completed\n              [StaticText] Clear completed\n          [StaticText] Double-click to edit a todo\n          [StaticText] Created by \n          [link] Remo H. Jansen\n            [StaticText] Remo H. Jansen\n          [StaticText] Part of \n          [link] TodoMVC\n            [StaticText] TodoMVC"
+    },
+    {
+      "step": 13,
+      "api_s": 1.877,
+      "provider": "Together",
+      "request_id": "gen-1789230368-p83aTqz41bw1xNCYf8yw",
+      "usage": {
+        "prompt_tokens": 2096,
+        "completion_tokens": 7,
+        "total_tokens": 2103,
+        "cost": 0.0001094346,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1728,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011054,
+          "upstream_inference_prompt_cost": 0.00010704,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 17.982,
+  "total_s": 9.922,
+  "api_s": 9.185,
+  "model_calls": 13,
+  "tokens": {
+    "input": 18629,
+    "output": 249,
+    "cached": 15360,
+    "reasoning": 0
+  },
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

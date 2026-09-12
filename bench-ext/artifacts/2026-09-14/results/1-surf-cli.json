@@ -1,0 +1,543 @@
+{
+  "id": "1-surf-cli",
+  "contender": "surf-cli",
+  "rep": "1",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.398,
+      "provider": "Together",
+      "request_id": "gen-1789233171-bmm1HsGip73w091dSZ0a",
+      "usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 9,
+        "total_tokens": 472,
+        "cost": 2.75913e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 2.787e-05,
+          "upstream_inference_prompt_cost": 2.337e-05,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click e2"
+      },
+      "browser_s": 0.0,
+      "code": "click e2",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233173199.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 2,
+      "api_s": 1.289,
+      "provider": "Together",
+      "request_id": "gen-1789233173-klpz0ipJzEg6qq5m9lMD",
+      "usage": {
+        "prompt_tokens": 521,
+        "completion_tokens": 13,
+        "total_tokens": 534,
+        "cost": 3.81843e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.857e-05,
+          "upstream_inference_prompt_cost": 3.207e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type \"Email supplier\" --submit"
+      },
+      "browser_s": 0.0,
+      "code": "type \"Email supplier\" --submit",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233175229.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 3,
+      "api_s": 1.664,
+      "provider": "Together",
+      "request_id": "gen-1789233176-tIuIfyoRgXtJPiY95eRh",
+      "usage": {
+        "prompt_tokens": 583,
+        "completion_tokens": 13,
+        "total_tokens": 596,
+        "cost": 3.97881e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.019e-05,
+          "upstream_inference_prompt_cost": 3.369e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "type \"Review invoice\" --submit"
+      },
+      "browser_s": 0.0,
+      "code": "type \"Review invoice\" --submit",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233177621.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 4,
+      "api_s": 0.619,
+      "provider": "Together",
+      "request_id": "gen-1789233178-czWa46IJBA4mdCzpPPwM",
+      "usage": {
+        "prompt_tokens": 645,
+        "completion_tokens": 7,
+        "total_tokens": 652,
+        "cost": 9.92475e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010025,
+          "upstream_inference_prompt_cost": 9.675e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "read"
+      },
+      "browser_s": 0.0,
+      "code": "read",
+      "observation": "link \"real TodoMVC app.\" [e1] [cursor=pointer] href=\"https://todomvc.com/\"\ntextbox \"What needs to be done?\" [e2] placeholder=\"What needs to be done?\"\nlink \"Remo H. Jansen\" [e3] [cursor=pointer] href=\"http://github.com/remojansen/\"\nlink \"TodoMVC\" [e4] [cursor=pointer] href=\"http://todomvc.com\"\n\n[Viewport: 1200x762]\n\n--- Page Text ---\nThis is just a demo of TodoMVC for testing, not the real TodoMVC app. todos Double-click to edit a todo Created by Remo H. Jansen Part of TodoMVC\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 5,
+      "api_s": 4.746,
+      "provider": "Together",
+      "request_id": "gen-1789233179-KcuHfuscPS5HuPF0oACo",
+      "usage": {
+        "prompt_tokens": 829,
+        "completion_tokens": 69,
+        "total_tokens": 898,
+        "cost": 9.64359e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 9.741e-05,
+          "upstream_inference_prompt_cost": 6.291e-05,
+          "upstream_inference_completions_cost": 3.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "js \"document.querySelectorAll('.todo-list li').length + '|' + document.querySelector('.new-todo')?.value\""
+      },
+      "browser_s": 0.0,
+      "code": "js \"document.querySelectorAll('.todo-list li').length + '|' + document.querySelector('.new-todo')?.value\"",
+      "observation": "\"0|Email supplierReview invoice\"\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 6,
+      "api_s": 1.057,
+      "provider": "Together",
+      "request_id": "gen-1789233184-Wcv5fGV8hJTghidg5ZgF",
+      "usage": {
+        "prompt_tokens": 890,
+        "completion_tokens": 56,
+        "total_tokens": 946,
+        "cost": 9.14562e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 576,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 9.238e-05,
+          "upstream_inference_prompt_cost": 6.438e-05,
+          "upstream_inference_completions_cost": 2.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "smart_type --selector .new-todo --text \"Email supplier\" --submit"
+      },
+      "browser_s": 0.0,
+      "code": "smart_type --selector .new-todo --text \"Email supplier\" --submit",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233185641.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 7,
+      "api_s": 0.715,
+      "provider": "Together",
+      "request_id": "gen-1789233186-NpqcDdRvFFZX6LI1FrVt",
+      "usage": {
+        "prompt_tokens": 961,
+        "completion_tokens": 22,
+        "total_tokens": 983,
+        "cost": 6.23601e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.299e-05,
+          "upstream_inference_prompt_cost": 5.199e-05,
+          "upstream_inference_completions_cost": 1.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "smart_type --selector .new-todo --text \"Review invoice\" --submit"
+      },
+      "browser_s": 0.0,
+      "code": "smart_type --selector .new-todo --text \"Review invoice\" --submit",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233187087.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 8,
+      "api_s": 0.38,
+      "provider": "Together",
+      "request_id": "gen-1789233187-xh5xEu4TwM7mOJar3tGy",
+      "usage": {
+        "prompt_tokens": 1032,
+        "completion_tokens": 7,
+        "total_tokens": 1039,
+        "cost": 5.02722e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 896,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.078e-05,
+          "upstream_inference_prompt_cost": 4.728e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "read"
+      },
+      "browser_s": 0.0,
+      "code": "read",
+      "observation": "link \"real TodoMVC app.\" [e1] [cursor=pointer] href=\"https://todomvc.com/\"\ntextbox \"What needs to be done?\" [e2] placeholder=\"What needs to be done?\"\nlink \"All\" [e5] [cursor=pointer] href=\"#/\"\nlink \"Active\" [e6] [cursor=pointer] href=\"#/active\"\nlink \"Completed\" [e7] [cursor=pointer] href=\"#/completed\"\nlink \"Remo H. Jansen\" [e3] [cursor=pointer] href=\"http://github.com/remojansen/\"\nlink \"TodoMVC\" [e4] [cursor=pointer] href=\"http://todomvc.com\"\n\n[Viewport: 1200x762]\n\n--- Page Text ---\nThis is just a demo of TodoMVC for testing, not the real TodoMVC app. todosMark all as completeEmail supplierReview invoice2 items leftAll Active Completed Double-click to edit a todo Created by Remo H. Jansen Part of TodoMVC\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 9,
+      "api_s": 2.029,
+      "provider": "Together",
+      "request_id": "gen-1789233188-kg1zn87TG5OIHqmZleJG",
+      "usage": {
+        "prompt_tokens": 1282,
+        "completion_tokens": 121,
+        "total_tokens": 1403,
+        "cost": 0.000136224,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 960,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001376,
+          "upstream_inference_prompt_cost": 7.71e-05,
+          "upstream_inference_completions_cost": 6.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 82,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "js \"[...document.querySelectorAll('.todo-list li')].map(li=>li.className+'|'+li.querySelector('.toggle')?.outerHTML).join('; ')\""
+      },
+      "browser_s": 0.0,
+      "code": "js \"[...document.querySelectorAll('.todo-list li')].map(li=>li.className+'|'+li.querySelector('.toggle')?.outerHTML).join('; ')\"",
+      "observation": "\"|<input aria-label=\\\"Toggle Todo\\\" class=\\\"toggle\\\" type=\\\"checkbox\\\">; |<input aria-label=\\\"Toggle Todo\\\" class=\\\"toggle\\\" type=\\\"checkbox\\\">\"\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 10,
+      "api_s": 2.797,
+      "provider": "Together",
+      "request_id": "gen-1789233191-EiYQeAYyJBPXUVTdzxJU",
+      "usage": {
+        "prompt_tokens": 1381,
+        "completion_tokens": 35,
+        "total_tokens": 1416,
+        "cost": 0.0001387683,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014017,
+          "upstream_inference_prompt_cost": 0.00012267,
+          "upstream_inference_completions_cost": 1.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "js \"[...document.querySelectorAll('.todo-list li')].map((li,i)=>i+':'+li.textContent.trim()).join('; ')\""
+      },
+      "browser_s": 0.0,
+      "code": "js \"[...document.querySelectorAll('.todo-list li')].map((li,i)=>i+':'+li.textContent.trim()).join('; ')\"",
+      "observation": "\"0:Email supplier; 1:Review invoice\"\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 11,
+      "api_s": 2.193,
+      "provider": "Together",
+      "request_id": "gen-1789233194-ZsmwTKSQkULVdyE1pT8w",
+      "usage": {
+        "prompt_tokens": 1452,
+        "completion_tokens": 22,
+        "total_tokens": 1474,
+        "cost": 7.4448e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.52e-05,
+          "upstream_inference_prompt_cost": 6.42e-05,
+          "upstream_inference_completions_cost": 1.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "js \"document.querySelectorAll('.todo-list li .toggle')[0].click()\""
+      },
+      "browser_s": 0.0,
+      "code": "js \"document.querySelectorAll('.todo-list li .toggle')[0].click()\"",
+      "observation": "\"undefined\"\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 12,
+      "api_s": 0.888,
+      "provider": "Together",
+      "request_id": "gen-1789233197-IFWLEQKXWmNfEUcpS0H4",
+      "usage": {
+        "prompt_tokens": 1501,
+        "completion_tokens": 21,
+        "total_tokens": 1522,
+        "cost": 7.36263e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1344,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.437e-05,
+          "upstream_inference_prompt_cost": 6.387e-05,
+          "upstream_inference_completions_cost": 1.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 14,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "read"
+      },
+      "browser_s": 0.0,
+      "code": "read",
+      "observation": "link \"real TodoMVC app.\" [e1] [cursor=pointer] href=\"https://todomvc.com/\"\ntextbox \"What needs to be done?\" [e2] placeholder=\"What needs to be done?\"\nlink \"All\" [e5] [cursor=pointer] href=\"#/\"\nlink \"Active\" [e6] [cursor=pointer] href=\"#/active\"\nlink \"Completed\" [e7] [cursor=pointer] href=\"#/completed\"\nbutton \"Clear completed\" [e8] [cursor=pointer]\nlink \"Remo H. Jansen\" [e3] [cursor=pointer] href=\"http://github.com/remojansen/\"\nlink \"TodoMVC\" [e4] [cursor=pointer] href=\"http://todomvc.com\"\n\n[Viewport: 1200x762]\n\n--- Page Text ---\nThis is just a demo of TodoMVC for testing, not the real TodoMVC app. todosMark all as completeEmail supplierReview invoice1 item leftAll Active CompletedClear completed Double-click to edit a todo Created by Remo H. Jansen Part of TodoMVC\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 13,
+      "api_s": 0.479,
+      "provider": "Together",
+      "request_id": "gen-1789233198-L5Oa0aW3CzQwmqLCZzl3",
+      "usage": {
+        "prompt_tokens": 1767,
+        "completion_tokens": 9,
+        "total_tokens": 1776,
+        "cost": 9.95841e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010059,
+          "upstream_inference_prompt_cost": 9.609e-05,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click e6"
+      },
+      "browser_s": 0.0,
+      "code": "click e6",
+      "observation": "OK\nScreenshot (1200x762): /tmp/pi-auto-1789233198982.png\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 14,
+      "api_s": 0.576,
+      "provider": "Together",
+      "request_id": "gen-1789233199-LL3UFjwEW2M2lDZ0yfKi",
+      "usage": {
+        "prompt_tokens": 1825,
+        "completion_tokens": 7,
+        "total_tokens": 1832,
+        "cost": 7.67943e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.757e-05,
+          "upstream_inference_prompt_cost": 7.407e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "read"
+      },
+      "browser_s": 0.0,
+      "code": "read",
+      "observation": "link \"real TodoMVC app.\" [e1] [cursor=pointer] href=\"https://todomvc.com/\"\ntextbox \"What needs to be done?\" [e2] placeholder=\"What needs to be done?\"\nlink \"All\" [e5] [cursor=pointer] href=\"#/\"\nlink \"Active\" [e6] [cursor=pointer] href=\"#/active\"\nlink \"Completed\" [e7] [cursor=pointer] href=\"#/completed\"\nbutton \"Clear completed\" [e8] [cursor=pointer]\nlink \"Remo H. Jansen\" [e3] [cursor=pointer] href=\"http://github.com/remojansen/\"\nlink \"TodoMVC\" [e4] [cursor=pointer] href=\"http://todomvc.com\"\n\n[Viewport: 1200x762]\n--- Diff from previous snapshot ---\n[NO CHANGES]\n\n--- Page Text ---\nThis is just a demo of TodoMVC for testing, not the real TodoMVC app. todosMark all as completeReview invoice1 item leftAll Active CompletedClear completed Double-click to edit a todo Created by Remo H. Jansen Part of TodoMVC\n[surf tab=227409678 window=227409557]"
+    },
+    {
+      "step": 15,
+      "api_s": 0.415,
+      "provider": "Together",
+      "request_id": "gen-1789233200-hDDyUkZuw4cnpYSA3wSk",
+      "usage": {
+        "prompt_tokens": 2100,
+        "completion_tokens": 7,
+        "total_tokens": 2107,
+        "cost": 0.0001100286,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1728,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011114,
+          "upstream_inference_prompt_cost": 0.00010764,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 12.949,
+  "total_s": 29.013,
+  "api_s": 21.244,
+  "model_calls": 15,
+  "tokens": {
+    "input": 17232,
+    "output": 418,
+    "cached": 13056,
+    "reasoning": 170
+  },
+  "done": true,
+  "error": null,
+  "verification": "\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":false}]}\"",
+  "pass": true
+}

@@ -1,0 +1,263 @@
+{
+  "id": "2-browser-act-skills",
+  "contender": "browser-act-skills",
+  "rep": "2",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.385,
+      "provider": "Together",
+      "request_id": "gen-1789230078-Bbi6BY0w0mVvfP0zSUkn",
+      "usage": {
+        "prompt_tokens": 342,
+        "completion_tokens": 13,
+        "total_tokens": 355,
+        "cost": 5.7222e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.78e-05,
+          "upstream_inference_prompt_cost": 5.13e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "input 2 \"Email supplier\""
+      },
+      "browser_s": 0.0,
+      "code": "input 2 \"Email supplier\"",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\nDouble-click to edit a todo\nCreated by\n[3]<a />\n\tRemo H. Jansen\nPart of\n[4]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 2,
+      "api_s": 1.931,
+      "provider": "Together",
+      "request_id": "gen-1789230081-ge47LGGW9K3j7vlFsPoO",
+      "usage": {
+        "prompt_tokens": 460,
+        "completion_tokens": 16,
+        "total_tokens": 476,
+        "cost": 3.06108e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.092e-05,
+          "upstream_inference_prompt_cost": 2.292e-05,
+          "upstream_inference_completions_cost": 8e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "keys \"Enter\""
+      },
+      "browser_s": 0.0,
+      "code": "keys \"Enter\"",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\n[3]<label />\n\tMark all as complete\n[4]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nEmail supplier\n1\nitem\nleft\n[5]<a class=selected />\n\tAll\n[6]<a />\n\tActive\n[7]<a />\n\tCompleted\nDouble-click to edit a todo\nCreated by\n[8]<a />\n\tRemo H. Jansen\nPart of\n[9]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 3,
+      "api_s": 1.141,
+      "provider": "Together",
+      "request_id": "gen-1789230085-hocTiq3OkdF6MiWt21q7",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 13,
+        "total_tokens": 652,
+        "cost": 4.05009e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.091e-05,
+          "upstream_inference_prompt_cost": 3.441e-05,
+          "upstream_inference_completions_cost": 6.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "input 2 \"Review invoice\""
+      },
+      "browser_s": 0.0,
+      "code": "input 2 \"Review invoice\"",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\n[3]<label />\n\tMark all as complete\n[4]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nEmail supplier\n1\nitem\nleft\n[5]<a class=selected />\n\tAll\n[6]<a />\n\tActive\n[7]<a />\n\tCompleted\nDouble-click to edit a todo\nCreated by\n[8]<a />\n\tRemo H. Jansen\nPart of\n[9]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 4,
+      "api_s": 1.309,
+      "provider": "Together",
+      "request_id": "gen-1789230088-DDOWaulqbmis3AZ8KGBD",
+      "usage": {
+        "prompt_tokens": 821,
+        "completion_tokens": 10,
+        "total_tokens": 831,
+        "cost": 4.32333e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.367e-05,
+          "upstream_inference_prompt_cost": 3.867e-05,
+          "upstream_inference_completions_cost": 5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "keys \"Enter\""
+      },
+      "browser_s": 0.0,
+      "code": "keys \"Enter\"",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\n[3]<label />\n\tMark all as complete\n[4]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nEmail supplier\n[5]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nReview invoice\n2\nitems\nleft\n[6]<a class=selected />\n\tAll\n[7]<a />\n\tActive\n[8]<a />\n\tCompleted\nDouble-click to edit a todo\nCreated by\n[9]<a />\n\tRemo H. Jansen\nPart of\n[10]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 5,
+      "api_s": 0.525,
+      "provider": "Together",
+      "request_id": "gen-1789230091-wzJeSXNuVamirXiAbgih",
+      "usage": {
+        "prompt_tokens": 1020,
+        "completion_tokens": 9,
+        "total_tokens": 1029,
+        "cost": 4.94802e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 896,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.998e-05,
+          "upstream_inference_prompt_cost": 4.548e-05,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 4"
+      },
+      "browser_s": 0.0,
+      "code": "click 4",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\n[3]<label />\n\tMark all as complete\n[4]<input aria-label=Toggle Todo type=checkbox invalid=false checked=true />\nEmail supplier\n[5]<button aria-label=Delete invalid=false />\n[6]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nReview invoice\n1\nitem\nleft\n[7]<a class=selected />\n\tAll\n[8]<a />\n\tActive\n[9]<a />\n\tCompleted\n[10]<button class=clear-completed invalid=false />\n\tClear completed\nDouble-click to edit a todo\nCreated by\n[11]<a />\n\tRemo H. Jansen\nPart of\n[12]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 6,
+      "api_s": 1.549,
+      "provider": "Together",
+      "request_id": "gen-1789230095-wpSt8bAgSktauErY01FZ",
+      "usage": {
+        "prompt_tokens": 1245,
+        "completion_tokens": 9,
+        "total_tokens": 1254,
+        "cost": 5.24799e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.301e-05,
+          "upstream_inference_prompt_cost": 4.851e-05,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click 8"
+      },
+      "browser_s": 0.0,
+      "code": "click 8",
+      "observation": "url=https://demo.playwright.dev/todomvc/#/active\ntitle=React \u2022 TodoMVC\n\nThis is just a demo of TodoMVC for testing, not the\n[1]<a />\n\treal TodoMVC app.\ntodos\n[2]<input placeholder=What needs to be done? invalid=false required=false />\n[3]<label />\n\tMark all as complete\n[4]<input aria-label=Toggle Todo type=checkbox invalid=false checked=false />\nReview invoice\n1\nitem\nleft\n[5]<a />\n\tAll\n[6]<a class=selected />\n\tActive\n[7]<a />\n\tCompleted\n[8]<button class=clear-completed invalid=false />\n\tClear completed\nDouble-click to edit a todo\nCreated by\n[9]<a />\n\tRemo H. Jansen\nPart of\n[10]<a />\n\tTodoMVC"
+    },
+    {
+      "step": 7,
+      "api_s": 1.372,
+      "provider": "Together",
+      "request_id": "gen-1789230099-vQijf2OHl2IfW8p99z4E",
+      "usage": {
+        "prompt_tokens": 1441,
+        "completion_tokens": 7,
+        "total_tokens": 1448,
+        "cost": 5.77863e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1344,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.837e-05,
+          "upstream_inference_prompt_cost": 5.487e-05,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 6.482,
+  "total_s": 20.857,
+  "api_s": 9.212,
+  "model_calls": 7,
+  "tokens": {
+    "input": 5968,
+    "output": 77,
+    "cached": 4992,
+    "reasoning": 6
+  },
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

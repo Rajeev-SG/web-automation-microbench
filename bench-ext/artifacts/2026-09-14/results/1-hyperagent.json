@@ -1,0 +1,206 @@
+{
+  "id": "1-hyperagent",
+  "contender": "hyperagent",
+  "rep": "1",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.913,
+      "provider": "Makora",
+      "request_id": "gen-1789230926-nw9QD6hcXleh0onKs5hB",
+      "usage": {
+        "prompt_tokens": 375,
+        "completion_tokens": 19,
+        "total_tokens": 394,
+        "cost": 6.08157e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.143e-05,
+          "upstream_inference_prompt_cost": 5.25e-05,
+          "upstream_inference_completions_cost": 8.93e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill the new todo input with 'Email supplier' and press Enter"
+      },
+      "browser_s": 41.425,
+      "code": "fill the new todo input with 'Email supplier' and press Enter",
+      "observation": "{\"taskId\":\"8ce26667-f2ab-4e07-a115-f2206813edaf\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: fill the new todo input with 'Email supplier' and press Enter\",\"actionCache\":{\"taskId\":\"8ce26667-f2ab-4e07-a115-f2206813edaf\",\"createdAt\":\"2026-09-12T16:35:26.946Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-6\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    },
+    {
+      "step": 2,
+      "api_s": 1.74,
+      "provider": "Makora",
+      "request_id": "gen-1789230969-7hhy7Lr6KMhIVieOsbZ3",
+      "usage": {
+        "prompt_tokens": 725,
+        "completion_tokens": 28,
+        "total_tokens": 753,
+        "cost": 0.0001135134,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011466,
+          "upstream_inference_prompt_cost": 0.0001015,
+          "upstream_inference_completions_cost": 1.316e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 11,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "fill the new todo input with 'Review invoice' and press Enter"
+      },
+      "browser_s": 20.112,
+      "code": "fill the new todo input with 'Review invoice' and press Enter",
+      "observation": "{\"taskId\":\"3e3ba8f8-4b02-4648-b64d-f6b0d09b14c8\",\"status\":\"completed\",\"steps\":[],\"output\":\"Successfully executed: fill the new todo input with 'Review invoice' and press Enter\",\"actionCache\":{\"taskId\":\"3e3ba8f8-4b02-4648-b64d-f6b0d09b14c8\",\"createdAt\":\"2026-09-12T16:36:10.112Z\",\"status\":\"completed\",\"steps\":[]},\"replayStepMeta\":{\"usedCachedAction\":false,\"fallbackUsed\":false,\"retries\":1,\"cachedXPath\":null,\"fallbackXPath\":\"/html[1]/body[1]/section[1]/div[1]/header[1]/input[1]\",\"fallbackElementId\":\"0-6\"}}\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    },
+    {
+      "step": 3,
+      "api_s": 0.884,
+      "provider": "Makora",
+      "request_id": "gen-1789230990-sKIhq8DwCVp7jaHklHWp",
+      "usage": {
+        "prompt_tokens": 1088,
+        "completion_tokens": 37,
+        "total_tokens": 1125,
+        "cost": 0.0001680129,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016971,
+          "upstream_inference_prompt_cost": 0.00015232,
+          "upstream_inference_completions_cost": 1.739e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click the checkbox next to the 'Email supplier' todo item"
+      },
+      "browser_s": 53.133,
+      "code": "click the checkbox next to the 'Email supplier' todo item",
+      "observation": "perform error: [Hyperagent]: No elements found for instruction: \"click the checkbox next to the 'Email supplier' todo item\" after 10 retry attempts. The instruction may be too vague, the element may not exist, or the page may not have fully loaded.\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    },
+    {
+      "step": 4,
+      "api_s": 1.368,
+      "provider": "Makora",
+      "request_id": "gen-1789231044-ceqTVtdrDYwuiREc11Ky",
+      "usage": {
+        "prompt_tokens": 1325,
+        "completion_tokens": 62,
+        "total_tokens": 1387,
+        "cost": 0.0002124936,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00021464,
+          "upstream_inference_prompt_cost": 0.0001855,
+          "upstream_inference_completions_cost": 2.914e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click the toggle checkbox for the todo labeled 'Email supplier' in the todo list"
+      },
+      "browser_s": 59.115,
+      "code": "click the toggle checkbox for the todo labeled 'Email supplier' in the todo list",
+      "observation": "perform error: [Hyperagent]: No elements found for instruction: \"click the toggle checkbox for the todo labeled 'Email supplier' in the todo list\" after 10 retry attempts. The instruction may be too vague, the element may not exist, or the page may not have fully loaded.\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    },
+    {
+      "step": 5,
+      "api_s": 1.044,
+      "provider": "Together",
+      "request_id": "gen-1789231104-97sFsU3wdWBXMPDKx8te",
+      "usage": {
+        "prompt_tokens": 1570,
+        "completion_tokens": 44,
+        "total_tokens": 1614,
+        "cost": 0.000254925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002575,
+          "upstream_inference_prompt_cost": 0.0002355,
+          "upstream_inference_completions_cost": 2.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "click the checkbox to the left of the text 'Email supplier'"
+      },
+      "browser_s": 61.024,
+      "code": "click the checkbox to the left of the text 'Email supplier'",
+      "observation": "perform error: [Hyperagent]: No elements found for instruction: \"click the checkbox to the left of the text 'Email supplier'\" after 10 retry attempts. The instruction may be too vague, the element may not exist, or the page may not have fully loaded.\n{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"text\":\"This is just a demo of TodoMVC for testing, not the real TodoMVC app.\\ntodos\\n\\nDouble-click to edit a todo\\n\\nCreated by Remo H. Jansen\\n\\nPart of TodoMVC\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"real TodoMVC app.\",\"id\":\"\"},{\"tag\":\"INPUT\",\"type\":\"text\",\"class\":\"new-todo\",\"text\":\"\",\"placeholder\":\"What needs to be done?\",\"checked\":false,\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"Remo H. Jansen\",\"id\":\"\"},{\"tag\":\"A\",\"type\":\"\",\"class\":\"\",\"text\":\"TodoMVC\",\"id\":\"\"}],\"items\":[]}"
+    }
+  ],
+  "setup_s": 1.939,
+  "total_s": 240.759,
+  "api_s": 5.95,
+  "model_calls": 5,
+  "tokens": {
+    "input": 5083,
+    "output": 190,
+    "cached": 0,
+    "reasoning": 114
+  },
+  "done": false,
+  "error": "timeout",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[],\"saved\":[]}",
+  "pass": false,
+  "tool_internal_llm": {
+    "inputTokens": 23934,
+    "outputTokens": 10489,
+    "calls": 32,
+    "providers": {
+      "Makora": 6,
+      "Together": 26
+    }
+  },
+  "note": "HyperAgent opens its own local Playwright Chromium (headless); bench-side fetch wrapper injects provider.sort=latency and tallies tool-internal usage."
+}
