@@ -67,6 +67,32 @@ re-derive them from the DB.)*
   removal tracked in issue #12.
 - `bench-ext/tasks_v1.py` tasks 2–9 — **known violation** (hand-authored or
   generic-public-site), to be replaced by session-derived tasks under #12.
-- TodoMVC (task 1) and the 22 measured envelopes in
-  `artifacts/2026-09-12/pareto-corpus/` — **legitimate real-work evidence** and
+- The 22 measured envelopes in `artifacts/2026-09-12/pareto-corpus/` —
+  **legitimate real-work evidence** (derived from actual scored runs) and
   remain valid.
+
+## TodoMVC — where it fits and why it does not violate this rule
+
+TodoMVC (task 1) is **not** a real-work task and does not claim to be. It is a
+controlled instrument, like a sprint test for a timing bench. Its session
+provenance is real (`a308af6a96316e9f148c7ce6d4153c10f1fe3b25cfb873de00c754f26051967f`,
+2026-09-10 — "do a micro automation speed benchmark"), but the *task content*
+was chosen as a deterministic harness check, not harvested from Rajeev's actual
+work.
+
+That is allowed under one narrow, explicit carve-out:
+
+> **TodoMVC is the latency microbenchmark only.** Its job is to measure
+> harness/model speed deterministically, not to claim capability coverage. It
+> must never be counted toward capability-frontier conclusions, never cited as
+> evidence of how the rig performs on real work, and never used to justify
+> further synthetic tasks. All capability claims come exclusively from
+> session-derived tasks (#12 scope).
+
+Concretely:
+- Reporting already separates the two (fast-path frontier vs capability
+  frontier); TodoMVC results may only feed the fast-path frontier.
+- Task provenance for TodoMVC = `source: controlled-instrument (session
+  a308af6a…, requested by user)`, not session-harvested.
+- If TodoMVC is ever extended or replaced with task variations, those variations
+  fall back under the full mandate rules (real work only).
