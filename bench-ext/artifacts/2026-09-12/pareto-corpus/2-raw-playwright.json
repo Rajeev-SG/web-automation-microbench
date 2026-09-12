@@ -1,0 +1,33 @@
+{
+  "cache_read_tokens": 2816,
+  "configuration": {
+    "harness": "raw-playwright",
+    "model": "z-ai/glm-5.3-flash",
+    "provider": "openrouter"
+  },
+  "elapsed_seconds": 14.003,
+  "evidence_type": "observed",
+  "failure_class": "task-state",
+  "input_tokens": 16293,
+  "metered_cost_usd": 0.00321862,
+  "model_calls": 9,
+  "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/task-suite-v1.md)",
+  "outcome": {
+    "success": false
+  },
+  "outcome_evidence": {
+    "done_protocol": true,
+    "passed": false,
+    "source_run": "web-automation-microbench/results/2-raw-playwright.json",
+    "verifier": "benchlib.check_pass(dom-state)"
+  },
+  "output_tokens": 440,
+  "provider_route": [
+    "Makora",
+    "Modal"
+  ],
+  "schema": "pareto-research-task/v1",
+  "task_class": "web-automation",
+  "task_id": "web-automation-microbench/2026-09-12/2-raw-playwright",
+  "total_tokens": 16733
+}

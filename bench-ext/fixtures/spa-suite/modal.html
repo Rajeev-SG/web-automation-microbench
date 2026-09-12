@@ -1,0 +1,11 @@
+<!doctype html><title>Modal Checkout</title>
+<style>body{font-family:sans-serif}#m{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center}
+#m .box{background:#fff;padding:2rem;border-radius:8px}</style>
+<h1>Checkout</h1>
+<label><input type=checkbox id=t1> accept terms</label>
+<label><input type=checkbox id=t2> confirm address</label>
+<button id=buy onclick="window.__placed=true">Place order</button>
+<div id=m><div class=box><p>We value your privacy (dismiss to continue)</p><button id=x onclick="m.style.display='none'">Dismiss</button></div></div>
+<script>
+const pop=()=>{if(!window.__placed&&m.style.display!=='flex'){m.style.display='flex'};setTimeout(pop,7000)};setTimeout(pop,5000)
+</script>

@@ -1,0 +1,30 @@
+{
+  "cache_read_tokens": 11840,
+  "configuration": {
+    "harness": "browser-control",
+    "model": "z-ai/glm-5.3-flash",
+    "provider": "openrouter"
+  },
+  "elapsed_seconds": 5.941,
+  "evidence_type": "observed",
+  "failure_class": "adapter-protocol",
+  "input_tokens": 15578,
+  "metered_cost_usd": 0.00102208,
+  "model_calls": 10,
+  "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/task-suite-v1.md)",
+  "outcome": {
+    "success": false
+  },
+  "outcome_evidence": {
+    "done_protocol": false,
+    "passed": false,
+    "source_run": "web-automation-microbench/results/1-browser-control.json",
+    "verifier": "benchlib.check_pass(dom-state)"
+  },
+  "output_tokens": 233,
+  "provider_route": "Together",
+  "schema": "pareto-research-task/v1",
+  "task_class": "web-automation",
+  "task_id": "web-automation-microbench/2026-09-12/1-browser-control",
+  "total_tokens": 15811
+}
