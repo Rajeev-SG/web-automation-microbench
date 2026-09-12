@@ -27,6 +27,23 @@ jobs:
           [ "$c1" -ge 12 ] || { echo "round1 screenshots: $c1"; exit 1; }
           [ "$c2" -ge 10 ] || { echo "round2 screenshots: $c2"; exit 1; }
           echo "screenshots ok: $c1 + $c2"
+      - name: No synthetic task fixtures
+        run: |
+          python3 - <<'PY'
+          import pathlib, sys
+          roots = [pathlib.Path('bench-ext/fixtures'), pathlib.Path('fixtures')]
+          offenders = [p for root in roots if root.exists() for p in root.rglob('*.html')]
+          local_urls = []
+          for py in list(pathlib.Path('bench-ext').rglob('*.py')):
+              text = py.read_text(errors='ignore')
+              if 'file://' in text or '/fixtures/' in text:
+                  local_urls.append(str(py))
+          if offenders or local_urls:
+              print('FAIL: synthetic fixture pages or repo-local task URLs detected (#12):')
+              for o in offenders + local_urls: print(' -', o)
+              sys.exit(1)
+          print('no synthetic fixtures ok')
+          PY
       - name: No secrets in artifacts
         run: |
           if grep -rIn "sk-or-v1-[A-Za-z0-9]\{20,\}" artifacts/; then echo "secret-like token found"; exit 1; fi
