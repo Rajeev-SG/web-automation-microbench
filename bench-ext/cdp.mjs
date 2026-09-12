@@ -4,7 +4,11 @@ const WS = '/Users/rajeev/Code/web-automation-microbench/bench-ext/work/browser-
 const { default: WebSocket } = await import(WS);
 const [port, mode, urlSub, arg] = process.argv.slice(2);
 const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
-const t = list.find(t => (t.url || '').includes(urlSub) && t.webSocketDebuggerUrl);
+// urlSub '*' = first page target of any URL (fresh Chrome opens chrome://newtab/, not about:blank)
+const cands = list.filter(t => t.webSocketDebuggerUrl);
+const t = urlSub === '*'
+  ? (cands.find(x => x.type === 'page') || cands.find(x => (x.url || '').startsWith('http')))
+  : cands.find(x => (x.url || '').includes(urlSub));
 if (!t) { console.error('no target matching ' + urlSub + ' :: ' + list.map(x=>x.url).join(' , ')); process.exit(2); }
 const ws = new WebSocket(t.webSocketDebuggerUrl);
 await new Promise((res, rej) => { ws.on('open', res); ws.on('error', rej); });

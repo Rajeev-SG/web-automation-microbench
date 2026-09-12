@@ -147,3 +147,24 @@ next to the tool table (`packages/core/src/tools/index.ts`). Two reportable upst
 (a) missing `send_keys` tool (its `execute_javascript` could dispatch the key, but the model never tried);
 (b) sending LLM `config` over the hub wire makes `useHubWs` call `configure()` → `useAgent` re-renders →
 the in-flight agent is disposed ("Task aborted"); seed `chrome.storage.local.llmConfig` and send no config.
+
+## Round 5 addendum (2026-09-12) — the two browser-agents, page-agent, sitegeist
+
+| Tool | Result | Root cause found |
+|---|---|---|
+| browser-agent (Taylor-Bayouth) | **1/2**, median 200.1s | NOT an adapter bug (tool calls parse fine). Its Chrome uses a PERSISTENT isolated profile (`~/.browser-agent/profile`); `launch()` early-returns the existing port, so a stale browser from a previous run was silently reused (it was working a Grafana tab). Fix: kill that profile's Chrome, wipe the profile, pre-launch via the tool's own `launch()`, assert the task URL is in front. Rep 2 = 9.2s clean pass; rep 1 = 391s, left **4 todos** but reported "Task complete" (false success, caught by the shared verifier). Its OpenAI-tuned 10s per-call timeout was raised to 30s for OpenRouter. |
+| page-agent | **2/2**, median 25.3s (**patched**) | Two real defects: (1) no key-press action (upstream `// @todo send_keys`) so it can never commit a TodoMVC todo — stock = 0/2; (2) key events dispatched from the extension's isolated content-script world never reach React. |
+| browser-agent (visnia-ai) | already scored R4 2/2 @ 32.5s | unrelated same-name project |
+| sitegeist | **unscoreable** at 104788c | Builds with `pi-*`@0.73.1 + `@opentelemetry/api`, then `TypeError: agent.appendMessage is not a function` — needs pi-agent-core 0.85.x (unpublished); vendored pi-mono has no `packages/web-ui` and won't build (`tsgo` missing, `pi-telemetry` unbuilt). |
+
+### page-agent patch (bench-local fork; stock 0/2 recorded separately)
+1. `packages/core/src/tools/index.ts` — new `send_keys` tool (key + optional index), replacing the `// @todo send_keys`.
+2. `packages/page-controller/src/{actions,PageController}.ts` — `pressKeyElement` / `resolveKeyTargetElement` / `pressKey`.
+3. `packages/extension/src/agent/RemotePageController.background.ts` — handle `press_key` by dispatching in the page's **MAIN** world via `chrome.scripting.executeScript`, targeting **`targetTabId`** (using `sender.tab.id` injects into the agent's own UI tab and silently no-ops — that mistake cost a run).
+4. `packages/extension/wxt.config.js` — add `scripting` permission.
+
+**General lesson worth keeping:** a synthetic `KeyboardEvent` dispatched from a content script (isolated world) does NOT reach the page's React listener; the identical dispatch from the MAIN world commits fine. Mouse events are unaffected. Probe it by dispatching from the main world via CDP before blaming the tool.
+
+### sitegeist recipe (for whoever retries)
+`@mariozechner/pi-agent-core` + `pi-ai` + `pi-web-ui` all `file:../pi-mono/packages/*` (sitegeist's shipped deps) is unreproducible: `packages/web-ui` does not exist in the vendored clone, and the monorepo build fails on a missing `tsgo`. Pinning all three to the published 0.73.1 family builds but lacks `agent.appendMessage`. Needs upstream to publish a consistent 0.85.x set (incl. web-ui).
+Also patched for headless: `src/sidepanel.ts` must NOT call `UserScriptsPermissionDialog.request()` (it only settles on a human click, so first-run blocks forever) — warn + continue.

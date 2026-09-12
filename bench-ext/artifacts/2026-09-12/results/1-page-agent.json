@@ -10,7 +10,7 @@
           "content": [
             {
               "type": "text",
-              "text": "Task failed.\n\nI could not complete the task. The TodoMVC demo requires pressing Enter to commit each todo, but the only input method available (input_text) fills the field without pressing Enter, and no key-press action exists in my toolset. Across ~16 attempts on 5 fresh tabs, 'Email supplier' and 'Review invoice' were typed into the \"What needs to be done?\" input but never committed \u2014 the list, checkboxes, and Active filter never appeared. The steps completed so far: typed 'Email supplier' then 'Review invoice' as requested, but they were never added, so marking 'Email supplier' complete, clicking Active, and verifying the filtered state were not possible. If you can add a 'press Enter / press_key' action to the toolset, I can finish this task."
+              "text": "Task completed.\n\nTask complete and verified on the Active filter view (todo.m/#/active): 1) Added todo \"Email supplier\"; 2) Added todo \"Review invoice\"; 3) Marked ONLY \"Email supplier\" complete (its toggle is checked, \"Review invoice\" unchecked); 4) Clicked the Active filter \u2014 the list now shows ONLY \"Review invoice\", and \"Email supplier\" is hidden as completed, matching the \"1 item left\" counter. Completed items were NOT cleared. Final state confirmed."
             }
           ]
         },
@@ -19,7 +19,7 @@
       }
     }
   ],
-  "seed": "{\"allowAllHubConnection\":true,\"llmConfig\":{\"apiKey\":\"REDACTED\",\"baseURL\":\"https://openrouter.ai/api/v1\",\"model\":\"z-ai/glm-5.3-flash\"}}",
+  "seed": "allowAllHubConnection set; llmConfig seeded (redacted)",
   "pre_status": {
     "result": {
       "content": [
@@ -32,11 +32,11 @@
     "jsonrpc": "2.0",
     "id": 1
   },
-  "setup_s": 16.339,
-  "hub_text": "Page Agent Hub\nBETA\n\nPage Agent Hub lets local apps (e.g. MCP servers) control the Page Agent extension via WebSocket.\n\nCheck out the official MCP server package.\n\nCONFIG\nAuto-approve connections\nBy default, each connection requires your approval before running tasks.\nEnable this to skip per-session approval.\n* Use with caution!\nDOCS\nv1.12.4\nBuilt with \u2665\ufe0f by @Simon\nConnected\nDone\nCURRENT TASK\nAdd exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.\nPage navigated to \u2192 https://demo.playwright.dev/todomvc/#/\nStep #1\n\u2611\ufe0f\nNo previous action yet; the TodoMVC demo app is loaded with an empty list and the \"What needs to be done?\" input visible.\n\ud83e\udde0\nGoal: add todos \"Email supplier\" then \"Review invoice\"; mark only \"Email supplier\" complete; click Active filter; verify only \"Review invoice\" remains with 1 item left; do not clear completed. Current step: typing first todo.\n\ud83c\udfaf\nType \"Email supplier\" into the new-todo input and press Enter to add the first todo.\nActions\n\ninput_text{\"index\":1,\"text\":\"Email supplier\\n\"}\n\n\u2514\n\u2705 Input text (Email supplier ) into element (1).\n\nRaw Request\nRaw Response\nStep #2\n\u2611\ufe0f\nTyped 'Email supplier' into the input, but the page state shows no todo item added, so",
-  "total_s": 526.653,
+  "setup_s": 15.927,
+  "hub_text": "Page Agent Hub\nBETA\n\nPage Agent Hub lets local apps (e.g. MCP servers) control the Page Agent extension via WebSocket.\n\nCheck out the official MCP server package.\n\nCONFIG\nAuto-approve connections\nBy default, each connection requires your approval before running tasks.\nEnable this to skip per-session approval.\n* Use with caution!\nDOCS\nv1.12.4\nBuilt with \u2665\ufe0f by @Simon\nConnected\nDone\nCURRENT TASK\nAdd exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.\nPage navigated to \u2192 https://demo.playwright.dev/todomvc/#/\nStep #1\n\u2611\ufe0f\nFresh TodoMVC page loaded, empty todo list. Verdict: Success\n\ud83e\udde0\nTodoMVC app open, empty. Plan: add 'Email supplier', add 'Review invoice', mark only 'Email supplier' complete, click Active filter, verify only 'Review invoice' + '1 item left'.\n\ud83c\udfaf\nType 'Email supplier' into the new-todo input and press Enter to add the first todo.\nActions\n\ninput_text{\"index\":1,\"text\":\"Email supplier\"}\n\n\u2514\n\u2705 Input text (Email supplier) into element (1).\n\nRaw Request\nRaw Response\nStep #2\n\u2611\ufe0f\nTyped 'Email supplier' into the input but the todo list is not yet visible, so Enter likely hasn't been pressed. Verdict: Uncertain\n\ud83e\udde0\nTodoMVC open. Typed 'Email supplier' in input [1]; need to comm",
+  "total_s": 22.605,
   "model_calls": 1,
-  "done": false,
+  "done": true,
   "tokens": {
     "input": 0,
     "output": 0,
@@ -44,7 +44,7 @@
     "reasoning": 0
   },
   "tokens_source": "n/a (agent runs inside the extension)",
-  "agent_result": "Task failed.\n\nI could not complete the task. The TodoMVC demo requires pressing Enter to commit each todo, but the only input method available (input_text) fills the field without pressing Enter, and no key-press action exists in my toolset. Across ~16 attempts on 5 fresh tabs, 'Email supplier' and 'Review invoice' were typed into the \"What needs to be done?\" input but never committed \u2014 the list, checkboxes, and Active filter never appeared. The steps completed so far: typed 'Email supplier' then 'Review invoice' as requested, but they were never added, so marking 'Email supplier' complete, clicking Active, and verifying the filtered state were not possible. If you can add a 'press Enter / press_key' action to the toolset, I can finish this task.",
-  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[],\"saved\":[]}",
-  "pass": false
+  "agent_result": "Task completed.\n\nTask complete and verified on the Active filter view (todo.m/#/active): 1) Added todo \"Email supplier\"; 2) Added todo \"Review invoice\"; 3) Marked ONLY \"Email supplier\" complete (its toggle is checked, \"Review invoice\" unchecked); 4) Clicked the Active filter \u2014 the list now shows ONLY \"Review invoice\", and \"Email supplier\" is hidden as completed, matching the \"1 item left\" counter. Completed items were NOT cleared. Final state confirmed.",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
 }
