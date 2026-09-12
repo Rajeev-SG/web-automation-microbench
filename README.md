@@ -17,7 +17,7 @@ not real work, not capability evidence, and must never be cited as such.
 
 Short, practical head-to-head races between browser automation tools. Every tool gets the same task, the same browser situation, and the same success test — then we measure who finishes reliably, quickly, cheaply, and with the least AI overhead.
 
-**Read this if you want the one-paragraph answer:** a thin harness that lets the model write code against the browser (Browser Harness) beats everything else on speed and cost. A vision-first agent (Magnitude) is the most reliable and the best choice for messy, JavaScript-heavy sites — but it costs more tokens and is slower. Anything that ships its own heavyweight agent runtime (BrowserCode) costs 10–100× more for no accuracy gain. Two of the six tools tested dominate the practical frontier; two are dominated and can be dropped.
+**Read this if you want the one-paragraph answer:** thin harnesses that let the model issue one native command per step — now the extension-backed CLIs too (BrowserSkill 4.1s, browser-relay 4.3s, browser-cli 6.2s) — beat everything else on speed and cost. A vision-first agent (Magnitude) is the most reliable on messy, JavaScript-heavy sites but costs more tokens and is slower. An agent runtime with only a narrow action set can lose outright: page-agent ships no key-press action, so it cannot commit a TodoMVC todo at all. Anything running its own heavyweight agent loop (BrowserCode, notte, page-agent) costs 10–100× more wall-clock for no accuracy gain.
 
 ## The test task
 
@@ -64,11 +64,14 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
 ## Master leaderboard — every benchmarked tool
 
-One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report).
+One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness and Round 3 page-agent could not use latency routing.
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
-| **browser-control** | [keon/browser-control](https://github.com/keon/browser-control) | 3 | 1/2 | **5.5s** | ~13.2k / ~180 | ~$0.0007 |
+| **BrowserSkill** | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | 3 | 2/2 | **4.1s** | ~6.2k / ~97 | ~$0.0005 |
+| **browser-relay** | [reliefeai/browser-relay](https://github.com/reliefeai/browser-relay) | 3 | 2/2 | 4.3s | ~5.9k / ~95 | ~$0.0005 |
+| **browser-control** | [keon/browser-control](https://github.com/keon/browser-control) | 3 | 1/2 | 5.5s | ~13.2k / ~180 | ~$0.0007 |
+| **browser-cli** | [six-ddc/browser-cli](https://github.com/six-ddc/browser-cli) | 3 | 2/2 | 6.2s | ~8.6k / ~128 | ~$0.0007 |
 | **pinchtab** | [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 3 | 2/2 | 8.3s | ~5.1k / ~200 | ~$0.0003 |
 | **browser-use** | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 1 | 2/2 | 8.7s | n/a | n/a |
 | **Browser Harness** | [in-repo (artifacts/2026-09-11)](https://github.com/Rajeev-SG/web-automation-microbench/tree/main/artifacts/2026-09-11) | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
@@ -84,18 +87,30 @@ One row per harness × best-model combination. `Median time` is the median acros
 | **Magnitude** | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
 | **Playwriter** | [remorses/playwriter](https://github.com/remorses/playwriter) | 1 | 2/2 | 10.1s | n/a | n/a |
 | **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
+| **notte** | [nottelabs/notte](https://github.com/nottelabs/notte) | 3 | 2/2 | 171.8s | n/a | n/a |
+| **page-agent** | [alibaba/page-agent](https://github.com/alibaba/page-agent) | 3 | 0/2 | 527s+ | n/a | n/a |
 
 ### Excluded after genuine attempts
 
 | Tool | Repo | Reason |
 |---|---|---|
-| browser-agent (Taylor-Bayouth) | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | OpenRouter adapter loop never wired its tool calls (2 runs recorded as evidence); tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 above |
-| page-agent | [alibaba/page-agent](https://github.com/alibaba/page-agent) | Hub approval gate + Chrome hub-slot race; no provider.sort pass-through |
-| browser-cli | [six-ddc/browser-cli](https://github.com/six-ddc/browser-cli) | Extension install not automatable headlessly |
-| BrowserSkill | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | Extension install not completed in budget |
-| browser-relay | [reliefeai/browser-relay](https://github.com/reliefeai/browser-relay) | No attached tab; extension never loaded |
-| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Not scored. Root causes: branded Google Chrome silently ignores `--load-extension` (verbose log: "--load-extension is not allowed in Google Chrome, ignoring"); Chrome for Testing loads the extension fine, but the sidepanel first-run (userscripts-permission dialog + full agent init) needs an interactive pass. GLM key pre-seeded in its IndexedDB — pending |
-| Notte | [nottelabs/notte](https://github.com/nottelabs/notte) | Not started — pending (next step: py3.12 venv + litellm openrouter/z-ai/glm-5.3-flash) |
+| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Build blocked upstream. sitegeist pins `@mariozechner/pi-agent-core@0.85.1` (a `file:` dep on the vendored `pi-mono`) which imports `DEFAULT_MAX_AGENT_RETRY_DELAY_MS` / `retryDelayMs` from `@earendil-works/pi-ai@0.85.1`, but the published pi-ai 0.85.1 exposes neither symbol (`dist/utils/retry.js` only has `retryAssistantCall` / `isRetryableAssistantError`). Both the nested npm copy and the vendored `pi-mono/packages/ai/dist` fail the esbuild resolve, so no `dist-chrome` can be built and the sidepanel-first-run fixes cannot be applied. Verified 2026-09-12: `npm run build:chrome` fails with those three missing-export errors; extension loading itself is solved (Chrome for Testing `--load-extension`). |
+
+## Round 3 extension fix-up — 12 Sep 2026
+
+The extension-backed contenders that Round 3 could not load are now scored. The root cause of every "extension install not automatable headlessly" exclusion was one thing: **branded Google Chrome silently ignores `--load-extension`, but Chrome for Testing honours it** (`bench-ext/cft_chrome.py`). With that solved:
+
+| Contender | What unblocked it | Result |
+|---|---|---|
+| BrowserSkill (Tencent) | wxt build of `apps/extension` loaded into Chrome for Testing; `bsk` daemon (`ws 127.0.0.1:52800`) then sees it | **2/2, 4.1s** |
+| browser-relay (reliefeai) | bundled unpacked extension loaded directly; relay on `127.0.0.1:18795`; needs `focus` so CDP key events land (its `key` builds an invalid Enter event otherwise) | **2/2, 4.3s** |
+| browser-cli (six-ddc) | prebuilt `chrome-mv3` extension loaded; daemon moved to port 9333 (9222 is the user's own Chrome) with the extension rebuilt against it | **2/2, 6.2s** |
+| page-agent (alibaba) | hub gate is `chrome.storage.local.allowAllHubConnection`, seeded in the extension's own service-worker context over CDP; the MCP bridge's auto-`open` is neutered so the user's Chrome can't race for the hub slot | 0/2 — see below |
+| notte (nottelabs) | Python 3.12 uv venv + `notte`; agent pointed at OpenRouter/GLM via `NOTTE_CONFIG_PATH` (`reasoning_model = openrouter/z-ai/glm-5.3-flash`) | **2/2, 171.8s** |
+
+**page-agent scores 0/2, and the reason is the tool, not the harness.** After clearing the approval gate, its built-in action set is `click_element_by_index`, `input_text`, `select_dropdown_option`, `scroll`, `scroll_horizontally`, `execute_javascript`, `wait`, `ask_user`, `done` — there is no key-press action. The TodoMVC task cannot be finished without pressing Enter after typing, and the model filled the field across ~16 attempts on 5 tabs without ever committing a todo (rep 1: 527s, "Task failed"; rep 2: same, cut at the 900s budget).
+
+The **Taylor-Bayouth `browser-agent`** exclusion row is now removed: the tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 (2/2, 32.5s, `bench-ext/artifacts/2026-09-13/`).
 
 ## What "cost" means here
 

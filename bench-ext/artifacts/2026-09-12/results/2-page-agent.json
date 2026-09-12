@@ -1,0 +1,26 @@
+{
+  "id": "2-page-agent",
+  "contender": "page-agent",
+  "rep": "2",
+  "events": [],
+  "seed": "{\"allowAllHubConnection\":true,\"llmConfig\":{\"apiKey\":\"REDACTED\",\"baseURL\":\"https://openrouter.ai/api/v1\",\"model\":\"z-ai/glm-5.3-flash\"}}",
+  "pre_status": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"connected\": true,\n  \"busy\": false\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "setup_s": 15.993,
+  "error": "TimeoutError: mcp rpc",
+  "trace": "Traceback (most recent call last):\n  File \"/Users/rajeev/Code/web-automation-microbench/bench-ext/runners/page-agent.py\", line 96, in main\n    start = time.perf_counter()\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rajeev/Code/web-automation-microbench/bench-ext/runners/page-agent.py\", line 56, in call\n    return self._rpc({'jsonrpc': '2.0', 'id': self.nid, 'method': 'tools/call',\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                      'params': {'name': name, 'arguments': args}}, self.nid, timeout)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rajeev/Code/web-automation-microbench/bench-ext/runners/page-agent.py\", line 53, in _rpc\n    raise TimeoutError('mcp rpc')\nTimeoutError: mcp rpc\n",
+  "pass": false,
+  "total_s": 900.0,
+  "cap_hit": true,
+  "note": "execute_task did not return within the 900s budget; aborted. Rep 1 failed with the agent's own \"Task failed\" at 527s. Root cause: page-agent has no key-press action, so it cannot commit a todo."
+}

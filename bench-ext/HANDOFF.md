@@ -82,3 +82,34 @@ Slick solutions worth remembering:
 3. A stuck "Loading..." extension page can mask a pending IDB versionchange lock — deleting the database while blocked, then reopening in a fresh tab, recovers cleanly.
 
 Branch: gh-6-round3-rebench. Artifacts rewritten in place (results 1/2 per contender; stale pinchtab reps 3–8 removed).
+
+## Round 3 fix-up addendum (2026-09-12, issue #11) — extension tools scored
+
+**Root cause of every "extension install not automatable headlessly" exclusion:** branded Google
+Chrome silently ignores `--load-extension`; **Chrome for Testing honours it**. New shared helper
+`bench-ext/cft_chrome.py` launches CFT (`~/Library/Caches/ms-playwright/chromium-1243/`) with one or
+more unpacked extensions; `bench-ext/cdp.mjs` does targeted CDP eval/screenshot against a target
+matched by URL (used for page-agent seeding + verification).
+
+| Contender | Runner | Reps | Median | What actually unblocked it |
+|---|---|---:|---:|---|
+| BrowserSkill | `runners/BrowserSkill.py` | 2/2 | 4.1s | wxt build of `apps/extension` (`dist/chrome-mv3`) loaded into CFT; `bsk` daemon `ws 127.0.0.1:52800` sees it. `bsk` needs a session first (`bsk session start`), then `fill/press/click/evaluate/screenshot --session <id>`. |
+| browser-relay | `runners/browser-relay.py` | 2/2 | 4.3s | bundled `extension/` loaded directly; relay on `127.0.0.1:18795`. **Gotcha:** its `key` builds an invalid Enter event (`code:""`, `windowsVirtualKeyCode:69`) and CDP key events only reach the page when its window is foreground — `browser-relay focus --tab <id>` in setup fixes it. |
+| browser-cli | `runners/browser-cli.py` | 2/2 | 6.2s | prebuilt `apps/extension/.output/chrome-mv3` loaded; daemon on **9333** (9222 is the user's own Chrome debug port) and the extension rebuilt with `VITE_WS_PORT=9333`. `tab list --json` is the reliable way to read the tab id. |
+| page-agent | `runners/page-agent.py` | 0/2 | ~527s | Approval gate = `chrome.storage.local.allowAllHubConnection`, seeded in the **extension's own service-worker** context over CDP (a web page has no `chrome.storage`, which is why earlier seeds no-op'd). MCP bridge auto-`open`s the launcher in the default browser → neutered with a no-op `open` on PATH so the user's Chrome cannot race for the hub slot. **Second bug:** sending LLM config over the wire makes `useHubWs` call `configure()` → `useAgent` re-renders → the running agent is disposed ("Task aborted"). Seeding `llmConfig` into `chrome.storage.local` and sending **no** config avoids it. Result: the agent runs, but page-agent has **no key-press action**, so it cannot commit a TodoMVC todo → 0/2. |
+| notte | `runners/notte.py` | 2/2 | 171.8s | Python 3.12 uv venv (`/tmp/notte-venv`) + `notte` 1.9.0; agent on OpenRouter/GLM via `NOTTE_CONFIG_PATH` → `reasoning_model = "openrouter/z-ai/glm-5.3-flash"` + `ENABLE_OPENROUTER=true`. Screenshot bytes are `session.screenshot().raw`. High variance (116–228s). |
+
+**Taylor-Bayouth browser-agent:** exclusion row removed — tool rewritten as `visnia-ai/browser-agent`
+and re-scored 2/2 @ 32.5s in Round 4 (`bench-ext/artifacts/2026-09-13/`).
+
+**Still excluded:** sitegeist. Build blocked upstream — `@mariozechner/pi-agent-core@0.85.1` imports
+`DEFAULT_MAX_AGENT_RETRY_DELAY_MS` / `retryDelayMs` from `@earendil-works/pi-ai@0.85.1`, which exports
+neither (neither the nested npm copy nor the vendored `pi-mono/packages/ai/dist`). No `dist-chrome` ⇒
+the sidepanel-first-run patch can't be applied. Needs a pi-ai/pi-agent-core version realignment upstream.
+
+**Harness gotchas worth keeping:**
+1. Hand-rolled MCP stdio clients must not use a bare blocking `readline()` for timing out — use
+   `select.select` on the pipe, or the runner hangs past its own budget (hit twice).
+2. Background `nohup ... &` processes are reaped when the tool call returns; run long installs in a
+   foreground session instead.
+3. Never log the seeded `llmConfig` — it carries the OpenRouter key (CI scans artifacts for `sk-or-v1-`).
