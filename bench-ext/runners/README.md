@@ -1,24 +1,29 @@
-# Round 3 runner status
+# Round 3 runner status — after the issue #11 extension fix-up (2026-09-12)
 
-| Contender | Owner | Runner | Reps | Status |
-|---|---|---|---|---|
-| raw-playwright | main | raw-playwright.py | 4 (3 pass) | DONE |
-| pinchtab | main | pinchtab.py | 6 (0 pass) | scored reps exhausted, need final verdict + report |
-| agent-browser | A1 | - | 0 | in progress |
-| browser-control | A1 | - | 0 | in progress |
-| cdp-browser | A1 | - | 0 | in progress |
-| webctl | A1 | - | 0 | in progress |
-| browser-agent | A2 | - | 0 | in progress |
-| BrowserSkill | A2 | - | 0 | in progress |
-| browser-relay | A2 | - | 0 | in progress |
-| browser-cli | A2 | - | 0 | in progress |
-| agent-chrome-cli | A3 | agent-chrome-cli.py | 0 | in progress |
-| jarvis-browser | A3 | jarvis-browser.py | 0 | in progress |
-| page-agent | A3 | page-agent.py (draft) | 0 | in progress |
-| lightpanda | A3 | - | 0 | in progress |
-| sitegeist | main | - | 0 | queued |
-| notte | main | - | 0 | queued |
+Shared infrastructure: `bench-ext/benchlib.py` (task/verify/model/timer/schema + `run_rep`),
+`bench-ext/cft_chrome.py` (Chrome for Testing launcher with `--load-extension`),
+`bench-ext/cdp.mjs` (targeted CDP eval / screenshot).
 
-## Model-routing notes (for report)
-- OpenRouter providers observed so far: Together (pinchtab rep4), Makora (raw-playwright). Record provider per call in each JSON (`events[].provider`).
-- benchlib enforces: model z-ai/glm-5.3-flash, temp 0, reasoning low+excluded, response_format json_object, provider {"sort":"latency"}.
+| Contender | Runner | Reps | Median | Status |
+|---|---|---|---:|---|
+| BrowserSkill | BrowserSkill.py | 2 (2 pass) | 4.1s | DONE |
+| browser-relay | browser-relay.py | 2 (2 pass) | 4.3s | DONE |
+| browser-control | browser-control.py | 2 (1 pass) | 5.5s | DONE |
+| browser-cli | browser-cli.py | 2 (2 pass) | 6.2s | DONE |
+| pinchtab | pinchtab.py | 2 (2 pass) | 8.3s | DONE |
+| agent-browser | agent-browser.py | 2 (2 pass) | 10.1s | DONE |
+| cdp-browser | cdp-browser.py | 2 (2 pass) | 10.7s | DONE |
+| jarvis-browser | jarvis-browser.py | 2 (2 pass) | 11.2s | DONE |
+| webctl | webctl.py | 2 (2 pass) | 14.5s | DONE |
+| agent-chrome-cli | agent-chrome-cli.py | 2 (2 pass) | 17.4s | DONE |
+| lightpanda | lightpanda.py | 2 (2 pass) | 22.7s | DONE |
+| raw-playwright | raw-playwright.py | 4 (3 pass) | 42.7s | DONE |
+| notte | notte.py | 2 (2 pass) | 171.8s | DONE |
+| page-agent | page-agent.py | 2 (0 pass) | 527s+ | DONE — scored fail (no key-press action) |
+| sitegeist | — | 0 | — | EXCLUDED — upstream pi-ai/pi-agent-core export mismatch blocks the build |
+| browser-agent (Taylor-Bayouth) | — | — | — | SUPERSEDED — rewritten as visnia-ai/browser-agent, Round 4 2/2 @ 32.5s |
+
+Model config (enforced in `benchlib.openrouter_payload`): model `z-ai/glm-5.3-flash`, temp 0,
+reasoning low+excluded, `response_format json_object`, `provider {"sort":"latency"}`. notte and
+page-agent ship their own agent runtimes and are timed as a single agent run; page-agent's own LLM
+client does not accept latency routing.

@@ -1,1 +1,0 @@
-{"contender": "browser-agent", "excluded": true, "reason": "Run managed to launch its own CDP+GLM loop with the OpenRouter adapter but the custom tool-calling contract mismatched the engine (the tool-use call never propagated to the engine's action loop, so the agent kept navigating without the task's tool calls). 2 reps attempted and both timed out at 240s; no results usable."}

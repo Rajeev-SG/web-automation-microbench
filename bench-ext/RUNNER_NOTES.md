@@ -49,3 +49,20 @@ attempt, do NOT run it with another model. Write bench-ext/runners/<name>-EXCLUD
 Deliverables per contender (worker-owned directory bench-ext/runners/):
   runner script, 2x {rep}-{name}.json in results, 2x screenshots, and a final report line:
   {contender, version_or_commit, passes "x/y", median_s, tokens_in/out per run, cost_per_run_usd, setup_notes}
+
+## Chrome for Testing extension loading (issue #11 fix-up)
+
+Branded Google Chrome silently ignores `--load-extension`; Chrome for Testing honours it. Use
+`bench-ext/cft_chrome.py`:
+
+```python
+from cft_chrome import Chrome
+c = Chrome(port=9290, extensions=['/abs/path/to/unpacked-extension'], start_url='about:blank')
+c.launch()                       # waits for CDP; see c.targets() / c.extension_workers()
+```
+
+Helpers: `bench-ext/cdp.mjs <port> eval|shot <url-substring> <arg>` for targeted CDP eval/screenshot.
+Gotchas: (1) hand-rolled MCP stdio clients must use `select.select` for timeouts or they hang;
+(2) CDP keyboard events only reach a page whose window is foreground — browsers that press keys
+(browser-relay `key`/`--submit`) need an explicit `focus` step; (3) never log seeded provider config
+(contains the API key) into artifacts.

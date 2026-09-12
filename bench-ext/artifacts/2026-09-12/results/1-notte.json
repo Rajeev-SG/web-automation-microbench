@@ -1,0 +1,23 @@
+{
+  "id": "1-notte",
+  "contender": "notte",
+  "rep": "1",
+  "events": [],
+  "setup_s": 1.132,
+  "total_s": 227.857,
+  "agent_result": {
+    "success": true,
+    "answer": "Task completed. On https://demo.playwright.dev/todomvc/ I added exactly two todos - 'Email supplier' and then 'Review invoice' - and marked ONLY 'Email supplier' as complete. After clicking the Active filter (#/active), the final state was verified: only 'Review invoice' is displayed in the list and the footer shows '1 item left'. 'Clear completed' was not used, so the completed 'Email supplier' remains stored in the app."
+  },
+  "model_calls": 1,
+  "done": true,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "n/a (agent runs inside notte)",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

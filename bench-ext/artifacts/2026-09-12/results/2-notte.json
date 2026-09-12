@@ -1,0 +1,23 @@
+{
+  "id": "2-notte",
+  "contender": "notte",
+  "rep": "2",
+  "events": [],
+  "setup_s": 0.871,
+  "total_s": 115.707,
+  "agent_result": {
+    "success": true,
+    "answer": "Active view verified: only 'Review invoice' shown, '1 item left'."
+  },
+  "model_calls": 1,
+  "done": true,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "n/a (agent runs inside notte)",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

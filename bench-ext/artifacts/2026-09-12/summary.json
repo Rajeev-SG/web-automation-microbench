@@ -41,8 +41,8 @@
     "tok_in_avg": 174,
     "tok_out_avg": 20,
     "tok_cached_avg": 0,
-    "note": "BROKEN adapter (Taylor-Bayouth/browser-agent OpenRouter loop never wired); EXCLUDED \u2014 see runners/browser-agent-EXCLUDED.json; re-scored Round 4 as visnia-ai/browser-agent",
-    "cost_per_run_usd": 2e-05
+    "cost_per_run_usd": null,
+    "note": "Taylor-Bayouth/browser-agent: broken adapter loop, kept as historical evidence. SUPERSEDED 2026-09-12: rewritten upstream as visnia-ai/browser-agent, re-scored 2/2 @ 32.5s in Round 4 (artifacts/2026-09-13/summary.json). README exclusion row removed."
   },
   {
     "contender": "browser-control",
@@ -164,13 +164,77 @@
   },
   {
     "contender": "notte",
-    "reps": 0,
-    "passes": 0,
-    "median_s": null,
-    "times_s": [],
-    "tok_in_avg": 0,
-    "tok_out_avg": 0,
+    "reps": 2,
+    "passes": 2,
+    "median_s": 171.8,
+    "times_s": [
+      227.857,
+      115.707
+    ],
+    "tok_in_avg": null,
+    "tok_out_avg": null,
+    "tok_cached_avg": null,
+    "cost_per_run_usd": null,
+    "note": "nottelabs/notte 1.9.0 (Python 3.12 uv venv). Shiped its own agent runtime, so it is timed as one Agent.run and the harness cannot see its tokens/cost. Model: OpenRouter z-ai/glm-5.3-flash via NOTTE_CONFIG_PATH reasoning_model + ENABLE_OPENROUTER. High variance. Issue #11 fix-up."
+  },
+  {
+    "contender": "BrowserSkill",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 4.1,
+    "times_s": [
+      4.19,
+      4.041
+    ],
+    "tok_in_avg": 6198.5,
+    "tok_out_avg": 97,
     "tok_cached_avg": 0,
-    "note": "NOT RUN \u2014 Round 3 budget closed before install; pip/venv + litellm openrouter wiring remains the documented next step"
+    "cost_per_run_usd": 0.00049,
+    "note": "Tencent/BrowserSkill bsk CLI 0.2.1 (prebuilt aarch64 binary) + wxt build of apps/extension (dist/chrome-mv3) loaded via Chrome for Testing --load-extension; bsk daemon ws 127.0.0.1:52800. Issue #11 fix-up."
+  },
+  {
+    "contender": "browser-relay",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 4.25,
+    "times_s": [
+      3.927,
+      4.579
+    ],
+    "tok_in_avg": 5889,
+    "tok_out_avg": 95,
+    "tok_cached_avg": 0,
+    "cost_per_run_usd": 0.00047,
+    "note": "reliefeai/browser-relay pkg 1.5.2; bundled extension/ loaded via Chrome for Testing; relay 127.0.0.1:18795. Needs `focus` before key input (its `key Enter` builds an invalid event). Issue #11 fix-up."
+  },
+  {
+    "contender": "browser-cli",
+    "reps": 2,
+    "passes": 2,
+    "median_s": 6.18,
+    "times_s": [
+      5.901,
+      6.46
+    ],
+    "tok_in_avg": 8567,
+    "tok_out_avg": 128.5,
+    "tok_cached_avg": 0,
+    "cost_per_run_usd": 0.00067,
+    "note": "six-ddc/browser-cli ext 0.4.0 (wxt build, VITE_WS_PORT=9333) + CLI built with bun; daemon 9333 because 9222 is the user Chrome debug port. Issue #11 fix-up."
+  },
+  {
+    "contender": "page-agent",
+    "reps": 2,
+    "passes": 0,
+    "median_s": 527.0,
+    "times_s": [
+      526.653,
+      900.0
+    ],
+    "tok_in_avg": null,
+    "tok_out_avg": null,
+    "tok_cached_avg": null,
+    "cost_per_run_usd": null,
+    "note": "alibaba/page-agent ext 1.12.4. Approval gate cleared by seeding chrome.storage.local.allowAllHubConnection in the extension SW over CDP; agent runs but has NO key-press action, so it cannot commit a TodoMVC todo. rep1 agent-reported failure at 527s; rep2 exceeded the 900s budget. Issue #11 fix-up."
   }
 ]
