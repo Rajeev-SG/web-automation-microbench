@@ -55,5 +55,6 @@ class Adapter:
         pass
 
 if __name__ == '__main__':
-    rep = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-    benchlib.run_rep(Adapter(), rep, max_steps=12)
+    reps, task = benchlib.cli_reps_and_task(sys.argv[1:])
+    for rep in (reps if sys.argv[1:] else ['1']):
+        benchlib.run_rep(Adapter(), rep, task=task, max_steps=12)

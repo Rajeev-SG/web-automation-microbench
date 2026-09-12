@@ -64,6 +64,7 @@ class BrowserControl:
         except Exception: pass
 
 if __name__ == '__main__':
-    for rep in benchlib.reps_from_argv(sys.argv[1:]):
+    reps, task = benchlib.cli_reps_and_task(sys.argv[1:])
+    for rep in reps:
         a = BrowserControl(); a.rep = rep
-        benchlib.run_rep(a, rep)
+        benchlib.run_rep(a, rep, task=task)

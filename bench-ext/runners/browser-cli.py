@@ -112,5 +112,6 @@ class BrowserCLI:
 
 
 if __name__ == '__main__':
-    rep = sys.argv[1] if len(sys.argv) > 1 else '1'
-    benchlib.run_rep(BrowserCLI(), rep)
+    reps, task = benchlib.cli_reps_and_task(sys.argv[1:])
+    for rep in (reps if sys.argv[1:] else ['1']):
+        benchlib.run_rep(BrowserCLI(), rep, task=task)

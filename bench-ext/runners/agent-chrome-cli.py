@@ -10,7 +10,6 @@ import benchlib
 
 SRC = pathlib.Path('/Users/rajeev/Code/web-automation-microbench/bench-ext/work/agent-chrome-cli')
 CLI = ['node', str(SRC / 'bin/agent-chrome.js'), '--port', '9247']
-URL = benchlib.URL_TASK
 
 class Adapter:
     name = 'agent-chrome-cli'
@@ -32,7 +31,7 @@ class Adapter:
         tab = m.group(1) if m else None
         self.handle = {'tab': tab}
         pre = self._tab_args(tab)
-        self.cli(pre + ['open', URL])
+        self.cli(pre + ['open', benchlib.URL_TASK])
         self.cli(pre + ['eval', "localStorage.removeItem('react-todos'); location.reload()"])
         import time as _t; _t.sleep(2.0)
         self.cli(pre + ['snapshot', '-ic'])  # seed ref cache for the fresh page
@@ -57,5 +56,6 @@ class Adapter:
             self.cli(['tab', 'close', handle['tab']])
 
 if __name__ == '__main__':
-    rep = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-    benchlib.run_rep(Adapter(), rep, max_steps=12)
+    reps, task = benchlib.cli_reps_and_task(sys.argv[1:])
+    for rep in (reps if sys.argv[1:] else ['1']):
+        benchlib.run_rep(Adapter(), rep, task=task, max_steps=12)

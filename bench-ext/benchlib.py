@@ -8,7 +8,7 @@
 # chosen task. For backwards compatibility the default task (`todomvc`) is also bound to the historical
 # module globals `TASK`, `URL_TASK`, `OBS_JS`, `VERIFY_JS`, so the 29 existing runners keep working
 # unchanged: each adapter reads those globals, and `run_rep` rebinds them to the selected task.
-import os, json, time, subprocess, pathlib, re, urllib.request
+import os, sys, json, time, subprocess, pathlib, re, urllib.request
 
 BASE = pathlib.Path(__file__).parent
 RES = pathlib.Path(os.environ.get('BENCH_RES', BASE / 'artifacts' / '2026-09-12' / 'results'))
@@ -216,6 +216,29 @@ register(Task(
 #   verify(handle) -> verify stdout  [post-timer]
 #   screenshot(handle, path)  [post-timer]
 #   teardown(handle)
+def cli_reps_and_task(argv):
+    """Parse runner argv into (reps, task_id). `--task=<id>` may appear anywhere."""
+    task, reps = None, []
+    for a in argv:
+        if a.startswith('--task='):
+            task = a.split('=', 1)[1] or None
+        else:
+            reps.append(a)
+    return reps_from_argv(reps), task
+
+
+def run_cli(factory, argv=None, max_steps=10, timeout=180):
+    """Standard runner entrypoint: reps + `--task=<id>` from argv, one run_rep per rep.
+
+    `factory` is any zero-argument callable returning a fresh adapter (usually the class).
+    Keeps runner `__main__` blocks one line and makes every contender able to run any
+    registered task, which is the point of the task-parameterized library (issue #20).
+    """
+    argv = list(sys.argv[1:] if argv is None else argv)
+    reps, task = cli_reps_and_task(argv)
+    return [run_rep(factory(), rep, task=task, max_steps=max_steps, timeout=timeout) for rep in reps]
+
+
 def run_rep(adapter, rep, task=None, max_steps=10, timeout=180):
     task = get_task(task)
     task.bind()

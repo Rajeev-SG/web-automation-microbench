@@ -88,5 +88,4 @@ class Adapter:
             bb('close', '--tab', handle['tab'])
 
 if __name__ == '__main__':
-    for rep in benchlib.reps_from_argv(sys.argv[1:]):
-        benchlib.run_rep(Adapter(), rep, max_steps=16)
+    benchlib.run_cli(Adapter, max_steps=16)

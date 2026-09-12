@@ -84,9 +84,10 @@ class HyperAgent:
 
 
 if __name__ == '__main__':
-    for rep in benchlib.reps_from_argv(sys.argv[1:]):
+    reps, task = benchlib.cli_reps_and_task(sys.argv[1:])
+    for rep in reps:
         a = HyperAgent()
-        log = benchlib.run_rep(a, rep)
+        log = benchlib.run_rep(a, rep, task=task)
         # merge the tool-internal LLM usage (element resolution) collected by the driver
         try:
             inner = a.inner_usage()

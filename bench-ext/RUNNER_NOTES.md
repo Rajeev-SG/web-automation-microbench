@@ -1,4 +1,4 @@
-# Round 3 runner instructions (shared context for all contender runners)
+# Runner instructions (shared context for all contender runners)
 
 Repo: /Users/rajeev/Code/web-automation-microbench (worktree: bench-ext/)
 Contender sources cloned under bench-ext/work/<name>/
@@ -12,11 +12,42 @@ Model config (MUST, every call — benchlib.openrouter_call / openrouter_payload
   model z-ai/glm-5.3-flash, temperature 0, reasoning effort low + excluded, response_format json_object,
   provider {"sort": "latency"}. Never :nitro. Record provider per call.
 
-Task + verification + timing + schema: DO NOT reimplement — use benchlib:
-  benchlib.TASK (verbatim instruction), benchlib.OBS_JS (post-action observation JS),
-  benchlib.VERIFY_JS (post-run verification JS), benchlib.check_pass, benchlib.parse_verify,
-  benchlib.run_rep(adapter, rep) — implements the whole loop, token accounting, timer
-  (starts at first model call, setup before, verify/screenshot after), and writes the JSON + prints summary.
+Task + verification + timing + schema: DO NOT reimplement — use benchlib.
+  The library is TASK-PARAMETERIZED (issue #20): a task registry holds tasks of
+  {id, instruction, url, observe_js, verify_js, check, capabilities[], provenance{}}.
+    benchlib.get_task(id)            -> resolve a task (None => default 'todomvc')
+    benchlib.run_rep(adapter, rep, task=<id>, max_steps=..., timeout=...)
+  run_rep binds the chosen task to the historical module globals (benchlib.TASK / URL_TASK /
+  OBS_JS / VERIFY_JS), so adapters that read those globals keep working unchanged. It
+  implements the whole loop, token accounting, diagnostics, the timer (starts at first model
+  call; setup before, verify/screenshot after) and writes the JSON + prints a summary.
+  Every rep JSON also carries: task, tool_calls, retries, recovery, tool_errors, provider, cost.
+  Failed reps are PRESERVED — never replaced with a retry.
+
+Reps (issue #1 topology, centralized — do not hardcode):
+    benchlib.REP_TOPOLOGY = {screen: 2, promote: 5, tiebreak: 10}
+    reps = benchlib.reps_from_argv(sys.argv[1:])   # explicit reps from argv, else ['1','2']
+  2 reps screen everything; promote plausible candidates to 5; 10+ only for near-ties/high
+  variance. A failed rep is recorded, never retried away.
+
+Runner flags: `python3 runners/<name>.py [reps...] [--task=<task-id>]`.
+  --task   select a registered task (default: todomvc); parsed by benchlib.cli_reps_and_task
+  BENCH_RES=<dir>   override the results directory (default artifacts/2026-09-12/results)
+  Entrypoint helper: `benchlib.run_cli(Adapter, max_steps=N)` — one line, parses reps + --task.
+  TASK-AWARE (21): BrowserSkill, agent-browser, agent-chrome-cli, bb-browser, browser-act-skills,
+  browser-cli, browser-control, browser-relay, cdp-browser, chrome-cdp-skill, chrome-devtools-mcp,
+  ego-browser, hyperagent, jarvis-browser, lightpanda, opencli, pinchtab, playwright-cli,
+  raw-playwright, surf-cli, webctl.
+  NOT YET TASK-AWARE (5): browser-agent-tb, midscene, notte, page-agent, skyvern — these ship
+  their own agent loops (they do not call benchlib.run_rep), so a task id needs per-tool wiring.
+  They hardcode the TodoMVC task and must not be cited for any other task until wired.
+
+Tasks: anything other than the TodoMVC latency microbenchmark is REAL WORK and must be
+  session-derived. Every non-TodoMVC task carries mandatory provenance
+  (source_session_id, source_url, verified_against); bench-ext/task_intake.py REJECTS a task
+  missing any of them. Derive session ids from the AgentSessions DB read-only — never copy
+  them out of a doc. Real-work tasks register in bench-ext/tasks_real.py.
+  See docs/task-intake.md and docs/REAL-WORK-MANDATE.md.
 
 Adapter contract (subclass or duck-type):
   .name (contender id used in filenames)
@@ -40,7 +71,8 @@ Launch example: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" -
 Costs: record OpenRouter usage tokens; cost = tokens * published latency-sorted provider rate
   (Makora: $0.075/M input, $0.25/M output, cached input ~half) unless the tool reports cost itself.
 
-Reps: minimum 2 scored reps per contender (rep '1' and rep '2'). Record failures as failures; do not substitute.
+Reps: screen at 2 scored reps per contender, then follow the issue #1 topology (promote to 5;
+10+ only for near-ties/high variance). Record failures as failures; do not substitute or retry away.
 
 Exclusion: if a tool cannot use GLM/OpenRouter cleanly or cannot run on this machine after a genuine
 attempt, do NOT run it with another model. Write bench-ext/runners/<name>-EXCLUDED.json with

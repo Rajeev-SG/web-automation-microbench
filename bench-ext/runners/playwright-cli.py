@@ -96,6 +96,4 @@ class PlaywrightCli:
 
 
 if __name__ == '__main__':
-    reps = benchlib.reps_from_argv(sys.argv[1:])
-    for rep in reps:
-        benchlib.run_rep(PlaywrightCli(), rep, max_steps=14)
+    benchlib.run_cli(PlaywrightCli, max_steps=14)

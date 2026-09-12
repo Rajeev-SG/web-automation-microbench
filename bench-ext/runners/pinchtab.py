@@ -79,6 +79,4 @@ Return ONLY JSON: {"code":"<one command>","done":false} or {"done":true,"result"
         except Exception: pass
 
 if __name__ == '__main__':
-    reps = benchlib.reps_from_argv(sys.argv[1:])
-    for rep in reps:
-        benchlib.run_rep(Adapter(), rep)
+    benchlib.run_cli(Adapter)
