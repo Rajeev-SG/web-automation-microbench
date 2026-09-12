@@ -225,4 +225,27 @@ Report: [bench-ext/artifacts/2026-09-15/delivery/report.md](bench-ext/artifacts/
 
 ## Status
 
-These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark. That larger effort (real sites, login flows, uploads, multi-tab journeys) lives in a separate project and will use this repo's methodology as its starting point.
+These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark.
+
+## The real-world corpus
+
+The scored corpus is harvested in
+[`Rajeev-SG/codex-session-orchestration-analysis`](https://github.com/Rajeev-SG/codex-session-orchestration-analysis)
+(issue #88, closed) and offered to this repo as conformant task specs.
+`bench-ext/task_intake.py` validates them; `benchlib` runs them.
+
+The published corpus holds **14 real task definitions** — 9 browser-domain (marketing-tag
+inspection, third-party script inventory, SEO/structured-data audits, crawlability,
+canvas diagram creation) and 5 coding (replayable, each proven to fail at its pre-task SHA
+and pass at its gold commit). Every one is auth-free with a deterministic verifier.
+
+```bash
+git clone https://github.com/Rajeev-SG/codex-session-orchestration-analysis
+python3 bench-ext/task_intake.py --validate \
+  ./codex-session-orchestration-analysis/benchmarks/corpus/tasks
+# {"schema": "pareto-research-task/v1", "specs": 14, "valid": 14, "quarantined": 0}
+```
+
+Their provenance rules, schema and admission gates are documented in
+[`bench-ext/docs/task-intake.md`](bench-ext/docs/task-intake.md) and the producer's
+`docs/implementation/task-harvesting-v1.md`.
