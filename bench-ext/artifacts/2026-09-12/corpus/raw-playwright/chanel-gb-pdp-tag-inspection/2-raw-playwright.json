@@ -1,0 +1,138 @@
+{
+  "id": "2-raw-playwright",
+  "contender": "raw-playwright",
+  "rep": "2",
+  "task": "chanel-gb-pdp-tag-inspection",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.505,
+      "provider": "Together",
+      "request_id": "gen-1789252373-j6mYNEeo78En265GwTM4",
+      "usage": {
+        "prompt_tokens": 370,
+        "completion_tokens": 145,
+        "total_tokens": 515,
+        "cost": 0.00012672,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000128,
+          "upstream_inference_prompt_cost": 5.55e-05,
+          "upstream_inference_completions_cost": 7.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 14,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = Array.from(new Set((html.match(/GTM-[A-Z0-9]+/g) || []))); const ads = Array.from(new Set((html.match(/AW-[0-9]{6,}/g) || []))); const pin = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = { gtm, googleAds: ads, pinterest: pin }; return window.__bench_finding; })",
+        "done": false
+      },
+      "browser_s": 0.006,
+      "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = Array.from(new Set((html.match(/GTM-[A-Z0-9]+/g) || []))); const ads = Array.from(new Set((html.match(/AW-[0-9]{6,}/g) || []))); const pin = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = { gtm, googleAds: ads, pinterest: pin }; return window.__bench_finding; })",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\",\"title\":\"Access Denied\",\"text\":\"Access Denied\\nYou don't have permission to access \\\"http://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\\\" on this server.\\n\\nReference #18.5a690317.1789252373.47aa99d\\n\\nhttps://errors.edgesuite.net/18.5a690317.1789252373.47aa99d\",\"controls\":[]}"
+    },
+    {
+      "step": 2,
+      "api_s": 2.085,
+      "provider": "Together",
+      "request_id": "gen-1789252374-YMHVGYKxlF5ylHjh3w6J",
+      "usage": {
+        "prompt_tokens": 648,
+        "completion_tokens": 146,
+        "total_tokens": 794,
+        "cost": 0.0001380852,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00013948,
+          "upstream_inference_prompt_cost": 6.648e-05,
+          "upstream_inference_completions_cost": 7.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = Array.from(new Set(html.match(/GTM-[A-Z0-9]+/g) || [])); const ads = Array.from(new Set(html.match(/AW-[0-9]{6,}/g) || [])); const pin = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = { gtm, googleAds: ads, pinterest: pin }; return window.__bench_finding; })",
+        "done": false
+      },
+      "browser_s": 0.004,
+      "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = Array.from(new Set(html.match(/GTM-[A-Z0-9]+/g) || [])); const ads = Array.from(new Set(html.match(/AW-[0-9]{6,}/g) || [])); const pin = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = { gtm, googleAds: ads, pinterest: pin }; return window.__bench_finding; })",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\",\"title\":\"Access Denied\",\"text\":\"Access Denied\\nYou don't have permission to access \\\"http://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\\\" on this server.\\n\\nReference #18.5a690317.1789252373.47aa99d\\n\\nhttps://errors.edgesuite.net/18.5a690317.1789252373.47aa99d\",\"controls\":[]}"
+    },
+    {
+      "step": 3,
+      "api_s": 1.039,
+      "provider": "Together",
+      "request_id": "gen-1789252376-BjLqRnYz2vF1euEMa9DG",
+      "usage": {
+        "prompt_tokens": 924,
+        "completion_tokens": 75,
+        "total_tokens": 999,
+        "cost": 0.0001059102,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 576,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010698,
+          "upstream_inference_prompt_cost": 6.948e-05,
+          "upstream_inference_completions_cost": 3.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true,
+        "result": "The CHANEL page is blocked by Akamai (Access Denied), so no marketing tags are present on the live page. window.__bench_finding was set to {\"gtm\":[],\"googleAds\":[],\"pinterest\":false}."
+      }
+    }
+  ],
+  "setup_s": 2.1576756670037867,
+  "total_s": 4.639,
+  "api_s": 4.629,
+  "browser_s": 0.01,
+  "model_calls": 3,
+  "tool_calls": 2,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 1942,
+    "output": 366,
+    "cached": 832,
+    "reasoning": 43
+  },
+  "cost": 0.00026835,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\",\"truth\":{\"gtm\":[],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[],\"googleAds\":[],\"pinterest\":false}}",
+  "pass": true
+}

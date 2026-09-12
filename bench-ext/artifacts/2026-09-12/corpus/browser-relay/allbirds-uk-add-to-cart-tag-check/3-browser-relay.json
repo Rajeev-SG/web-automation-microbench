@@ -1,0 +1,459 @@
+{
+  "id": "3-browser-relay",
+  "contender": "browser-relay",
+  "rep": "3",
+  "task": "allbirds-uk-add-to-cart-tag-check",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.558,
+      "provider": "Together",
+      "request_id": "gen-1789252867-lBIdlU4QqMd7ZFFxmyRW",
+      "usage": {
+        "prompt_tokens": 770,
+        "completion_tokens": 28,
+        "total_tokens": 798,
+        "cost": 0.000128205,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001295,
+          "upstream_inference_prompt_cost": 0.0001155,
+          "upstream_inference_completions_cost": 1.4e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay observe"
+      },
+      "browser_s": 0.294,
+      "code": "browser-relay observe",
+      "tool_error": false,
+      "observation": "nt Olive (Natural White Sole)\" url=\"https://www.allbirds.co.uk/products/mens-varsity-burnt-olive\"\n    [e647a359f_299] image \"Men's Varsity - Light Burnt Olive (Natural White Sole)\"\n    [e647a359f_300] image \"Men's Varsity - Light Burnt Olive (Natural White Sole)\"\n    [e647a359f_301] link \"MEN'S VARSITY Light Burnt Olive \u00a3110\" url=\"https://www.allbirds.co.uk/products/mens-varsity-burnt-olive\"\n    [e647a359f_302] StaticText \"MEN'S VARSITY\"\n    [e647a359f_303] StaticText \"Light Burnt Olive\"\n    [e647a359f_304] StaticText \"\u00a3110\"\n    [e647a359f_305] radio \"Men's Varsity - Light Burnt Olive (Natural White Sole)\" checked=\"true\"\n    [e647a359f_306] LabelText \"Men's Varsity - Light Burnt Olive (Natural White Sole)\"\n    [e647a359f_307] radio \"Men's Varsity - Ochre (Natural White Sole)\" checked=\"false\"\n    [e647a359f_308] LabelText \"Men's Varsity - Ochre (Natural White Sole)\"\n    [e647a359f_309] radio \"Men's Varsity - Parchment (Blizzard Sole)\" checked=\"false\"\n    [e647a359f_310] LabelText \"Men's Varsity - Parchment (Blizzard Sole)\"\n    [e647a359f_311] radio \"Men's Varsity - Mushroom (Blizzard Sole)\" checked=\"false\"\n    [e647a359f_312] LabelText \"Men's Varsity - Mushroom (Blizzard Sole)\"\n    [e647a359f_313] radio \"Men's Varsity - Natural Black (Natural Black Sole)\" checked=\"false\"\n    [e647a359f_314] LabelText \"Men's Varsity - Natural Black (Natural Black Sole)\"\n    [e647a359f_315] StaticText \"NEW\"\n    [e647a359f_316] link \"Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole) Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole)\" url=\"https://www.allbirds.co.uk/products/mens-varsity-cruiser\"\n    [e647a359f_317] image \"Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole)\"\n    [e647a359f_318] image \"Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole)\"\n    [e647a359f_319] link \"MEN'S VARSITY CRUISER Light Burnt Olive \u00a3110\" url=\"https://www.allbirds.co.uk/products/mens-varsity-cruiser\"\n    [e647a359f_320] StaticText \"MEN'S VARSITY CRUISER\"\n    [e647a359f_321] StaticText \"Light Burnt Olive\"\n    [e647a359f_322] StaticText \"\u00a3110\"\n    [e647a359f_323] radio \"Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole)\" checked=\"true\"\n    [e647a359f_324] LabelText \"Men's Varsity Cruiser - Light Burnt Olive (Light Gum Sole)\"\n\n\n[More content: --cursor obs_756bc435-2a68-45b0-96cb-f1ca7a977707:19907]\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n[frame_unattached] Frame has no accessible embedding element or root\n{\"url\":\"https://www.allbirds.co.uk/collections/mens-shoes\",\"title\":\"Sustainable Men's Shoes | Everyday, Running, Hiking | Allbir\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"FILTER\\n(40 products)\",\"SIGN UP\",\"Return & Refund Policy\",\"Privacy policy\",\"Terms of service\",\"Shipping policy\",\"Cookie preferences\",\"Do Not Sell My Personal Information\"],\"sizes\":[\"1\",\"1\",\"1\",\"2\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.619,
+      "provider": "Together",
+      "request_id": "gen-1789252868-v6WmG0P94Yjhd7g7oVPb",
+      "usage": {
+        "prompt_tokens": 2778,
+        "completion_tokens": 35,
+        "total_tokens": 2813,
+        "cost": 0.0003462228,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00034972,
+          "upstream_inference_prompt_cost": 0.00033222,
+          "upstream_inference_completions_cost": 1.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 11,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay navigate https://www.allbirds.co.uk/products/mens-tree-runner-nz"
+      },
+      "browser_s": 1.308,
+      "code": "browser-relay navigate https://www.allbirds.co.uk/products/mens-tree-runner-nz",
+      "tool_error": false,
+      "observation": "Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trainers | Allbirds UK\nhttps://www.allbirds.co.uk/products/mens-tree-runner-nz\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 3,
+      "api_s": 1.25,
+      "provider": "Together",
+      "request_id": "gen-1789252870-eyBA5hxfhqGOjn1JHFKi",
+      "usage": {
+        "prompt_tokens": 3252,
+        "completion_tokens": 87,
+        "total_tokens": 3339,
+        "cost": 0.0002066526,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020874,
+          "upstream_inference_prompt_cost": 0.00016524,
+          "upstream_inference_completions_cost": 4.35e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 11,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button]')]; const t=els.find(e=>e.textContent.trim().replace(/\\s+/g,' ')==='UK 9'); if(t){t.click(); return 'clicked '+t.tagName;} return 'not found'; })()\""
+      },
+      "browser_s": 0.128,
+      "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button]')]; const t=els.find(e=>e.textContent.trim().replace(/\\s+/g,' ')==='UK 9'); if(t){t.click(); return 'clicked '+t.tagName;} return 'not found'; })()\"",
+      "tool_error": false,
+      "observation": "not found\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 4,
+      "api_s": 1.322,
+      "provider": "Together",
+      "request_id": "gen-1789252872-AyDLdbym8sfPXDNIMw4x",
+      "usage": {
+        "prompt_tokens": 3749,
+        "completion_tokens": 93,
+        "total_tokens": 3842,
+        "cost": 0.0002302047,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3136,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00023253,
+          "upstream_inference_prompt_cost": 0.00018603,
+          "upstream_inference_completions_cost": 4.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button],span,div')]; const t=els.filter(e=>e.children.length===0 && e.textContent.trim().replace(/\\s+/g,' ')==='UK 9'); if(t.length){t[0].click(); return 'clicked '+t[0].tagName;} return 'not found'; })()\""
+      },
+      "browser_s": 0.133,
+      "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button],span,div')]; const t=els.filter(e=>e.children.length===0 && e.textContent.trim().replace(/\\s+/g,' ')==='UK 9'); if(t.length){t[0].click(); return 'clicked '+t[0].tagName;} return 'not found'; })()\"",
+      "tool_error": false,
+      "observation": "not found\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 5,
+      "api_s": 1.158,
+      "provider": "Together",
+      "request_id": "gen-1789252873-wrvKtAvWJPtwYxTImhpZ",
+      "usage": {
+        "prompt_tokens": 4262,
+        "completion_tokens": 102,
+        "total_tokens": 4364,
+        "cost": 0.0002500146,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3648,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00025254,
+          "upstream_inference_prompt_cost": 0.00020154,
+          "upstream_inference_completions_cost": 5.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button]')]; const t=els.find(e=>e.textContent.replace(/\\s+/g,' ').includes('UK 9') && !e.textContent.includes('9.5')); if(t){t.click(); return 'clicked '+t.tagName+' | '+t.className;} return 'not found'; })()\""
+      },
+      "browser_s": 0.132,
+      "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,input,label,[role=button]')]; const t=els.find(e=>e.textContent.replace(/\\s+/g,' ').includes('UK 9') && !e.textContent.includes('9.5')); if(t){t.click(); return 'clicked '+t.tagName+' | '+t.className;} return 'not found'; })()\"",
+      "tool_error": false,
+      "observation": "not found\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 6,
+      "api_s": 1.231,
+      "provider": "Together",
+      "request_id": "gen-1789252874-X5bCMYtu6Pb5iFdKhFpa",
+      "usage": {
+        "prompt_tokens": 4772,
+        "completion_tokens": 90,
+        "total_tokens": 4862,
+        "cost": 0.000258984,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4160,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002616,
+          "upstream_inference_prompt_cost": 0.0002166,
+          "upstream_inference_completions_cost": 4.5e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 13,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const hits=[]; document.querySelectorAll('*').forEach(e=>{ if(e.shadowRoot) hits.push(e.tagName+'.'+e.className); }); const ifr=[...document.querySelectorAll('iframe')].map(f=>f.src); return JSON.stringify({sh:hits.slice(0,10),ifr}); })()\""
+      },
+      "browser_s": 0.129,
+      "code": "browser-relay eval \"(() => { const hits=[]; document.querySelectorAll('*').forEach(e=>{ if(e.shadowRoot) hits.push(e.tagName+'.'+e.className); }); const ifr=[...document.querySelectorAll('iframe')].map(f=>f.src); return JSON.stringify({sh:hits.slice(0,10),ifr}); })()\"",
+      "tool_error": false,
+      "observation": "{\"sh\":[\"SHOP-CART-SYNC.\",\"DIV.\"],\"ifr\":[\"https://www.allbirds.co.uk/web-pixels@449ac4ccw8cfe1344p8a6aeedamfa32ca01/app/web-pixel-1878917496@8a9a175b11d15038a70fe78d09c59720/sandbox/modern/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/web-pixels@449ac4ccw8cfe1344p8a6aeedamfa32ca01/custom/web-pixel-21561476@20/sandbox/modern/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/web-pixels@449ac4ccw8cfe1344p8a6aeedamfa32ca01/custom/web-pixel-21594244@18/sandbox/modern/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/web-pixels@449ac4ccw8cfe1344p8a6aeedamfa32ca01/custom/web-pixel-21627012@26/sandbox/modern/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/web-pixels@449ac4ccw8cfe1344p8a6aeedamfa32ca01/custom/web-pixel-shopify-custom-pixel@0520/sandbox/modern/products/mens-tree-runner-nz\",\"https://creatives.attn.tv/creatives-dynamic/multiPage/index.html\",\"about:blank\"]}\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 7,
+      "api_s": 1.645,
+      "provider": "Together",
+      "request_id": "gen-1789252876-jXDAvhsVmwYDmfnU6HEN",
+      "usage": {
+        "prompt_tokens": 5604,
+        "completion_tokens": 126,
+        "total_tokens": 5730,
+        "cost": 0.0003395304,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00034296,
+          "upstream_inference_prompt_cost": 0.00027996,
+          "upstream_inference_completions_cost": 6.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const out=[]; document.querySelectorAll('*').forEach(e=>{ if(e.shadowRoot){ const b=[...e.shadowRoot.querySelectorAll('button,label,[role=button]')].map(x=>x.textContent.trim().replace(/\\s+/g,' ')).filter(t=>t.startsWith('UK')); if(b.length) out.push({host:e.tagName+'.'+e.className, b:b.slice(0,20)}); } }); return JSON.stringify(out); })()\""
+      },
+      "browser_s": 0.123,
+      "code": "browser-relay eval \"(() => { const out=[]; document.querySelectorAll('*').forEach(e=>{ if(e.shadowRoot){ const b=[...e.shadowRoot.querySelectorAll('button,label,[role=button]')].map(x=>x.textContent.trim().replace(/\\s+/g,' ')).filter(t=>t.startsWith('UK')); if(b.length) out.push({host:e.tagName+'.'+e.className, b:b.slice(0,20)}); } }); return JSON.stringify(out); })()\"",
+      "tool_error": false,
+      "observation": "[]\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"SELECT A SIZE\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 8,
+      "api_s": 1.617,
+      "provider": "Together",
+      "request_id": "gen-1789252877-lgoa84lOAkuPEtjYboRC",
+      "usage": {
+        "prompt_tokens": 6130,
+        "completion_tokens": 180,
+        "total_tokens": 6310,
+        "cost": 0.0003455298,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5504,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00034902,
+          "upstream_inference_prompt_cost": 0.00025902,
+          "upstream_inference_completions_cost": 9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,label,[role=button],input')]; const t=els.find(e=>/^UK\\s*9$/.test(e.textContent.trim()) || (e.tagName==='INPUT' && /^UK\\s*9$/.test(e.value||''))); if(t){t.click(); return 'clicked '+t.tagName+'|'+t.className;} return 'nf:'+els.filter(e=>/UK/.test(e.textContent)).slice(0,3).map(e=>e.tagName+'|'+e.textContent.trim().slice(0,20)).join(';'); })()\""
+      },
+      "browser_s": 0.228,
+      "code": "browser-relay eval \"(() => { const els=[...document.querySelectorAll('button,label,[role=button],input')]; const t=els.find(e=>/^UK\\s*9$/.test(e.textContent.trim()) || (e.tagName==='INPUT' && /^UK\\s*9$/.test(e.value||''))); if(t){t.click(); return 'clicked '+t.tagName+'|'+t.className;} return 'nf:'+els.filter(e=>/UK/.test(e.textContent)).slice(0,3).map(e=>e.tagName+'|'+e.textContent.trim().slice(0,20)).join(';'); })()\"",
+      "tool_error": false,
+      "observation": "clicked BUTTON|btn-size gap-0.5\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz?size=uk-9&variant=55173723750776\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"ADD TO CART\\n-\\n\u00a3110\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 9,
+      "api_s": 0.796,
+      "provider": "Together",
+      "request_id": "gen-1789252879-V8elDA9MryfaSGJ10Gv9",
+      "usage": {
+        "prompt_tokens": 6718,
+        "completion_tokens": 38,
+        "total_tokens": 6756,
+        "cost": 0.0003017322,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6016,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00030478,
+          "upstream_inference_prompt_cost": 0.00028578,
+          "upstream_inference_completions_cost": 1.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"window.__bench_marker = performance.now(); 'set'\""
+      },
+      "browser_s": 0.126,
+      "code": "browser-relay eval \"window.__bench_marker = performance.now(); 'set'\"",
+      "tool_error": false,
+      "observation": "set\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz?size=uk-9&variant=55173723750776\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"ADD TO CART\\n-\\n\u00a3110\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 10,
+      "api_s": 1.083,
+      "provider": "Together",
+      "request_id": "gen-1789252880-lvU5AFPOTgmi341YlqFa",
+      "usage": {
+        "prompt_tokens": 7183,
+        "completion_tokens": 54,
+        "total_tokens": 7237,
+        "cost": 0.0003102759,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6592,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00031341,
+          "upstream_inference_prompt_cost": 0.00028641,
+          "upstream_inference_completions_cost": 2.7e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const b=[...document.querySelectorAll('button')].find(x=>/ADD TO CART/i.test(x.textContent)); if(b){b.click(); return 'clicked';} return 'nf'; })()\""
+      },
+      "browser_s": 0.167,
+      "code": "browser-relay eval \"(() => { const b=[...document.querySelectorAll('button')].find(x=>/ADD TO CART/i.test(x.textContent)); if(b){b.click(); return 'clicked';} return 'nf'; })()\"",
+      "tool_error": false,
+      "observation": "clicked\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz?size=uk-9&variant=55173723750776\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"1\",\"Remove\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\",\"ADD TO CART\\n-\\n\u00a3110\"],\"sizes\":[\"1\",\"1\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (1)\"}"
+    },
+    {
+      "step": 11,
+      "api_s": 2.184,
+      "provider": "Together",
+      "request_id": "gen-1789252882-3LlMfQiiLK39HCwyVGEA",
+      "usage": {
+        "prompt_tokens": 7679,
+        "completion_tokens": 254,
+        "total_tokens": 7933,
+        "cost": 0.0004221063,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7104,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00042637,
+          "upstream_inference_prompt_cost": 0.00029937,
+          "upstream_inference_completions_cost": 0.000127
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 85,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(async () => { await new Promise(r=>setTimeout(r,5000)); window.__bench_report_at = performance.now(); const perf = performance.getEntriesByType('resource').map(e=>{try{return new URL(e.name).hostname}catch(_){return null}}).filter(Boolean); const hosts=[...new Set(perf)].filter(h=>/googletagmanager|google|doubleclick|facebook|tiktok|snapchat|pinterest|criteo|clarity|bing|hotjar|attn/.test(h)).sort(); window.__bench_finding = {consentAccepted:false, productTitle:\\\"Men's Tree Runner NZ\\\", cartItemCount:2, tagsAfterAdd:hosts}; return JSON.stringify(window.__bench_finding); })()\""
+      },
+      "browser_s": 5.135,
+      "code": "browser-relay eval \"(async () => { await new Promise(r=>setTimeout(r,5000)); window.__bench_report_at = performance.now(); const perf = performance.getEntriesByType('resource').map(e=>{try{return new URL(e.name).hostname}catch(_){return null}}).filter(Boolean); const hosts=[...new Set(perf)].filter(h=>/googletagmanager|google|doubleclick|facebook|tiktok|snapchat|pinterest|criteo|clarity|bing|hotjar|attn/.test(h)).sort(); window.__bench_finding = {consentAccepted:false, productTitle:\\\"Men's Tree Runner NZ\\\", cartItemCount:2, tagsAfterAdd:hosts}; return JSON.stringify(window.__bench_finding); })()\"",
+      "tool_error": false,
+      "observation": "{\"consentAccepted\":false,\"productTitle\":\"Men's Tree Runner NZ\",\"cartItemCount\":2,\"tagsAfterAdd\":[\"allbirds-gb.attn.tv\",\"analytics.tiktok.com\",\"cdn.attn.tv\",\"connect.facebook.net\",\"creatives.attn.tv\",\"fonts.googleapis.com\",\"googleads.g.doubleclick.net\",\"www.google.com\",\"www.googleadservices.com\",\"www.googletagmanager.com\"]}\n{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz?size=uk-9&variant=55173723750776\",\"title\":\"Men's Tree Runner NZ | Eco Friendly Shoes | Sustainable Trai\",\"products\":[\"https://www.allbirds.co.uk/products/allbirds-slipper\",\"https://www.allbirds.co.uk/products/mens-tree-runner-nz\",\"https://www.allbirds.co.uk/products/mens-dasher-nz-blizzard\",\"https://www.allbirds.co.uk/products/mens-varsity-natural-black\",\"https://www.allbirds.co.uk/products/mens-cruiser-canvas-blizzard\",\"https://www.allbirds.co.uk/products/mens-tree-gliders\",\"https://www.allbirds.co.uk/products/anytime-no-show-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-ankle-sock-blizzard\",\"https://www.allbirds.co.uk/products/anytime-crew-sock\",\"https://www.allbirds.co.uk/products/recycled-shoe-bag\",\"https://www.allbirds.co.uk/products/allbirds-laces\",\"https://www.allbirds.co.uk/products/mens-dasher-nz\"],\"buttons\":[\"Skip to Content\",\"MEN\",\"WOMEN\",\"2\",\"Remove\",\"-\",\"+\",\"RECOMMENDED FOR YOU\",\"Add+\",\"Add+\",\"Add+\",\"UK\\n7\",\"UK\\n7.5\",\"UK\\n8\",\"UK\\n8.5\",\"UK\\n9\",\"UK\\n9.5\",\"UK\\n10\",\"UK\\n10.5\",\"UK\\n11\",\"UK\\n11.5\",\"UK\\n12\",\"UK\\n12.5\",\"UK\\n13\",\"Fit Guide\"],\"sizes\":[\"2\",\"2\",\"UK 7\",\"UK 7\",\"UK 7.5\",\"UK 7.5\",\"UK 8\",\"UK 8\",\"UK 8.5\",\"UK 8.5\",\"UK 9\",\"UK 9\",\"UK 9.5\",\"UK 9.5\",\"UK 10\",\"UK 10\"],\"cart\":\"CART (2)\"}"
+    },
+    {
+      "step": 12,
+      "api_s": 0.879,
+      "provider": "Together",
+      "request_id": "gen-1789252889-KPM33PfyjvMww6GcVjgU",
+      "usage": {
+        "prompt_tokens": 8364,
+        "completion_tokens": 52,
+        "total_tokens": 8416,
+        "cost": 0.0003706164,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7552,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00037436,
+          "upstream_inference_prompt_cost": 0.00034836,
+          "upstream_inference_completions_cost": 2.6e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 45,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 5.188,
+  "total_s": 22.244,
+  "api_s": 14.341,
+  "browser_s": 7.903,
+  "model_calls": 12,
+  "tool_calls": 11,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 61261,
+    "output": 1139,
+    "cached": 51776,
+    "reasoning": 271
+  },
+  "cost": 0.00682092,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runner-nz?size=uk-9&variant=55173723750776\",\"truth\":{\"consentAccepted\":true,\"cartItemCount\":2,\"tagsAfterAdd\":[\"analytics.tiktok.com\",\"googleads.g.doubleclick.net\",\"www.googleadservices.com\"]},\"finding\":{\"consentAccepted\":false,\"productTitle\":\"Men's Tree Runner NZ\",\"cartItemCount\":2,\"tagsAfterAdd\":[\"allbirds-gb.attn.tv\",\"analytics.tiktok.com\",\"cdn.attn.tv\",\"connect.facebook.net\",\"creatives.attn.tv\",\"fonts.googleapis.com\",\"googleads.g.doubleclick.net\",\"www.google.com\",\"www.googleadservices.com\",\"www.googletagmanager.com\"]}}",
+  "pass": false
+}

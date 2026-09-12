@@ -1,0 +1,99 @@
+{
+  "id": "2-browser-relay",
+  "contender": "browser-relay",
+  "rep": "2",
+  "task": "porsche-uk-tag-inspection",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.133,
+      "provider": "Together",
+      "request_id": "gen-1789252973-FnAYZltAH9PKOtMQa4ci",
+      "usage": {
+        "prompt_tokens": 841,
+        "completion_tokens": 126,
+        "total_tokens": 967,
+        "cost": 0.0001872585,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018915,
+          "upstream_inference_prompt_cost": 0.00012615,
+          "upstream_inference_completions_cost": 6.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "browser-relay eval \"(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set((html.match(/GTM-[A-Z0-9]+/g)||[]))]; const aw = [...new Set((html.match(/AW-[0-9]{6,}/g)||[]))]; const pinterest = typeof window.pintrk !== 'undefined' || /ct\\.pinterest\\.com|pintrk/.test(html); window.__bench_finding = {gtm, aw, pinterest}; return JSON.stringify(window.__bench_finding); })()\""
+      },
+      "browser_s": 0.133,
+      "code": "browser-relay eval \"(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set((html.match(/GTM-[A-Z0-9]+/g)||[]))]; const aw = [...new Set((html.match(/AW-[0-9]{6,}/g)||[]))]; const pinterest = typeof window.pintrk !== 'undefined' || /ct\\.pinterest\\.com|pintrk/.test(html); window.__bench_finding = {gtm, aw, pinterest}; return JSON.stringify(window.__bench_finding); })()\"",
+      "tool_error": false,
+      "observation": "{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}\n{\"url\":\"https://www.porsche.com/uk/\",\"title\":\"Porsche United Kingdom | Official Website\",\"text\":\"The Cayenne Electric.\\nDiscover more\\nYour Porsche journey starts now.\\nPetrol\\nIconic sports car with rear engine: 2 doors, 2+2 seats.\\nExplore\\nModel unavailable for order. Explore available inventory.\\nPrecise mid-engine sports car: 2 doors, 2 seats.\\nExplore\\nElectric\\nElectric sports car: 4 doors, 4/5 seats.\\nExplore\\nHybrid\\nPetrol\\nLuxury sedan with a high level of comfort: 4 doors, 4/5 seats.\\nExplore\\nElectric\\nPetrol\\nSporty compact SUV: 4 doors, 5 seats.\\nExplore\\nElectric\\nHybrid\\nPetrol\\nVersatile SUV: 4 doors, up to 5 seats.\\nExplore\\nExplore new and\u00a0pre-owned\u00a0cars available\u00a0at our Porsche Centres.\\nSearch\\nTip: Include car models,\u00a0colours, price ranges, features, or locations for the best results.\\nSearch Suggestions:\\nPrefer to explore on your own? Start here.\\nBrowse all available cars\\nShop exclusive Porsche products\\nFueled by Summer\\nGo to online shop\\nVehicle accessories\\nClothing\\nHome & lifestyle\\nDiscover\\nCompare Porsche models.\\nElectric Ownership.\\nFinance from Porsche.\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"HomeStageMain__clickableArea__b8921\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"AiCarFinder__finderNavLinkHidden__42318\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"ShopFeed__linkElement__0d2b1\"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.53,
+      "provider": "Together",
+      "request_id": "gen-1789252974-tMzFa8IJeQX9R0kvVk8V",
+      "usage": {
+        "prompt_tokens": 1516,
+        "completion_tokens": 7,
+        "total_tokens": 1523,
+        "cost": 0.0001373526,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00013874,
+          "upstream_inference_prompt_cost": 0.00013524,
+          "upstream_inference_completions_cost": 3.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 2.029,
+  "total_s": 1.795,
+  "api_s": 1.663,
+  "browser_s": 0.133,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 2357,
+    "output": 133,
+    "cached": 768,
+    "reasoning": 0
+  },
+  "cost": 0.00023882,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}}",
+  "pass": true
+}

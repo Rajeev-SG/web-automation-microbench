@@ -31,14 +31,25 @@ def _make_session_db(ids, path):
 
 
 def _spec(**overrides):
+    # A minimal spec that satisfies the published #88 definition contract (#27); the
+    # provenance tests below then remove one provenance field at a time.
     spec = {
         "schema": task_intake.TASK_SCHEMA,
+        "definition_schema": task_intake.DEFINITION_SCHEMA,
         "task_id": "example-real-task",
         "task_class": "web-automation",
         "evidence_type": "controlled",
         "objective": "do the real thing",
+        "instruction": "do the real thing and record the finding",
         "url": "https://example.com/",
-        "verification": {"verify_js": "JSON.stringify({ok:true})"},
+        "capabilities": ["dom-script-audit"],
+        "verification": {
+            "verify_js": "JSON.stringify({truth:{ok:true},finding:window.__bench_finding||null})",
+            "description": "recompute the truth from the live page",
+            "authority": "page-recomputed",
+            "pass_rule": {"kind": "finding_matches_truth", "fields": ["ok"]},
+        },
+        "pre_state": {"kind": "fresh-page-load"},
         "provenance": {
             "source_session_id": REAL_SESSION,
             "source_url": "https://example.com/console",

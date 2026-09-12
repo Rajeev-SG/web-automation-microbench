@@ -1,8 +1,0 @@
-<!doctype html><title>Checkbox Grid</title>
-<style>body{font-family:monospace}label{display:block;margin:.2rem}</style>
-<h1>Select every "approve" row</h1><form id=f></form>
-<button onclick="window.__submitted=(Array.from(f.querySelectorAll('input:checked')).map(i=>i.dataset.row).sort().join(','))">Submit</button>
-<script>
-const rows=['approve-alpha','reject-beta','approve-gamma','reject-delta','approve-epsilon','approve-zeta','reject-eta','approve-theta'];
-f.innerHTML=rows.map(r=>`<label><input type=checkbox data-row=${r}> ${r}</label>`).join('')
-</script>

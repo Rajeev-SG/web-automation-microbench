@@ -36,11 +36,14 @@ re-derive them from the DB.)*
 
 ## Rules for adding a task
 
+Tasks are added **only on the producer side** (`codex-session-orchestration-analysis`), and
+re-vendored here with `bench-ext/corpus/refresh.py`. Nothing in this repo authors a task.
+
 1. **Mine from sessions first.** Use the `codex-session-mining` skill:
    `sqlite3 "file:~/Library/Application Support/AgentSessions/index.db?mode=ro"`
    against `session_meta` + `session_search_fts`.
-2. **Provenance is mandatory**, not optional. Every task entry in
-   `bench-ext/tasks_v1.py` must carry:
+2. **Provenance is mandatory**, not optional. Every vendored task spec in
+   `bench-ext/corpus/tasks/` must carry:
    - `source_session_id` — the AgentSessions session the task came from;
    - `source_url` — the real site(s)/console the work was done on;
    - `verified_against` — the objective end state that proves success.
@@ -63,10 +66,17 @@ re-derive them from the DB.)*
 
 ## Status
 
-- `bench-ext/fixtures/spa-suite/` (5 invented pages) — **known violation**,
-  removal tracked in issue #12.
-- `bench-ext/tasks_v1.py` tasks 2–9 — **known violation** (hand-authored or
-  generic-public-site), to be replaced by session-derived tasks under #12.
+- `bench-ext/fixtures/spa-suite/` (5 invented pages) — **REMOVED** (issue #27).
+- `bench-ext/tasks_v1.py` (hand-authored/generic-public-site tasks) — **REMOVED** (issue #27),
+  along with `tasks_real.py` and the stale `docs/task-suite-v1.md` it described.
+- The repo now has **one** capability task source: the read-only vendored corpus under
+  `bench-ext/corpus/`, ingested from the producer's harvested browser tasks
+  (`codex-session-orchestration-analysis#88`). No task in the capability suite is
+  hand-authored here, and no fixed suite size is imposed — the corpus is however many
+  browser tasks the producer has admitted.
+- No local synthetic fixtures remain, and the CI/test guardrails now reject synthetic
+  fixture *files*, repo-local `file://` task URLs, and hand-authored task *modules*
+  (`tests/test_no_synthetic_fixtures.py`), with no legacy exemption.
 - The 22 measured envelopes in `artifacts/2026-09-12/pareto-corpus/` —
   **legitimate real-work evidence** (derived from actual scored runs) and
   remain valid.

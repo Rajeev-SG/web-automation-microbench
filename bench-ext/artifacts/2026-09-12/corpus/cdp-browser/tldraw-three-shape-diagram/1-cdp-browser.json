@@ -1,0 +1,536 @@
+{
+  "id": "1-cdp-browser",
+  "contender": "cdp-browser",
+  "rep": "1",
+  "task": "tldraw-three-shape-diagram",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 14.67,
+      "provider": "Friendli",
+      "request_id": "gen-1789252051-0ZD8noCn8d7JS988wBr6",
+      "usage": {
+        "prompt_tokens": 1829,
+        "completion_tokens": 617,
+        "total_tokens": 2446,
+        "cost": 0.0005770215,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00058285,
+          "upstream_inference_prompt_cost": 0.00027435,
+          "upstream_inference_completions_cost": 0.0003085
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 573,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var b=[].slice.call(document.querySelectorAll('button')).find(function(x){return x.textContent.trim()==='Accept all'}); if(b) b.click(); return 'cookie-handled';})()\""
+      },
+      "browser_s": 0.761,
+      "code": "cdp-browser eval \"(function(){var b=[].slice.call(document.querySelectorAll('button')).find(function(x){return x.textContent.trim()==='Accept all'}); if(b) b.click(); return 'cookie-handled';})()\"",
+      "tool_error": false,
+      "observation": "tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"100%\",\"id\":\"radix-_r_t_\",\"cls\":\"tlui-button tlui-button__icon tlui-zoom-menu__button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool tlui-main-toolbar__overflow\"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 1.786,
+      "provider": "Friendli",
+      "request_id": "gen-1789252067-dyff2WzKxsLWAMSz4J21",
+      "usage": {
+        "prompt_tokens": 3286,
+        "completion_tokens": 76,
+        "total_tokens": 3362,
+        "cost": 0.000525591,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005309,
+          "upstream_inference_prompt_cost": 0.0004929,
+          "upstream_inference_completions_cost": 3.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ks=Object.keys(window).filter(function(k){return /tldraw|editor|app/i.test(k)}); return JSON.stringify(ks);})()\""
+      },
+      "browser_s": 0.752,
+      "code": "cdp-browser eval \"(function(){var ks=Object.keys(window).filter(function(k){return /tldraw|editor|app/i.test(k)}); return JSON.stringify(ks);})()\"",
+      "tool_error": false,
+      "observation": "tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon tlui-toolbar-toggle-group-item\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"100%\",\"id\":\"radix-_r_t_\",\"cls\":\"tlui-button tlui-button__icon tlui-zoom-menu__button\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__icon\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool\"},{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"\",\"id\":\"\",\"cls\":\"tlui-button tlui-button__tool tlui-main-toolbar__overflow\"}]}"
+    },
+    {
+      "step": 3,
+      "api_s": 3.341,
+      "provider": "Friendli",
+      "request_id": "gen-1789252069-49sxk9Dv5bcgXJ6fkhtB",
+      "usage": {
+        "prompt_tokens": 4755,
+        "completion_tokens": 290,
+        "total_tokens": 5045,
+        "cost": 0.0008496675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00085825,
+          "upstream_inference_prompt_cost": 0.00071325,
+          "upstream_inference_completions_cost": 0.000145
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 24,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=[]; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){var id='shape-rect-'+i; ids.push(id); ed.createShapes([{id:id,type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150,text:labels[i]}}]);} ed.createShapes([{id:'shape-arrow-0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape-arrow-1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\""
+      },
+      "browser_s": 0.663,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=[]; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){var id='shape-rect-'+i; ids.push(id); ed.createShapes([{id:id,type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150,text:labels[i]}}]);} ed.createShapes([{id:'shape-arrow-0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape-arrow-1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 ValidationError: At shape(type = geo).id: Error: shape ID must start with \"shape:\"\n    at la (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:102)\n    at e.validationFn (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:9228)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:648)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:23145)\n    at e.validateRecord (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:39879)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32779\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37702\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2670)\n    at ta.atomic (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37268)\n    at ta.put (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32328)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:43:86069\n    at Un (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2440)\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2674)\n    at Lg.batch (https://www.tldraw.com/assets/src-BpFD6v3t.js:39:1524)\n    at Y.run (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:23932)\n    at Y.createShapes (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:84693)\n    at <anonymous>:1:176\n    at <anonymous>:1:769\n    at <anonymous>:1:776\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 4,
+      "api_s": 1.948,
+      "provider": "Friendli",
+      "request_id": "gen-1789252073-RqkQcVwaUMilar7LY6Ac",
+      "usage": {
+        "prompt_tokens": 5622,
+        "completion_tokens": 275,
+        "total_tokens": 5897,
+        "cost": 0.0006972768,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00070432,
+          "upstream_inference_prompt_cost": 0.00056682,
+          "upstream_inference_completions_cost": 0.0001375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){ed.createShapes([{id:ids[i],type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150,text:labels[i]}}]);} ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\""
+      },
+      "browser_s": 0.651,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){ed.createShapes([{id:ids[i],type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150,text:labels[i]}}]);} ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 ValidationError: At shape(type = geo).props.text: Unexpected property\n    at la (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:102)\n    at e.validationFn (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:9228)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:648)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:23145)\n    at e.validateRecord (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:39879)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32779\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37702\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2670)\n    at ta.atomic (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37268)\n    at ta.put (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32328)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:43:86069\n    at Un (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2440)\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2674)\n    at Lg.batch (https://www.tldraw.com/assets/src-BpFD6v3t.js:39:1524)\n    at Y.run (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:23932)\n    at Y.createShapes (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:84693)\n    at <anonymous>:1:179\n    at <anonymous>:1:774\n    at <anonymous>:1:781\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 5,
+      "api_s": 1.769,
+      "provider": "Friendli",
+      "request_id": "gen-1789252076-98aWrsVwUTI8cCqjLzb1",
+      "usage": {
+        "prompt_tokens": 6487,
+        "completion_tokens": 105,
+        "total_tokens": 6592,
+        "cost": 0.0007415793,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00074907,
+          "upstream_inference_prompt_cost": 0.00069657,
+          "upstream_inference_completions_cost": 5.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var s=ed.store.schema.types.geo.props; return JSON.stringify(Object.keys(s));})()\""
+      },
+      "browser_s": 0.644,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var s=ed.store.schema.types.geo.props; return JSON.stringify(Object.keys(s));})()\"",
+      "tool_error": false,
+      "observation": "\u2717 TypeError: Cannot read properties of undefined (reading 'props')\n    at <anonymous>:1:90\n    at <anonymous>:1:137\n    at <anonymous>:1:144\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 6,
+      "api_s": 1.392,
+      "provider": "Friendli",
+      "request_id": "gen-1789252078-0p9f6em7gWIipiHjhiUv",
+      "usage": {
+        "prompt_tokens": 6660,
+        "completion_tokens": 85,
+        "total_tokens": 6745,
+        "cost": 0.0007573698,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00076502,
+          "upstream_inference_prompt_cost": 0.00072252,
+          "upstream_inference_completions_cost": 4.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var sh=ed.createShapeId?ed.createShapeId():null; var def=ed.getStyleForNextShape?null:null; var geo=ed.getShapeUtil('geo'); var props=geo.getDefaultProps?geo.getDefaultProps():null; return JSON.stringify(props?Object.keys(props):'no');})()\""
+      },
+      "browser_s": 0.751,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var sh=ed.createShapeId?ed.createShapeId():null; var def=ed.getStyleForNextShape?null:null; var geo=ed.getShapeUtil('geo'); var props=geo.getDefaultProps?geo.getDefaultProps():null; return JSON.stringify(props?Object.keys(props):'no');})()\"",
+      "tool_error": false,
+      "observation": "[\"w\",\"h\",\"geo\",\"dash\",\"growY\",\"url\",\"scale\",\"flipX\",\"flipY\",\"color\",\"labelColor\",\"fill\",\"size\",\"font\",\"align\",\"verticalAlign\",\"richText\"]\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 7,
+      "api_s": 1.36,
+      "provider": "Friendli",
+      "request_id": "gen-1789252080-oFBYbLPvaQ8GiOdCtwmS",
+      "usage": {
+        "prompt_tokens": 6877,
+        "completion_tokens": 84,
+        "total_tokens": 6961,
+        "cost": 0.0007890993,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00079707,
+          "upstream_inference_prompt_cost": 0.00075507,
+          "upstream_inference_completions_cost": 4.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 29,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){return JSON.stringify(window.tldraw?Object.keys(window.tldraw).filter(function(k){return /rich|text/i.test(k)}):'no tldraw');})()\""
+      },
+      "browser_s": 0.757,
+      "code": "cdp-browser eval \"(function(){return JSON.stringify(window.tldraw?Object.keys(window.tldraw).filter(function(k){return /rich|text/i.test(k)}):'no tldraw');})()\"",
+      "tool_error": false,
+      "observation": "\"no tldraw\"\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 8,
+      "api_s": 1.994,
+      "provider": "Friendli",
+      "request_id": "gen-1789252082-sy8iVrfKyWlpQFVhIqi5",
+      "usage": {
+        "prompt_tokens": 7027,
+        "completion_tokens": 270,
+        "total_tokens": 7297,
+        "cost": 0.0009034443,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00091257,
+          "upstream_inference_prompt_cost": 0.00077757,
+          "upstream_inference_completions_cost": 0.000135
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){ed.createShapes([{id:ids[i],type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150}}]);} ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\""
+      },
+      "browser_s": 0.638,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; var labels=['Runner','Browser','Verifier']; for(var i=0;i<3;i++){ed.createShapes([{id:ids[i],type:'geo',x:200+i*400,y:300,props:{geo:'rectangle',w:250,h:150}}]);} ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'created';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 ValidationError: At shape(type = arrow).props.start.x: Expected number, got undefined\n    at la (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:102)\n    at e.validationFn (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:9228)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:648)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:23145)\n    at e.validateRecord (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:39879)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32779\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37702\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2670)\n    at ta.atomic (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37268)\n    at ta.put (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32328)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:43:86069\n    at Un (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2440)\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2674)\n    at Lg.batch (https://www.tldraw.com/assets/src-BpFD6v3t.js:39:1524)\n    at Y.run (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:23932)\n    at Y.createShapes (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:84693)\n    at <anonymous>:1:277\n    at <anonymous>:1:759\n    at <anonymous>:1:766\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 9,
+      "api_s": 2.222,
+      "provider": "Friendli",
+      "request_id": "gen-1789252085-6EW0PCk4tIUtnIiJi2ph",
+      "usage": {
+        "prompt_tokens": 7892,
+        "completion_tokens": 275,
+        "total_tokens": 8167,
+        "cost": 0.0007606566,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4608,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00076834,
+          "upstream_inference_prompt_cost": 0.00063084,
+          "upstream_inference_completions_cost": 0.0001375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{x:0,y:0,type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{x:0,y:0,type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{x:0,y:0,type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{x:0,y:0,type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'arrows-created';})()\""
+      },
+      "browser_s": 0.656,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var ids=['shape:rect0','shape:rect1','shape:rect2']; ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375,props:{start:{x:0,y:0,type:'binding',boundShapeId:ids[0],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{x:0,y:0,type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:0,y:0.5},isExact:false}}},{id:'shape:arrow1',type:'arrow',x:850,y:375,props:{start:{x:0,y:0,type:'binding',boundShapeId:ids[1],normalizedAnchor:{x:1,y:0.5},isExact:false},end:{x:0,y:0,type:'binding',boundShapeId:ids[2],normalizedAnchor:{x:0,y:0.5},isExact:false}}}]); return 'arrows-created';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 ValidationError: At shape(type = arrow).props.start.type: Unexpected property\n    at la (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:102)\n    at e.validationFn (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:9228)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:648)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:23145)\n    at e.validateRecord (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:39879)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32779\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37702\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2670)\n    at ta.atomic (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37268)\n    at ta.put (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32328)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:43:86069\n    at Un (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2440)\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2674)\n    at Lg.batch (https://www.tldraw.com/assets/src-BpFD6v3t.js:39:1524)\n    at Y.run (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:23932)\n    at Y.createShapes (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:84693)\n    at <anonymous>:1:114\n    at <anonymous>:1:635\n    at <anonymous>:1:642\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 10,
+      "api_s": 1.065,
+      "provider": "Friendli",
+      "request_id": "gen-1789252088-Yz9oBVBZqTZYT3eJeAuJ",
+      "usage": {
+        "prompt_tokens": 8722,
+        "completion_tokens": 65,
+        "total_tokens": 8787,
+        "cost": 0.0007799616,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4608,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00078784,
+          "upstream_inference_prompt_cost": 0.00075534,
+          "upstream_inference_completions_cost": 3.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; var u=ed.getShapeUtil('arrow'); var p=u.getDefaultProps?u.getDefaultProps():null; return JSON.stringify(p?{keys:Object.keys(p),start:p.start,end:p.end}:null);})()\""
+      },
+      "browser_s": 0.757,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; var u=ed.getShapeUtil('arrow'); var p=u.getDefaultProps?u.getDefaultProps():null; return JSON.stringify(p?{keys:Object.keys(p),start:p.start,end:p.end}:null);})()\"",
+      "tool_error": false,
+      "observation": "{\"keys\":[\"kind\",\"elbowMidPoint\",\"dash\",\"size\",\"fill\",\"color\",\"labelColor\",\"bend\",\"start\",\"end\",\"arrowheadStart\",\"arrowheadEnd\",\"richText\",\"labelPosition\",\"font\",\"scale\"],\"start\":{\"x\":0,\"y\":0},\"end\":{\"x\":2,\"y\":0}}\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 11,
+      "api_s": 2.38,
+      "provider": "Together",
+      "request_id": "gen-1789252090-GvslQd6KGvy5CTpI42lx",
+      "usage": {
+        "prompt_tokens": 8944,
+        "completion_tokens": 326,
+        "total_tokens": 9270,
+        "cost": 0.001489554,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0015046,
+          "upstream_inference_prompt_cost": 0.0013416,
+          "upstream_inference_completions_cost": 0.000163
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 68,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375},{id:'shape:arrow1',type:'arrow',x:850,y:375}]); ed.createBindings([{id:'shape:bind0',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind1',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'shape:bind2',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind3',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\""
+      },
+      "browser_s": 0.653,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createShapes([{id:'shape:arrow0',type:'arrow',x:450,y:375},{id:'shape:arrow1',type:'arrow',x:850,y:375}]); ed.createBindings([{id:'shape:bind0',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind1',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'shape:bind2',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind3',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 TypeError: Cannot read properties of undefined (reading 'type')\n    at Y.getBindingUtil (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:22443)\n    at Y.createBindings (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:68382)\n    at <anonymous>:1:171\n    at <anonymous>:1:712\n    at <anonymous>:1:719\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 12,
+      "api_s": 2.189,
+      "provider": "Friendli",
+      "request_id": "gen-1789252093-EE6cjhfbQaGiJeDOxsMm",
+      "usage": {
+        "prompt_tokens": 9397,
+        "completion_tokens": 231,
+        "total_tokens": 9628,
+        "cost": 0.0009623691,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4608,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00097209,
+          "upstream_inference_prompt_cost": 0.00085659,
+          "upstream_inference_completions_cost": 0.0001155
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createBindings([{id:'shape:bind0',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind1',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'shape:bind2',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind3',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\""
+      },
+      "browser_s": 0.65,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createBindings([{id:'shape:bind0',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind1',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'shape:bind2',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'shape:bind3',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\"",
+      "tool_error": false,
+      "observation": "\u2717 ValidationError: At binding(type = arrow).id: Error: binding ID must start with \"binding:\"\n    at la (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:102)\n    at e.validationFn (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:9228)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:31:648)\n    at e.validate (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:23145)\n    at e.validateRecord (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:39879)\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32779\n    at https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37702\n    at Un (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2440)\n    at Wn (https://www.tldraw.com/assets/src-BpFD6v3t.js:16:2674)\n    at ta.atomic (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:37268)\n    at ta.put (https://www.tldraw.com/assets/src-BpFD6v3t.js:29:32328)\n    at Y.createBindings (https://www.tldraw.com/assets/src-BpFD6v3t.js:43:68538)\n    at <anonymous>:1:61\n    at <anonymous>:1:654\n    at <anonymous>:1:661\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 13,
+      "api_s": 1.965,
+      "provider": "Friendli",
+      "request_id": "gen-1789252096-pLAPAYt8efZK27o4rJU4",
+      "usage": {
+        "prompt_tokens": 10111,
+        "completion_tokens": 227,
+        "total_tokens": 10338,
+        "cost": 0.0007927029,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00080071,
+          "upstream_inference_prompt_cost": 0.00068721,
+          "upstream_inference_completions_cost": 0.0001135
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createBindings([{id:'binding:b0',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'binding:b1',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'binding:b2',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'binding:b3',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\""
+      },
+      "browser_s": 0.756,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; ed.createBindings([{id:'binding:b0',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect0',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'binding:b1',type:'arrow',fromId:'shape:arrow0',toId:'shape:rect1',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}},{id:'binding:b2',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect1',props:{terminal:'start',normalizedAnchor:{x:1,y:0.5},isExact:false}},{id:'binding:b3',type:'arrow',fromId:'shape:arrow1',toId:'shape:rect2',props:{terminal:'end',normalizedAnchor:{x:0,y:0.5},isExact:false}}]); return 'ok';})()\"",
+      "tool_error": false,
+      "observation": "ok\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    },
+    {
+      "step": 14,
+      "api_s": 2.111,
+      "provider": "Friendli",
+      "request_id": "gen-1789252098-YPK0iiBeN5w7xm38hSlS",
+      "usage": {
+        "prompt_tokens": 10432,
+        "completion_tokens": 136,
+        "total_tokens": 10568,
+        "cost": 0.0007953264,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00080336,
+          "upstream_inference_prompt_cost": 0.00073536,
+          "upstream_inference_completions_cost": 6.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 79,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "cdp-browser eval \"(function(){var ed=window.editor; try{ed.updateShapes([{id:'shape:rect0',type:'geo',props:{richText:'Runner'}}]); return 'plain-ok';}catch(e){return 'err:'+e.message;}})()\""
+      },
+      "browser_s": 0.736,
+      "code": "cdp-browser eval \"(function(){var ed=window.editor; try{ed.updateShapes([{id:'shape:rect0',type:'geo',props:{richText:'Runner'}}]); return 'plain-ok';}catch(e){return 'err:'+e.message;}})()\"",
+      "tool_error": false,
+      "observation": "err:Cannot read properties of undefined (reading 'length')\n{\"url\":\"https://www.tldraw.com/\",\"title\":\"tldraw \u2022 very good free whiteboard\",\"text\":\"tldraw - free and instant collaborative whiteboarding\\nUnable to connect\\n\\nWe're having trouble connecting to our authentication service. This is usually temporary. Please try refreshing the page.\\n\\nRefresh\",\"controls\":[{\"tag\":\"BUTTON\",\"type\":\"button\",\"text\":\"Refresh\",\"id\":\"\",\"cls\":\"\"}]}"
+    }
+  ],
+  "setup_s": 5.637,
+  "total_s": 50.017,
+  "api_s": 40.191,
+  "browser_s": 9.824,
+  "model_calls": 14,
+  "tool_calls": 14,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Friendli",
+    "Together"
+  ],
+  "tokens": {
+    "input": 98041,
+    "output": 3062,
+    "cached": 39168,
+    "reasoning": 904
+  },
+  "cost": 0.00958738,
+  "done": false,
+  "error": null,
+  "verification": "{\"url\":\"https://www.tldraw.com/\",\"truth\":{\"labels\":[],\"nodes\":[],\"arrows\":0,\"overlap\":false},\"finding\":null}",
+  "pass": false
+}

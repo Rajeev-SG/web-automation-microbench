@@ -1,0 +1,212 @@
+{
+  "id": "3-raw-playwright",
+  "contender": "raw-playwright",
+  "rep": "3",
+  "task": "porsche-uk-tag-inspection",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.203,
+      "provider": "Modal",
+      "request_id": "gen-1789252578-C5MHDUhSfMGT9wya3VOY",
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 117,
+        "total_tokens": 967,
+        "cost": 0.0002558952,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 832,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00025848,
+          "upstream_inference_prompt_cost": 8.298e-05,
+          "upstream_inference_completions_cost": 0.0001755
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set((html.match(/GTM-[A-Z0-9]+/g)||[]))]; const aw = [...new Set((html.match(/AW-[0-9]{6,}/g)||[]))]; const pinterest = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = {gtm, aw, pinterest}; });",
+        "done": false
+      },
+      "browser_s": 0.004,
+      "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set((html.match(/GTM-[A-Z0-9]+/g)||[]))]; const aw = [...new Set((html.match(/AW-[0-9]{6,}/g)||[]))]; const pinterest = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = {gtm, aw, pinterest}; });",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.porsche.com/uk/\",\"title\":\"Porsche United Kingdom | Official Website\",\"text\":\"The Cayenne Electric.\\nDiscover more\\nYour Porsche journey starts now.\\nPetrol\\nIconic sports car with rear engine: 2 doors, 2+2 seats.\\nExplore\\nModel unavailable for order. Explore available inventory.\\nPrecise mid-engine sports car: 2 doors, 2 seats.\\nExplore\\nElectric\\nElectric sports car: 4 doors, 4/5 seats.\\nExplore\\nHybrid\\nPetrol\\nLuxury sedan with a high level of comfort: 4 doors, 4/5 seats.\\nExplore\\nElectric\\nPetrol\\nSporty compact SUV: 4 doors, 5 seats.\\nExplore\\nElectric\\nHybrid\\nPetrol\\nVersatile SUV: 4 doors, up to 5 seats.\\nExplore\\nExplore new and\u00a0pre-owned\u00a0cars available\u00a0at our Porsche Centres.\\nSearch\\nTip: Include car models,\u00a0colours, price ranges, features, or locations for the best results.\\nSearch Suggestions:\\nPrefer to explore on your own? Start here.\\nBrowse all available cars\\nShop exclusive Porsche products\\nFueled by Summer\\nGo to online shop\\nVehicle accessories\\nClothing\\nHome & lifestyle\\nDiscover\\nCompare Porsche models.\\nElectric Ownership.\\nFinance from Porsche.\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"HomeStageMain__clickableArea__b8921\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"AiCarFinder__finderNavLinkHidden__42318\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"ShopFeed__linkElement__0d2b1\"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.536,
+      "provider": "Modal",
+      "request_id": "gen-1789252579-5Hq2LsgtxprNtDz4t31C",
+      "usage": {
+        "prompt_tokens": 1495,
+        "completion_tokens": 23,
+        "total_tokens": 1518,
+        "cost": 0.0001755567,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1472,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017733,
+          "upstream_inference_prompt_cost": 0.00014283,
+          "upstream_inference_completions_cost": 3.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => window.__bench_finding)",
+        "done": false
+      },
+      "browser_s": 0.004,
+      "code": "await page.evaluate(() => window.__bench_finding)",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.porsche.com/uk/\",\"title\":\"Porsche United Kingdom | Official Website\",\"text\":\"The Cayenne Electric.\\nDiscover more\\nYour Porsche journey starts now.\\nPetrol\\nIconic sports car with rear engine: 2 doors, 2+2 seats.\\nExplore\\nModel unavailable for order. Explore available inventory.\\nPrecise mid-engine sports car: 2 doors, 2 seats.\\nExplore\\nElectric\\nElectric sports car: 4 doors, 4/5 seats.\\nExplore\\nHybrid\\nPetrol\\nLuxury sedan with a high level of comfort: 4 doors, 4/5 seats.\\nExplore\\nElectric\\nPetrol\\nSporty compact SUV: 4 doors, 5 seats.\\nExplore\\nElectric\\nHybrid\\nPetrol\\nVersatile SUV: 4 doors, up to 5 seats.\\nExplore\\nExplore new and\u00a0pre-owned\u00a0cars available\u00a0at our Porsche Centres.\\nSearch\\nTip: Include car models,\u00a0colours, price ranges, features, or locations for the best results.\\nSearch Suggestions:\\nPrefer to explore on your own? Start here.\\nBrowse all available cars\\nShop exclusive Porsche products\\nFueled by Summer\\nGo to online shop\\nVehicle accessories\\nClothing\\nHome & lifestyle\\nDiscover\\nCompare Porsche models.\\nElectric Ownership.\\nFinance from Porsche.\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"HomeStageMain__clickableArea__b8921\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"AiCarFinder__finderNavLinkHidden__42318\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"ShopFeed__linkElement__0d2b1\"}]}"
+    },
+    {
+      "step": 3,
+      "api_s": 1.698,
+      "provider": "Modal",
+      "request_id": "gen-1789252579-XqGnJv5JLkNXP3kEKzyu",
+      "usage": {
+        "prompt_tokens": 2043,
+        "completion_tokens": 160,
+        "total_tokens": 2203,
+        "cost": 0.0004406589,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1984,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00044511,
+          "upstream_inference_prompt_cost": 0.00020511,
+          "upstream_inference_completions_cost": 0.00024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 44,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set(html.match(/GTM-[A-Z0-9]+/g)||[])]; const aw = [...new Set(html.match(/AW-[0-9]{6,}/g)||[])]; const pinterest = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = {gtm, aw, pinterest}; return window.__bench_finding; })",
+        "done": false
+      },
+      "browser_s": 0.004,
+      "code": "await page.evaluate(() => { const html = document.documentElement.outerHTML; const gtm = [...new Set(html.match(/GTM-[A-Z0-9]+/g)||[])]; const aw = [...new Set(html.match(/AW-[0-9]{6,}/g)||[])]; const pinterest = typeof window.pintrk !== 'undefined' || /pintrk|ct\\.pinterest\\.com/.test(html); window.__bench_finding = {gtm, aw, pinterest}; return window.__bench_finding; })",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.porsche.com/uk/\",\"title\":\"Porsche United Kingdom | Official Website\",\"text\":\"The Cayenne Electric.\\nDiscover more\\nYour Porsche journey starts now.\\nPetrol\\nIconic sports car with rear engine: 2 doors, 2+2 seats.\\nExplore\\nModel unavailable for order. Explore available inventory.\\nPrecise mid-engine sports car: 2 doors, 2 seats.\\nExplore\\nElectric\\nElectric sports car: 4 doors, 4/5 seats.\\nExplore\\nHybrid\\nPetrol\\nLuxury sedan with a high level of comfort: 4 doors, 4/5 seats.\\nExplore\\nElectric\\nPetrol\\nSporty compact SUV: 4 doors, 5 seats.\\nExplore\\nElectric\\nHybrid\\nPetrol\\nVersatile SUV: 4 doors, up to 5 seats.\\nExplore\\nExplore new and\u00a0pre-owned\u00a0cars available\u00a0at our Porsche Centres.\\nSearch\\nTip: Include car models,\u00a0colours, price ranges, features, or locations for the best results.\\nSearch Suggestions:\\nPrefer to explore on your own? Start here.\\nBrowse all available cars\\nShop exclusive Porsche products\\nFueled by Summer\\nGo to online shop\\nVehicle accessories\\nClothing\\nHome & lifestyle\\nDiscover\\nCompare Porsche models.\\nElectric Ownership.\\nFinance from Porsche.\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"HomeStageMain__clickableArea__b8921\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"AiCarFinder__finderNavLinkHidden__42318\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"ShopFeed__linkElement__0d2b1\"}]}"
+    },
+    {
+      "step": 4,
+      "api_s": 0.69,
+      "provider": "Modal",
+      "request_id": "gen-1789252581-IGjtbJERlnUmMibSu8ko",
+      "usage": {
+        "prompt_tokens": 2691,
+        "completion_tokens": 38,
+        "total_tokens": 2729,
+        "cost": 0.0002972673,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00030027,
+          "upstream_inference_prompt_cost": 0.00024327,
+          "upstream_inference_completions_cost": 5.7e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => JSON.stringify(window.__bench_finding))",
+        "done": false
+      },
+      "browser_s": 0.002,
+      "code": "await page.evaluate(() => JSON.stringify(window.__bench_finding))",
+      "tool_error": false,
+      "observation": "{\"url\":\"https://www.porsche.com/uk/\",\"title\":\"Porsche United Kingdom | Official Website\",\"text\":\"The Cayenne Electric.\\nDiscover more\\nYour Porsche journey starts now.\\nPetrol\\nIconic sports car with rear engine: 2 doors, 2+2 seats.\\nExplore\\nModel unavailable for order. Explore available inventory.\\nPrecise mid-engine sports car: 2 doors, 2 seats.\\nExplore\\nElectric\\nElectric sports car: 4 doors, 4/5 seats.\\nExplore\\nHybrid\\nPetrol\\nLuxury sedan with a high level of comfort: 4 doors, 4/5 seats.\\nExplore\\nElectric\\nPetrol\\nSporty compact SUV: 4 doors, 5 seats.\\nExplore\\nElectric\\nHybrid\\nPetrol\\nVersatile SUV: 4 doors, up to 5 seats.\\nExplore\\nExplore new and\u00a0pre-owned\u00a0cars available\u00a0at our Porsche Centres.\\nSearch\\nTip: Include car models,\u00a0colours, price ranges, features, or locations for the best results.\\nSearch Suggestions:\\nPrefer to explore on your own? Start here.\\nBrowse all available cars\\nShop exclusive Porsche products\\nFueled by Summer\\nGo to online shop\\nVehicle accessories\\nClothing\\nHome & lifestyle\\nDiscover\\nCompare Porsche models.\\nElectric Ownership.\\nFinance from Porsche.\",\"controls\":[{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"HomeStageMain__clickableArea__b8921\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"DesktopCarRangeTile__clickableArea__8907b\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"AiCarFinder__finderNavLinkHidden__42318\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"\",\"id\":\"\",\"cls\":\"ShopFeed__linkElement__0d2b1\"}]}"
+    },
+    {
+      "step": 5,
+      "api_s": 4.543,
+      "provider": "Modal",
+      "request_id": "gen-1789252582-IRMELQzEnK4hHCqlxpuy",
+      "usage": {
+        "prompt_tokens": 3242,
+        "completion_tokens": 290,
+        "total_tokens": 3532,
+        "cost": 0.000734481,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0007419,
+          "upstream_inference_prompt_cost": 0.0003069,
+          "upstream_inference_completions_cost": 0.000435
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 208,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true,
+        "result": "window.__bench_finding has been set on the live page via a single eval, computed from the page HTML and window globals: gtm = all unique GTM-[A-Z0-9]+ container ids found in the page, aw = all unique AW-[0-9]{6,} Google Ads ids, and pinterest = true if window.pintrk is defined or a pintrk/ct.pinterest.com reference exists in the page, else false. The page was not modified."
+      }
+    }
+  ],
+  "setup_s": 1.8956310830035363,
+  "total_s": 8.683,
+  "api_s": 8.67,
+  "browser_s": 0.014,
+  "model_calls": 5,
+  "tool_calls": 4,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Modal"
+  ],
+  "tokens": {
+    "input": 10321,
+    "output": 628,
+    "cached": 10176,
+    "reasoning": 273
+  },
+  "cost": 0.00131267,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}}",
+  "pass": true
+}

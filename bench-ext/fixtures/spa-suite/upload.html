@@ -1,6 +1,0 @@
-<!doctype html><title>Upload Receipt</title>
-<style>body{font-family:sans-serif}</style>
-<h1>Upload expense receipt</h1>
-<input type=file id=inp><div id=st></div>
-<button onclick="if(inp.files.length===1){st.textContent='RECEIVED:'+(window.__name=inp.files[0].name)}">Upload</button>
-<script>inp.onchange=()=>st.textContent='selected:'+(inp.files[0]&&inp.files[0].name)</script>

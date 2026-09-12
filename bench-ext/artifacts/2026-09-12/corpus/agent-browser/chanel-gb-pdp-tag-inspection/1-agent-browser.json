@@ -1,0 +1,171 @@
+{
+  "id": "1-agent-browser",
+  "contender": "agent-browser",
+  "rep": "1",
+  "task": "chanel-gb-pdp-tag-inspection",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 0.798,
+      "provider": "Together",
+      "request_id": "gen-1789251425-YBuGwqibSQ3swg6s0ME2",
+      "usage": {
+        "prompt_tokens": 560,
+        "completion_tokens": 38,
+        "total_tokens": 598,
+        "cost": 0.00010197,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000103,
+          "upstream_inference_prompt_cost": 8.4e-05,
+          "upstream_inference_completions_cost": 1.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser open https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/"
+      },
+      "browser_s": 0.321,
+      "code": "agent-browser open https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/",
+      "tool_error": false,
+      "observation": "\u2713 Access Denied\n  https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\n\"{\\\"url\\\":\\\"https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\\\",\\\"title\\\":\\\"Access Denied\\\",\\\"text\\\":\\\"Access Denied\\\\nYou don't have permission to access \\\\\\\"http://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\\\\\\\" on this server.\\\\n\\\\nReference #18.5a690317.1789251425.477c11d\\\\n\\\\nhttps://errors.edgesuite.net/18.5a690317.1789251425.477c11d\\\",\\\"controls\\\":[]}\""
+    },
+    {
+      "step": 2,
+      "api_s": 0.833,
+      "provider": "Together",
+      "request_id": "gen-1789251426-3N04cnUmaddasDtlhqHI",
+      "usage": {
+        "prompt_tokens": 789,
+        "completion_tokens": 24,
+        "total_tokens": 813,
+        "cost": 7.58241e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.659e-05,
+          "upstream_inference_prompt_cost": 6.459e-05,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser open https://www.chanel.com/gb/"
+      },
+      "browser_s": 0.324,
+      "code": "agent-browser open https://www.chanel.com/gb/",
+      "tool_error": false,
+      "observation": "\u2713 Access Denied\n  https://www.chanel.com/gb/\n\"{\\\"url\\\":\\\"https://www.chanel.com/gb/\\\",\\\"title\\\":\\\"Access Denied\\\",\\\"text\\\":\\\"Access Denied\\\\nYou don't have permission to access \\\\\\\"http://www.chanel.com/gb/\\\\\\\" on this server.\\\\n\\\\nReference #18.5a690317.1789251427.477c217\\\\n\\\\nhttps://errors.edgesuite.net/18.5a690317.1789251427.477c217\\\",\\\"controls\\\":[]}\""
+    },
+    {
+      "step": 3,
+      "api_s": 0.753,
+      "provider": "Together",
+      "request_id": "gen-1789251427-IBxotOeJjZDBVzRDrdv9",
+      "usage": {
+        "prompt_tokens": 936,
+        "completion_tokens": 56,
+        "total_tokens": 992,
+        "cost": 8.30808e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.392e-05,
+          "upstream_inference_prompt_cost": 5.592e-05,
+          "upstream_inference_completions_cost": 2.8e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval window.__bench_finding = JSON.stringify({gtm: [], googleAds: [], pinterest: false})"
+      },
+      "browser_s": 0.022,
+      "code": "agent-browser eval window.__bench_finding = JSON.stringify({gtm: [], googleAds: [], pinterest: false})",
+      "tool_error": false,
+      "observation": "\"{\\\"gtm\\\":[],\\\"googleAds\\\":[],\\\"pinterest\\\":false}\"\n\"{\\\"url\\\":\\\"https://www.chanel.com/gb/\\\",\\\"title\\\":\\\"Access Denied\\\",\\\"text\\\":\\\"Access Denied\\\\nYou don't have permission to access \\\\\\\"http://www.chanel.com/gb/\\\\\\\" on this server.\\\\n\\\\nReference #18.5a690317.1789251427.477c217\\\\n\\\\nhttps://errors.edgesuite.net/18.5a690317.1789251427.477c217\\\",\\\"controls\\\":[]}\""
+    },
+    {
+      "step": 4,
+      "api_s": 0.558,
+      "provider": "Together",
+      "request_id": "gen-1789251428-mtfpWAcUUm834f0wTHkd",
+      "usage": {
+        "prompt_tokens": 1099,
+        "completion_tokens": 24,
+        "total_tokens": 1123,
+        "cost": 7.62399e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 832,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.701e-05,
+          "upstream_inference_prompt_cost": 6.501e-05,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 3.63,
+  "total_s": 3.61,
+  "api_s": 2.942,
+  "browser_s": 0.668,
+  "model_calls": 4,
+  "tool_calls": 3,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 3384,
+    "output": 142,
+    "cached": 1984,
+    "reasoning": 49
+  },
+  "cost": 0.0003637,
+  "done": true,
+  "error": null,
+  "verification": "\"{\\\"url\\\":\\\"https://www.chanel.com/gb/\\\",\\\"truth\\\":{\\\"gtm\\\":[],\\\"aw\\\":[],\\\"pinterest\\\":false},\\\"finding\\\":\\\"{\\\\\\\"gtm\\\\\\\":[],\\\\\\\"googleAds\\\\\\\":[],\\\\\\\"pinterest\\\\\\\":false}\\\"}\"",
+  "pass": false
+}

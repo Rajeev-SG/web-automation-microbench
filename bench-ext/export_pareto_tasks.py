@@ -40,7 +40,7 @@ def envelope_for(run: dict, source: str) -> dict:
         "task_id": f"web-automation-microbench/2026-09-12/{run.get('id', Path(source).stem)}",
         "task_class": TASK_CLASS,
         "evidence_type": "observed",
-        "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/task-suite-v1.md)",
+        "objective": "TodoMVC: add two todos, complete one, filter Active (latency microbenchmark; see bench-ext/docs/benchmark-spec.md)",
         "configuration": {
             "harness": run.get("contender"),
             "model": "z-ai/glm-5.3-flash",

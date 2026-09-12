@@ -1,0 +1,59 @@
+{
+  "definition_schema": "pareto-research-task-definition/v1",
+  "files": {
+    "allbirds-uk-add-to-cart-tag-check.json": {
+      "sha256": "5ecf464bc06bc6463d78d341d3bd51326afc5ea94d48ac37f12ea9bf0243aa5b",
+      "task_id": "allbirds-uk-add-to-cart-tag-check"
+    },
+    "chanel-gb-pdp-tag-inspection.json": {
+      "sha256": "451b1d6f600b7e7e673910a16e6d4a477e0b3cde5b252dc526fef5d989fbc0fa",
+      "task_id": "chanel-gb-pdp-tag-inspection"
+    },
+    "gymshark-uk-add-to-cart-tag-check.json": {
+      "sha256": "8a9126df18bf4ac9ce03375f256d4e4971c66e10edfe7d10a759c62b8585ece6",
+      "task_id": "gymshark-uk-add-to-cart-tag-check"
+    },
+    "porsche-uk-script-inventory.json": {
+      "sha256": "b7792ffc84cc5dde615d0a494220eb1f5f67dadbd0939d806367eca9c5435279",
+      "task_id": "porsche-uk-script-inventory"
+    },
+    "porsche-uk-tag-inspection.json": {
+      "sha256": "9a02ae805c4b63604fd32ebaec863d7ddb7b3ec61c5fa0661cfa9c92743362d6",
+      "task_id": "porsche-uk-tag-inspection"
+    },
+    "puma-uk-script-inventory.json": {
+      "sha256": "c69449c1d83a5ced696f348315766ade38455dbc67c1f539dd4bddd81cf558b4",
+      "task_id": "puma-uk-script-inventory"
+    },
+    "puma-uk-seo-metadata-audit.json": {
+      "sha256": "8b4ccfb7a7726081276be23e401b08c98211e8cb5b1b635e1b9c5ce44ff218d3",
+      "task_id": "puma-uk-seo-metadata-audit"
+    },
+    "puma-uk-tag-inspection.json": {
+      "sha256": "ffa1496425693c5bebea584ad615d68900d0913334b8fc2fde4bd7c51b813e0d",
+      "task_id": "puma-uk-tag-inspection"
+    },
+    "rajeevg-crawlability-audit.json": {
+      "sha256": "7557a23861b14564133833508d891d94fbf57c8a7a8414d429673f3177721837",
+      "task_id": "rajeevg-crawlability-audit"
+    },
+    "rajeevg-seo-metadata-audit.json": {
+      "sha256": "10dd03d28aed3cf1d608ed59643c52f664af45cc2c8bb6e5379f5b835cce8d80",
+      "task_id": "rajeevg-seo-metadata-audit"
+    },
+    "tldraw-three-shape-diagram.json": {
+      "sha256": "66ab246ed4cf578e3d24c93ad32be0f27f222b40eaac037244d450347cf9bcb2",
+      "task_id": "tldraw-three-shape-diagram"
+    }
+  },
+  "note": "Read-only vendored snapshot of the producer's admitted browser tasks. Refresh with corpus/refresh.py --from <checkout>; ingest with task_ingest.py.",
+  "producer": {
+    "branch": "main",
+    "dirty": false,
+    "repo": "Rajeev-SG/codex-session-orchestration-analysis",
+    "revision": "399137b56aa44f741fcdb0cc92d011d17a5d8c2e",
+    "subject": "feat(harvest): consent -> find a product -> add to cart -> tag check, on two reachable retailers (#107)"
+  },
+  "task_class": "web-automation",
+  "vendored_date": "2026-09-12"
+}

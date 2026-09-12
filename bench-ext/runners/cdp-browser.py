@@ -3,14 +3,14 @@
 # Source: sids/cdp-browser @ 857a8ba; cdp-browser@0.1.3 (npm). Node 26.7.0.
 # Chrome launched manually on --remote-debugging-port 9243 (profile /tmp/bench-chrome-cdp2).
 # cdp-browser hardcodes http://localhost:9222 + ws://localhost:9222, so all CLI invocations run under
-# a Node preload shim (/tmp/cdp-fwd/cdp-redirect.cjs) that rewrites those URLs to 127.0.0.1:9243.
+# a Node preload shim (runners/_cdp_forward.cjs, versioned) that rewrites those URLs to 127.0.0.1:9243.
 # The shim only redirects ports; no cdp-browser source files are modified.
 import sys, subprocess, os, time
 sys.path.insert(0, '/Users/rajeev/Code/web-automation-microbench/bench-ext')
 import benchlib
 
 CDP = '/Users/rajeev/Code/web-automation-microbench/bench-ext/work/cdp-browser'
-SHIM = '/tmp/cdp-fwd/cdp-redirect.cjs'
+SHIM = '/Users/rajeev/Code/web-automation-microbench/bench-ext/runners/_cdp_forward.cjs'
 
 def cdp(*args, timeout=60):
     r = subprocess.run(['node', '-r', SHIM, 'bin/browser.js'] + list(args),

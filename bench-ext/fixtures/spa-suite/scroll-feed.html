@@ -1,9 +1,0 @@
-<!doctype html><title>Scroll Feed</title>
-<style>body{font-family:sans-serif}.item{padding:.5rem;border-bottom:1px solid #eee}</style>
-<h1>News feed</h1><div id=list></div><div id=more>Scroll for more…</div>
-<script>
-let n=0;
-const add=()=>{for(let i=0;i<10;i++){n++;const d=document.createElement('div');d.className='item';d.dataset.id='item-'+n;d.textContent='Item '+n;list.appendChild(d)}};
-add();add();
-new IntersectionObserver(es=>{if(es[0].isIntersecting)add()}).observe(more)
-</script>

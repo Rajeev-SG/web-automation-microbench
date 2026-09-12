@@ -116,16 +116,46 @@ promote to 5 → 10+ only for near-ties/high variance), so no runner hardcodes r
 
 The delivery demonstration ran the top two harnesses on a real, auth-free, session-derived
 task (`chanel-gb-tag-check`), each screened at 2 reps then promoted to 5 — see
-[artifacts/2026-09-15/delivery/report.md](artifacts/2026-09-15/delivery/report.md).
+[artifacts/2026-09-12-delivery/delivery/report.md](artifacts/2026-09-12-delivery/delivery/report.md).
 **browser-relay screened 1/2 then scored 4/5; BrowserSkill screened 2/2 then scored 3/5.**
 The promotion corrected screening in both directions: 2 reps understated browser-relay and
 overstated BrowserSkill.
 
-The registry also ingests conformant task specs with **mandatory session provenance**
-(`source_session_id`, `source_url`, `verified_against`, rejected by a test) — see
-[docs/task-intake.md](docs/task-intake.md). The task set stays empty pending
-`codex-session-orchestration-analysis#88`.
+## Harvested browser corpus (#27)
+
+The capability suite is **vendored, not authored**. `codex-session-orchestration-analysis#88`
+harvests replayable tasks from real AgentSessions work; its browser families (PRs #105, #107)
+are copied read-only into [`corpus/tasks/`](corpus/tasks) with a producer-revision + sha256 pin
+in [`corpus/SOURCE.json`](corpus/SOURCE.json). Only `task_class == "web-automation"` tasks are
+consumed, and there is no fixed suite size.
+
+**11 browser tasks**, each auth-free with a page-recomputed verifier and a declarative pass rule:
+marketing-tag inspection (CHANEL PDP, Porsche UK, PUMA UK), third-party script inventory
+(Porsche UK, PUMA UK), SEO/structured-data audit (rajeevg.com, PUMA UK), crawlability
+(rajeevg.com), canvas diagram creation (tldraw), and consent → find product → add to cart → tag
+check (Allbirds UK, Gymshark UK).
+
+```bash
+python3 bench-ext/corpus/refresh.py --from <producer checkout>   # re-vendor / --check for drift
+python3 bench-ext/task_ingest.py                                 # validate -> benchlib.Task
+python3 bench-ext/corpus/screen.py --harness raw-playwright --reps 1 --all
+python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/2026-09-12/corpus
+```
+
+`task_ingest.py` registers each spec with **no per-task Python**: instruction, URL, observation
+and verifier come from the spec, and the pass predicate is the spec's own declarative rule,
+evaluated by [`pass_rule.py`](pass_rule.py) (a port of the producer's rule interpreter).
+`screen.py` reuses the existing contender adapters, so a harness added for the TodoMVC race can
+be screened on the corpus unchanged.
+
+The registry still enforces **mandatory session provenance** (`source_session_id`, `source_url`,
+`verified_against`), plus the full `#88` definition contract: `definition_schema`, non-empty
+`capabilities`, a declarative `pass_rule`, a recoverable `pre_state`, and the admission gates
+(no `secret_dependency`, no `blocked_reason`, derivation declared for a variant). See
+[docs/task-intake.md](docs/task-intake.md).
 
 ## Status
 
-These are directional mini-benchmarks on one demo task. They're good enough to rank tools for practical automation work and to rule out clear losers, but they are not the scored real-world corpus benchmark. That larger effort (real sites, login flows, uploads, multi-tab journeys) lives in a separate project and will use this repo's methodology as its starting point.
+Two separate claims, from two separate task sets: **fast-path latency/cost** from the TodoMVC
+microbenchmark, and **real-work capability/reliability** from the harvested browser corpus above.
+TodoMVC never feeds the capability claim.

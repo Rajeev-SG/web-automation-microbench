@@ -32,7 +32,8 @@ Reps (issue #1 topology, centralized — do not hardcode):
 
 Runner flags: `python3 runners/<name>.py [reps...] [--task=<task-id>]`.
   --task   select a registered task (default: todomvc); parsed by benchlib.cli_reps_and_task
-  BENCH_RES=<dir>   override the results directory (default artifacts/2026-09-12/results)
+  BENCH_RES=<dir>   override the results directory (default artifacts/<today>/results, derived
+                  from the wall clock at import — issue #27 removed the frozen future date)
   Entrypoint helper: `benchlib.run_cli(Adapter, max_steps=N)` — one line, parses reps + --task.
   TASK-AWARE (21): BrowserSkill, agent-browser, agent-chrome-cli, bb-browser, browser-act-skills,
   browser-cli, browser-control, browser-relay, cdp-browser, chrome-cdp-skill, chrome-devtools-mcp,
@@ -43,11 +44,24 @@ Runner flags: `python3 runners/<name>.py [reps...] [--task=<task-id>]`.
   They hardcode the TodoMVC task and must not be cited for any other task until wired.
 
 Tasks: anything other than the TodoMVC latency microbenchmark is REAL WORK and must be
-  session-derived. Every non-TodoMVC task carries mandatory provenance
-  (source_session_id, source_url, verified_against); bench-ext/task_intake.py REJECTS a task
-  missing any of them. Derive session ids from the AgentSessions DB read-only — never copy
-  them out of a doc. Real-work tasks register in bench-ext/tasks_real.py.
+  session-derived. There is no hand-authored task module any more (issue #27 removed
+  tasks_v1.py / tasks_real.py): the capability suite is the vendored harvested corpus under
+  bench-ext/corpus/tasks/, ingested at import by bench-ext/task_ingest.py. Every non-TodoMVC
+  task carries mandatory provenance (source_session_id, source_url, verified_against) plus the
+  #88 definition contract (definition_schema, capabilities, declarative pass_rule, pre_state,
+  no secret_dependency/blocked_reason); task_intake.py REJECTS a task missing any of them.
+  Derive session ids from the AgentSessions DB read-only — never copy them out of a doc.
   See docs/task-intake.md and docs/REAL-WORK-MANDATE.md.
+
+  Task execution budget: a harvested task carries its own max_steps/timeout (default 14 steps /
+  300 s) set by task_ingest; TodoMVC keeps the 10-step default. run_rep resolves the budget
+  from the task when the caller does not pass one.
+
+  Screening the corpus (issue #27):
+    python3 bench-ext/corpus/screen.py --harness <name> --reps 1 --all
+    python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/<date>/corpus
+  screen.py discovers the adapter class from the runner module (class names vary), writes one
+  directory per task under the harness, and never retries a failure away.
 
 Adapter contract (subclass or duck-type):
   .name (contender id used in filenames)

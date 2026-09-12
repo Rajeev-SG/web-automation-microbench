@@ -1,0 +1,102 @@
+{
+  "id": "1-raw-playwright",
+  "contender": "raw-playwright",
+  "rep": "1",
+  "task": "puma-uk-seo-metadata-audit",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 3.937,
+      "provider": "Modal",
+      "request_id": "gen-1789250973-bPZ4uoV3LTBEMS7a0iiA",
+      "usage": {
+        "prompt_tokens": 2381,
+        "completion_tokens": 251,
+        "total_tokens": 2632,
+        "cost": 0.0014334705,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00144795,
+          "upstream_inference_prompt_cost": 0.00107145,
+          "upstream_inference_completions_cost": 0.0003765
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "await page.evaluate(() => { const q=s=>document.querySelector(s); const m=s=>{const e=document.querySelector(`meta[${s}]`);return e?e.content:null;}; const types=new Set(); document.querySelectorAll(\"script[type='application/ld+json']\").forEach(s=>{try{const d=JSON.parse(s.textContent); const walk=o=>{if(Array.isArray(o))o.forEach(walk);else if(o&&typeof o==='object'){const t=o['@type'];if(t)Array.isArray(t)?t.forEach(x=>types.add(x)):types.add(t);Object.values(o).forEach(v=>{if(v&&typeof v==='object')walk(v);});}}; walk(d);}catch(e){}}); window.__bench_finding={canonical:q('link[rel=canonical]')?.href||null,ogTitle:m(\"property='og:title'\"),ogType:m(\"property='og:type'\"),hasOgImage:!!m(\"property='og:image'\"),hasH1:!![...document.querySelectorAll('h1')].find(h=>h.textContent.trim()),jsonldTypes:[...types].sort()}; });",
+        "done": false
+      },
+      "browser_s": 0.008,
+      "code": "await page.evaluate(() => { const q=s=>document.querySelector(s); const m=s=>{const e=document.querySelector(`meta[${s}]`);return e?e.content:null;}; const types=new Set(); document.querySelectorAll(\"script[type='application/ld+json']\").forEach(s=>{try{const d=JSON.parse(s.textContent); const walk=o=>{if(Array.isArray(o))o.forEach(walk);else if(o&&typeof o==='object'){const t=o['@type'];if(t)Array.isArray(t)?t.forEach(x=>types.add(x)):types.add(t);Object.values(o).forEach(v=>{if(v&&typeof v==='object')walk(v);});}}; walk(d);}catch(e){}}); window.__bench_finding={canonical:q('link[rel=canonical]')?.href||null,ogTitle:m(\"property='og:title'\"),ogType:m(\"property='og:type'\"),hasOgImage:!!m(\"property='og:image'\"),hasH1:!![...document.querySelectorAll('h1')].find(h=>h.textContent.trim()),jsonldTypes:[...types].sort()}; });",
+      "tool_error": false,
+      "observation": "Golf\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Motorsport\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Basketball\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sale\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"KIDS\",\"id\":\"\",\"cls\":\"tw-8jhgk1 tw-hlsw0v cursor-pointer transition-opacity flex i\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"New Arrivals\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-70 hover:tex\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sports\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Football\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Football Boots\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Football Clothing\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base px-6 py-1 leadi\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Motorsport\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"All Sports\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Boys\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Trainers\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Coats & Jackets\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Hoodies & Sweatshirts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Tracksuits\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Joggers\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"T-Shirts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shorts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Socks\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Accessories\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sale\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Girls\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-neutral-100 hover:te\"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Trainers\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Coats & Jackets\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Hoodies & Sweatshirts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Joggers & Leggings\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Matching Sets\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"T-Shirts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Shorts\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Socks\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Accessories\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"},{\"tag\":\"A\",\"type\":\"\",\"text\":\"Sale\",\"id\":\"\",\"cls\":\"tw-4m0ihd tw-hlsw0v cursor-pointer text-base py-1 leading-6 \"}]}"
+    },
+    {
+      "step": 2,
+      "api_s": 0.785,
+      "provider": "Modal",
+      "request_id": "gen-1789250976-cCLqoA0LjckAM4OO5I55",
+      "usage": {
+        "prompt_tokens": 4675,
+        "completion_tokens": 57,
+        "total_tokens": 4732,
+        "cost": 0.0012549735,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00126765,
+          "upstream_inference_prompt_cost": 0.00118215,
+          "upstream_inference_completions_cost": 8.55e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "const v = await page.evaluate(() => window.__bench_finding || null); if (!v) throw new Error('not set'); console.log(JSON.stringify(v));",
+        "done": true,
+        "result": "window.__bench_finding set"
+      }
+    }
+  ],
+  "setup_s": 2.6240815830024076,
+  "total_s": 4.73,
+  "api_s": 4.722,
+  "browser_s": 0.008,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Modal"
+  ],
+  "tokens": {
+    "input": 7056,
+    "output": 308,
+    "cached": 2560,
+    "reasoning": 4
+  },
+  "cost": 0.0007022,
+  "done": true,
+  "error": null,
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Corporation\",\"WebSite\"]},\"finding\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}}",
+  "pass": false
+}

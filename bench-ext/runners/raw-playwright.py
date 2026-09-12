@@ -13,6 +13,10 @@ const { chromium } = require('playwright');
   const context = await browser.newContext();
   const page = await context.newPage();
   const readline = require('readline');
+  // The model's code runs in this process, so a stray console.log would land on
+  // stdout and be mistaken for the protocol response. Route it to stderr instead.
+  console.log = (...a) => process.stderr.write(a.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ') + '\n');
+  console.info = console.log; console.debug = console.log;
   const rl = readline.createInterface({ input: process.stdin, terminal: false });
   for await (const line of rl) {
     if (!line.trim()) continue;
@@ -58,8 +62,21 @@ Do not navigate or reload; the harness manages state. Return ONLY JSON: {"code":
     def __init__(self):
         self.p = None
     def _send(self, req):
+        # Read until the protocol line arrives: any non-protocol output (a stray print,
+        # a Node warning) is logged to stderr rather than mis-parsed as the response.
         self.p.stdin.write(json.dumps(req) + '\n'); self.p.stdin.flush()
-        return json.loads(self.p.stdout.readline())
+        for _ in range(200):
+            line = self.p.stdout.readline()
+            if not line:
+                raise RuntimeError('raw-playwright REPL closed')
+            try:
+                r = json.loads(line)
+            except Exception:
+                sys.stderr.write('[raw-playwright skipped stdout] ' + line[:200])
+                continue
+            if isinstance(r, dict) and 'ms' in r:
+                return r
+        raise RuntimeError('raw-playwright: no protocol response')
     def start(self):
         self.p = subprocess.Popen(['node', '-e', build_repl_js()], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                   text=True, cwd='/Users/rajeev/Code/web-automation-microbench/bench-ext')

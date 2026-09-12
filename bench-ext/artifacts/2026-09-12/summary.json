@@ -42,7 +42,7 @@
     "tok_out_avg": 20,
     "tok_cached_avg": 0,
     "cost_per_run_usd": null,
-    "note": "Taylor-Bayouth/browser-agent: broken adapter loop, kept as historical evidence. SUPERSEDED 2026-09-12: rewritten upstream as visnia-ai/browser-agent, re-scored 2/2 @ 32.5s in Round 4 (artifacts/2026-09-13/summary.json). README exclusion row removed."
+    "note": "Taylor-Bayouth/browser-agent: broken adapter loop, kept as historical evidence. SUPERSEDED 2026-09-12: rewritten upstream as visnia-ai/browser-agent, re-scored 2/2 @ 32.5s in Round 4 (artifacts/2026-09-11-round4/summary.json). README exclusion row removed."
   },
   {
     "contender": "browser-control",

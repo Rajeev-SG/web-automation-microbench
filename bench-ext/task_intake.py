@@ -15,23 +15,34 @@ Two rules this module enforces, both covered by tests in `bench-ext/tests/`:
    session; `find_sessions()` lists candidates by keyword.
 
 Schema note (do not invent a parallel schema): the canonical harvested-corpus *task*
-schema belongs to codex-session-orchestration-analysis#88 and is not published yet. This
-consumer therefore validates against the *published* `pareto-research-task/v1` envelope
-field names (schema, task_id, task_class, evidence_type, objective) plus the browser-domain
-execution fields this repo needs (url, instruction, verification), and leaves the registry
-task set EMPTY pending #88 output. See `docs/task-intake.md` for the exact dependency.
+schema is published by codex-session-orchestration-analysis#88 as
+`pareto-research-task-definition/v1`. This consumer validates the `pareto-research-task/v1`
+envelope field names (schema, task_id, task_class, evidence_type, objective) **and** the
+definition contract the harvester emits: `definition_schema`, the agent-facing execution
+fields (`url`, `instruction`, `capabilities`), the declarative `verification.pass_rule`
+(so the consumer needs no per-task code), the recoverable `pre_state`, and the admission
+gates (`secret_dependency`, `blocked_reason`, `derivation`) — so a spec this validator
+accepts can be registered as a `benchlib.Task` and run. See `docs/task-intake.md`.
 """
 from __future__ import annotations
-import argparse, json, sqlite3, sys
+import argparse, json, os, sqlite3, sys
 from pathlib import Path
 
 # Mirrors Rajeev-SG/codex-session-orchestration-analysis tools/pareto_research.py.
 TASK_SCHEMA = "pareto-research-task/v1"
+# The published definition schema (codex-session-orchestration-analysis#88). A spec this
+# validator accepts must declare it, so the consumer ingests the harvester's own contract.
+DEFINITION_SCHEMA = "pareto-research-task-definition/v1"
 TASK_CLASSES = [
     "small-coding-fix", "feature-implementation", "long-context-coding", "repo-devops",
     "web-automation", "desktop-automation", "document", "research",
 ]
 EVIDENCE_TYPES = ("observed", "controlled")
+# Pass-rule kinds the declarative interpreter (bench-ext/pass_rule.py) can evaluate.
+PASS_RULE_KINDS = ("finding_matches_truth", "structural", "test-runner")
+# Recoverable pre-states the harvester admits (issue #88 gate 4).
+PRE_STATES = ("fresh-page-load", "public-page-load", "repo-checkout")
+DERIVATION_FIDELITIES = ("literal-replay", "derived-variant")
 
 # The three mandatory provenance fields for any real-work task (issue #20 + REAL-WORK-MANDATE.md).
 REQUIRED_PROVENANCE = ("source_session_id", "source_url", "verified_against")
@@ -39,7 +50,9 @@ REQUIRED_PROVENANCE = ("source_session_id", "source_url", "verified_against")
 CONTROLLED_INSTRUMENT_TASK_CLASSES = ()  # TodoMVC is identified by task_id, below.
 TODO_MVC_TASK_ID = "todomvc"
 
-AGENT_SESSIONS_DB = Path.home() / "Library" / "Application Support" / "AgentSessions" / "index.db"
+# Overridable so CI/tests can point at a throwaway DB (missing DB => "not a real session").
+AGENT_SESSIONS_DB = Path(os.environ.get("AGENT_SESSIONS_DB",
+    Path.home() / "Library" / "Application Support" / "AgentSessions" / "index.db"))
 
 
 def _connect(db=AGENT_SESSIONS_DB):
@@ -115,9 +128,57 @@ def validate_task_spec(spec, check_session=True, db=AGENT_SESSIONS_DB):
                 errors.append(f"provenance.source_session_id {sid!r} is not a real AgentSessions session")
 
     # Browser-domain execution fields needed to actually run the task.
-    for field in ("url", "verification"):
+    for field in ("url", "instruction", "verification"):
         if spec.get(field) in (None, ""):
             errors.append(f"missing required field: {field}")
+
+    # --- published #88 definition contract (issue #27) -------------------------------------
+    if spec.get("definition_schema") != DEFINITION_SCHEMA:
+        errors.append(f"definition_schema must be {DEFINITION_SCHEMA}")
+
+    caps = spec.get("capabilities")
+    if not isinstance(caps, list) or not caps:
+        errors.append("capabilities must be a non-empty list (capability metadata is required)")
+
+    verification = spec.get("verification")
+    if isinstance(verification, dict):
+        for field in ("description", "authority"):
+            if not verification.get(field):
+                errors.append(f"missing required verification.{field}")
+        if not verification.get("verify_js") and not verification.get("test_command"):
+            errors.append("verification needs a deterministic verifier (verify_js or test_command)")
+        rule = verification.get("pass_rule")
+        if not isinstance(rule, dict) or rule.get("kind") not in PASS_RULE_KINDS:
+            errors.append(f"verification.pass_rule.kind must be one of {PASS_RULE_KINDS}")
+    elif verification is not None:
+        errors.append("verification must be an object")
+
+    pre = spec.get("pre_state")
+    if not isinstance(pre, dict) or pre.get("kind") not in PRE_STATES:
+        errors.append(f"pre_state.kind must be one of {PRE_STATES}")
+
+    # Admission gates carried on the spec (issue #88 gates 5 and the derivation gate).
+    if spec.get("secret_dependency"):
+        errors.append("secret_dependency is set: an unrecoverable secret cannot be admitted")
+    if spec.get("blocked_reason"):
+        errors.append(f"blocked_reason is set: {spec['blocked_reason']}")
+
+    derivation = spec.get("derivation")
+    if derivation is not None:
+        if not isinstance(derivation, dict):
+            errors.append("derivation must be an object when present")
+        else:
+            if derivation.get("fidelity") not in DERIVATION_FIDELITIES:
+                errors.append(f"derivation.fidelity must be one of {DERIVATION_FIDELITIES}")
+            derived_from = derivation.get("derived_from") or []
+            if not derived_from:
+                errors.append("derivation.derived_from must name at least one real session")
+            else:
+                for sid in derived_from:
+                    if check_session and not session_exists(sid, db=db):
+                        errors.append(f"derivation.derived_from {sid!r} is not a real AgentSessions session")
+            if derivation.get("fidelity") == "derived-variant" and not (derivation.get("varied") and derivation.get("rationale")):
+                errors.append("a derived-variant must declare `varied` and `rationale`")
     return errors
 
 

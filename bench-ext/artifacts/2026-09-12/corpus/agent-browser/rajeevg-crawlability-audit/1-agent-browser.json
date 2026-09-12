@@ -1,0 +1,207 @@
+{
+  "id": "1-agent-browser",
+  "contender": "agent-browser",
+  "rep": "1",
+  "task": "rajeevg-crawlability-audit",
+  "events": [
+    {
+      "step": 1,
+      "api_s": 1.6,
+      "provider": "Together",
+      "request_id": "gen-1789251508-iZJeHwXVOADtNSleLCsO",
+      "usage": {
+        "prompt_tokens": 1833,
+        "completion_tokens": 170,
+        "total_tokens": 2003,
+        "cost": 0.0003563505,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00035995,
+          "upstream_inference_prompt_cost": 0.00027495,
+          "upstream_inference_completions_cost": 8.5e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval \"fetch('/robots.txt').then(r=>r.text()).then(rt=>fetch('/sitemap.xml').then(r=>r.text()).then(st=>{const sm=[...rt.matchAll(/Sitemap:\\s*(\\S+)/g)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...st.matchAll(/<loc>([\\s\\S]*?)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:rt.trim().length>0,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})}}))\""
+      },
+      "browser_s": 0.113,
+      "code": "agent-browser eval \"fetch('/robots.txt').then(r=>r.text()).then(rt=>fetch('/sitemap.xml').then(r=>r.text()).then(st=>{const sm=[...rt.matchAll(/Sitemap:\\s*(\\S+)/g)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...st.matchAll(/<loc>([\\s\\S]*?)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:rt.trim().length>0,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})}}))\"",
+      "tool_error": false,
+      "observation": "licy\\\\nNecessary only\\\\nAllow analytics\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Rajeev Gill\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"text-base font-semibold tracking-tight\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Home\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"About\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Toggle theme\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"View selected solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read my writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Get in touch\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"See all solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Local model write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Build write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Browse all writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I moved the waiting out of my coding agent and into CI\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I Built a Remote Control Plane for Cheap Coding Workers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Email me\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Privacy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"transition-colors hover:text-foreground\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Privacy settings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap fo\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read the privacy policy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex text-sm text-muted-foreground underline underlin\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Necessary only\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Allow analytics\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"}]}\""
+    },
+    {
+      "step": 2,
+      "api_s": 0.521,
+      "provider": "Together",
+      "request_id": "gen-1789251510-Rkl4QUzDLDirMUcc3cgl",
+      "usage": {
+        "prompt_tokens": 3450,
+        "completion_tokens": 27,
+        "total_tokens": 3477,
+        "cost": 0.0003204036,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1728,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00032364,
+          "upstream_inference_prompt_cost": 0.00031014,
+          "upstream_inference_completions_cost": 1.35e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval \"JSON.stringify(window.__bench_finding||null)\""
+      },
+      "browser_s": 0.022,
+      "code": "agent-browser eval \"JSON.stringify(window.__bench_finding||null)\"",
+      "tool_error": false,
+      "observation": "licy\\\\nNecessary only\\\\nAllow analytics\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Rajeev Gill\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"text-base font-semibold tracking-tight\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Home\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"About\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Toggle theme\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"View selected solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read my writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Get in touch\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"See all solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Local model write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Build write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Browse all writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I moved the waiting out of my coding agent and into CI\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I Built a Remote Control Plane for Cheap Coding Workers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Email me\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Privacy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"transition-colors hover:text-foreground\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Privacy settings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap fo\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read the privacy policy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex text-sm text-muted-foreground underline underlin\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Necessary only\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Allow analytics\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"}]}\""
+    },
+    {
+      "step": 3,
+      "api_s": 2.62,
+      "provider": "Together",
+      "request_id": "gen-1789251511-HLF0jwTZuHE59oTIIbKI",
+      "usage": {
+        "prompt_tokens": 4918,
+        "completion_tokens": 294,
+        "total_tokens": 5212,
+        "cost": 0.0004804866,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00048534,
+          "upstream_inference_prompt_cost": 0.00033834,
+          "upstream_inference_completions_cost": 0.000147
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 107,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval \"(async()=>{const r1=await fetch('/robots.txt');const rt=await r1.text();const r2=await fetch('/sitemap.xml');const st=await r2.text();const sm=[...rt.matchAll(/Sitemap:\\s*(\\S+)/g)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...st.matchAll(/<loc>([\\s\\S]*?)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:r1.ok,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})};return JSON.stringify(window.__bench_finding)})()\""
+      },
+      "browser_s": 0.103,
+      "code": "agent-browser eval \"(async()=>{const r1=await fetch('/robots.txt');const rt=await r1.text();const r2=await fetch('/sitemap.xml');const st=await r2.text();const sm=[...rt.matchAll(/Sitemap:\\s*(\\S+)/g)].map(m=>new URL(m[1],location.origin).href).sort();const locs=[...st.matchAll(/<loc>([\\s\\S]*?)<\\/loc>/g)].map(m=>m[1].trim());const host=location.hostname;window.__bench_finding={robotsPresent:r1.ok,robotsSitemaps:sm,sitemapUrlCount:locs.length,allSameHost:locs.every(u=>{try{return new URL(u).hostname===host}catch(e){return false}})};return JSON.stringify(window.__bench_finding)})()\"",
+      "tool_error": false,
+      "observation": "licy\\\\nNecessary only\\\\nAllow analytics\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Rajeev Gill\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"text-base font-semibold tracking-tight\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Home\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"About\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Toggle theme\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"View selected solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read my writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Get in touch\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"See all solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Local model write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Build write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Browse all writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I moved the waiting out of my coding agent and into CI\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I Built a Remote Control Plane for Cheap Coding Workers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Email me\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Privacy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"transition-colors hover:text-foreground\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Privacy settings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap fo\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read the privacy policy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex text-sm text-muted-foreground underline underlin\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Necessary only\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Allow analytics\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"}]}\""
+    },
+    {
+      "step": 4,
+      "api_s": 0.51,
+      "provider": "Together",
+      "request_id": "gen-1789251513-GD6jZX6BvQOvTnonFkYB",
+      "usage": {
+        "prompt_tokens": 6552,
+        "completion_tokens": 19,
+        "total_tokens": 6571,
+        "cost": 0.000412137,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4800,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004163,
+          "upstream_inference_prompt_cost": 0.0004068,
+          "upstream_inference_completions_cost": 9.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "code": "agent-browser eval \"JSON.stringify(window.__bench_finding)\""
+      },
+      "browser_s": 0.023,
+      "code": "agent-browser eval \"JSON.stringify(window.__bench_finding)\"",
+      "tool_error": false,
+      "observation": "licy\\\\nNecessary only\\\\nAllow analytics\\\",\\\"controls\\\":[{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Rajeev Gill\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"text-base font-semibold tracking-tight\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Home\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"About\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"rounded-md px-3 py-2 text-sm text-muted-foreground transitio\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Toggle theme\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"View selected solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read my writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Get in touch\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"mt-4 inline-flex items-center gap-2 font-medium text-foregro\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"See all solutions\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Local model write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Build write-up\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"GitHub\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Live site\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap te\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Browse all writing\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center gap-2 text-sm font-medium hover:und\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I moved the waiting out of my coding agent and into CI\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"I Built a Remote Control Plane for Cheap Coding Workers\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"ChatGPT as Controller, GitHub as Memory, a Local GLM Worker \\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"hover:underline\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Email me\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Privacy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"transition-colors hover:text-foreground\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Privacy settings\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center whitespace-nowrap fo\\\"},{\\\"tag\\\":\\\"A\\\",\\\"type\\\":\\\"\\\",\\\"text\\\":\\\"Read the privacy policy\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex text-sm text-muted-foreground underline underlin\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Necessary only\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"},{\\\"tag\\\":\\\"BUTTON\\\",\\\"type\\\":\\\"button\\\",\\\"text\\\":\\\"Allow analytics\\\",\\\"id\\\":\\\"\\\",\\\"cls\\\":\\\"inline-flex items-center justify-center gap-2 whitespace-now\\\"}]}\""
+    },
+    {
+      "step": 5,
+      "api_s": 1.176,
+      "provider": "Together",
+      "request_id": "gen-1789251514-1rpXS9zr2BZVbj3vIIjt",
+      "usage": {
+        "prompt_tokens": 8018,
+        "completion_tokens": 90,
+        "total_tokens": 8108,
+        "cost": 0.0004672998,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6464,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00047202,
+          "upstream_inference_prompt_cost": 0.00042702,
+          "upstream_inference_completions_cost": 4.5e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 83,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "answer": {
+        "done": true
+      }
+    }
+  ],
+  "setup_s": 4.539,
+  "total_s": 6.689,
+  "api_s": 6.427,
+  "browser_s": 0.261,
+  "model_calls": 5,
+  "tool_calls": 4,
+  "tool_errors": 0,
+  "retries": 0,
+  "recovery": 0,
+  "provider": [
+    "Together"
+  ],
+  "tokens": {
+    "input": 24771,
+    "output": 600,
+    "cached": 16320,
+    "reasoning": 196
+  },
+  "cost": 0.00261982,
+  "done": true,
+  "error": null,
+  "verification": "\"{\\\"url\\\":\\\"https://rajeevg.com/\\\",\\\"truth\\\":{\\\"robotsPresent\\\":true,\\\"robotsSitemaps\\\":[\\\"https://rajeevg.com/sitemap.xml\\\"],\\\"sitemapUrlCount\\\":76,\\\"allSameHost\\\":true},\\\"finding\\\":{\\\"robotsPresent\\\":true,\\\"robotsSitemaps\\\":[\\\"https://rajeevg.com/sitemap.xml\\\"],\\\"sitemapUrlCount\\\":76,\\\"allSameHost\\\":true},\\\"error\\\":null}\"",
+  "pass": true
+}
