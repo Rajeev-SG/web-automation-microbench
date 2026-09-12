@@ -1,161 +1,39 @@
-# Web Automation Microbenchmarks
+# Web Automation Microbenchmarks — bench-ext
 
-Short, practical head-to-head races between browser automation tools. Every tool gets the same task, the same browser situation, and the same success test — then we measure who finishes reliably, quickly, cheaply, and with the least AI overhead.
+This directory holds the harness library, the runner adapters and the harvested task corpus
+introduced in Round 3.
 
-**Read this if you want the one-paragraph answer:** a thin harness that lets the model write code against the browser (Browser Harness) beats everything else on speed and cost. A vision-first agent (Magnitude) is the most reliable and the best choice for messy, JavaScript-heavy sites — but it costs more tokens and is slower. Anything that ships its own heavyweight agent runtime (BrowserCode) costs 10–100× more for no accuracy gain. Two of the six tools tested dominate the practical frontier; two are dominated and can be dropped.
+**The benchmark itself — results, both leaderboards, and the round-by-round write-ups — lives in
+the repository README: [`../README.md`](../README.md).**
 
-## The test task
+## What is in here
 
-Every round uses the same job on a public demo app (TodoMVC):
-
-1. Add two to-dos: "Email supplier" and "Review invoice".
-2. Tick off only "Email supplier".
-3. Switch to the "Active" filter.
-4. Confirm only "Review invoice" is showing, with "1 item left".
-
-Passing is checked by independent code reading the page and the app's saved data — not by the agent's own say-so. The stopwatch covers just the model+browser work (from first model call to the agent saying "done"), not browser startup or the checking step. Full contract: [docs/benchmark-spec.md](docs/benchmark-spec.md).
-
-## Round 1 — 10 Sep 2026: Playwriter vs Browser Use
-
-Three cheap OpenRouter models, two browser harnesses, two runs each. **All 12 runs passed.**
-
-| Model | Browser Use | Playwriter |
-|---|---|---|
-| GLM 5.3 Flash | 7.4s / 10.1s | 17.4s / 5.3s |
-| DeepSeek V4.1 Flash | 10.4s / 13.6s | 10.6s / 9.6s |
-| Grok 4.6 | 14.2s / 14.2s | 12.1s / 11.6s |
-
-What mattered:
-- **Playwriter's browser actions were ~5× faster** than Browser Use's (0.76s vs 4.12s per task) because it runs one code snippet instead of many round-trips.
-- GLM was the fastest model per call (0.90s median) but had a 12.6s provider hiccup once. DeepSeek was the steadiest. Grok was never the fastest.
-- Browser Use's verification-wait adds real time per click.
-
-Details: [artifacts/2026-09-10/report.md](artifacts/2026-09-10/report.md)
-
-## Round 2 — 11 Sep 2026: four new contenders
-
-All on GLM 5.3-Flash via OpenRouter with **latency-sorted provider routing** (not throughput-sorted "nitro").
-
-| Contender | What it is | Pass | Median time | Tokens in/out | Cost per run |
-|---|---|---|---:|---:|---:|
-| **Browser Harness** | Thin CLI that lets the model write browser code via one CDP connection | 2/2 | **9.9s** | ~6.2k / ~190 | **$0.0005** |
-| **Stagehand v4** | SDK with observe/act/extract and strict JSON contracts | 1/4 | 13.1s | ~6.6k / 300–3,400 | ~$0.0007 |
-| **Magnitude** | Vision-first agent; looks at screenshots, clicks pixel coordinates | 4/4 | 52.6s | ~18.3k / ~3.0k | ~$0.0021 |
-| **BrowserCode** | Full OpenCode-style agent runtime with browser tools | 2/2 | 153.0s | ~55k / ~3.0k | ~$0.026 |
-
-For comparison, the prior round's best times: browser-use+GLM 8.8s, Playwriter+DeepSeek 10.1s, Playwriter+GLM 11.4s.
-
-Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
-
-## Combined verdict
-
-| Question | Answer |
+| Path | What it is |
 |---|---|
-| **Overall winner** | **Browser Harness** — fastest (9.9s median, faster than every Round 1 combination), cheapest (~$0.0005/run), 2/2 reliable. |
-| Fastest | Browser Harness. Its 7.8s best run beat everything, including browser-use's 7.4s (which used default, not latency-sorted, routing). |
-| Most token-efficient | Browser Harness (~6k input / ~190 output tokens per run — roughly 3× cheaper on tokens than Magnitude, 9× cheaper than BrowserCode). |
-| Most reliable | **Magnitude** — 4/4 across four runs, zero flaky behaviour. |
-| Best for complex SPAs | **Magnitude** — screenshot-driven actions never get confused by odd DOM or shadow DOM; it costs more tokens but doesn't break. |
-| Best visual fallback | Magnitude (vision-native by design). Stagehand supports vision too, but it wasn't needed in these DOM-based runs. |
-| **Drop from the stack** | **BrowserCode.** It passed the task but was 15× slower, used 8–15× more tokens, and cost ~55× more than Browser Harness — with no capability advantage to justify it. Its heavyweight agent runtime adds ~26k prompt tokens per call and minutes of overhead. |
+| `benchlib.py` | shared library: task registry, model payload, `run_rep` loop, token/cost accounting, artifact paths |
+| `runners/` | one adapter per contender, each driven by `benchlib.run_cli(Adapter)` |
+| `tests/` | unit suite + the golden TodoMVC fixture + the README/scoreboard consistency guard |
+| `pass_rule.py` | declarative pass-rule interpreter for harvested tasks |
+| `task_intake.py` | validates a task spec against the published `#88` contract |
+| `task_ingest.py` | validate → register as `benchlib.Task`, with no per-task code |
+| `corpus/` | the vendored harvested browser corpus, its pin, and the screen/report tools |
+| `delivery/` | the issue #20 worked-example task spec |
+| `docs/` | task intake contract and the real-work mandate |
+| `artifacts/` | Round 3 on: per-run JSON, screenshots, summaries and reports |
 
-### Notable failure patterns
+## Contracts
 
-- **Stagehand + GLM don't mix.** Stagehand demands strict JSON-schema responses; GLM-5.3-Flash intermittently returns malformed output or misfires actions (in one run it literally typed "Email supplier Enter" as a todo title). This is a model-schema mismatch, not a Stagehand bug — with a stronger model, Stagehand's self-healing local-browser support could do much better. Until then, don't pair them.
-- **Browser Harness gotchas we fixed during the runs:** pressing `Enter` needs exact case (`press_key('Enter')`, not `'ENTER'`), and re-navigating with `goto_url()` can leave CDP input pointed at a stale session — use `new_tab()` for resets. Both documented in the spec so future runners don't rediscover them.
+- TodoMVC round: [`../docs/benchmark-spec.md`](../docs/benchmark-spec.md)
+- Task intake and the harvested corpus: [`docs/task-intake.md`](docs/task-intake.md)
+- No invented tasks, ever: [`docs/REAL-WORK-MANDATE.md`](docs/REAL-WORK-MANDATE.md)
 
-## What "cost" means here
-
-- BrowserCode's cost is OpenRouter's own reported number.
-- Everything else is calculated from exact token counts at the latency-sorted provider's published rate (Makora: $0.075 per million input, $0.25 per million output; cached input ≈ half price).
-- No run exceeded a few cents total.
-
-## Repo layout
-
-```
-artifacts/
-  2026-09-10/            Round 1: per-run JSON + screenshots, results.json,
-                         bench.py (runner), report.md, acceptance-manifest.md
-  2026-09-11/
-    results/             Round 2 per-run JSON + screenshots
-    bench-py.py          Round 2 runner (Browser Harness, BrowserCode)
-    bench-node.mjs       Round 2 runner (Stagehand, Magnitude)
-    report.md            Round 2 full report + Pareto analysis
-    acceptance-manifest.md
-docs/
-  benchmark-spec.md      The contract any future round must follow
-.github/workflows/ci.yml  Validates JSON artifacts, screenshot presence, secret scan
-```
-
-## Reproducing a round
-
-1. `export OPENROUTER_API_KEY=...` (never committed; CI scans for leaks).
-2. Round 1 runner needs Browser Use + Playwriter sessions running with fresh task tabs — edit the session/target IDs at the top of `artifacts/2026-09-10/bench.py`, then `python3 bench.py`.
-3. Round 2 runners need two isolated headless Chrome instances:
-   - port 9233 with `--user-data-dir=<repo>/bcode-data` (for BrowserCode)
-   - port 9234 with `--user-data-dir=<repo>/harness-data` (for Browser Harness)
-   Then: `python3 artifacts/2026-09-11/bench-py.py <rep> harness|bcode` and `node artifacts/2026-09-11/bench-node.mjs stagehand|magnitude <rep>`.
-4. Each script writes `results/<rep>-<contender>.json` plus a screenshot, and prints a one-line summary.
-
-## Adding a new tool
-
-Read [docs/benchmark-spec.md](docs/benchmark-spec.md) first — it defines the exact task text, pass criteria, provider config, timing boundary, required measurements, and the JSON transcript shape. Then follow the runner pattern in `artifacts/2026-09-11/` and add at least two scored reps. Update the README table and add a short Pareto note.
-
-## Task parameterization (#20)
-
-`bench-ext/benchlib.py` is now task-parameterized: a task registry holds tasks
-(`{id, instruction, url, observe_js, verify_js, check, capabilities[], provenance{}}`)
-and `run_rep(adapter, rep, task=..., max_steps=..., timeout=...)` runs one rep of a chosen
-task. TodoMVC stays task `todomvc` with byte-identical text (guarded by a golden-file test);
-all existing runners keep working unchanged. Diagnostics per rep now include the task id,
-tool-call count, retries/recovery, tool errors, provider and cost — and every failed rep is
-kept as evidence.
-
-Rep counts are centralized in `benchlib.REP_TOPOLOGY` (issue #1 topology: 2 screen →
-promote to 5 → 10+ only for near-ties/high variance), so no runner hardcodes reps.
-
-The delivery demonstration ran the top two harnesses on a real, auth-free, session-derived
-task (`chanel-gb-tag-check`), each screened at 2 reps then promoted to 5 — see
-[artifacts/2026-09-12-delivery/delivery/report.md](artifacts/2026-09-12-delivery/delivery/report.md).
-**browser-relay screened 1/2 then scored 4/5; BrowserSkill screened 2/2 then scored 3/5.**
-The promotion corrected screening in both directions: 2 reps understated browser-relay and
-overstated BrowserSkill.
-
-## Harvested browser corpus (#27)
-
-The capability suite is **vendored, not authored**. `codex-session-orchestration-analysis#88`
-harvests replayable tasks from real AgentSessions work; its browser families (PRs #105, #107)
-are copied read-only into [`corpus/tasks/`](corpus/tasks) with a producer-revision + sha256 pin
-in [`corpus/SOURCE.json`](corpus/SOURCE.json). Only `task_class == "web-automation"` tasks are
-consumed, and there is no fixed suite size.
-
-**11 browser tasks**, each auth-free with a page-recomputed verifier and a declarative pass rule:
-marketing-tag inspection (CHANEL PDP, Porsche UK, PUMA UK), third-party script inventory
-(Porsche UK, PUMA UK), SEO/structured-data audit (rajeevg.com, PUMA UK), crawlability
-(rajeevg.com), canvas diagram creation (tldraw), and consent → find product → add to cart → tag
-check (Allbirds UK, Gymshark UK).
+## Running
 
 ```bash
-python3 bench-ext/corpus/refresh.py --from <producer checkout>   # re-vendor / --check for drift
-python3 bench-ext/task_ingest.py                                 # validate -> benchlib.Task
-python3 bench-ext/corpus/screen.py --harness raw-playwright --reps 1 --all
-python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/2026-09-12/corpus
+export OPENROUTER_API_KEY=$(security find-generic-password -s codex-openrouter -w)   # never committed
+python3 bench-ext/runners/<harness>.py 1 2 --task=<task-id>       # one scored rep per number
+python3 bench-ext/corpus/screen.py --harness <harness> --reps 1 --all
 ```
 
-`task_ingest.py` registers each spec with **no per-task Python**: instruction, URL, observation
-and verifier come from the spec, and the pass predicate is the spec's own declarative rule,
-evaluated by [`pass_rule.py`](pass_rule.py) (a port of the producer's rule interpreter).
-`screen.py` reuses the existing contender adapters, so a harness added for the TodoMVC race can
-be screened on the corpus unchanged.
-
-The registry still enforces **mandatory session provenance** (`source_session_id`, `source_url`,
-`verified_against`), plus the full `#88` definition contract: `definition_schema`, non-empty
-`capabilities`, a declarative `pass_rule`, a recoverable `pre_state`, and the admission gates
-(no `secret_dependency`, no `blocked_reason`, derivation declared for a variant). See
-[docs/task-intake.md](docs/task-intake.md).
-
-## Status
-
-Two separate claims, from two separate task sets: **fast-path latency/cost** from the TodoMVC
-microbenchmark, and **real-work capability/reliability** from the harvested browser corpus above.
-TodoMVC never feeds the capability claim.
+Full instructions, the shared runner contract and the round gotchas: [`RUNNER_NOTES.md`](RUNNER_NOTES.md).
+Hand-off state: [`HANDOFF.md`](HANDOFF.md).

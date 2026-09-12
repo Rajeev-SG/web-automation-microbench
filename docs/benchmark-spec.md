@@ -21,7 +21,7 @@ Add exactly two todos: "Email supplier" then "Review invoice". Mark ONLY "Email 
    - `{"title": "Email supplier", "completed": true}`
    - `{"title": "Review invoice", "completed": false}`
 
-The verification code lives in `VERIFY_JS` (`artifacts/2026-09-11/bench-py.py`) and reads both live DOM and persisted state. A run passes only if `done` was signalled by the agent AND verification matches. Do not simplify the criteria per contender.
+The verification code lives in `benchlib.VERIFY_JS` (`bench-ext/benchlib.py`) and reads both live DOM and persisted state; `bench-ext/tests/golden/todomvc.json` freezes the task text and verifier so a round cannot silently change the instrument. A run passes only if `done` was signalled by the agent AND verification matches. Do not simplify the criteria per contender.
 
 ## Model + provider config
 
@@ -78,13 +78,20 @@ Minimum two scored reps per contender (reversed order for the second to cancel o
 
 ## README publishing rule (enforced by CI)
 
-The README contains exactly ONE results table: the "Master leaderboard — every benchmarked tool" table.
+The README carries the results, and CI checks their shape. `ci.yml` parses every Markdown table and
+fails if any table has a column count outside `{3, 6, 7}`; if the seven-column master leaderboard is
+missing or more than one exists; or if an editorial two-column "Question | Answer" table appears.
 
-1. **Schema (fixed, in this order):** `Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run`.
-   - Every benchmarked tool must appear in this table and nowhere else as a results table.
-   - One row per harness × best-model combination. No per-round separate results tables in the README — round sections link to their artifact reports instead of duplicating tables.
-2. **No editorial tables.** No "Overall winner / Fastest / Most reliable / Drop from the stack" Q&A-style tables anywhere in the README. Conclusions live in the opening paragraph and in round reports under `artifacts/<date>/report.md`.
-3. **Numbers must come from artifacts.** Every row's values must be derivable from the round's `summary.json` / result JSONs. When adding or re-scoring a contender, regenerate the row from the artifacts — never hand-edit a number without updating the artifact first.
-4. **Single source:** the only allowed results tables in README.md are the master leaderboard and the exclusions table. Adding any other table (per-round, per-model, verdicts) breaks CI.
-
-CI check: `ci.yml` parses the README, finds every Markdown table, and fails if any results table does not use exactly the seven-column header above, or if more than two tables exist.
+1. **Exactly one master leaderboard**, with the fixed header
+   `Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run`, one row per
+   harness x best-model combination. It is the fast-path (TodoMVC) claim.
+2. **Capability results live in their own tables next to it**, because the capability ordering
+   differs from the fast-path ordering and collapsing them would hide that. They are 3- or 6-column
+   tables (the real-work leaderboard and the per-task difficulty table) and are bound to the
+   committed scoreboard by `bench-ext/tests/test_readme_capability_table.py`.
+3. **No editorial verdict tables.** No "Overall winner / Fastest / Most reliable" Q&A tables.
+   Conclusions live in the opening paragraph and in round reports under `bench-ext/artifacts/<date>/`.
+4. **Numbers must come from artifacts.** Every row must be derivable from the round's
+   `summary.json` / result JSONs. Regenerate from the artifacts rather than hand-editing a number;
+   `tests/test_readme_capability_table.py` fails the build if the README and the scoreboard disagree.
+5. Round sections link to their artifact reports instead of duplicating a table.
