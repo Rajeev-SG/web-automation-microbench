@@ -47,69 +47,40 @@ For comparison, the prior round's best times: browser-use+GLM 8.8s, Playwriter+D
 
 Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
-## All-round comparison — every benchmarked tool
+## Master leaderboard — every benchmarked tool
 
-One row per harness/tool × best-model combination. Times are medians across all scored runs of that combination; pass rate is aggregate. Round 1 ran three models per harness (routing was default, not latency-sorted); Rounds 2–3 ran GLM 5.3-Flash with `provider.sort: latency`; Round 4 (browser-agent) ran GLM 5.3-Flash with default routing (no latency pass-through available in that CLI). Cost = tokens × latency-sorted provider rate (Makora: $0.075/M in, half-rate cached, $0.25/M out) where not OpenRouter-reported. Round 1 token counts were not recorded (timing-only round).
-
-### Rounds 2–4 (GLM 5.3-Flash — directly comparable; Round 4 browser-agent row used default routing, see its report)
+One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report).
 
 | Harness | Repo | Round | Pass | Median time | Tokens in/out | Cost per run |
 |---|---|---|---:|---:|---:|---:|
-| **browser-control** | [keon/browser-control](https://github.com/keon/browser-control) | 3 | 1/2 | **5.5s** | ~13.2k / ~180 | ~$0.0014 |
+| **browser-control** | [keon/browser-control](https://github.com/keon/browser-control) | 3 | 1/2 | **5.5s** | ~13.2k / ~180 | ~$0.0007 |
+| **pinchtab** | [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 3 | 2/2 | 8.3s | ~5.1k / ~200 | ~$0.0003 |
+| **browser-use** | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 1 | 2/2 | 8.7s | n/a | n/a |
 | **Browser Harness** | [in-repo (artifacts/2026-09-11)](https://github.com/Rajeev-SG/web-automation-microbench/tree/main/artifacts/2026-09-11) | 2 | 2/2 | 9.9s | ~6.2k / ~190 | ~$0.0005 |
-| **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 3 | 2/2 | 10.7s | ~6.3k / ~250 | ~$0.0007 |
-| **jarvis-browser** | [bridge25/jarvis-browser](https://github.com/bridge25/jarvis-browser) | 3 | 2/2 | 11.2s | ~8.5k / ~100 | ~$0.0005 |
-| **Stagehand v4** | [browserbase/stagehand](https://github.com/browserbase/stagehand) | 2 | 1/4 | 13.1s | ~6.7k / 300–3,400 | ~$0.0007 |
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 3 | 2/2 | 10.1s | ~20.8k / ~120 | ~$0.0010 |
+| **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 3 | 2/2 | 10.7s | ~6.3k / ~250 | ~$0.0003 |
+| **jarvis-browser** | [bridge25/jarvis-browser](https://github.com/bridge25/jarvis-browser) | 3 | 2/2 | 11.2s | ~8.5k / ~100 | ~$0.0005 |
+| **Stagehand v4** | [browserbase/stagehand](https://github.com/browserbase/stagehand) | 2 | 1/4 | 13.1s | ~6.6k / 300–3,400 | ~$0.0007 |
+| **webctl** | [cosinusalpha/webctl](https://github.com/cosinusalpha/webctl) | 3 | 2/2 | 14.5s | ~8.2k / ~100 | ~$0.0006 |
 | **agent-chrome-cli** | [gxbvc/agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | 3 | 2/2 | 17.4s | ~7.6k / ~180 | ~$0.0004 |
 | **lightpanda** | [lightpanda-io/browser](https://github.com/lightpanda-io/browser) | 3 | 2/2 | 22.7s | ~7.1k / ~590 | ~$0.0006 |
 | **browser-agent** | [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) | 4 | 2/2 | 32.5s | ~43.1k / ~1,360 | ~$0.0036 |
-| **Magnitude** | [magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
-| **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0016 |
-| **webctl** | [cosinusalpha/webctl](https://github.com/cosinusalpha/webctl) | 3 | 2/2 | 14.5s | ~8.2k / ~100 | ~$0.0006 |
-| **pinchtab** | [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 3 | 2/2 | 8.3s | ~5.1k / ~200 | ~$0.0003 |
-| **BrowserCode** | [BrowserCode](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
+| **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 |
+| **Magnitude** | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
+| **Playwriter** | [remorses/playwriter](https://github.com/remorses/playwriter) | 1 | 2/2 | 10.1s | n/a | n/a |
+| **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
 
-### Round 1 (three models, default routing — timing-only)
-
-| Harness | Repo | Best model combo | Pass | Median time |
-|---|---|---|---:|---:|
-| **browser-use** | [browser-use/browser-use](https://github.com/browser-use/browser-use) | GLM 5.3-Flash | 2/2 | **8.7s** |
-| **Playwriter** | [playwriter](https://github.com/remorses/playwriter) | DeepSeek V4.1-Flash | 2/2 | 10.1s |
-
-### Excluded after genuine attempts (Round 3)
+### Excluded after genuine attempts
 
 | Tool | Repo | Reason |
 |---|---|---|
-| browser-agent | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | OpenRouter adapter loop never wired its tool calls (2 runs recorded as evidence) |
-
-Re-run: the tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 — see the comparison table and [artifacts/2026-09-13/report.md](artifacts/2026-09-13/report.md).
+| browser-agent (Taylor-Bayouth) | [Taylor-Bayouth/browser-agent](https://github.com/Taylor-Bayouth/browser-agent) | OpenRouter adapter loop never wired its tool calls (2 runs recorded as evidence); tool was rewritten as [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) and re-scored in Round 4 above |
 | page-agent | [alibaba/page-agent](https://github.com/alibaba/page-agent) | Hub approval gate + Chrome hub-slot race; no provider.sort pass-through |
 | browser-cli | [six-ddc/browser-cli](https://github.com/six-ddc/browser-cli) | Extension install not automatable headlessly |
 | BrowserSkill | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | Extension install not completed in budget |
 | browser-relay | [reliefeai/browser-relay](https://github.com/reliefeai/browser-relay) | No attached tab; extension never loaded |
-| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Not scored. Root causes found: branded Google Chrome now silently ignores `--load-extension` (verbose log: "--load-extension is not allowed in Google Chrome, ignoring"); Chrome for Testing loads the extension fine, but the sidepanel first-run (userscripts-permission dialog + full agent init) needs an interactive pass. GLM key pre-seeded in its IndexedDB — pending |
+| sitegeist | [badlogic/sitegeist](https://github.com/badlogic/sitegeist) | Not scored. Root causes: branded Google Chrome silently ignores `--load-extension` (verbose log: "--load-extension is not allowed in Google Chrome, ignoring"); Chrome for Testing loads the extension fine, but the sidepanel first-run (userscripts-permission dialog + full agent init) needs an interactive pass. GLM key pre-seeded in its IndexedDB — pending |
 | Notte | [nottelabs/notte](https://github.com/nottelabs/notte) | Not started — pending (next step: py3.12 venv + litellm openrouter/z-ai/glm-5.3-flash) |
-
-## Combined verdict (through Round 4)
-
-| Question | Answer |
-|---|---|
-| **Overall winner** | **Browser Harness** — 9.9s median at 2/2, ~$0.0005/run. cdp-browser (10.7s, 2/2, ~$0.0007) and jarvis-browser (11.2s, 2/2, ~$0.0005) now match it within noise. |
-| Fastest single tool | **browser-control** (5.5s) — but only 1/2 pass; its one miss was a step-limit timeout after reaching the correct state, so its true speed is promising but reliability is unproven. |
-| Fastest at 100% pass rate | Browser Harness (9.9s), with cdp-browser (10.7s) right behind. |
-| Most token-efficient | **agent-chrome-cli** (~7.6k in / ~180 out, ~$0.0004/run) — undercuts Browser Harness on cost. jarvis-browser is close (~8.5k / ~100). |
-| Most reliable | Magnitude — 4/4 (Round 2). Among Round 3 tools: cdp-browser, jarvis-browser, agent-chrome-cli, lightpanda, agent-browser, webctl, pinchtab all 2/2 after Round 3 fix-up (PR #7). |
-| Best for complex SPAs | Magnitude (vision-first). lightpanda is a promising DOM-only alternative that passed without Chrome. |
-| Round 4 addition | **browser-agent** ([visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent)) — reliable (2/2, 32.5s median) but ~3× slower and ~7× the tokens of Browser Harness; no capability gain on a plain DOM task, so it stays off the stack for simple jobs. |
-| New in Round 3 | lightpanda passes 2/2 with a non-Chromium engine; raw-playwright baseline confirms the code-mode pattern is cheap but slower than ref-CLIs. |
-| **Drop from the stack** | **BrowserCode** — 15× slower, ~9× more tokens, ~55× more cost, no capability advantage. Also **webctl** was 0/2 until its runner bugs (hidden @refs, @ref check bug) were fixed — it now passes 2/2 at 14.5s; **pinchtab** turned out to be an adapter artifact (literal `type`) and now passes 2/2 at 8.3s median, the fastest fully-reliable Round 3 contender after browser-control. |
-
-### Notable failure patterns
-
-- **Stagehand + GLM don't mix.** Stagehand demands strict JSON-schema responses; GLM-5.3-Flash intermittently returns malformed output or misfires actions (in one run it literally typed "Email supplier Enter" as a todo title). This is a model-schema mismatch, not a Stagehand bug — with a stronger model, Stagehand's self-healing local-browser support could do much better. Until then, don't pair them.
-- **visnia browser-agent quirks (Round 4).** Its CLI config has no `provider.sort` pass-through (only single-provider `openrouter_provider` pinning), so its rows ran on default routing — a small unfairness in its favour/disfavour either way. It also enforces an extract_data → return_results barrier before finishing, which added 2–4 extra steps per run on this task.
-- **Browser Harness gotchas we fixed during the runs:** pressing `Enter` needs exact case (`press_key('Enter')`, not `'ENTER'`), and re-navigating with `goto_url()` can leave CDP input pointed at a stale session — use `new_tab()` for resets. Both documented in the spec so future runners don't rediscover them.
 
 ## What "cost" means here
 
