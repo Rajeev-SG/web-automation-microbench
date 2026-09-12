@@ -5,10 +5,11 @@ harvested in `Rajeev-SG/codex-session-orchestration-analysis` (issue #88) and of
 to this repo as **conformant task specs**; `bench-ext/task_intake.py` validates them and
 the `benchlib` task registry can run them.
 
-This repo does **not** mine, invent, or hand-author tasks. The harvested **corpus** stays
-empty pending #88 output — `bench-ext/tasks_v1.py` tasks 2–9 remain invalid records. The only
-task present is the one issue #20 delivery demonstration (`chanel-gb-tag-check`), kept as
-worked evidence, not as corpus.
+This repo does **not** mine, invent, or hand-author tasks. The harvested **corpus** now
+exists: `codex-session-orchestration-analysis#88` is CLOSED and
+`benchmarks/corpus/tasks/` holds the real task definitions (validated below). Within *this*
+repo, `bench-ext/tasks_v1.py` tasks 2–9 remain invalid records, and the issue #20 delivery
+demonstration (`chanel-gb-tag-check`) stays as worked evidence rather than corpus.
 
 ## The registry
 
@@ -80,20 +81,32 @@ execution fields this repo needs:
 }
 ```
 
-## Outstanding cross-repo dependency
+## Cross-repo dependency (resolved)
 
 `codex-session-orchestration-analysis#88` ("Harvest replayable benchmark tasks
-conservatively from real work") is **OPEN**. The shared **run-envelope** contract
-(`pareto-research-task/v1`) is published (landed in #93), but #88's canonical
-**harvested-corpus task schema** is not yet published, and the harvester CLI is not built.
-This repo therefore validates only against the published envelope field names plus its own
-browser-domain execution fields — it does **not** define a parallel task schema.
+conservatively from real work") is **CLOSED**. Both schemas are published:
 
-Until #88 lands, `benchmarks/corpus/` (the consumer's task set) stays empty. When #88
-publishes, its harvested task definitions must carry, per REAL-WORK-MANDATE.md, at minimum:
-`source_session_id`, `source_url`, `verified_against`, a deterministic verifier, a
-recoverable pre-state, and no unrecoverable secret dependency — those map directly onto the
-spec shape above with no translation layer required.
+| Schema | Where | What it is |
+|---|---|---|
+| `pareto-research-task/v1` | the run envelope | the one this validator checks |
+| `pareto-research-task-definition/v1` | harvested task definitions | the canonical corpus task schema |
+
+The harvester CLI exists (`pareto-research harvest`), and the corpus lives at
+`codex-session-orchestration-analysis/benchmarks/corpus/tasks/`. This repo still validates
+against the published envelope field names plus its own browser-domain execution fields — it
+does **not** define a parallel task schema.
+
+Validate the published corpus from the producer checkout:
+
+```bash
+python3 bench-ext/task_intake.py --validate \
+  /Users/rajeev/Code/codex-session-orchestration-analysis/benchmarks/corpus/tasks
+```
+
+Current result: `{"specs": 14, "valid": 14, "quarantined": 0}` — 9 browser-domain and 5
+coding task definitions, every one carrying `source_session_id`, `source_url`,
+`verified_against`, a deterministic verifier and a recoverable pre-state, per
+REAL-WORK-MANDATE.md, with no translation layer required.
 
 ## Worked example (delivery, issue #20)
 
