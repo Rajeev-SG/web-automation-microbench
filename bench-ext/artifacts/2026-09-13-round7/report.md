@@ -81,9 +81,12 @@ five harnesses.
 | `rajeevg-seo-metadata-audit` | PASS | completed | 5 | 12.0 | 3304 | 953 | $0.00062 |
 | `tldraw-three-shape-diagram` | fail | completed | 14 | 25.8 | 48465 | 1843 | $0.00437 |
 
-**Headline: browser-use-pi is the only harness in the whole set to pass `chanel-gb-pdp-tag-inspection`.**
-That is the anti-bot boundary where the thin CLIs score 2/9 (raw-playwright 0/3, BrowserSkill 0/1).
-It records the two GTM container ids correctly, with the tolerance the pass rule allows for extra keys.
+**It passes the anti-bot boundary — but it is not unique in doing so.** It records the two GTM container
+ids correctly on `chanel-gb-pdp-tag-inspection`, with the tolerance the pass rule allows for extra keys.
+The task stands at **3/10 across harnesses, and browser-relay accounts for two of those three (2/3)**.
+Every one of the four tasks browser-use-pi passed is a task browser-relay also passes, so its 4/11 is a
+**strict subset** of browser-relay's 22/33. An earlier draft of this report claimed it was "the only
+harness in the set to pass" this task; that was wrong and is corrected here.
 
 **Honest failures (not harness defects):**
 - `allbirds`/`gymshark` (add-to-cart): the journey actually completed — allbirds' cart reaches
@@ -99,9 +102,11 @@ It records the two GTM container ids correctly, with the tolerance the pass rule
 ## Pareto impact
 
 - **Fast path: no new frontier.** Dominated on (speed, cost) by every thin CLI in the 4–15s block.
-- **Capability: a genuine new point.** It is the first harness to get past the CHANEL anti-bot
-  boundary, which is the capability the benchmark's next phase (messy, authenticated, long-horizon)
-  is actually about. That is a new Pareto point on (capability), not on (speed, cost).
+- **Capability: also no new frontier.** A candidate is Pareto-relevant only if it passes something the
+  frontier does not; browser-use-pi passes nothing browser-relay misses. It reaches the anti-bot
+  boundary but does not extend it. Reporting it as a capability win would have been a miscount of the
+  scoreboard (browser-relay 2/3 vs browser-use-pi 1/1 on that task) — the corrected reading is that
+  the new architecture adds a datapoint, not a Pareto point.
 
 ## Does the persistent code-execution model get more competitive as tasks get longer?
 
@@ -115,11 +120,12 @@ Partially, and not yet. Two observations from the evidence:
    re-derives helpers instead of reusing them. On this corpus it mostly used the REPL as a slower
    one-command-per-step loop.
 
-The honest answer: the architecture *permits* bigger composed actions, but the model did not yet
-exploit it enough to beat either the thin leaders on speed or the strongest rows on reliability. That
-is a **1-rep corpus screen and a 10-rep microbenchmark** — evidence, not a verdict. The claim to test
-next is a long-horizon, multi-tab, authenticated workflow where a single 30-action cell would beat 30
-round-trips.
+The honest answer: the architecture *permits* bigger composed actions, but this run did not exploit
+them enough to beat the thin leaders on speed or the strongest rows on reliability — and it extended
+neither frontier. That is a **1-rep corpus screen and a 10-rep microbenchmark**, so it is evidence
+against the hypothesis rather than a settled verdict. The claim to test next is a long-horizon,
+multi-tab, authenticated workflow where a single 30-action cell would beat 30 round-trips; the
+exploration-report task proposed in issue #3 is exactly that shape.
 
 ## Not yet covered
 

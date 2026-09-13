@@ -17,7 +17,7 @@ not real work, not capability evidence, and must never be cited as such.
 
 Short, practical head-to-head races between browser automation tools. Every tool gets the same task, the same browser situation, and the same success test — then we measure who finishes reliably, quickly, cheaply, and with the least AI overhead.
 
-**Read this if you want the one-paragraph answer:** thin harnesses that let the model issue one native command per step — now the extension-backed CLIs too (BrowserSkill 4.1s, browser-relay 4.3s, browser-cli 6.2s) — beat everything else on speed and cost. Round 6 tested eleven more contenders (the official Microsoft and Chrome DevTools CLIs, ego-browser, browser-act, surf, bb-browser, opencli, chrome-cdp-skill, hyperagent, midscene, skyvern) and **none displaced the front**: the fastest new arrival (chrome-cdp-skill, 11.5s) was also the least reliable (3/5), and the best new row once reliability is counted was chrome-devtools-mcp (5/5 @ 11.8s). A vision-first agent (Magnitude) is the most reliable on messy, JavaScript-heavy sites but costs more tokens and is slower. An agent runtime with only a narrow action set can lose outright: page-agent ships no key-press action, so it cannot commit a TodoMVC todo at all — and Round 6 found two more tools (opencli, bb-browser) that fail the same way because their key events carry no `keyCode`, so React never commits the todo. Anything running its own heavyweight agent loop (BrowserCode, notte, skyvern, midscene) costs 10–100× more wall-clock for no accuracy gain.
+**Read this if you want the one-paragraph answer:** thin harnesses that let the model issue one native command per step — now the extension-backed CLIs too (BrowserSkill 4.1s, browser-relay 4.3s, browser-cli 6.2s) — beat everything else on speed and cost. Round 6 tested eleven more contenders (the official Microsoft and Chrome DevTools CLIs, ego-browser, browser-act, surf, bb-browser, opencli, chrome-cdp-skill, hyperagent, midscene, skyvern) and **none displaced the front**: the fastest new arrival (chrome-cdp-skill, 11.5s) was also the least reliable (3/5), and the best new row once reliability is counted was chrome-devtools-mcp (5/5 @ 11.8s). A vision-first agent (Magnitude) is the most reliable on messy, JavaScript-heavy sites but costs more tokens and is slower. An agent runtime with only a narrow action set can lose outright: page-agent ships no key-press action, so it cannot commit a TodoMVC todo at all — and Round 6 found two more tools (opencli, bb-browser) that fail the same way because their key events carry no `keyCode`, so React never commits the todo. Anything running its own heavyweight agent loop (BrowserCode, notte, skyvern, midscene) costs 10–100× more wall-clock for no accuracy gain. Round 7 tested that claim in its strongest form — an own-loop agent that writes code against raw CDP instead of issuing one command per step — and **the claim held**: Browser Use Pi is 13× slower than the leader on the toy task (53.5s) and its 4/11 real-work score is a strict subset of browser-relay's 22/33, so it extends neither frontier.
 
 ## The test task
 
@@ -64,7 +64,7 @@ Details: [artifacts/2026-09-11/report.md](artifacts/2026-09-11/report.md)
 
 ## Master leaderboard — every benchmarked tool
 
-One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter. **Round 6 rows are mostly 2-rep screening results**, with four promoted to 5 reps (chrome-cdp-skill, chrome-devtools-mcp, ego-browser, playwright-cli) because the 8–16s block was a near-tie and the issue requires promoting plausible frontier candidates. That promotion mattered: **chrome-cdp-skill screened 2/2 at 8.8s and then scored 3/5 over five reps** (reps 4–5 ended at the right persisted state but the wrong URL/filter, and the model reported "done" anyway) — 2-rep screening overstates reliability. Similarly, round-6 rows with only 2 reps should not be ordered finely against each other. Round 6 cost/routing: midscene and skyvern costs are tool-reported and both use default OpenRouter routing (no `provider.sort` pass-through); everything else is latency-sorted. opencli (0/2) and bb-browser (0/2) are **scored tool failures**, not exclusions — both reach the page but their native key event never commits the React todo (see the Round 6 section).
+One row per harness × best-model combination. `Median time` is the median across all scored reps of that row; `Pass` is the aggregate over the same reps. Sorted by median time. Costs: OpenRouter-reported for BrowserCode; else tokens × the latency-sorted provider's published rate (Makora: $0.075/M in, cached ≈ half, $0.25/M out). Round 1 rows are timing-only (token counts were not recorded); Round 4 browser-agent ran default routing (no latency pass-through in that CLI — see its report). Round 3 fix-up rows: browser-cli, browser-relay and BrowserSkill run the shared benchlib GLM loop (latency-sorted); notte and page-agent ship their own agent runtimes, so their tokens/cost are not observable to the harness — and page-agent's LLM client cannot take latency routing. Round 5 page-agent is a **patched build**, not the stock release: stock page-agent scores 0/2 (it ships no key-press action, so it can never commit a TodoMVC todo). The patch adds `send_keys` and dispatches the key from the page's MAIN world — see the Round 5 section below. Taylor-Bayouth `browser-agent` is one of two unrelated same-name projects; its 1/2 is stock upstream code plus an OpenRouter adapter. **Round 6 rows are mostly 2-rep screening results**, with four promoted to 5 reps (chrome-cdp-skill, chrome-devtools-mcp, ego-browser, playwright-cli) because the 8–16s block was a near-tie and the issue requires promoting plausible frontier candidates. That promotion mattered: **chrome-cdp-skill screened 2/2 at 8.8s and then scored 3/5 over five reps** (reps 4–5 ended at the right persisted state but the wrong URL/filter, and the model reported "done" anyway) — 2-rep screening overstates reliability. Similarly, round-6 rows with only 2 reps should not be ordered finely against each other. Round 6 cost/routing: midscene and skyvern costs are tool-reported and both use default OpenRouter routing (no `provider.sort` pass-through); everything else is latency-sorted. opencli (0/2) and bb-browser (0/2) are **scored tool failures**, not exclusions — both reach the page but their native key event never commits the React todo (see the Round 6 section). **Round 7's single new row, Browser Use Pi, is a 10-rep result** (7/10, median 53.5s): reps 1–5 screened clean 5/5 and reps 6–10 then exposed three false successes, so the promoted set is reported rather than the flattering subset — another case, like chrome-cdp-skill, where 2-rep screening would have overstated reliability.
 This table is the **fast-path latency/cost** claim only; the separate **real-work capability** claim
 is the next table.
 
@@ -120,7 +120,7 @@ and the defects the runs exposed:
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3/4 · 42.7s | 17/33 | 1, 2, 3 | promoted past screening |
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 2/2 · 10.1s | 6/11 | 1 | |
 | **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 2/2 · 10.7s | 6/11 | 1 | |
-| **browser-use-pi** | [browser-use/browser-use-pi](https://github.com/browser-use/browser-use-pi) | 7/10 · 53.5s | 4/11 | 1 | own-loop (Pi Mono + V8 REPL); the only harness to pass `chanel-gb-pdp-tag-inspection` |
+| **browser-use-pi** | [browser-use/browser-use-pi](https://github.com/browser-use/browser-use-pi) | 7/10 · 53.5s | 4/11 | 1 | own-loop (Pi Mono + V8 REPL); every task it passed, browser-relay also passed |
 | **BrowserSkill** | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | 2/2 · **4.1s** | 2/11 | 1 | **fastest fast-path, weakest real work** — the orderings invert |
 
 Six harness architectures, 110 runs, model `z-ai/glm-5.3-flash`. Cells are `passes / reps`; every
@@ -172,22 +172,23 @@ exactly like notte/skyvern/midscene.
   — it pays a larger prompt and AX/tool plumbing per turn. The three failures are all **false
   successes**: both todos added and the right one toggled, but the view never left `#/` for `#/active`
   and the agent reported done. The independent verifier caught all three.
-- **Real work 4/11 (1-rep screening).** The headline inverts the ordering: **browser-use-pi is the only
-  harness in the whole set to pass `chanel-gb-pdp-tag-inspection`** — the anti-bot boundary where the
-  thin CLIs score 2/9. It also passes `rajeevg-crawlability-audit`, `rajeevg-seo-metadata-audit` and
-  `porsche-uk-tag-inspection`. It fails the add-to-cart journeys (never publishes `window.__bench_finding`,
-  although allbirds' cart is mutation-correct) and the script inventories (under- or double-encoded
-  findings) — honest capability failures, the same near-misses the thin harnesses make.
-- **Pareto impact: no new fast-path frontier.** On (speed, cost) it is dominated by every thin CLI in
-  the 4–15s block. Its distinct value is capability, not speed — the first harness past the CHANEL
-  anti-bot boundary, which is exactly the messy, long-horizon workload the next phase targets.
-- **Does the persistent code-execution model get more competitive as tasks get longer?** Partly, and
-  only up to a point. It is weakest exactly where it should be strongest on paper: the short,
-  deterministic TodoMVC task (53.5s vs 4.1s). On the corpus its **round-trip count** is low (3–6 steps
-  for the one-shot audits) but wall time is high (up to 153s on CHANEL) — each cell round-trip is heavy
-  and it re-derives helpers. At this sample size it has not converted code batching into either speed
-  or reliability. The honest read: the architecture *permits* larger composed actions, but on this
-  corpus the model mostly used it as a slower one-command-per-step loop. Evidence, not a verdict.
+- **Real work 4/11 (1-rep screening)** — `chanel-gb-pdp-tag-inspection`, `porsche-uk-tag-inspection`,
+  `rajeevg-crawlability-audit`, `rajeevg-seo-metadata-audit`. **It passes the anti-bot boundary, but it is
+  not unique in doing so:** the task stands at 3/10 across harnesses and `browser-relay` accounts for two
+  of those three (2/3). Every one of the four tasks browser-use-pi passed is a task browser-relay also
+  passes — its 4/11 is a **strict subset** of browser-relay's 22/33.
+- **Pareto impact: it extends neither frontier.** On (speed, cost) it is dominated by every thin CLI in
+  the 4–15s block. On capability, a candidate is only Pareto-relevant if it passes something the
+  frontier does not, and this one passes nothing the leader misses. It is a new *architecture*
+  datapoint, not a new Pareto point.
+- **Does the persistent code-execution model get more competitive as tasks get longer? The evidence
+  says no, so far.** It is weakest exactly where it should be strongest on paper — the short
+  deterministic TodoMVC task (53.5s vs 4.1s). Its round-trip count is low on the one-shot audits (3–6
+  model calls), which shows the batching capability exists, but wall time is high (up to 152.8s on
+  CHANEL) and reliability did not improve: it largely used the REPL as a slower one-command-per-step
+  loop and re-derived helpers instead of reusing them. The architecture *permits* larger composed
+  actions; on this corpus the model did not exploit them. A 1-rep corpus screen and a 10-rep
+  microbenchmark is evidence against the hypothesis, not a settled verdict.
 
 Full evidence: [bench-ext/artifacts/2026-09-13-round7/report.md](bench-ext/artifacts/2026-09-13-round7/report.md);
 per-rep JSON in `bench-ext/artifacts/2026-09-13/results/` (TodoMVC) and
