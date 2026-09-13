@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}",
+  "text": "{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}",
+  "steps": 4,
+  "durationMs": 25943,
+  "wallMs": 25952,
+  "usage": {
+    "input": 2264,
+    "output": 294,
+    "cacheRead": 5760,
+    "cacheWrite": 0,
+    "totalTokens": 8318,
+    "cost": {
+      "input": 0.00016980000000000003,
+      "output": 0.0000735,
+      "cacheRead": 0.00008639999999999999,
+      "cacheWrite": 0,
+      "total": 0.0003297
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "74042fed-b6ea-4b34-ae96-7979eeaf7b0d",
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false}}",
+  "url_final": "https://www.porsche.com/uk/"
+}

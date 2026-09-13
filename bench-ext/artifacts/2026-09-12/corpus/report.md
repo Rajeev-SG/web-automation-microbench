@@ -7,9 +7,9 @@ no failure is hidden. Machine-readable form: [`capability-scoreboard.json`](capa
 - **Corpus:** 11 harvested browser tasks, vendored read-only from
   `Rajeev-SG/codex-session-orchestration-analysis#88` (PRs #105, #107) and pinned by
   producer revision + per-file sha256 in [`../../corpus/SOURCE.json`](../../corpus/SOURCE.json).
-- **Harness architectures:** `BrowserSkill` (extension-backed in-page agent); `agent-browser` (npm CLI driving CDP); `browser-relay` (CLI + MV3 extension relay, Chrome for Testing); `cdp-browser` (raw CDP CLI); `raw-playwright` (code-mode Playwright (persistent Node REPL holding one page)).
+- **Harness architectures:** `BrowserSkill` (extension-backed in-page agent); `agent-browser` (npm CLI driving CDP); `browser-relay` (CLI + MV3 extension relay, Chrome for Testing); `browser-use-pi` (own-loop: Pi Mono agent loop + persistent V8 REPL + raw CDP); `cdp-browser` (raw CDP CLI); `raw-playwright` (code-mode Playwright (persistent Node REPL holding one page)).
 - **Model/config:** `z-ai/glm-5.3-flash`, temperature 0, reasoning low+excluded, latency-sorted routing (enforced in `benchlib.openrouter_payload`).
-- **Runs:** 99. Stage A = 1 rep per task per harness; the leaders were then promoted to 3 reps (issue #1 topology).
+- **Runs:** 110. Stage A = 1 rep per task per harness; the leaders were then promoted to 3 reps (issue #1 topology).
 - **Screenshots:** `<rep>-<harness>.jpg` beside each run JSON — a size-reduced derivative (max 1400 px, JPEG q70) of the harness's full-page capture, kept small enough to version.
 
 ## Scoreboard
@@ -19,6 +19,7 @@ no failure is hidden. Machine-readable form: [`capability-scoreboard.json`](capa
 | BrowserSkill | 0/1 | 0/1 | 0/1 | 1/1 | 1/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 2/11 |
 | agent-browser | 0/1 | 0/1 | 0/1 | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 1/1 | 0/1 | 6/11 |
 | browser-relay | 0/3 | 2/3 | 0/3 | 3/3 | 3/3 | 3/3 | 1/3 | 3/3 | 3/3 | 3/3 | 1/3 | 22/33 |
+| browser-use-pi | 0/1 | 1/1 | 0/1 | 0/1 | 1/1 | 0/1 | 0/1 | 0/1 | 1/1 | 1/1 | 0/1 | 4/11 |
 | cdp-browser | 0/1 | 0/1 | 1/1 | 1/1 | 0/1 | 1/1 | 0/1 | 1/1 | 1/1 | 1/1 | 0/1 | 6/11 |
 | raw-playwright | 0/3 | 0/3 | 0/3 | 2/3 | 3/3 | 3/3 | 0/3 | 3/3 | 2/3 | 3/3 | 1/3 | 17/33 |
 
@@ -29,17 +30,17 @@ Runs where that disagrees with the value stored at run time: **3** (see `stored_
 
 | Task | Capabilities | Passes (all harnesses) |
 |---|---|---|
-| `allbirds-uk-add-to-cart-tag-check` | consent-handling, commerce-flow, add-to-cart, tag-inspection, real-site | 0/9 |
-| `gymshark-uk-add-to-cart-tag-check` | consent-handling, commerce-flow, add-to-cart, tag-inspection, real-site | 1/9 |
-| `puma-uk-seo-metadata-audit` | seo-audit, head-metadata, structured-data, real-site | 1/9 |
-| `chanel-gb-pdp-tag-inspection` | tag-inspection, dom-script-audit, real-site | 2/9 |
-| `tldraw-three-shape-diagram` | ui-creation, canvas-tool, structural-verification, real-site | 2/9 |
-| `rajeevg-crawlability-audit` | crawlability, robots-txt, sitemap, real-site | 7/9 |
-| `porsche-uk-script-inventory` | vendor-inventory, dom-script-audit, real-site | 8/9 |
-| `porsche-uk-tag-inspection` | tag-inspection, dom-script-audit, real-site | 8/9 |
-| `puma-uk-script-inventory` | vendor-inventory, dom-script-audit, real-site | 8/9 |
-| `puma-uk-tag-inspection` | tag-inspection, dom-script-audit, real-site | 8/9 |
-| `rajeevg-seo-metadata-audit` | seo-audit, head-metadata, structured-data, real-site | 8/9 |
+| `allbirds-uk-add-to-cart-tag-check` | consent-handling, commerce-flow, add-to-cart, tag-inspection, real-site | 0/10 |
+| `gymshark-uk-add-to-cart-tag-check` | consent-handling, commerce-flow, add-to-cart, tag-inspection, real-site | 1/10 |
+| `puma-uk-seo-metadata-audit` | seo-audit, head-metadata, structured-data, real-site | 1/10 |
+| `tldraw-three-shape-diagram` | ui-creation, canvas-tool, structural-verification, real-site | 2/10 |
+| `chanel-gb-pdp-tag-inspection` | tag-inspection, dom-script-audit, real-site | 3/10 |
+| `porsche-uk-script-inventory` | vendor-inventory, dom-script-audit, real-site | 8/10 |
+| `puma-uk-script-inventory` | vendor-inventory, dom-script-audit, real-site | 8/10 |
+| `puma-uk-tag-inspection` | tag-inspection, dom-script-audit, real-site | 8/10 |
+| `rajeevg-crawlability-audit` | crawlability, robots-txt, sitemap, real-site | 8/10 |
+| `porsche-uk-tag-inspection` | tag-inspection, dom-script-audit, real-site | 9/10 |
+| `rajeevg-seo-metadata-audit` | seo-audit, head-metadata, structured-data, real-site | 9/10 |
 
 ## Reading the scoreboard
 

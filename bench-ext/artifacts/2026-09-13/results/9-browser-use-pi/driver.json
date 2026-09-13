@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Task partially completed on https://demo.playwright.dev/todomvc/ (React • TodoMVC):\n\nCompleted and VERIFIED via page state:\n- Added exactly two todos in order: \"Email supplier\", then \"Review invoice\" (both confirmed in .todo-list).\n- Marked ONLY \"Email supplier\" complete via its toggle checkbox. Verified state: items = [{t:\"Email supplier\", done:true}, {t:\"Review invoice\", done:false}] and footer count \"1 item left\".\n- Did NOT clear completed.\n\nNOT completed (missing evidence): The \"Click Active filter\" step and the subsequent filter-view verification were NOT performed — the budget was exhausted before that action. The observed \"1 item left\" count and per-item completed states are verified, but the Active-filter view showing only \"Review invoice\" was never observed.",
+  "text": "Task partially completed on https://demo.playwright.dev/todomvc/ (React • TodoMVC):\n\nCompleted and VERIFIED via page state:\n- Added exactly two todos in order: \"Email supplier\", then \"Review invoice\" (both confirmed in .todo-list).\n- Marked ONLY \"Email supplier\" complete via its toggle checkbox. Verified state: items = [{t:\"Email supplier\", done:true}, {t:\"Review invoice\", done:false}] and footer count \"1 item left\".\n- Did NOT clear completed.\n\nNOT completed (missing evidence): The \"Click Active filter\" step and the subsequent filter-view verification were NOT performed — the budget was exhausted before that action. The observed \"1 item left\" count and per-item completed states are verified, but the Active-filter view showing only \"Review invoice\" was never observed.",
+  "steps": 10,
+  "durationMs": 58072,
+  "wallMs": 58084,
+  "usage": {
+    "input": 6628,
+    "output": 914,
+    "cacheRead": 19968,
+    "cacheWrite": 0,
+    "totalTokens": 27510,
+    "cost": {
+      "input": 0.0004971,
+      "output": 0.00022849999999999997,
+      "cacheRead": 0.00029951999999999995,
+      "cacheWrite": 0,
+      "total": 0.00102512
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "1b342904-fdcc-4e5f-8a11-f1b133ed414f",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[{\"text\":\"Email supplier\",\"completed\":true},{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

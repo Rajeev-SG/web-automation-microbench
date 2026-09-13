@@ -168,3 +168,21 @@ the in-flight agent is disposed ("Task aborted"); seed `chrome.storage.local.llm
 ### sitegeist recipe (for whoever retries)
 `@mariozechner/pi-agent-core` + `pi-ai` + `pi-web-ui` all `file:../pi-mono/packages/*` (sitegeist's shipped deps) is unreproducible: `packages/web-ui` does not exist in the vendored clone, and the monorepo build fails on a missing `tsgo`. Pinning all three to the published 0.73.1 family builds but lacks `agent.appendMessage`. Needs upstream to publish a consistent 0.85.x set (incl. web-ui).
 Also patched for headless: `src/sidepanel.ts` must NOT call `UserScriptsPermissionDialog.request()` (it only settles on a human click, so first-run blocks forever) — warn + continue.
+
+## Round 7 handoff (2026-09-13) — Browser Use Pi (issue #34)
+
+Added `browser-use/browser-use-pi` (`@browser_use/pi` 0.1.0 @ fa838f3) as an **own-loop** contender.
+
+- Runner: `bench-ext/runners/browser-use-pi.py` (+ `browser-use-pi.mjs`, + `browser-use-pi-setup.sh`).
+- Corpus driver for own-loop tools: `bench-ext/corpus/screen_native.py`.
+- TodoMVC: **7/10 @ 53.5s** median, ~6.6k/0.7k tokens, ~$0.0010/run — `artifacts/2026-09-13/results/`.
+  Three failures are false successes (never left `#/` for `#/active`) caught by the verifier.
+- Corpus (1-rep screening): **4/11** — `artifacts/2026-09-12/corpus/browser-use-pi/`, folded into the
+  shared scoreboard. **Only harness in the set to pass `chanel-gb-pdp-tag-inspection`.**
+- Report: `artifacts/2026-09-13-round7/report.md`. README: Round 7 section, master-leaderboard row,
+  capability-table row, per-task totals re-derived (/10), and the own-loop guidance in "Adding a new tool".
+- Test updated: `tests/test_readme_capability_table.py` HARNESS_ALIASES += `browser-use-pi`;
+  `corpus/report.py` HARNESS_NOTES += `browser-use-pi`.
+
+Still open on #34: authenticated / own-Chrome and multi-tab long-horizon tasks (the corpus is auth-free),
+and a 3-rep promotion of the corpus row.

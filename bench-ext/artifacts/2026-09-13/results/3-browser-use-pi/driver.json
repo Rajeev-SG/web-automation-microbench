@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Verified final state on https://demo.playwright.dev/todomvc/: Added \"Email supplier\" then \"Review invoice\" (both appeared in the list). Marked only \"Email supplier\" completed via its toggle (counter showed \"1 item left\"). Clicked the Active filter (it became the selected filter). Observed final state: Active list shows only \"Review invoice\", footer shows \"1 item left\". Completed items were not cleared.",
+  "text": "Verified final state on https://demo.playwright.dev/todomvc/: Added \"Email supplier\" then \"Review invoice\" (both appeared in the list). Marked only \"Email supplier\" completed via its toggle (counter showed \"1 item left\"). Clicked the Active filter (it became the selected filter). Observed final state: Active list shows only \"Review invoice\", footer shows \"1 item left\". Completed items were not cleared.",
+  "steps": 6,
+  "durationMs": 32763,
+  "wallMs": 32771,
+  "usage": {
+    "input": 2485,
+    "output": 522,
+    "cacheRead": 9664,
+    "cacheWrite": 0,
+    "totalTokens": 12671,
+    "cost": {
+      "input": 0.00018637500000000002,
+      "output": 0.00013049999999999997,
+      "cacheRead": 0.00014495999999999997,
+      "cacheWrite": 0,
+      "total": 0.00046183499999999996
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "c68f3549-409c-4673-b368-5fa68c4add08",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

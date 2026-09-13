@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "porsche-uk-script-inventory",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":3,\"wallMs\":36670,\"verification\":\"{\\\"url\\\":\\\"https://www.porsche.com/uk/\\\",\\\"truth\\\":{\\\"hosts\\\":[\\\"cdn.ui.porsche.com\\\",\\\"cookie.porsche.com\\\",\\\"www.porsche.com\\\"]},\\\"finding\\\":\\\"{\\\\\\\"hosts\\\\\\\":[\\\\\\\"cdn.ui.porsche.com\\\\\\\",\\\\\\\"cookie.porsche.com\\\\\\\",\\\\\\\"www.porsche.\"}\n",
+  "wall_s": 38.079,
+  "status": "completed",
+  "done": true,
+  "total_s": 36.67,
+  "duration_s": 36.662,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "steps": 3,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 2172,
+    "output": 250,
+    "cached": 3584,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00027916,
+  "cost_from_tokens": 0.0003598,
+  "agent_output": "{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.porsche.com\"]}",
+  "agent_error": null,
+  "run_id": "ebb45d34-746c-412d-8e8d-88b163168f65",
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.porsche.com\"]},\"finding\":\"{\\\"hosts\\\":[\\\"cdn.ui.porsche.com\\\",\\\"cookie.porsche.com\\\",\\\"www.porsche.com\\\"]}\"}",
+  "pass": false
+}

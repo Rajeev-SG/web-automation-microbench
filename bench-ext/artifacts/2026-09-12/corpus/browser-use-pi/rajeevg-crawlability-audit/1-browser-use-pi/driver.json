@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":79,\"allSameHost\":true}",
+  "text": "{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":79,\"allSameHost\":true}",
+  "steps": 10,
+  "durationMs": 21624,
+  "wallMs": 21633,
+  "usage": {
+    "input": 8249,
+    "output": 639,
+    "cacheRead": 18112,
+    "cacheWrite": 0,
+    "totalTokens": 27000,
+    "cost": {
+      "input": 0.000618675,
+      "output": 0.00015975,
+      "cacheRead": 0.00027167999999999995,
+      "cacheWrite": 0,
+      "total": 0.001050105
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "d666ce2f-867c-4202-a7ce-fc8e0ecfe9bc",
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":79,\"allSameHost\":true},\"finding\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":79,\"allSameHost\":true},\"error\":null}",
+  "url_final": "https://rajeevg.com/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "7-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "7",
+  "task": "todomvc",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":8,\"wallMs\":55946,\"verification\":\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":f\"}\n",
+  "wall_s": 57.086,
+  "status": "completed",
+  "done": true,
+  "total_s": 55.946,
+  "duration_s": 55.937,
+  "model_calls": 8,
+  "tool_calls": 8,
+  "steps": 8,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 6576,
+    "output": 624,
+    "cached": 11712,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00082488,
+  "cost_from_tokens": 0.0010884,
+  "agent_output": "Task completed and verified at https://demo.playwright.dev/todomvc/: Added \"Email supplier\" then \"Review invoice\"; marked only \"Email supplier\" complete; clicked the Active filter. Final observed state: Active tab selected (#/active), list shows only \"Review invoice\", footer reads \"1 item left\", and completed todo was not cleared (Clear completed not clicked). Screenshot confirms.",
+  "agent_error": null,
+  "run_id": "90d39c32-0be6-4175-a705-6432a1013df2",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

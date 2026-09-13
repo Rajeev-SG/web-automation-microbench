@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.porsche.com\"]}",
+  "text": "{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.porsche.com\"]}",
+  "steps": 3,
+  "durationMs": 36662,
+  "wallMs": 36670,
+  "usage": {
+    "input": 2172,
+    "output": 250,
+    "cacheRead": 3584,
+    "cacheWrite": 0,
+    "totalTokens": 6006,
+    "cost": {
+      "input": 0.0001629,
+      "output": 0.0000625,
+      "cacheRead": 0.00005376,
+      "cacheWrite": 0,
+      "total": 0.00027916
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "ebb45d34-746c-412d-8e8d-88b163168f65",
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.porsche.com\"]},\"finding\":\"{\\\"hosts\\\":[\\\"cdn.ui.porsche.com\\\",\\\"cookie.porsche.com\\\",\\\"www.porsche.com\\\"]}\"}",
+  "url_final": "https://www.porsche.com/uk/"
+}

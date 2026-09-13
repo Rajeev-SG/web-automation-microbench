@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "allbirds-uk-add-to-cart-tag-check",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":14,\"wallMs\":53233,\"verification\":\"{\\\"url\\\":\\\"https://www.allbirds.co.uk/products/mens-tree-runners-jet-black?size=uk-9&variant=34515140870276\\\",\\\"truth\\\":{\\\"consentAccepted\\\":true,\\\"cartItemCount\\\":1,\\\"tagsAfterAdd\\\":[\\\"analytics.tiktok.com\\\",\\\"goog\"}\n",
+  "wall_s": 54.496,
+  "status": "completed",
+  "done": true,
+  "total_s": 53.233,
+  "duration_s": 53.223,
+  "model_calls": 14,
+  "tool_calls": 14,
+  "steps": 14,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 16593,
+    "output": 1589,
+    "cached": 29952,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.002091,
+  "cost_from_tokens": 0.00276493,
+  "agent_output": "{\"consentAccepted\": true, \"productTitle\": \"Men's Tree Runner - Jet Black (Black Sole)\", \"cartItemCount\": null, \"tagsAfterAdd\": [], \"incomplete\": true, \"missingEvidence\": [\"Final 5s settle and __bench_report_at/__bench_finding eval not executed due to budget exhaustion; cartItemCount unverified (cart count observation after add missing)\", \"tagsAfterAdd is an empty inferred list, NOT verified network observation - no request log was captured\"], \"stepsCompleted\": [\"Cookie banner accepted ('Accept' clicked)\", \"Opened https://www.allbirds.co.uk/products/mens-tree-runners-jet-black\", \"Size UK9 selected (class showed selected state)\", \"window.__bench_marker set immediately before one Add to Cart - \u00a3110 click\"]}",
+  "agent_error": null,
+  "run_id": "48e1d468-8cb0-47b9-8be5-85cf4bd6dd7b",
+  "verification": "{\"url\":\"https://www.allbirds.co.uk/products/mens-tree-runners-jet-black?size=uk-9&variant=34515140870276\",\"truth\":{\"consentAccepted\":true,\"cartItemCount\":1,\"tagsAfterAdd\":[\"analytics.tiktok.com\",\"googleads.g.doubleclick.net\",\"www.googleadservices.com\"]},\"finding\":null}",
+  "pass": false
+}

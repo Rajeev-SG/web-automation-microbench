@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"canonical\":\"https://rajeevg.com/\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]}",
+  "text": "{\"canonical\":\"https://rajeevg.com/\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]}",
+  "steps": 5,
+  "durationMs": 11946,
+  "wallMs": 11956,
+  "usage": {
+    "input": 3304,
+    "output": 953,
+    "cacheRead": 8640,
+    "cacheWrite": 0,
+    "totalTokens": 12897,
+    "cost": {
+      "input": 0.0002478,
+      "output": 0.00023825,
+      "cacheRead": 0.0001296,
+      "cacheWrite": 0,
+      "total": 0.0006156499999999999
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "bc18a6f6-9359-4017-9e19-48f5f6de7c07",
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"canonical\":\"https://rajeevg.com\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]},\"finding\":{\"canonical\":\"https://rajeevg.com/\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]}}",
+  "url_final": "https://rajeevg.com/"
+}

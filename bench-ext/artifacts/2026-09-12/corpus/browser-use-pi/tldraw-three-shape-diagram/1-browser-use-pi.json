@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "tldraw-three-shape-diagram",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":14,\"wallMs\":25762,\"verification\":\"{\\\"url\\\":\\\"https://www.tldraw.com/\\\",\\\"truth\\\":{\\\"labels\\\":[],\\\"nodes\\\":[],\\\"arrows\\\":0,\\\"overlap\\\":false},\\\"finding\\\":null}\"}\n",
+  "wall_s": 26.685,
+  "status": "completed",
+  "done": true,
+  "total_s": 25.762,
+  "duration_s": 25.754,
+  "model_calls": 14,
+  "tool_calls": 14,
+  "steps": 14,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 48465,
+    "output": 1843,
+    "cached": 18432,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.0043721,
+  "cost_from_tokens": 0.00478682,
+  "agent_output": "Task incomplete. Evidence gathered on tldraw.com: window.editor (tldraw v3 API) was used to successfully create three non-overlapping rectangles at x=100/500/900, y=200, w=200, h=120, labeled Runner/Browser/Verifier via props.richText (verified via editor.getShape). Arrow creation failed with a ValidationError: arrow props.start/end in this tldraw version require numeric x/y point properties plus bindings, so the two arrows were never created and window.__bench_finding was never set (budget exhausted before retry or verification). No result files were saved. Missing evidence: arrow shapes, final left-to-right visual confirmation, and the required window.__bench_finding record.",
+  "agent_error": null,
+  "run_id": "4d62215c-3a1e-4a73-b7ce-225a8d167a79",
+  "verification": "{\"url\":\"https://www.tldraw.com/\",\"truth\":{\"labels\":[],\"nodes\":[],\"arrows\":0,\"overlap\":false},\"finding\":null}",
+  "pass": false
+}

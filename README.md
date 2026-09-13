@@ -99,6 +99,7 @@ is the next table.
 | **midscene** | [web-infra-dev/midscene](https://github.com/web-infra-dev/midscene) | 6 | 2/2 | 33.4s | ~444k / ~62k | ~$0.074 |
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 |
 | **Magnitude** | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
+| **Browser Use Pi** | [browser-use/browser-use-pi](https://github.com/browser-use/browser-use-pi) | 7 | 7/10 | 53.5s | ~6.6k / ~0.7k | ~$0.0010 |
 | **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
 | **notte** | [nottelabs/notte](https://github.com/nottelabs/notte) | 3 | 2/2 | 171.8s | n/a | n/a |
 | **skyvern** | [Skyvern-AI/skyvern](https://github.com/Skyvern-AI/skyvern) | 6 | 2/2 | 186.5s | ~29.0k / ~4.2k | ~$0.0055 |
@@ -119,31 +120,78 @@ and the defects the runs exposed:
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3/4 · 42.7s | 17/33 | 1, 2, 3 | promoted past screening |
 | **agent-browser** | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 2/2 · 10.1s | 6/11 | 1 | |
 | **cdp-browser** | [sids/cdp-browser](https://github.com/sids/cdp-browser) | 2/2 · 10.7s | 6/11 | 1 | |
+| **browser-use-pi** | [browser-use/browser-use-pi](https://github.com/browser-use/browser-use-pi) | 7/10 · 53.5s | 4/11 | 1 | own-loop (Pi Mono + V8 REPL); the only harness to pass `chanel-gb-pdp-tag-inspection` |
 | **BrowserSkill** | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | 2/2 · **4.1s** | 2/11 | 1 | **fastest fast-path, weakest real work** — the orderings invert |
 
-Five harness architectures, 99 runs, model `z-ai/glm-5.3-flash`. Cells are `passes / reps`; every
+Six harness architectures, 110 runs, model `z-ai/glm-5.3-flash`. Cells are `passes / reps`; every
 number is recomputed from the per-rep JSON in `bench-ext/artifacts/2026-09-12/corpus/`, and nothing is
 retried away. Screening was 1 rep per task; the two leaders were then promoted to 3 reps, which
 exposed failures a single rep understated.
 
 | Task | Capability | Passes (all harnesses) |
 |---|---|---|
-| `allbirds-uk-add-to-cart-tag-check` | consent → add to cart → tags | 0/9 |
-| `gymshark-uk-add-to-cart-tag-check` | consent → add to cart → tags | 1/9 |
-| `puma-uk-seo-metadata-audit` | SEO / structured data | 1/9 |
-| `chanel-gb-pdp-tag-inspection` | tag inspection (anti-bot boundary) | 2/9 |
-| `tldraw-three-shape-diagram` | canvas UI creation | 2/9 |
-| `rajeevg-crawlability-audit` | robots.txt + sitemap | 7/9 |
-| `porsche-uk-script-inventory` | third-party script inventory | 8/9 |
-| `porsche-uk-tag-inspection` | tag inspection | 8/9 |
-| `puma-uk-script-inventory` | third-party script inventory | 8/9 |
-| `puma-uk-tag-inspection` | tag inspection | 8/9 |
-| `rajeevg-seo-metadata-audit` | SEO / structured data | 8/9 |
+| `allbirds-uk-add-to-cart-tag-check` | consent → add to cart → tags | 0/10 |
+| `gymshark-uk-add-to-cart-tag-check` | consent → add to cart → tags | 1/10 |
+| `puma-uk-seo-metadata-audit` | SEO / structured data | 1/10 |
+| `tldraw-three-shape-diagram` | canvas UI creation | 2/10 |
+| `chanel-gb-pdp-tag-inspection` | tag inspection (anti-bot boundary) | 3/10 |
+| `rajeevg-crawlability-audit` | robots.txt + sitemap | 8/10 |
+| `porsche-uk-script-inventory` | third-party script inventory | 8/10 |
+| `puma-uk-script-inventory` | third-party script inventory | 8/10 |
+| `puma-uk-tag-inspection` | tag inspection | 8/10 |
+| `porsche-uk-tag-inspection` | tag inspection | 9/10 |
+| `rajeevg-seo-metadata-audit` | SEO / structured data | 9/10 |
 
-**Read it as:** the one-shot "inspect the live page and report" audits converge (8-9/9) on any harness
+**Read it as:** the one-shot "inspect the live page and report" audits converge on any harness
 that can evaluate JS in the page; the multi-step journeys (add-to-cart) and canvas construction sit
-above the current frontier (0-2/9). `puma-uk-seo-metadata-audit` fails because models over-report
+above the current frontier. `puma-uk-seo-metadata-audit` fails because models over-report
 nested JSON-LD types. Discriminating difficulty, not broken tasks.
+
+## Round 7 — 13 Sep 2026: Browser Use Pi (issue #34)
+
+[Browser Use Pi](https://github.com/browser-use/browser-use-pi) is not another thin CLI. Its
+architecture is **Pi Mono agent loop → persistent V8 REPL → raw CDP → Chrome**, with AX-tree and
+screenshot observations: the model writes JavaScript cells against a browser API it builds for itself
+as it goes. That is genuinely different from every row above, so it clears the §10 admission bar — and
+its claim is not fast-path latency but long-horizon **code batching**.
+
+Pin: `@browser_use/pi` **0.1.0** at git `fa838f3`; Node 22.19+; `bench-ext/runners/browser-use-pi-setup.sh`
+reproduces the install. GLM 5.3 Flash via OpenRouter with `provider.sort: "latency"` — the model is
+registered into Pi's pinned catalog with `compat.openRouterRouting`, so the same latency-sorted
+routing the other rows use is passed through. Browser: **local Chrome** (`Browser.chromium`, headless),
+not Browser Use Cloud. It ships its own agent loop, so it is timed as one `agent.run()` per rep —
+exactly like notte/skyvern/midscene.
+
+| Round | Reps | Pass | Median time | Tokens in/out | Cost per run |
+|---|---:|---:|---:|---:|---:|
+| 7 | 10 | **7/10** | **53.5s** | ~6.6k / ~0.7k | ~$0.0010 |
+
+- **TodoMVC 7/10 @ 53.5s** (reps 1–5 screened clean 5/5; reps 6–10 exposed three false successes —
+  the reason 2-rep screening is not trusted here). Slower and less reliable than the thin leaders
+  (BrowserSkill 4.1s): on a three-action task, code batching does not beat one native command per step
+  — it pays a larger prompt and AX/tool plumbing per turn. The three failures are all **false
+  successes**: both todos added and the right one toggled, but the view never left `#/` for `#/active`
+  and the agent reported done. The independent verifier caught all three.
+- **Real work 4/11 (1-rep screening).** The headline inverts the ordering: **browser-use-pi is the only
+  harness in the whole set to pass `chanel-gb-pdp-tag-inspection`** — the anti-bot boundary where the
+  thin CLIs score 2/9. It also passes `rajeevg-crawlability-audit`, `rajeevg-seo-metadata-audit` and
+  `porsche-uk-tag-inspection`. It fails the add-to-cart journeys (never publishes `window.__bench_finding`,
+  although allbirds' cart is mutation-correct) and the script inventories (under- or double-encoded
+  findings) — honest capability failures, the same near-misses the thin harnesses make.
+- **Pareto impact: no new fast-path frontier.** On (speed, cost) it is dominated by every thin CLI in
+  the 4–15s block. Its distinct value is capability, not speed — the first harness past the CHANEL
+  anti-bot boundary, which is exactly the messy, long-horizon workload the next phase targets.
+- **Does the persistent code-execution model get more competitive as tasks get longer?** Partly, and
+  only up to a point. It is weakest exactly where it should be strongest on paper: the short,
+  deterministic TodoMVC task (53.5s vs 4.1s). On the corpus its **round-trip count** is low (3–6 steps
+  for the one-shot audits) but wall time is high (up to 153s on CHANEL) — each cell round-trip is heavy
+  and it re-derives helpers. At this sample size it has not converted code batching into either speed
+  or reliability. The honest read: the architecture *permits* larger composed actions, but on this
+  corpus the model mostly used it as a slower one-command-per-step loop. Evidence, not a verdict.
+
+Full evidence: [bench-ext/artifacts/2026-09-13-round7/report.md](bench-ext/artifacts/2026-09-13-round7/report.md);
+per-rep JSON in `bench-ext/artifacts/2026-09-13/results/` (TodoMVC) and
+`bench-ext/artifacts/2026-09-12/corpus/browser-use-pi/` (corpus).
 
 ## Round 6 — 12 Sep 2026: remaining high-value contenders (issue #17)
 
@@ -281,7 +329,8 @@ instances, ports 9233/9234). Round 1 needs Browser Use + Playwriter sessions wit
 **A real-work capability screen** (the harvested corpus):
 
 ```bash
-python3 bench-ext/corpus/screen.py --harness <harness> --reps 1 --all
+python3 bench-ext/corpus/screen.py --harness <harness> --reps 1 --all          # benchlib adapters
+python3 bench-ext/corpus/screen_native.py --harness <harness> --reps 1 --all   # own-loop harnesses
 python3 bench-ext/corpus/report.py --run-dir bench-ext/artifacts/<run date>/corpus
 ```
 
@@ -300,6 +349,12 @@ reimplement the task, the timer, the token accounting or the schema — `benchli
 Score at least two reps of the TodoMVC microbenchmark, then screen the harvested corpus
 (`bench-ext/corpus/screen.py`) to see where it lands on real work. Update both tables in this
 README, and add a short Pareto note.
+
+**A tool that ships its own agent loop** (notte, skyvern, midscene, Browser Use Pi) is different:
+do **not** reduce it to a benchlib adapter, because one primitive action per model call erases the
+architecture under test. Give it a runner exposing `run_native(rep, task=...)` that drives the tool's
+own loop once per rep, then screen it with `bench-ext/corpus/screen_native.py` (it writes the same run
+JSON, so `corpus/report.py` aggregates it unchanged).
 
 ## Task parameterization — 12 Sep 2026
 

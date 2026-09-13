@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "chanel-gb-pdp-tag-inspection",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":13,\"wallMs\":152784,\"verification\":\"{\\\"url\\\":\\\"https://www.chanel.com/gb/fine-jewellery/p/J13850/bouton-de-camelia-earrings/\\\",\\\"truth\\\":{\\\"gtm\\\":[\\\"GTM-5CXVSL2\\\",\\\"GTM-KNZ4RBR\\\"],\\\"aw\\\":[],\\\"pinterest\\\":false},\\\"finding\\\":{\\\"gtm\\\":[\\\"GTM-5CXVSL2\\\",\\\"GTM-KNZ4\"}\n",
+  "wall_s": 153.965,
+  "status": "completed",
+  "done": true,
+  "total_s": 152.784,
+  "duration_s": 152.775,
+  "model_calls": 13,
+  "tool_calls": 13,
+  "steps": 13,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 4397,
+    "output": 2655,
+    "cached": 38464,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00157048,
+  "cost_from_tokens": 0.00243592,
+  "agent_output": "Finding recorded in window.__bench_finding on the live CHANEL GB product page (loaded after an Akamai block was bypassed by emulating an iPhone Safari user agent; page title confirmed \"Bouton de Cam\u00e9lia earrings - Rose gold - J13850 | CHANEL\").\n\n{\"gtm\": [\"GTM-5CXVSL2\", \"GTM-KNZ4RBR\"], \"googleAds\": [], \"pinterest\": false}\n\nEvidence (verified in page HTML + scripts + window globals):\n- GTM: two containers, both loaded via googletagmanager.com script tags (gtm.js?id=GTM-5CXVSL2 and gtm.js?id=GTM-KNZ4RBR), and both present in window.google_tag_manager.\n- Google Ads: no /AW-[0-9]{6,}/ match anywhere in the HTML.\n- Pinterest: window.pintrk undefined; no ct.pinterest.com or pintrk reference anywhere in HTML.\nPage was not modified.",
+  "agent_error": null,
+  "run_id": "815a883a-77ab-491b-9f79-da44626f84aa",
+  "verification": "{\"url\":\"https://www.chanel.com/gb/fine-jewellery/p/J13850/bouton-de-camelia-earrings/\",\"truth\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"googleAds\":[],\"pinterest\":false}}",
+  "pass": true
+}

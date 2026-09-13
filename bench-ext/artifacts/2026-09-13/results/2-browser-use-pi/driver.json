@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Verified final state on https://demo.playwright.dev/todomvc/#/active: Added \"Email supplier\" then \"Review invoice\" (both observed in list). Marked only \"Email supplier\" completed. With the Active filter selected (hash #/active), only \"Review invoice\" is visible and the footer shows \"1 item left\". Completed todo was not cleared.",
+  "text": "Verified final state on https://demo.playwright.dev/todomvc/#/active: Added \"Email supplier\" then \"Review invoice\" (both observed in list). Marked only \"Email supplier\" completed. With the Active filter selected (hash #/active), only \"Review invoice\" is visible and the footer shows \"1 item left\". Completed todo was not cleared.",
+  "steps": 7,
+  "durationMs": 47756,
+  "wallMs": 47766,
+  "usage": {
+    "input": 4815,
+    "output": 607,
+    "cacheRead": 12352,
+    "cacheWrite": 0,
+    "totalTokens": 17774,
+    "cost": {
+      "input": 0.00036112499999999996,
+      "output": 0.00015175000000000003,
+      "cacheRead": 0.00018527999999999996,
+      "cacheWrite": 0,
+      "total": 0.000698155
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "eb36bec4-e75a-4902-a24a-e232f15f3508",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

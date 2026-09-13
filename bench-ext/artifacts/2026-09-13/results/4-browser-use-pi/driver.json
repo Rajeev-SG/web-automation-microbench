@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Completed on https://demo.playwright.dev/todomvc/:\n1. Added \"Email supplier\" (verified visible).\n2. Added \"Review invoice\" (verified both todos present).\n3. Marked only \"Email supplier\" complete (verified class 'completed' on it only).\n4. Clicked the Active filter (hash #/active).\n5. Verified final state: only \"Review invoice\" shown, footer reads \"1 item left\". Did not clear completed — \"Email supplier\" remains in the completed state.",
+  "text": "Completed on https://demo.playwright.dev/todomvc/:\n1. Added \"Email supplier\" (verified visible).\n2. Added \"Review invoice\" (verified both todos present).\n3. Marked only \"Email supplier\" complete (verified class 'completed' on it only).\n4. Clicked the Active filter (hash #/active).\n5. Verified final state: only \"Review invoice\" shown, footer reads \"1 item left\". Did not clear completed — \"Email supplier\" remains in the completed state.",
+  "steps": 9,
+  "durationMs": 62634,
+  "wallMs": 62652,
+  "usage": {
+    "input": 6593,
+    "output": 979,
+    "cacheRead": 17664,
+    "cacheWrite": 0,
+    "totalTokens": 25236,
+    "cost": {
+      "input": 0.0004944750000000001,
+      "output": 0.00024475,
+      "cacheRead": 0.00026496,
+      "cacheWrite": 0,
+      "total": 0.001004185
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "043cf8eb-02ce-43e0-9ae6-f0a5dedc2d3a",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

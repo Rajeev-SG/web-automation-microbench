@@ -1,0 +1,38 @@
+{
+  "id": "10-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "10",
+  "task": "todomvc",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":10,\"wallMs\":99727,\"verification\":\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"completed\\\":false},{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":false},\"}\n",
+  "wall_s": 100.841,
+  "status": "completed",
+  "done": true,
+  "total_s": 99.727,
+  "duration_s": 99.712,
+  "model_calls": 10,
+  "tool_calls": 10,
+  "steps": 10,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 7628,
+    "output": 1377,
+    "cached": 20992,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00123123,
+  "cost_from_tokens": 0.00170355,
+  "agent_output": "PARTIAL \u2014 task not completed. Verified observed state: opened https://demo.playwright.dev/todomvc/#/ and added exactly two todos; DOM check confirmed labels ['Email supplier', 'Review invoice'] with footer \"2 items left\". Missing evidence / not performed: (1) \"Email supplier\" was never marked complete; (2) the Active filter was never clicked; (3) the required final state (only \"Review invoice\" visible under Active, \"1 item left\") was never observed. Current page state: both todos present and unchecked. No files were saved; no screenshots captured.",
+  "agent_error": null,
+  "run_id": "700aa7ec-ffc7-462a-b051-fdb73c3ae88b",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[{\"text\":\"Email supplier\",\"completed\":false},{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":false},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": false
+}

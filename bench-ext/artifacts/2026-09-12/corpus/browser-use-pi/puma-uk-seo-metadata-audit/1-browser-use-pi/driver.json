@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}",
+  "text": "{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}",
+  "steps": 3,
+  "durationMs": 18384,
+  "wallMs": 18394,
+  "usage": {
+    "input": 6472,
+    "output": 457,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 6929,
+    "cost": {
+      "input": 0.0004854,
+      "output": 0.00011425,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "total": 0.00059965
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "fb891281-52ec-4a35-bc57-8724f0c07e59",
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Corporation\",\"WebSite\"]},\"finding\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}}",
+  "url_final": "https://uk.puma.com/uk/en"
+}

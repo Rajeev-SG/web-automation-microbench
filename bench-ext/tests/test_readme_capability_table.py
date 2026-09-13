@@ -26,6 +26,7 @@ HARNESS_ALIASES = {
     "agent-browser": "agent-browser",
     "cdp-browser": "cdp-browser",
     "BrowserSkill": "BrowserSkill",
+    "browser-use-pi": "browser-use-pi",
 }
 
 

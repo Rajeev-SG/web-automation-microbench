@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "rajeevg-seo-metadata-audit",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":5,\"wallMs\":11956,\"verification\":\"{\\\"url\\\":\\\"https://rajeevg.com/\\\",\\\"truth\\\":{\\\"canonical\\\":\\\"https://rajeevg.com\\\",\\\"ogTitle\\\":\\\"Rajeev G.\\\",\\\"ogType\\\":\\\"website\\\",\\\"hasOgImage\\\":true,\\\"hasH1\\\":true,\\\"jsonldTypes\\\":[\\\"Person\\\"]},\\\"finding\\\":{\\\"canonical\\\":\\\"https\"}\n",
+  "wall_s": 13.045,
+  "status": "completed",
+  "done": true,
+  "total_s": 11.956,
+  "duration_s": 11.946,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "steps": 5,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 3304,
+    "output": 953,
+    "cached": 8640,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00061565,
+  "cost_from_tokens": 0.00081005,
+  "agent_output": "{\"canonical\":\"https://rajeevg.com/\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]}",
+  "agent_error": null,
+  "run_id": "bc18a6f6-9359-4017-9e19-48f5f6de7c07",
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"canonical\":\"https://rajeevg.com\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]},\"finding\":{\"canonical\":\"https://rajeevg.com/\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]}}",
+  "pass": true
+}
