@@ -131,6 +131,7 @@ HARNESS_NOTES = {
     "agent-browser": "npm CLI driving CDP",
     "cdp-browser": "raw CDP CLI",
     "BrowserSkill": "extension-backed in-page agent",
+    "browser-use-pi": "own-loop: Pi Mono agent loop + persistent V8 REPL + raw CDP",
 }
 
 NARRATIVE = """

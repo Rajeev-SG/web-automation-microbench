@@ -125,3 +125,28 @@ Gotchas: (1) hand-rolled MCP stdio clients must use `select.select` for timeouts
 - page-agent's approval gate is `chrome.storage.local.allowAllHubConnection`, seeded in the **extension's service-worker**
   context (a web page has no `chrome.storage`), and its MCP bridge auto-`open`s a launcher in the default browser → neuter
   with a no-op `open` on PATH so the user's Chrome can't race for the hub slot.
+
+## Round 7 addendum (2026-09-13) — own-loop harnesses and Browser Use Pi (issue #34)
+
+Contenders that ship their own agent runtime (notte, skyvern, midscene, **Browser Use Pi**) must not be
+reduced to a benchlib adapter: one primitive action per model call erases the architecture under test.
+Give them a runner exposing `run_native(rep, task=...)` that drives the tool's own loop once per rep,
+and screen with `corpus/screen_native.py` (writes the same run JSON, so `corpus/report.py` aggregates
+it unchanged).
+
+`runners/browser-use-pi.py` + `runners/browser-use-pi.mjs`:
+- Native architecture: Pi Mono agent loop -> persistent V8 REPL -> raw CDP -> Chrome. PINNED to
+  `@browser_use/pi` 0.1.0 @ `fa838f3`; reproduce with `runners/browser-use-pi-setup.sh`
+  (clone -> pin -> `npm install` -> `npm run build`). Needs Node >= 22.19.
+- GLM 5.3 Flash is NOT in Pi's pinned catalog. The `.mjs` registers it into a custom Models collection
+  with `compat.openRouterRouting = {sort:'latency'}` so the OpenRouter payload carries
+  `provider:{sort:'latency'}` like every other row. Do not drop this and call the routing "compatible".
+- Browser: local Chrome `Browser.chromium({headless:true, profileDir})`. **One fresh profile+workspace
+  per rep** (the tool locks a profile to one owner; reusing one leaks cookies/localStorage between
+  reps). Own-Chrome mode: `BUPI_MODE=chrome BUPI_CDP_URL=ws://127.0.0.1:<port>/devtools/browser/<id>`.
+- Verification: after `agent.run()` and BEFORE `agent.close()`, the runner reads the profile's
+  `DevToolsActivePort` and evaluates `VERIFY_JS` on the live page over CDP (Node's global WebSocket);
+  pass = task rule AND the agent's own `done`. The node log is on stderr; the driver writes its result
+  JSON to a per-rep subdir so `report.py`'s `*/*/*.json` glob never picks it up.
+- Gotcha: background `&` jobs are reaped when the tool call returns — run the corpus screen in a
+  foreground session and poll.

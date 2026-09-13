@@ -1,0 +1,232 @@
+{
+  "harness": "browser-use-pi",
+  "reps": [
+    "1"
+  ],
+  "tasks": [
+    "allbirds-uk-add-to-cart-tag-check",
+    "chanel-gb-pdp-tag-inspection",
+    "gymshark-uk-add-to-cart-tag-check",
+    "porsche-uk-script-inventory",
+    "porsche-uk-tag-inspection",
+    "puma-uk-script-inventory",
+    "puma-uk-seo-metadata-audit",
+    "puma-uk-tag-inspection",
+    "rajeevg-crawlability-audit",
+    "rajeevg-seo-metadata-audit",
+    "tldraw-three-shape-diagram"
+  ],
+  "runs": [
+    {
+      "task": "allbirds-uk-add-to-cart-tag-check",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 53.233,
+      "model_calls": 14,
+      "tool_calls": 14,
+      "tokens": {
+        "input": 16593,
+        "output": 1589,
+        "cached": 29952,
+        "reasoning": 0
+      },
+      "cost_usd": 0.002091,
+      "error": null,
+      "wall_s": 54.5,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/allbirds-uk-add-to-cart-tag-check/1-browser-use-pi.json"
+    },
+    {
+      "task": "chanel-gb-pdp-tag-inspection",
+      "rep": "1",
+      "pass": true,
+      "done": true,
+      "total_s": 152.784,
+      "model_calls": 13,
+      "tool_calls": 13,
+      "tokens": {
+        "input": 4397,
+        "output": 2655,
+        "cached": 38464,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00157048,
+      "error": null,
+      "wall_s": 153.97,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/chanel-gb-pdp-tag-inspection/1-browser-use-pi.json"
+    },
+    {
+      "task": "gymshark-uk-add-to-cart-tag-check",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 110.567,
+      "model_calls": 14,
+      "tool_calls": 14,
+      "tokens": {
+        "input": 20448,
+        "output": 1913,
+        "cached": 29312,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00245153,
+      "error": null,
+      "wall_s": 111.77,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/gymshark-uk-add-to-cart-tag-check/1-browser-use-pi.json"
+    },
+    {
+      "task": "porsche-uk-script-inventory",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 36.67,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "tokens": {
+        "input": 2172,
+        "output": 250,
+        "cached": 3584,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00027916,
+      "error": null,
+      "wall_s": 38.08,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/porsche-uk-script-inventory/1-browser-use-pi.json"
+    },
+    {
+      "task": "porsche-uk-tag-inspection",
+      "rep": "1",
+      "pass": true,
+      "done": true,
+      "total_s": 25.952,
+      "model_calls": 4,
+      "tool_calls": 4,
+      "tokens": {
+        "input": 2264,
+        "output": 294,
+        "cached": 5760,
+        "reasoning": 0
+      },
+      "cost_usd": 0.0003297,
+      "error": null,
+      "wall_s": 27.1,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/porsche-uk-tag-inspection/1-browser-use-pi.json"
+    },
+    {
+      "task": "puma-uk-script-inventory",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 13.68,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "tokens": {
+        "input": 5768,
+        "output": 305,
+        "cached": 0,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00050885,
+      "error": null,
+      "wall_s": 14.88,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/puma-uk-script-inventory/1-browser-use-pi.json"
+    },
+    {
+      "task": "puma-uk-seo-metadata-audit",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 18.394,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "tokens": {
+        "input": 6472,
+        "output": 457,
+        "cached": 0,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00059965,
+      "error": null,
+      "wall_s": 19.49,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/puma-uk-seo-metadata-audit/1-browser-use-pi.json"
+    },
+    {
+      "task": "puma-uk-tag-inspection",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 32.932,
+      "model_calls": 6,
+      "tool_calls": 6,
+      "tokens": {
+        "input": 10730,
+        "output": 541,
+        "cached": 2432,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00097648,
+      "error": null,
+      "wall_s": 33.8,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/puma-uk-tag-inspection/1-browser-use-pi.json"
+    },
+    {
+      "task": "rajeevg-crawlability-audit",
+      "rep": "1",
+      "pass": true,
+      "done": true,
+      "total_s": 21.633,
+      "model_calls": 10,
+      "tool_calls": 10,
+      "tokens": {
+        "input": 8249,
+        "output": 639,
+        "cached": 18112,
+        "reasoning": 0
+      },
+      "cost_usd": 0.0010501,
+      "error": null,
+      "wall_s": 22.87,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/rajeevg-crawlability-audit/1-browser-use-pi.json"
+    },
+    {
+      "task": "rajeevg-seo-metadata-audit",
+      "rep": "1",
+      "pass": true,
+      "done": true,
+      "total_s": 11.956,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "tokens": {
+        "input": 3304,
+        "output": 953,
+        "cached": 8640,
+        "reasoning": 0
+      },
+      "cost_usd": 0.00061565,
+      "error": null,
+      "wall_s": 13.05,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/rajeevg-seo-metadata-audit/1-browser-use-pi.json"
+    },
+    {
+      "task": "tldraw-three-shape-diagram",
+      "rep": "1",
+      "pass": false,
+      "done": true,
+      "total_s": 25.762,
+      "model_calls": 14,
+      "tool_calls": 14,
+      "tokens": {
+        "input": 48465,
+        "output": 1843,
+        "cached": 18432,
+        "reasoning": 0
+      },
+      "cost_usd": 0.0043721,
+      "error": null,
+      "wall_s": 26.69,
+      "artifact": "artifacts/2026-09-12/corpus/browser-use-pi/tldraw-three-shape-diagram/1-browser-use-pi.json"
+    }
+  ],
+  "passes": 4,
+  "total": 11
+}

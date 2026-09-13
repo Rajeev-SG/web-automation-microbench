@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Task completed and verified on https://demo.playwright.dev/todomvc/:\n\n1. Added \"Email supplier\" todo.\n2. Added \"Review invoice\" todo.\n3. Marked ONLY \"Email supplier\" complete (checkbox toggled; li gained \"completed\" class).\n4. Clicked the Active filter.\n\nFinal observed state (verified via DOM after clicking Active):\n- Visible items: only \"Review invoice\"\n- Counter: \"1 item left\"\n- Selected filter: \"Active\"\n- Completed was not cleared (completed item still exists in the list under All/Completed views).",
+  "text": "Task completed and verified on https://demo.playwright.dev/todomvc/:\n\n1. Added \"Email supplier\" todo.\n2. Added \"Review invoice\" todo.\n3. Marked ONLY \"Email supplier\" complete (checkbox toggled; li gained \"completed\" class).\n4. Clicked the Active filter.\n\nFinal observed state (verified via DOM after clicking Active):\n- Visible items: only \"Review invoice\"\n- Counter: \"1 item left\"\n- Selected filter: \"Active\"\n- Completed was not cleared (completed item still exists in the list under All/Completed views).",
+  "steps": 7,
+  "durationMs": 44063,
+  "wallMs": 44072,
+  "usage": {
+    "input": 3193,
+    "output": 761,
+    "cacheRead": 14208,
+    "cacheWrite": 0,
+    "totalTokens": 18162,
+    "cost": {
+      "input": 0.00023947499999999995,
+      "output": 0.00019025,
+      "cacheRead": 0.00021312,
+      "cacheWrite": 0,
+      "total": 0.000642845
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "c1ae07dc-1f06-4302-a47d-218cfdc0aa96",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

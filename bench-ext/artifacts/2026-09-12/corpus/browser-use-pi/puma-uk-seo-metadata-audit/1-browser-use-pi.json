@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "puma-uk-seo-metadata-audit",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":3,\"wallMs\":18394,\"verification\":\"{\\\"url\\\":\\\"https://uk.puma.com/uk/en\\\",\\\"truth\\\":{\\\"canonical\\\":\\\"https://uk.puma.com/uk/en\\\",\\\"ogTitle\\\":\\\"PUMA.com | Clothing, Shoes, Accessories | PUMA\\\",\\\"ogType\\\":\\\"website\\\",\\\"hasOgImage\\\":true,\\\"hasH1\\\":true,\\\"jsonld\"}\n",
+  "wall_s": 19.491,
+  "status": "completed",
+  "done": true,
+  "total_s": 18.394,
+  "duration_s": 18.384,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "steps": 3,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 6472,
+    "output": 457,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00059965,
+  "cost_from_tokens": 0.00059965,
+  "agent_output": "{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}",
+  "agent_error": null,
+  "run_id": "fb891281-52ec-4a35-bc57-8724f0c07e59",
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Corporation\",\"WebSite\"]},\"finding\":{\"canonical\":\"https://uk.puma.com/uk/en\",\"ogTitle\":\"PUMA.com | Clothing, Shoes, Accessories | PUMA\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"ContactPoint\",\"Corporation\",\"Organization\",\"Person\",\"Place\",\"PostalAddress\",\"SearchAction\",\"WebSite\"]}}",
+  "pass": false
+}

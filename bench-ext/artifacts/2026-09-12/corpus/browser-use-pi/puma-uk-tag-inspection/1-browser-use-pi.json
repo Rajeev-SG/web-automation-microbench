@@ -1,0 +1,38 @@
+{
+  "id": "1-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "1",
+  "task": "puma-uk-tag-inspection",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":6,\"wallMs\":32932,\"verification\":\"{\\\"url\\\":\\\"https://uk.puma.com/uk/en\\\",\\\"truth\\\":{\\\"gtm\\\":[\\\"GTM-5WWF665\\\",\\\"GTM-TSWKBGX3\\\"],\\\"aw\\\":[],\\\"pinterest\\\":false},\\\"finding\\\":{\\\"gtm\\\":[\\\"GTM-TSWKBGX3\\\",\\\"GTM-5WWF665\\\"],\\\"aw\\\":[],\\\"pinterest\\\":true}}\"}\n",
+  "wall_s": 33.803,
+  "status": "completed",
+  "done": true,
+  "total_s": 32.932,
+  "duration_s": 32.924,
+  "model_calls": 6,
+  "tool_calls": 6,
+  "steps": 6,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 10730,
+    "output": 541,
+    "cached": 2432,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00097648,
+  "cost_from_tokens": 0.0010312,
+  "agent_output": "{\"gtm\": [\"GTM-TSWKBGX3\", \"GTM-5WWF665\"], \"aw\": [], \"pinterest\": true}",
+  "agent_error": null,
+  "run_id": "b9f7cea3-a920-4063-bd38-edb7128dbbf6",
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"gtm\":[\"GTM-5WWF665\",\"GTM-TSWKBGX3\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-TSWKBGX3\",\"GTM-5WWF665\"],\"aw\":[],\"pinterest\":true}}",
+  "pass": false
+}

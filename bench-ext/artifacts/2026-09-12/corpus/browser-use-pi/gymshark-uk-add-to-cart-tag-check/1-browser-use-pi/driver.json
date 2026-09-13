@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"status\":\"incomplete_partial\",\"consentAccepted\":true,\"productTitle\":\"Gymshark Train T-Shirt - Black (https://uk.gymshark.com/products/gymshark-train-t-shirt-ss-tops-black-aw26)\",\"cartItemCount\":null,\"tagsAfterAdd\":null,\"completedSteps\":[\"opened UK all-products listing\",\"accepted cookie banner (clicked 'Accept All Cookies'; banner reappeared after navigation and was accepted again)\",\"navigated to a purchasable product page (Gymshark Train T-Shirt, £25, sizes XS–3XL shown in stock)\",\"located size radios (XS/S/M/L/XL/XXL/3XL) and 'Add to bag' button\"],\"failedStep\":\"size selection: clicked 'M' radio twice via observed coordinates, but accessibility snapshot consistently reported no radio with checked=true; could not verify the size was selected, so the add-to-cart click, performance marker (__bench_marker), 5s settle wait, and __bench_finding (__bench_report_at, cartItemCount, tagsAfterAdd) were never performed\",\"missingEvidence\":[\"verified selected size\",\"add-to-cart click confirmation\",\"cart item count after add\",\"list of marketing-tag hostnames loading between marker and report time\"],\"notes\":\"No payment or checkout entered; no add-to-cart click occurred, so no cart mutation was made.\"}",
+  "text": "{\"status\":\"incomplete_partial\",\"consentAccepted\":true,\"productTitle\":\"Gymshark Train T-Shirt - Black (https://uk.gymshark.com/products/gymshark-train-t-shirt-ss-tops-black-aw26)\",\"cartItemCount\":null,\"tagsAfterAdd\":null,\"completedSteps\":[\"opened UK all-products listing\",\"accepted cookie banner (clicked 'Accept All Cookies'; banner reappeared after navigation and was accepted again)\",\"navigated to a purchasable product page (Gymshark Train T-Shirt, £25, sizes XS–3XL shown in stock)\",\"located size radios (XS/S/M/L/XL/XXL/3XL) and 'Add to bag' button\"],\"failedStep\":\"size selection: clicked 'M' radio twice via observed coordinates, but accessibility snapshot consistently reported no radio with checked=true; could not verify the size was selected, so the add-to-cart click, performance marker (__bench_marker), 5s settle wait, and __bench_finding (__bench_report_at, cartItemCount, tagsAfterAdd) were never performed\",\"missingEvidence\":[\"verified selected size\",\"add-to-cart click confirmation\",\"cart item count after add\",\"list of marketing-tag hostnames loading between marker and report time\"],\"notes\":\"No payment or checkout entered; no add-to-cart click occurred, so no cart mutation was made.\"}",
+  "steps": 14,
+  "durationMs": 110556,
+  "wallMs": 110567,
+  "usage": {
+    "input": 20448,
+    "output": 1913,
+    "cacheRead": 29312,
+    "cacheWrite": 0,
+    "totalTokens": 51673,
+    "cost": {
+      "input": 0.0015336,
+      "output": 0.00047825,
+      "cacheRead": 0.00043968,
+      "cacheWrite": 0,
+      "total": 0.0024515300000000004
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "0646775e-cadc-41d4-bf43-d37d2d5fd87f",
+  "verification": "{\"url\":\"https://uk.gymshark.com/products/gymshark-train-t-shirt-ss-tops-black-aw26\",\"truth\":{\"consentAccepted\":true,\"cartItemCount\":0,\"tagsAfterAdd\":[\"connect.facebook.net\",\"region1.google-analytics.com\",\"www.googletagmanager.com\"]},\"finding\":null}",
+  "url_final": "https://uk.gymshark.com/collections/all-products"
+}

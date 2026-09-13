@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "PARTIAL — task not completed. Verified observed state: opened https://demo.playwright.dev/todomvc/#/ and added exactly two todos; DOM check confirmed labels ['Email supplier', 'Review invoice'] with footer \"2 items left\". Missing evidence / not performed: (1) \"Email supplier\" was never marked complete; (2) the Active filter was never clicked; (3) the required final state (only \"Review invoice\" visible under Active, \"1 item left\") was never observed. Current page state: both todos present and unchecked. No files were saved; no screenshots captured.",
+  "text": "PARTIAL — task not completed. Verified observed state: opened https://demo.playwright.dev/todomvc/#/ and added exactly two todos; DOM check confirmed labels ['Email supplier', 'Review invoice'] with footer \"2 items left\". Missing evidence / not performed: (1) \"Email supplier\" was never marked complete; (2) the Active filter was never clicked; (3) the required final state (only \"Review invoice\" visible under Active, \"1 item left\") was never observed. Current page state: both todos present and unchecked. No files were saved; no screenshots captured.",
+  "steps": 10,
+  "durationMs": 99712,
+  "wallMs": 99727,
+  "usage": {
+    "input": 7628,
+    "output": 1377,
+    "cacheRead": 20992,
+    "cacheWrite": 0,
+    "totalTokens": 29997,
+    "cost": {
+      "input": 0.0005721,
+      "output": 0.00034425,
+      "cacheRead": 0.00031487999999999997,
+      "cacheWrite": 0,
+      "total": 0.0012312299999999998
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "700aa7ec-ffc7-462a-b051-fdb73c3ae88b",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[{\"text\":\"Email supplier\",\"completed\":false},{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":false},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "url_final": "https://demo.playwright.dev/todomvc/"
+}

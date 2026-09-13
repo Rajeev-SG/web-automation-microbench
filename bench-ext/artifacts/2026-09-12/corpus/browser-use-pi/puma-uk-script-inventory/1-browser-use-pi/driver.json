@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "Inspected the live PUMA UK homepage (https://uk.puma.com/uk/en). All script elements with a src attribute were collected; distinct supplying hostnames (sorted): rapid-cdn.yottaa.com, try.abtasty.com, uk.puma.com (site's own host), www.googletagmanager.com. window.__bench_finding was set via one eval to {\"hosts\":[\"rapid-cdn.yottaa.com\",\"try.abtasty.com\",\"uk.puma.com\",\"www.googletagmanager.com\"]} and verified. No page changes were made.",
+  "text": "Inspected the live PUMA UK homepage (https://uk.puma.com/uk/en). All script elements with a src attribute were collected; distinct supplying hostnames (sorted): rapid-cdn.yottaa.com, try.abtasty.com, uk.puma.com (site's own host), www.googletagmanager.com. window.__bench_finding was set via one eval to {\"hosts\":[\"rapid-cdn.yottaa.com\",\"try.abtasty.com\",\"uk.puma.com\",\"www.googletagmanager.com\"]} and verified. No page changes were made.",
+  "steps": 3,
+  "durationMs": 13671,
+  "wallMs": 13680,
+  "usage": {
+    "input": 5768,
+    "output": 305,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 6073,
+    "cost": {
+      "input": 0.0004326,
+      "output": 0.00007625,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "total": 0.0005088499999999999
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "f2b2739d-0826-4ef1-92f8-950e90272350",
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"hosts\":[\"cdn.branch.io\",\"cdn.brcdn.com\",\"cdn.cookielaw.org\",\"eu.fw-cdn.com\",\"pumauk-a499d681c1e1d5417230476.freshchat.com\",\"rapid-cdn.yottaa.com\",\"try.abtasty.com\",\"uk.puma.com\",\"www.googletagmanager.com\"]},\"finding\":{\"hosts\":[\"rapid-cdn.yottaa.com\",\"try.abtasty.com\",\"uk.puma.com\",\"www.googletagmanager.com\"]}}",
+  "url_final": "https://uk.puma.com/uk/en"
+}

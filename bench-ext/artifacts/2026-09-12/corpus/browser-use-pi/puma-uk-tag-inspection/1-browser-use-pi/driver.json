@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "status": "completed",
+  "done": true,
+  "output": "{\"gtm\": [\"GTM-TSWKBGX3\", \"GTM-5WWF665\"], \"aw\": [], \"pinterest\": true}",
+  "text": "{\"gtm\": [\"GTM-TSWKBGX3\", \"GTM-5WWF665\"], \"aw\": [], \"pinterest\": true}",
+  "steps": 6,
+  "durationMs": 32924,
+  "wallMs": 32932,
+  "usage": {
+    "input": 10730,
+    "output": 541,
+    "cacheRead": 2432,
+    "cacheWrite": 0,
+    "totalTokens": 13703,
+    "cost": {
+      "input": 0.0008047499999999999,
+      "output": 0.00013525,
+      "cacheRead": 0.000036479999999999996,
+      "cacheWrite": 0,
+      "total": 0.00097648
+    }
+  },
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "providerRetries": 0,
+  "runId": "b9f7cea3-a920-4063-bd38-edb7128dbbf6",
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"gtm\":[\"GTM-5WWF665\",\"GTM-TSWKBGX3\"],\"aw\":[],\"pinterest\":false},\"finding\":{\"gtm\":[\"GTM-TSWKBGX3\",\"GTM-5WWF665\"],\"aw\":[],\"pinterest\":true}}",
+  "url_final": "https://uk.puma.com/uk/en"
+}

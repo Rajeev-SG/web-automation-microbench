@@ -1,0 +1,38 @@
+{
+  "id": "8-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "8",
+  "task": "todomvc",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":10,\"wallMs\":64618,\"verification\":\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/\\\",\\\"items\\\":[{\\\"text\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"\"}\n",
+  "wall_s": 65.724,
+  "status": "completed",
+  "done": true,
+  "total_s": 64.618,
+  "duration_s": 64.606,
+  "model_calls": 10,
+  "tool_calls": 10,
+  "steps": 10,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 6951,
+    "output": 1115,
+    "cached": 19328,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00108999,
+  "cost_from_tokens": 0.00152487,
+  "agent_output": "Task state on https://demo.playwright.dev/todomvc/#/ as last observed (via page.evaluate after each action):\n- Todos added in order: \"Email supplier\", then \"Review invoice\" (both present in .todo-list, text verified exactly).\n- \"Email supplier\" marked complete (li has class \"completed\", checkbox toggled); \"Review invoice\" left active.\n- Footer counter last observed: \"1 item left\".\n- Completed list was NOT cleared.\n\nMissing evidence (not yet observed): the Active filter was not clicked, so the filtered view showing only \"Review invoice\" was not directly verified \u2014 budget ran out right after toggling the checkbox. All prior steps (both todos added, correct item completed, 1 item left) were directly observed in the DOM.",
+  "agent_error": null,
+  "run_id": "aa6e4054-9b4c-4086-8cc1-6330b3489552",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[{\"text\":\"Email supplier\",\"completed\":true},{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "3-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "3",
+  "task": "todomvc",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":6,\"wallMs\":32771,\"verification\":\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":f\"}\n",
+  "wall_s": 33.816,
+  "status": "completed",
+  "done": true,
+  "total_s": 32.771,
+  "duration_s": 32.763,
+  "model_calls": 6,
+  "tool_calls": 6,
+  "steps": 6,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 2485,
+    "output": 522,
+    "cached": 9664,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00046183,
+  "cost_from_tokens": 0.00067928,
+  "agent_output": "Verified final state on https://demo.playwright.dev/todomvc/: Added \"Email supplier\" then \"Review invoice\" (both appeared in the list). Marked only \"Email supplier\" completed via its toggle (counter showed \"1 item left\"). Clicked the Active filter (it became the selected filter). Observed final state: Active list shows only \"Review invoice\", footer shows \"1 item left\". Completed items were not cleared.",
+  "agent_error": null,
+  "run_id": "c68f3549-409c-4673-b368-5fa68c4add08",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}

@@ -1,0 +1,38 @@
+{
+  "id": "4-browser-use-pi",
+  "contender": "browser-use-pi",
+  "rep": "4",
+  "task": "todomvc",
+  "events": [],
+  "version": "0.1.0 @ fa838f3298673950923bdaf12bd3c1b6279cd119",
+  "architecture": "Pi mono agent loop + persistent V8 REPL + raw CDP",
+  "runtimes": "own-loop (agent.run)",
+  "browser_mode": "chromium",
+  "model_config": "z-ai/glm-5.3-flash via OpenRouter, provider.sort=latency, reasoning low",
+  "driver_stdout": "{\"ok\":true,\"status\":\"completed\",\"steps\":9,\"wallMs\":62652,\"verification\":\"{\\\"url\\\":\\\"https://demo.playwright.dev/todomvc/#/active\\\",\\\"items\\\":[{\\\"text\\\":\\\"Review invoice\\\",\\\"completed\\\":false}],\\\"saved\\\":[{\\\"title\\\":\\\"Email supplier\\\",\\\"completed\\\":true},{\\\"title\\\":\\\"Review invoice\\\",\\\"completed\\\":f\"}\n",
+  "wall_s": 63.54,
+  "status": "completed",
+  "done": true,
+  "total_s": 62.652,
+  "duration_s": 62.634,
+  "model_calls": 9,
+  "tool_calls": 9,
+  "steps": 9,
+  "provider": [
+    "openrouter"
+  ],
+  "tokens": {
+    "input": 6593,
+    "output": 979,
+    "cached": 17664,
+    "reasoning": 0
+  },
+  "tokens_source": "browser-use-pi usage (Pi catalog rates)",
+  "cost": 0.00100419,
+  "cost_from_tokens": 0.00140163,
+  "agent_output": "Completed on https://demo.playwright.dev/todomvc/:\n1. Added \"Email supplier\" (verified visible).\n2. Added \"Review invoice\" (verified both todos present).\n3. Marked only \"Email supplier\" complete (verified class 'completed' on it only).\n4. Clicked the Active filter (hash #/active).\n5. Verified final state: only \"Review invoice\" shown, footer reads \"1 item left\". Did not clear completed \u2014 \"Email supplier\" remains in the completed state.",
+  "agent_error": null,
+  "run_id": "043cf8eb-02ce-43e0-9ae6-f0a5dedc2d3a",
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/active\",\"items\":[{\"text\":\"Review invoice\",\"completed\":false}],\"saved\":[{\"title\":\"Email supplier\",\"completed\":true},{\"title\":\"Review invoice\",\"completed\":false}]}",
+  "pass": true
+}
