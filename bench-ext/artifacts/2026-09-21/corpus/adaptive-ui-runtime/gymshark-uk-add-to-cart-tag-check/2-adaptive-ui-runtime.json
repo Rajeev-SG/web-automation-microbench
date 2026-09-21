@@ -1,0 +1,411 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "gymshark-uk-add-to-cart-tag-check",
+  "events": [
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 997.5,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task gymshark-uk-add-to-cart-tag-check"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 998.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 1135.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 5,
+      "kind": "action",
+      "at_ms": 1229.1,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 6,
+      "kind": "verify",
+      "at_ms": 1233.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 1236.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 8,
+      "kind": "action",
+      "at_ms": 1301.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 9,
+      "kind": "verify",
+      "at_ms": 1305.8,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 10,
+      "kind": "route",
+      "at_ms": 1308.9,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 11,
+      "kind": "cycle_detected",
+      "at_ms": 1384.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 12,
+      "kind": "subtask_failed",
+      "at_ms": 1384.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 13,
+      "kind": "manager_replan",
+      "at_ms": 1384.9,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 14,
+      "kind": "subtask_start",
+      "at_ms": 1385.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 15,
+      "kind": "route",
+      "at_ms": 1388.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 16,
+      "kind": "cycle_detected",
+      "at_ms": 1466.1,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 3
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 17,
+      "kind": "subtask_failed",
+      "at_ms": 1466.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 18,
+      "kind": "manager_replan",
+      "at_ms": 1466.7,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 19,
+      "kind": "subtask_start",
+      "at_ms": 1467.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 20,
+      "kind": "route",
+      "at_ms": 1469.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 21,
+      "kind": "cycle_detected",
+      "at_ms": 1583.1,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 4
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 22,
+      "kind": "subtask_failed",
+      "at_ms": 1583.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 23,
+      "kind": "manager_replan",
+      "at_ms": 1583.7,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 24,
+      "kind": "subtask_start",
+      "at_ms": 1584.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 25,
+      "kind": "route",
+      "at_ms": 1587.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 26,
+      "kind": "cycle_detected",
+      "at_ms": 1663.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 5
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 27,
+      "kind": "subtask_failed",
+      "at_ms": 1664.4,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9cea2a6894dc",
+      "seq": 28,
+      "kind": "run_end",
+      "at_ms": 1664.8,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 1664.4
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.763,
+  "wall_s": 7.504,
+  "total_s": 7.504,
+  "run_id": "run-9cea2a6894dc",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 6,
+    "observations": 8,
+    "verifications": 2,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 0,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 6,
+    "failure_classes": {
+      "verifier_mismatch": 2,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 2.9,
+    "observe_ms_p95": 137.8,
+    "verify_ms_p50": 1.2,
+    "verify_ms_p95": 1.4,
+    "wall_ms": 1664.4,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 6,
+  "model_calls": 0,
+  "tool_calls": 6,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://uk.gymshark.com/collections/all-products\",\"truth\":{\"consentAccepted\":false,\"cartItemCount\":0,\"tagsAfterAdd\":[]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

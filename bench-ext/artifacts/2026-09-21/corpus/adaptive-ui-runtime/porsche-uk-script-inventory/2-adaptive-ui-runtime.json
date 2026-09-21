@@ -1,0 +1,800 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "porsche-uk-script-inventory",
+  "events": [
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 27.6,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task porsche-uk-script-inventory"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 28.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 31.1,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 5,
+      "kind": "escalate",
+      "at_ms": 3047.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 6,
+      "kind": "route",
+      "at_ms": 3050.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 7,
+      "kind": "manager_decision",
+      "at_ms": 11281.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 8,
+      "kind": "verify",
+      "at_ms": 11282.7,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 9,
+      "kind": "route",
+      "at_ms": 11283.8,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 10,
+      "kind": "manager_decision",
+      "at_ms": 20509.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts before recording finding.'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 11,
+      "kind": "action",
+      "at_ms": 28516.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 12,
+      "kind": "failure",
+      "at_ms": 28516.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 13,
+      "kind": "repair",
+      "at_ms": 28516.0,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 14,
+      "kind": "route",
+      "at_ms": 28517.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 15,
+      "kind": "manager_decision",
+      "at_ms": 33034.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect its live scripts.</think><tool_call>final_result<arg_key>action</arg_key><arg_value>navigate'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 16,
+      "kind": "action",
+      "at_ms": 41041.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 17,
+      "kind": "failure",
+      "at_ms": 41041.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 18,
+      "kind": "repair",
+      "at_ms": 41041.2,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 19,
+      "kind": "subtask_failed",
+      "at_ms": 41042.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 20,
+      "kind": "manager_replan",
+      "at_ms": 41042.2,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 21,
+      "kind": "subtask_start",
+      "at_ms": 41042.7,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 22,
+      "kind": "route",
+      "at_ms": 41045.1,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 23,
+      "kind": "route_cascade",
+      "at_ms": 44155.4,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 24,
+      "kind": "action",
+      "at_ms": 44155.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 25,
+      "kind": "route",
+      "at_ms": 44159.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 26,
+      "kind": "route_cascade",
+      "at_ms": 46627.1,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 27,
+      "kind": "cycle_detected",
+      "at_ms": 46627.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 28,
+      "kind": "subtask_failed",
+      "at_ms": 46628.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 29,
+      "kind": "manager_replan",
+      "at_ms": 46628.5,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 30,
+      "kind": "subtask_start",
+      "at_ms": 46629.9,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 31,
+      "kind": "route",
+      "at_ms": 46633.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 32,
+      "kind": "escalate",
+      "at_ms": 49198.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 33,
+      "kind": "route",
+      "at_ms": 49202.6,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 34,
+      "kind": "manager_decision",
+      "at_ms": 68461.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts.'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 35,
+      "kind": "action",
+      "at_ms": 76471.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 36,
+      "kind": "failure",
+      "at_ms": 76471.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 37,
+      "kind": "repair",
+      "at_ms": 76471.6,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 38,
+      "kind": "route",
+      "at_ms": 76474.0,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 39,
+      "kind": "manager_decision",
+      "at_ms": 82826.1,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 40,
+      "kind": "verify",
+      "at_ms": 82828.9,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 41,
+      "kind": "route",
+      "at_ms": 82832.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 42,
+      "kind": "manager_decision",
+      "at_ms": 90935.3,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect its live scripts.'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 43,
+      "kind": "action",
+      "at_ms": 98940.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 44,
+      "kind": "failure",
+      "at_ms": 98940.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 45,
+      "kind": "subtask_failed",
+      "at_ms": 98941.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 46,
+      "kind": "manager_replan",
+      "at_ms": 98941.6,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 47,
+      "kind": "subtask_start",
+      "at_ms": 98942.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 48,
+      "kind": "route",
+      "at_ms": 98944.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 49,
+      "kind": "escalate",
+      "at_ms": 101370.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 50,
+      "kind": "route",
+      "at_ms": 101374.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 51,
+      "kind": "manager_decision",
+      "at_ms": 106594.7,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts.</think><tool_call>final_result<arg_key>action</arg_key><arg_value>navigate</arg_value"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 52,
+      "kind": "action",
+      "at_ms": 114605.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 53,
+      "kind": "failure",
+      "at_ms": 114605.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 54,
+      "kind": "route",
+      "at_ms": 114609.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 55,
+      "kind": "manager_decision",
+      "at_ms": 118378.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts.'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 56,
+      "kind": "action",
+      "at_ms": 126387.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 57,
+      "kind": "failure",
+      "at_ms": 126387.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 58,
+      "kind": "route",
+      "at_ms": 126390.5,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 59,
+      "kind": "manager_decision",
+      "at_ms": 134474.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts before evaluating hosts.'}"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 60,
+      "kind": "action",
+      "at_ms": 142483.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 61,
+      "kind": "failure",
+      "at_ms": 142483.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 62,
+      "kind": "subtask_failed",
+      "at_ms": 142483.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-904d1a72d9e9",
+      "seq": 63,
+      "kind": "run_end",
+      "at_ms": 142484.6,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "stale_target",
+        "wall_ms": 142483.8
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.805,
+  "wall_s": 145.28,
+  "total_s": 145.28,
+  "run_id": "run-904d1a72d9e9",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "stale_target",
+  "metrics": {
+    "actions": 9,
+    "observations": 14,
+    "verifications": 2,
+    "jev_calls": 5,
+    "fara_calls": 3,
+    "showui_calls": 3,
+    "manager_calls": 7,
+    "fallbacks": 12,
+    "recoveries": 3,
+    "loops": 1,
+    "transport_commands": 9,
+    "failure_classes": {
+      "premature_done": 2,
+      "stale_target": 7,
+      "repeated_action_loop": 1
+    },
+    "replans": 3,
+    "observe_ms_p50": 3.2,
+    "observe_ms_p95": 3.7,
+    "jev_ms_p50": 2565.0,
+    "jev_ms_p95": 3110.2,
+    "verify_ms_p50": 1.4,
+    "verify_ms_p95": 2.7,
+    "wall_ms": 142483.8,
+    "manager_input_tokens": 8957,
+    "manager_output_tokens": 1730,
+    "manager_latency_ms": 58162.2,
+    "jev_decision_ms": [
+      3110.1788329542615,
+      2467.8558750310913
+    ],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 7,
+  "jev_calls": 5,
+  "fara_calls": 3,
+  "showui_calls": 3,
+  "actions": 9,
+  "model_calls": 12,
+  "tool_calls": 9,
+  "tokens": {
+    "input": 8957,
+    "output": 1730,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.00110428,
+  "done": false,
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.googletagmanager.com\",\"www.porsche.com\"]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

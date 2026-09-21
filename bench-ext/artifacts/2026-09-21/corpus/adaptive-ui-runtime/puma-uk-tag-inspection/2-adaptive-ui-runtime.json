@@ -1,0 +1,375 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "puma-uk-tag-inspection",
+  "events": [
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 502.9,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task puma-uk-tag-inspection"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 503.2,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 635.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 5,
+      "kind": "action",
+      "at_ms": 761.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n57",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 6,
+      "kind": "verify",
+      "at_ms": 825.4,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 879.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 8,
+      "kind": "cycle_detected",
+      "at_ms": 994.1,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n57",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 9,
+      "kind": "subtask_failed",
+      "at_ms": 994.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 10,
+      "kind": "manager_replan",
+      "at_ms": 994.7,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 11,
+      "kind": "subtask_start",
+      "at_ms": 995.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 12,
+      "kind": "route",
+      "at_ms": 1001.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 13,
+      "kind": "cycle_detected",
+      "at_ms": 1083.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n57",
+        "repeats": 3
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 14,
+      "kind": "subtask_failed",
+      "at_ms": 1083.4,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 15,
+      "kind": "manager_replan",
+      "at_ms": 1083.4,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 16,
+      "kind": "subtask_start",
+      "at_ms": 1083.7,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 17,
+      "kind": "route",
+      "at_ms": 1090.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 18,
+      "kind": "cycle_detected",
+      "at_ms": 1318.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n57",
+        "repeats": 4
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 19,
+      "kind": "subtask_failed",
+      "at_ms": 1318.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 20,
+      "kind": "manager_replan",
+      "at_ms": 1318.9,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 21,
+      "kind": "subtask_start",
+      "at_ms": 1319.2,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 22,
+      "kind": "route",
+      "at_ms": 1439.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 23,
+      "kind": "cycle_detected",
+      "at_ms": 1585.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n57",
+        "repeats": 5
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 24,
+      "kind": "subtask_failed",
+      "at_ms": 1585.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-9a28a97d1740",
+      "seq": 25,
+      "kind": "run_end",
+      "at_ms": 1586.2,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 1585.7
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.771,
+  "wall_s": 6.596,
+  "total_s": 6.596,
+  "run_id": "run-9a28a97d1740",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 5,
+    "observations": 6,
+    "verifications": 1,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 0,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 5,
+    "failure_classes": {
+      "verifier_mismatch": 1,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 54.3,
+    "observe_ms_p95": 132.6,
+    "verify_ms_p50": 17.3,
+    "verify_ms_p95": 17.3,
+    "wall_ms": 1585.7,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 5,
+  "model_calls": 0,
+  "tool_calls": 5,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://uk.puma.com/uk/en\",\"truth\":{\"gtm\":[\"GTM-5WWF665\",\"GTM-TSWKBGX3\"],\"aw\":[],\"pinterest\":false},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

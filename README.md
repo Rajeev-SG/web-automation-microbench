@@ -94,6 +94,7 @@ is the next table.
 | **hyperagent** (perform) | [hyperbrowserai/HyperAgent](https://github.com/hyperbrowserai/HyperAgent) | 6 | 3/4 | 28.3s | ~20.8k / ~3.4k | ~$0.0096 |
 | **opencli** | [jackwener/OpenCLI](https://github.com/jackwener/OpenCLI) | 6 | 0/2 | 30.4s | ~20.8k / ~234 | ~$0.0032 |
 | **surf-cli** | [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli) | 6 | 2/2 | 31.8s | ~28.6k / ~519 | ~$0.0046 |
+| **adaptive-ui-runtime** | [Rajeev-SG/adaptive-ui-runtime](https://github.com/Rajeev-SG/adaptive-ui-runtime) | 8 | 0/2 | 32.3s | ~3.0k / ~187 | ~$0.0003 |
 | **browser-agent** | [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) | 4 | 2/2 | 32.5s | ~43.1k / ~1,360 | ~$0.0036 |
 | **bb-browser** | [epiral/bb-browser](https://github.com/epiral/bb-browser) | 6 | 0/2 | 32.7s | ~12.6k / ~380 | ~$0.0021 |
 | **midscene** | [web-infra-dev/midscene](https://github.com/web-infra-dev/midscene) | 6 | 2/2 | 33.4s | ~444k / ~62k | ~$0.074 |
@@ -146,6 +147,43 @@ exposed failures a single rep understated.
 that can evaluate JS in the page; the multi-step journeys (add-to-cart) and canvas construction sit
 above the current frontier. `puma-uk-seo-metadata-audit` fails because models over-report
 nested JSON-LD types. Discriminating difficulty, not broken tasks.
+
+## Round 8 — 21 Sep 2026: adaptive-ui-runtime (own-loop, issue #37)
+
+`adaptive-ui-runtime` is an own-loop contender (its own `plan -> route -> act -> verify`
+engine), so one runtime run is timed per rep — the same fairness rule as notte/skyvern/
+browser-use-pi. The microbench launches Chrome for Testing and verifies independently over
+CDP; the runtime attaches to it (the adapter subclasses the runtime's own transport to
+swap in a CDP attach — the runtime ships no CDP transport) and runs one `Engine.execute`.
+Full notes, commit pin and comparability caveats:
+[`bench-ext/runners/ADAPTIVE_UI_RUNTIME.md`](bench-ext/runners/ADAPTIVE_UI_RUNTIME.md).
+
+**Result: 0/2 on TodoMVC and 0/22 across the 11-task harvested corpus.** Independent
+verification and the runtime's own verdict agreed on 20 of 22 runs; the 2 disagreements are
+`tldraw-three-shape-diagram`, where the runtime's own verifier reported success while the
+independent structural check found empty truth (`labels:[], nodes:[], arrows:0`) — exactly
+the self-pass the independent verifier exists to catch.
+
+| Contender | TodoMVC pass | Median wall | Tokens in/out | Cost/run | Corpus pass |
+|---|---|---:|---:|---:|---:|
+| **adaptive-ui-runtime** | 0/2 | 32.3s | ~3.0k / ~187 | ~$0.0003 | 0/22 |
+| **browser-relay** | 3/3 | 4.3s | ~5.9k / ~95 | ~$0.0005 | 22/33 |
+| **raw-playwright** | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 | 17/33 |
+
+Failure classes (never retried away): `repeated_action_loop` (the manager re-issues the same
+action — e.g. types "Email supplier" without ever submitting), `premature_done` (actor says
+done, verifier rejects), `stale_target` (resolves a target then acts without re-observing, so a
+navigating click strands the next action), and — on every harvested audit task — a **capability gap**: the
+runtime's action vocabulary is click/type/key/select/scroll/wait/focus/inspect, with no
+action that can evaluate page JS, so it cannot record the `window.__bench_finding` every
+corpus task requires. These runs use the runtime's own manager model on **default** OpenRouter
+routing (the runtime does not pass `provider.sort=latency` through), and its token/cost are the
+manager usage only (Jev calls go to classifier.dev). Reproduce:
+
+```bash
+python3 bench-ext/corpus/screen_native.py --harness adaptive-ui-runtime --reps 1,2 --all \
+    --out bench-ext/artifacts/2026-09-21/corpus/adaptive-ui-runtime
+```
 
 ## Round 7 — 13 Sep 2026: Browser Use Pi (issue #34)
 

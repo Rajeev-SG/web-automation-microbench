@@ -1,0 +1,411 @@
+{
+  "id": "1-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "1",
+  "task": "rajeevg-seo-metadata-audit",
+  "events": [
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 402.7,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task rajeevg-seo-metadata-audit"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 404.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 408.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 5,
+      "kind": "action",
+      "at_ms": 774.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 6,
+      "kind": "verify",
+      "at_ms": 785.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 787.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 8,
+      "kind": "action",
+      "at_ms": 826.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 9,
+      "kind": "verify",
+      "at_ms": 828.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 10,
+      "kind": "route",
+      "at_ms": 833.0,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 11,
+      "kind": "cycle_detected",
+      "at_ms": 858.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 12,
+      "kind": "subtask_failed",
+      "at_ms": 859.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 13,
+      "kind": "manager_replan",
+      "at_ms": 859.2,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 14,
+      "kind": "subtask_start",
+      "at_ms": 859.5,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 15,
+      "kind": "route",
+      "at_ms": 861.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 16,
+      "kind": "cycle_detected",
+      "at_ms": 891.6,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 3
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 17,
+      "kind": "subtask_failed",
+      "at_ms": 892.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 18,
+      "kind": "manager_replan",
+      "at_ms": 892.2,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 19,
+      "kind": "subtask_start",
+      "at_ms": 892.6,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 20,
+      "kind": "route",
+      "at_ms": 894.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 21,
+      "kind": "cycle_detected",
+      "at_ms": 925.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 4
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 22,
+      "kind": "subtask_failed",
+      "at_ms": 925.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 23,
+      "kind": "manager_replan",
+      "at_ms": 925.6,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 24,
+      "kind": "subtask_start",
+      "at_ms": 926.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 25,
+      "kind": "route",
+      "at_ms": 927.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 26,
+      "kind": "cycle_detected",
+      "at_ms": 957.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 5
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 27,
+      "kind": "subtask_failed",
+      "at_ms": 958.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-44af7f0a22c4",
+      "seq": 28,
+      "kind": "run_end",
+      "at_ms": 959.0,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 958.5
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.764,
+  "wall_s": 3.38,
+  "total_s": 3.38,
+  "run_id": "run-44af7f0a22c4",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 6,
+    "observations": 8,
+    "verifications": 2,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 0,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 6,
+    "failure_classes": {
+      "verifier_mismatch": 2,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 1.7,
+    "observe_ms_p95": 4.6,
+    "verify_ms_p50": 0.7,
+    "verify_ms_p95": 2.3,
+    "wall_ms": 958.5,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 6,
+  "model_calls": 0,
+  "tool_calls": 6,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"canonical\":\"https://rajeevg.com\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

@@ -1,0 +1,245 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "tldraw-three-shape-diagram",
+  "events": [
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 679.8,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task tldraw-three-shape-diagram"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 680.5,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 685.1,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 5,
+      "kind": "manager_decision",
+      "at_ms": 3478.6,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open tldraw app to begin building the diagram.'}"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 6,
+      "kind": "action",
+      "at_ms": 3478.6,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": null,
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 7,
+      "kind": "failure",
+      "at_ms": 3478.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 8,
+      "kind": "repair",
+      "at_ms": 3478.7,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 9,
+      "kind": "route",
+      "at_ms": 3482.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 10,
+      "kind": "escalate",
+      "at_ms": 4883.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 11,
+      "kind": "route",
+      "at_ms": 4891.0,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 12,
+      "kind": "manager_decision",
+      "at_ms": 8886.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 13,
+      "kind": "verify",
+      "at_ms": 8890.6,
+      "data": {
+        "subtask": "mb",
+        "passed": true,
+        "failure_class": null
+      }
+    },
+    {
+      "run_id": "run-764081c3740c",
+      "seq": 14,
+      "kind": "run_end",
+      "at_ms": 8892.7,
+      "data": {
+        "status": "succeeded",
+        "verified": true,
+        "failure_class": null,
+        "wall_ms": 8892.0
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.763,
+  "wall_s": 13.091,
+  "total_s": 13.091,
+  "run_id": "run-764081c3740c",
+  "runtime_verified": true,
+  "runtime_status": "succeeded",
+  "runtime_failure_class": null,
+  "metrics": {
+    "actions": 1,
+    "observations": 3,
+    "verifications": 1,
+    "jev_calls": 1,
+    "fara_calls": 1,
+    "showui_calls": 1,
+    "manager_calls": 1,
+    "fallbacks": 2,
+    "recoveries": 1,
+    "loops": 0,
+    "transport_commands": 1,
+    "failure_classes": {
+      "stale_target": 1
+    },
+    "observe_ms_p50": 4.6,
+    "observe_ms_p95": 7.8,
+    "jev_ms_p50": 1400.0,
+    "jev_ms_p95": 1400.0,
+    "verify_ms_p50": 4.3,
+    "verify_ms_p95": 4.3,
+    "wall_ms": 8892.0,
+    "manager_input_tokens": 454,
+    "manager_output_tokens": 199,
+    "manager_latency_ms": 2531.3,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 1,
+  "jev_calls": 1,
+  "fara_calls": 1,
+  "showui_calls": 1,
+  "actions": 1,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tokens": {
+    "input": 454,
+    "output": 199,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 8.38e-05,
+  "done": true,
+  "verification": "{\"url\":\"https://www.tldraw.com/\",\"truth\":{\"labels\":[],\"nodes\":[],\"arrows\":0,\"overlap\":false},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": false
+}

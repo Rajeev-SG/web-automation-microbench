@@ -1,0 +1,505 @@
+{
+  "id": "1-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "1",
+  "task": "todomvc",
+  "events": [
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.1,
+      "data": {
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 15.6,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task todomvc"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 16.4,
+      "data": {
+        "subtask": "mb",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "task_class": "live_site_audit"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 19.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 5,
+      "kind": "manager_decision",
+      "at_ms": 3324.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 6,
+      "kind": "verify",
+      "at_ms": 3326.5,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 3327.5,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 8,
+      "kind": "manager_decision",
+      "at_ms": 20329.1,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': None, 'value': None, 'rationale': 'Add first todo via input.'}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 9,
+      "kind": "action",
+      "at_ms": 20352.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 10,
+      "kind": "verify",
+      "at_ms": 20354.4,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 11,
+      "kind": "route",
+      "at_ms": 20355.5,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 12,
+      "kind": "manager_decision",
+      "at_ms": 22192.3,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': 'n2', 'value': 'Email supplier', 'rationale': ''}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 13,
+      "kind": "action",
+      "at_ms": 22196.8,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 14,
+      "kind": "verify",
+      "at_ms": 22198.5,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 15,
+      "kind": "route",
+      "at_ms": 22199.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 16,
+      "kind": "manager_decision",
+      "at_ms": 24466.8,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': 'n2', 'value': 'Email supplier', 'rationale': ''}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 17,
+      "kind": "cycle_detected",
+      "at_ms": 24471.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 18,
+      "kind": "subtask_failed",
+      "at_ms": 24472.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 19,
+      "kind": "manager_replan",
+      "at_ms": 24472.2,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 20,
+      "kind": "subtask_start",
+      "at_ms": 24472.5,
+      "data": {
+        "subtask": "mb",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "task_class": "live_site_audit"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 21,
+      "kind": "route",
+      "at_ms": 24473.7,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 22,
+      "kind": "manager_decision",
+      "at_ms": 26331.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': 'n2', 'value': 'Email supplier', 'rationale': ''}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 23,
+      "kind": "cycle_detected",
+      "at_ms": 26335.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "repeats": 3
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 24,
+      "kind": "subtask_failed",
+      "at_ms": 26335.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 25,
+      "kind": "manager_replan",
+      "at_ms": 26335.8,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 26,
+      "kind": "subtask_start",
+      "at_ms": 26336.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "task_class": "live_site_audit"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 27,
+      "kind": "route",
+      "at_ms": 26337.1,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 28,
+      "kind": "manager_decision",
+      "at_ms": 28538.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': None, 'value': None, 'rationale': 'Add first todo'}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 29,
+      "kind": "cycle_detected",
+      "at_ms": 28542.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "repeats": 4
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 30,
+      "kind": "subtask_failed",
+      "at_ms": 28543.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 31,
+      "kind": "manager_replan",
+      "at_ms": 28543.2,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 32,
+      "kind": "subtask_start",
+      "at_ms": 28543.8,
+      "data": {
+        "subtask": "mb",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "task_class": "live_site_audit"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 33,
+      "kind": "route",
+      "at_ms": 28545.1,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "task_class=live_site_audit needs planner-owned DOM/eval loop",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 34,
+      "kind": "manager_decision",
+      "at_ms": 30902.1,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'type', 'target': 'n2', 'value': 'Email supplier', 'rationale': ''}"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 35,
+      "kind": "cycle_detected",
+      "at_ms": 30906.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "type",
+        "target": "n2",
+        "repeats": 5
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 36,
+      "kind": "subtask_failed",
+      "at_ms": 30906.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-84f63707aa67",
+      "seq": 37,
+      "kind": "run_end",
+      "at_ms": 30907.6,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 30906.9
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.924,
+  "wall_s": 32.809,
+  "total_s": 32.809,
+  "run_id": "run-84f63707aa67",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 6,
+    "observations": 9,
+    "verifications": 3,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 6,
+    "fallbacks": 1,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 6,
+    "failure_classes": {
+      "premature_done": 1,
+      "verifier_mismatch": 2,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 1.1,
+    "observe_ms_p95": 2.8,
+    "verify_ms_p50": 0.8,
+    "verify_ms_p95": 2.2,
+    "wall_ms": 30906.9,
+    "manager_input_tokens": 2814,
+    "manager_output_tokens": 171,
+    "manager_latency_ms": 27513.1,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 6,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 6,
+  "model_calls": 6,
+  "tool_calls": 6,
+  "tokens": {
+    "input": 2814,
+    "output": 171,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0002538,
+  "done": false,
+  "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[],\"saved\":[]}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

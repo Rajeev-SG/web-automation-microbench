@@ -1,0 +1,512 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "porsche-uk-tag-inspection",
+  "events": [
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 24.2,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task porsche-uk-tag-inspection"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 24.5,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 27.4,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 5,
+      "kind": "route_cascade",
+      "at_ms": 3082.9,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 6,
+      "kind": "action",
+      "at_ms": 3082.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 3088.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 8,
+      "kind": "route_cascade",
+      "at_ms": 5157.2,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 9,
+      "kind": "cycle_detected",
+      "at_ms": 5157.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "repeats": 2
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 10,
+      "kind": "subtask_failed",
+      "at_ms": 5158.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 11,
+      "kind": "manager_replan",
+      "at_ms": 5159.0,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 12,
+      "kind": "subtask_start",
+      "at_ms": 5159.9,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 13,
+      "kind": "route",
+      "at_ms": 5163.1,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 14,
+      "kind": "route_cascade",
+      "at_ms": 7265.9,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 15,
+      "kind": "cycle_detected",
+      "at_ms": 7265.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "repeats": 3
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 16,
+      "kind": "subtask_failed",
+      "at_ms": 7266.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 17,
+      "kind": "manager_replan",
+      "at_ms": 7266.9,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 18,
+      "kind": "subtask_start",
+      "at_ms": 7267.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 19,
+      "kind": "route",
+      "at_ms": 7270.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 20,
+      "kind": "escalate",
+      "at_ms": 9285.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 21,
+      "kind": "route",
+      "at_ms": 9287.8,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 22,
+      "kind": "manager_decision",
+      "at_ms": 16476.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 23,
+      "kind": "verify",
+      "at_ms": 16480.0,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 24,
+      "kind": "route",
+      "at_ms": 16483.6,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 25,
+      "kind": "manager_decision",
+      "at_ms": 19379.6,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 26,
+      "kind": "verify",
+      "at_ms": 19381.7,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 27,
+      "kind": "route",
+      "at_ms": 19383.0,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 28,
+      "kind": "manager_decision",
+      "at_ms": 24186.7,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 29,
+      "kind": "verify",
+      "at_ms": 24190.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 30,
+      "kind": "subtask_failed",
+      "at_ms": 24197.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "premature_done"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 31,
+      "kind": "manager_replan",
+      "at_ms": 24197.9,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 32,
+      "kind": "subtask_start",
+      "at_ms": 24198.6,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 33,
+      "kind": "route",
+      "at_ms": 24201.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 34,
+      "kind": "route_cascade",
+      "at_ms": 27068.2,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 35,
+      "kind": "cycle_detected",
+      "at_ms": 27068.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "inspect",
+        "target": "n1",
+        "repeats": 4
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 36,
+      "kind": "subtask_failed",
+      "at_ms": 27069.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "run_id": "run-32f7c9e67c03",
+      "seq": 37,
+      "kind": "run_end",
+      "at_ms": 27070.8,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 27069.6
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.771,
+  "wall_s": 30.435,
+  "total_s": 30.435,
+  "run_id": "run-32f7c9e67c03",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 4,
+    "observations": 8,
+    "verifications": 3,
+    "jev_calls": 5,
+    "fara_calls": 1,
+    "showui_calls": 1,
+    "manager_calls": 3,
+    "fallbacks": 5,
+    "recoveries": 0,
+    "loops": 3,
+    "transport_commands": 4,
+    "failure_classes": {
+      "repeated_action_loop": 3,
+      "premature_done": 3
+    },
+    "replans": 3,
+    "observe_ms_p50": 3.1,
+    "observe_ms_p95": 5.0,
+    "jev_ms_p50": 2102.8,
+    "jev_ms_p95": 3055.5,
+    "verify_ms_p50": 3.4,
+    "verify_ms_p95": 3.5,
+    "wall_ms": 27069.6,
+    "manager_input_tokens": 1839,
+    "manager_output_tokens": 325,
+    "manager_latency_ms": 14622.8,
+    "jev_decision_ms": [
+      3055.46266696183,
+      2069.0125839901157,
+      2102.7706660097465,
+      2866.2291250075214
+    ],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 3,
+  "jev_calls": 5,
+  "fara_calls": 1,
+  "showui_calls": 1,
+  "actions": 4,
+  "model_calls": 8,
+  "tool_calls": 4,
+  "tokens": {
+    "input": 1839,
+    "output": 325,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.00021917,
+  "done": false,
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}

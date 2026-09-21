@@ -1,0 +1,872 @@
+{
+  "id": "1-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "1",
+  "task": "allbirds-uk-add-to-cart-tag-check",
+  "events": [
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 1,
+      "kind": "run_start",
+      "at_ms": 0.1,
+      "data": {
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 2,
+      "kind": "plan",
+      "at_ms": 2047.7,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task allbirds-uk-add-to-cart-tag-check"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 3,
+      "kind": "subtask_start",
+      "at_ms": 2048.8,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 4,
+      "kind": "route",
+      "at_ms": 2066.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 5,
+      "kind": "action",
+      "at_ms": 2129.6,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 6,
+      "kind": "verify",
+      "at_ms": 2559.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 7,
+      "kind": "route",
+      "at_ms": 2565.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 8,
+      "kind": "action",
+      "at_ms": 2583.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 9,
+      "kind": "failure",
+      "at_ms": 2583.4,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 10,
+      "kind": "repair",
+      "at_ms": 2583.4,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 11,
+      "kind": "route",
+      "at_ms": 2587.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 12,
+      "kind": "action",
+      "at_ms": 2596.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 13,
+      "kind": "failure",
+      "at_ms": 2596.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 14,
+      "kind": "repair",
+      "at_ms": 2596.3,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 15,
+      "kind": "route",
+      "at_ms": 2599.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 16,
+      "kind": "action",
+      "at_ms": 2606.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 17,
+      "kind": "failure",
+      "at_ms": 2606.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 18,
+      "kind": "repair",
+      "at_ms": 2606.9,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 19,
+      "kind": "route",
+      "at_ms": 2610.3,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 20,
+      "kind": "action",
+      "at_ms": 2618.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 21,
+      "kind": "failure",
+      "at_ms": 2618.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 22,
+      "kind": "subtask_failed",
+      "at_ms": 2619.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 23,
+      "kind": "manager_replan",
+      "at_ms": 2619.1,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 24,
+      "kind": "subtask_start",
+      "at_ms": 2619.5,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 25,
+      "kind": "route",
+      "at_ms": 2622.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 26,
+      "kind": "action",
+      "at_ms": 2628.8,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 27,
+      "kind": "failure",
+      "at_ms": 2628.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 28,
+      "kind": "route",
+      "at_ms": 2631.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 29,
+      "kind": "action",
+      "at_ms": 2637.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 30,
+      "kind": "failure",
+      "at_ms": 2637.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 31,
+      "kind": "route",
+      "at_ms": 2640.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 32,
+      "kind": "action",
+      "at_ms": 2646.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 33,
+      "kind": "failure",
+      "at_ms": 2646.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 34,
+      "kind": "route",
+      "at_ms": 2649.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 35,
+      "kind": "action",
+      "at_ms": 2655.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 36,
+      "kind": "failure",
+      "at_ms": 2655.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 37,
+      "kind": "subtask_failed",
+      "at_ms": 2655.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 38,
+      "kind": "manager_replan",
+      "at_ms": 2655.7,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 39,
+      "kind": "subtask_start",
+      "at_ms": 2656.2,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 40,
+      "kind": "route",
+      "at_ms": 2658.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 41,
+      "kind": "action",
+      "at_ms": 2665.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 42,
+      "kind": "failure",
+      "at_ms": 2665.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 43,
+      "kind": "route",
+      "at_ms": 2669.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 44,
+      "kind": "action",
+      "at_ms": 2674.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 45,
+      "kind": "failure",
+      "at_ms": 2674.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 46,
+      "kind": "route",
+      "at_ms": 2677.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 47,
+      "kind": "action",
+      "at_ms": 2683.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 48,
+      "kind": "failure",
+      "at_ms": 2684.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 49,
+      "kind": "route",
+      "at_ms": 2686.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 50,
+      "kind": "action",
+      "at_ms": 2692.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 51,
+      "kind": "failure",
+      "at_ms": 2692.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 52,
+      "kind": "subtask_failed",
+      "at_ms": 2692.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 53,
+      "kind": "manager_replan",
+      "at_ms": 2692.7,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 54,
+      "kind": "subtask_start",
+      "at_ms": 2693.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 55,
+      "kind": "route",
+      "at_ms": 2695.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 56,
+      "kind": "action",
+      "at_ms": 2701.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 57,
+      "kind": "failure",
+      "at_ms": 2701.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 58,
+      "kind": "route",
+      "at_ms": 2703.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 59,
+      "kind": "action",
+      "at_ms": 2710.8,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 60,
+      "kind": "failure",
+      "at_ms": 2710.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 61,
+      "kind": "route",
+      "at_ms": 2713.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 62,
+      "kind": "action",
+      "at_ms": 2718.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 63,
+      "kind": "failure",
+      "at_ms": 2718.4,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 64,
+      "kind": "route",
+      "at_ms": 2720.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 65,
+      "kind": "action",
+      "at_ms": 2726.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n3",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 66,
+      "kind": "failure",
+      "at_ms": 2726.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 67,
+      "kind": "subtask_failed",
+      "at_ms": 2726.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "run_id": "run-febf376bf7e5",
+      "seq": 68,
+      "kind": "run_end",
+      "at_ms": 2727.0,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "stale_target",
+        "wall_ms": 2726.7
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.831,
+  "wall_s": 11.838,
+  "total_s": 11.838,
+  "run_id": "run-febf376bf7e5",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "stale_target",
+  "metrics": {
+    "actions": 17,
+    "observations": 18,
+    "verifications": 1,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 13,
+    "recoveries": 3,
+    "loops": 0,
+    "transport_commands": 17,
+    "failure_classes": {
+      "verifier_mismatch": 1,
+      "stale_target": 16
+    },
+    "replans": 3,
+    "observe_ms_p50": 2.7,
+    "observe_ms_p95": 5.9,
+    "verify_ms_p50": 427.1,
+    "verify_ms_p95": 427.1,
+    "wall_ms": 2726.7,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 17,
+  "model_calls": 0,
+  "tool_calls": 17,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://www.allbirds.co.uk/collections/mens-shoes\",\"truth\":{\"consentAccepted\":true,\"cartItemCount\":0,\"tagsAfterAdd\":[\"www.googletagmanager.com\"]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true
+}
