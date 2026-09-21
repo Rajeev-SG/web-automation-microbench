@@ -31,6 +31,21 @@ class CdpAttachedTransport(IsolatedBrowserTransport):
 
     Action/observe/reset semantics are inherited unchanged; only the browser is
     connected to the microbench's Chrome for Testing instead of being launched here.
+
+    Attribution control (frontier review #1 F2). The dominant corpus failure class
+    recorded for this contender is ``stale_target`` — the runtime resolves an ordinal
+    node from one observation, acts without re-observing, and its stamp revalidation
+    (``IsolatedBrowserTransport._sel`` -> ``_STAMP_JS``) fails closed after a navigating
+    click. This is NOT caused by the CDP attach: re-running the same tasks through the
+    runtime's OWN native ``IsolatedBrowserTransport`` (a real launched Chromium, no CDP
+    subclass, none of this adapter's code) reproduces the same classes:
+
+        allbirds-uk-add-to-cart-tag-check -> status=failed  failure_class=stale_target
+        porsche-uk-tag-inspection         -> status=failed  failure_class=repeated_action_loop
+
+    So the subclass changes only how the browser is obtained; the failure is the
+    runtime's own binding logic, inherited unchanged. Full evidence in
+    ``bench-ext/runners/ADAPTIVE_UI_RUNTIME.md``.
     """
 
     name = "cdp-attached"
