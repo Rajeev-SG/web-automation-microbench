@@ -148,6 +148,36 @@ that can evaluate JS in the page; the multi-step journeys (add-to-cart) and canv
 above the current frontier. `puma-uk-seo-metadata-audit` fails because models over-report
 nested JSON-LD types. Discriminating difficulty, not broken tasks.
 
+## Jev Ultrafast — the classifier fast path (cross-repo evidence)
+
+The shared benchlib loop times a chat model issuing one browser command per step. A
+different decision engine sits underneath it in some of the newer rows: **Jev
+Ultrafast** (`browser-use/jev-ultrafast`, pinned `452c1ad`), a small classifier that
+picks the next browser action over a bounded candidate set, and its own `Agent` loop.
+Its head-to-head numbers are produced and versioned in
+[`Rajeev-SG/jev-tests`](https://github.com/Rajeev-SG/jev-tests)
+(`results/browser-fastpath/`, issue #9) rather than duplicated here; this section is a
+pointer so the fast path is visible from the benchmark it belongs to.
+
+Same instrument family (TodoMVC, one loop, one bridge, one independent verifier; only
+the decision model changes; 5 reps per arm per transport, 20 runs). Jev is reached via
+**classifier.dev** (`jev-1.13.0`) — not TypeSafe, because this Mac has no TypeSafe key —
+so these measure Jev's decisions over that endpoint, not TypeSafe's latency:
+
+| Arm | Pass | Median wall | Wall (completed) | Decision p50 | Notes |
+|---|---:|---:|---:|---:|---|
+| Jev + Browser Relay | 5/5 | 13.1s | 13.1s | 1218 ms | Level with GLM on time; the difference is reliability |
+| GLM + Browser Relay | 1/5 | 13.4s | 12.8s | 2453 ms | Three stopped before applying the filter, one format error |
+| Jev + Playwriter | 4/5 | 16.1s | 16.1s | 1350 ms | ~40% lower median than GLM on the same transport |
+| GLM + Playwriter | 4/5 | 27.1s | 27.1s | 2619 ms | Same pass count, ~11s slower |
+
+Offline next-action routing on 400 scored real-work decisions (`results/06_browser_routing/`)
+gives the honest boundary: Jev does **not** beat the "always inspect the page" baseline
+(0.68 vs 0.86 raw accuracy), but at a confidence gate of 0.7 it covers **63.3%** of
+decisions at **96.9%** accuracy on held-out data (95% CI 0.92–0.99). Verdict there: use
+as a gate, not as the sole router. Do not let it own rare deterministic actions (`type`,
+`wait`, `navigate` recall was 0.00 in that sample).
+
 ## Round 8 — 21 Sep 2026: adaptive-ui-runtime (own-loop, issue #37)
 
 `adaptive-ui-runtime` is an own-loop contender (its own `plan -> route -> act -> verify`
