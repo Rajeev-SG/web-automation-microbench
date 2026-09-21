@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 312.7,
+      "at_ms": 398.2,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 313.8,
+      "at_ms": 398.7,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 323.0,
+      "at_ms": 402.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 380.9,
+      "at_ms": 741.0,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "verify",
-      "at_ms": 1202.1,
+      "at_ms": 1603.6,
       "data": {
         "subtask": "mb",
         "passed": false,
@@ -64,7 +64,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1205.0,
+      "at_ms": 1608.5,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -73,8 +73,38 @@
       }
     },
     {
+      "kind": "action",
+      "at_ms": 1671.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 2309.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2311.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
       "kind": "cycle_detected",
-      "at_ms": 1234.3,
+      "at_ms": 2333.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -84,7 +114,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1235.1,
+      "at_ms": 2334.6,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -92,7 +122,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1235.1,
+      "at_ms": 2334.6,
       "data": {
         "attempt": 1,
         "subtasks": [
@@ -102,7 +132,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1235.7,
+      "at_ms": 2335.1,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
@@ -111,7 +141,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1237.8,
+      "at_ms": 2336.8,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -121,7 +151,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1268.8,
+      "at_ms": 2368.3,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -131,7 +161,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1269.5,
+      "at_ms": 2368.8,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -139,7 +169,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1269.6,
+      "at_ms": 2368.9,
       "data": {
         "attempt": 2,
         "subtasks": [
@@ -149,7 +179,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1270.1,
+      "at_ms": 2369.3,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
@@ -158,7 +188,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1272.2,
+      "at_ms": 2371.5,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -168,7 +198,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1300.6,
+      "at_ms": 2401.2,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -178,7 +208,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1301.2,
+      "at_ms": 2401.8,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -186,7 +216,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1301.3,
+      "at_ms": 2401.9,
       "data": {
         "attempt": 3,
         "subtasks": [
@@ -196,7 +226,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1301.8,
+      "at_ms": 2402.3,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
@@ -205,7 +235,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1303.9,
+      "at_ms": 2404.0,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -215,7 +245,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1333.8,
+      "at_ms": 2434.4,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -225,7 +255,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1335.4,
+      "at_ms": 2435.0,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -233,12 +263,12 @@
     },
     {
       "kind": "run_end",
-      "at_ms": 1335.8,
+      "at_ms": 2435.4,
       "data": {
         "status": "failed",
         "verified": false,
         "failure_class": "repeated_action_loop",
-        "wall_ms": 1335.4
+        "wall_ms": 2435.0
       }
     }
   ],
@@ -246,17 +276,17 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.764,
-  "wall_s": 4.177,
-  "total_s": 4.177,
-  "run_id": "run-b0f73d77eba8",
+  "setup_s": 0.772,
+  "wall_s": 5.809,
+  "total_s": 5.809,
+  "run_id": "run-0744f8dd1349",
   "runtime_verified": false,
   "runtime_status": "failed",
   "runtime_failure_class": "repeated_action_loop",
   "metrics": {
-    "actions": 5,
-    "observations": 6,
-    "verifications": 1,
+    "actions": 6,
+    "observations": 8,
+    "verifications": 2,
     "jev_calls": 0,
     "fara_calls": 0,
     "showui_calls": 0,
@@ -264,17 +294,17 @@
     "fallbacks": 0,
     "recoveries": 0,
     "loops": 4,
-    "transport_commands": 5,
+    "transport_commands": 6,
     "failure_classes": {
-      "verifier_mismatch": 1,
+      "verifier_mismatch": 2,
       "repeated_action_loop": 4
     },
     "replans": 3,
-    "observe_ms_p50": 2.1,
-    "observe_ms_p95": 9.1,
-    "verify_ms_p50": 818.5,
-    "verify_ms_p95": 818.5,
-    "wall_ms": 1335.4,
+    "observe_ms_p50": 1.9,
+    "observe_ms_p95": 4.8,
+    "verify_ms_p50": 635.9,
+    "verify_ms_p95": 854.1,
+    "wall_ms": 2435.0,
     "manager_input_tokens": 0,
     "manager_output_tokens": 0,
     "manager_latency_ms": 0.0,
@@ -306,9 +336,9 @@
   "jev_calls": 0,
   "fara_calls": 0,
   "showui_calls": 0,
-  "actions": 5,
+  "actions": 6,
   "model_calls": 0,
-  "tool_calls": 5,
+  "tool_calls": 6,
   "tokens": {
     "input": 0,
     "output": 0,

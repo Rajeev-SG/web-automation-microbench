@@ -94,11 +94,11 @@ is the next table.
 | **hyperagent** (perform) | [hyperbrowserai/HyperAgent](https://github.com/hyperbrowserai/HyperAgent) | 6 | 3/4 | 28.3s | ~20.8k / ~3.4k | ~$0.0096 |
 | **opencli** | [jackwener/OpenCLI](https://github.com/jackwener/OpenCLI) | 6 | 0/2 | 30.4s | ~20.8k / ~234 | ~$0.0032 |
 | **surf-cli** | [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli) | 6 | 2/2 | 31.8s | ~28.6k / ~519 | ~$0.0046 |
-| **adaptive-ui-runtime** | [Rajeev-SG/adaptive-ui-runtime](https://github.com/Rajeev-SG/adaptive-ui-runtime) | 8 | 0/2 | 32.3s | ~3.0k / ~187 | ~$0.0003 |
 | **browser-agent** | [visnia-ai/browser-agent](https://github.com/visnia-ai/browser-agent) | 4 | 2/2 | 32.5s | ~43.1k / ~1,360 | ~$0.0036 |
 | **bb-browser** | [epiral/bb-browser](https://github.com/epiral/bb-browser) | 6 | 0/2 | 32.7s | ~12.6k / ~380 | ~$0.0021 |
 | **midscene** | [web-infra-dev/midscene](https://github.com/web-infra-dev/midscene) | 6 | 2/2 | 33.4s | ~444k / ~62k | ~$0.074 |
 | **raw-playwright baseline** | [microsoft/playwright](https://github.com/microsoft/playwright) | 3 | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 |
+| **adaptive-ui-runtime** | [Rajeev-SG/adaptive-ui-runtime](https://github.com/Rajeev-SG/adaptive-ui-runtime) | 8 | 0/2 | 45.8s | ~3.0k / ~210 | ~$0.0003 |
 | **Magnitude** | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 2 | 4/4 | 52.6s | ~18.3k / ~2.9k | ~$0.0021 |
 | **Browser Use Pi** | [browser-use/browser-use-pi](https://github.com/browser-use/browser-use-pi) | 7 | 7/10 | 53.5s | ~6.6k / ~0.7k | ~$0.0010 |
 | **BrowserCode** | [uuuuytgg/browser-code](https://github.com/uuuuytgg/browser-code) | 2 | 2/2 | 153.0s | ~55.6k / ~3.0k | ~$0.026 |
@@ -159,11 +159,11 @@ Full notes, commit pin and comparability caveats:
 [`bench-ext/runners/ADAPTIVE_UI_RUNTIME.md`](bench-ext/runners/ADAPTIVE_UI_RUNTIME.md).
 
 **Result: 0/2 on TodoMVC and 0/22 across the 11-task harvested corpus.** The configured
-manager and Jev **did** run on the decision classes (29 manager calls, 21 Jev calls, ~22.4k
+manager and Jev **did** run on the decision classes (48 manager calls, 11 Jev calls, ~54.7k
 manager input tokens across the 24 runs); the 7 single-page DOM/eval audit tasks made 0 model
 calls because the router sends them straight to its structured route and fails there.
-Independent verification and the runtime's own verdict agreed on 22 of 24 runs; the 2
-disagreements are `tldraw-three-shape-diagram`, flagged `vacuous_self_pass` — the runtime's own
+Independent verification and the runtime's own verdict agreed on 21 of 24 runs; the 3
+disagreements are flagged `vacuous_self_pass` (`tldraw` r1+r2, `chanel-gb-pdp-tag-inspection` r2) — the runtime's own
 verifier reported success against empty structural truth (`labels:[], nodes:[], arrows:0`),
 exactly the self-pass the independent verifier exists to catch. The top corpus failure class,
 `stale_target`, is **the runtime's own binding, not the adapter's**: re-running the same tasks
@@ -171,7 +171,7 @@ on the runtime's native `IsolatedBrowserTransport` (no CDP subclass) reproduces 
 
 | Contender | TodoMVC pass | Median wall | Tokens in/out | Cost/run | Corpus pass |
 |---|---|---:|---:|---:|---:|
-| **adaptive-ui-runtime** | 0/2 | 32.3s | ~3.0k / ~187 | ~$0.0003 | 0/22 |
+| **adaptive-ui-runtime** | 0/2 | 45.8s | ~3.0k / ~210 | ~$0.0003 | 0/22 |
 | **browser-relay** | 3/3 | 4.3s | ~5.9k / ~95 | ~$0.0005 | 22/33 |
 | **raw-playwright** | 3/4 | 42.7s | ~18.1k / ~410 | ~$0.0010 | 17/33 |
 

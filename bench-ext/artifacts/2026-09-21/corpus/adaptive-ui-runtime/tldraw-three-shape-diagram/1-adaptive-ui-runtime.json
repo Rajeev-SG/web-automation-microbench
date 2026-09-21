@@ -6,7 +6,7 @@
   "events": [
     {
       "kind": "run_start",
-      "at_ms": 0.1,
+      "at_ms": 0.0,
       "data": {
         "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
         "mode": "adaptive",
@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 773.6,
+      "at_ms": 674.4,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 774.1,
+      "at_ms": 677.5,
       "data": {
         "subtask": "mb",
         "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 776.4,
+      "at_ms": 680.1,
       "data": {
         "subtask": "mb",
         "route": "strong_manager",
@@ -44,15 +44,136 @@
     },
     {
       "kind": "manager_decision",
-      "at_ms": 4940.6,
+      "at_ms": 4547.6,
       "data": {
         "subtask": "mb",
-        "decision": "None"
+        "decision": "{'action': 'click', 'target': 'body', 'value': None, 'rationale': ''}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 4547.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "body",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 4547.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "repair",
+      "at_ms": 4547.8,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 4556.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "escalate",
+      "at_ms": 6344.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 6350.7,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 11310.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Select rectangle tool to draw first shape'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 11310.6,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": null,
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 11310.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "repair",
+      "at_ms": 11310.6,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 11319.1,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 15378.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': 'n47', 'value': None, 'rationale': ''}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 15456.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n47",
+        "ok": true,
+        "error_class": null
       }
     },
     {
       "kind": "verify",
-      "at_ms": 4944.2,
+      "at_ms": 15460.8,
       "data": {
         "subtask": "mb",
         "passed": true,
@@ -61,12 +182,12 @@
     },
     {
       "kind": "run_end",
-      "at_ms": 4946.0,
+      "at_ms": 15461.9,
       "data": {
         "status": "succeeded",
         "verified": true,
         "failure_class": null,
-        "wall_ms": 4945.3
+        "wall_ms": 15461.5
       }
     }
   ],
@@ -74,34 +195,38 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.766,
-  "wall_s": 9.322,
-  "total_s": 9.322,
-  "run_id": "run-73ec308804d0",
+  "setup_s": 0.774,
+  "wall_s": 19.546,
+  "total_s": 19.546,
+  "run_id": "run-73d1fb108d13",
   "runtime_verified": true,
   "runtime_status": "succeeded",
   "runtime_failure_class": null,
   "metrics": {
-    "actions": 0,
-    "observations": 1,
+    "actions": 3,
+    "observations": 5,
     "verifications": 1,
-    "jev_calls": 0,
-    "fara_calls": 0,
-    "showui_calls": 0,
-    "manager_calls": 1,
-    "fallbacks": 0,
-    "recoveries": 0,
+    "jev_calls": 1,
+    "fara_calls": 1,
+    "showui_calls": 1,
+    "manager_calls": 3,
+    "fallbacks": 2,
+    "recoveries": 2,
     "loops": 0,
-    "transport_commands": 0,
-    "failure_classes": {},
-    "observe_ms_p50": 2.2,
-    "observe_ms_p95": 2.2,
-    "verify_ms_p50": 3.5,
-    "verify_ms_p95": 3.5,
-    "wall_ms": 4945.3,
-    "manager_input_tokens": 454,
-    "manager_output_tokens": 86,
-    "manager_latency_ms": 3857.2,
+    "transport_commands": 3,
+    "failure_classes": {
+      "stale_target": 2
+    },
+    "observe_ms_p50": 8.4,
+    "observe_ms_p95": 8.4,
+    "jev_ms_p50": 1787.9,
+    "jev_ms_p95": 1787.9,
+    "verify_ms_p50": 1.4,
+    "verify_ms_p95": 1.4,
+    "wall_ms": 15461.5,
+    "manager_input_tokens": 6287,
+    "manager_output_tokens": 499,
+    "manager_latency_ms": 12631.8,
     "jev_decision_ms": [],
     "fara_inference_ms": [],
     "showui_inference_ms": [],
@@ -126,21 +251,21 @@
     },
     "transport": "cdp-attached"
   },
-  "manager_calls": 1,
-  "jev_calls": 0,
-  "fara_calls": 0,
-  "showui_calls": 0,
-  "actions": 0,
-  "model_calls": 1,
-  "tool_calls": 0,
+  "manager_calls": 3,
+  "jev_calls": 1,
+  "fara_calls": 1,
+  "showui_calls": 1,
+  "actions": 3,
+  "model_calls": 4,
+  "tool_calls": 3,
   "tokens": {
-    "input": 454,
-    "output": 86,
+    "input": 6287,
+    "output": 499,
     "cached": 0,
     "reasoning": 0
   },
   "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
-  "cost": 5.555e-05,
+  "cost": 0.00059627,
   "done": true,
   "verification": "{\"url\":\"https://www.tldraw.com/\",\"truth\":{\"labels\":[],\"nodes\":[],\"arrows\":0,\"overlap\":false},\"finding\":null}",
   "independent_pass": false,

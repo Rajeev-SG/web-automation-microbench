@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 1088.1,
+      "at_ms": 469.5,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1088.6,
+      "at_ms": 469.8,
       "data": {
         "subtask": "mb",
         "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1091.6,
+      "at_ms": 472.0,
       "data": {
         "subtask": "mb",
         "route": "strong_manager",
@@ -44,45 +44,26 @@
     },
     {
       "kind": "manager_decision",
-      "at_ms": 20155.2,
+      "at_ms": 5288.9,
       "data": {
         "subtask": "mb",
-        "decision": "None"
-      }
-    },
-    {
-      "kind": "verify",
-      "at_ms": 20166.7,
-      "data": {
-        "subtask": "mb",
-        "passed": false,
-        "failure_class": "verifier_mismatch"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 20173.6,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Start at CHANEL GB homepage to reach a product page.'}"
       }
     },
     {
       "kind": "action",
-      "at_ms": 28181.0,
+      "at_ms": 5289.0,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
-        "target": "n34",
+        "target": null,
         "ok": false,
         "error_class": "stale_target"
       }
     },
     {
       "kind": "failure",
-      "at_ms": 28181.0,
+      "at_ms": 5289.0,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -90,7 +71,7 @@
     },
     {
       "kind": "repair",
-      "at_ms": 28181.0,
+      "at_ms": 5289.0,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
@@ -99,28 +80,36 @@
     },
     {
       "kind": "route",
-      "at_ms": 28186.9,
+      "at_ms": 5291.8,
       "data": {
         "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
         "confidence": null
       }
     },
     {
+      "kind": "manager_decision",
+      "at_ms": 10768.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open CHANEL GB product page to inspect live marketing tags.'}"
+      }
+    },
+    {
       "kind": "action",
-      "at_ms": 36192.7,
+      "at_ms": 10768.6,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
-        "target": "n34",
+        "target": null,
         "ok": false,
         "error_class": "stale_target"
       }
     },
     {
       "kind": "failure",
-      "at_ms": 36192.7,
+      "at_ms": 10768.6,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -128,7 +117,7 @@
     },
     {
       "kind": "repair",
-      "at_ms": 36192.7,
+      "at_ms": 10768.6,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
@@ -137,28 +126,36 @@
     },
     {
       "kind": "route",
-      "at_ms": 36197.5,
+      "at_ms": 10770.6,
       "data": {
         "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
         "confidence": null
       }
     },
     {
+      "kind": "manager_decision",
+      "at_ms": 15059.6,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': 'https://www.chanel.com/gb/', 'value': None, 'rationale': 'Open CHANEL GB page to inspect marketing tags.'}"
+      }
+    },
+    {
       "kind": "action",
-      "at_ms": 44203.3,
+      "at_ms": 15059.7,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
-        "target": "n34",
+        "target": "https://www.chanel.com/gb/",
         "ok": false,
         "error_class": "stale_target"
       }
     },
     {
       "kind": "failure",
-      "at_ms": 44203.3,
+      "at_ms": 15059.7,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -166,16 +163,53 @@
     },
     {
       "kind": "repair",
-      "at_ms": 44203.3,
+      "at_ms": 15059.7,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
         "repaired": false
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 15061.8,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 18691.1,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open CHANEL GB product page to inspect live marketing tags.'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 18691.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": null,
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 18691.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 44204.1,
+      "at_ms": 18692.1,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -183,7 +217,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 44204.2,
+      "at_ms": 18692.2,
       "data": {
         "attempt": 1,
         "subtasks": [
@@ -193,7 +227,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 44204.6,
+      "at_ms": 18692.6,
       "data": {
         "subtask": "mb",
         "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
@@ -202,28 +236,36 @@
     },
     {
       "kind": "route",
-      "at_ms": 44209.6,
+      "at_ms": 18695.3,
       "data": {
         "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
         "confidence": null
       }
     },
     {
+      "kind": "manager_decision",
+      "at_ms": 30748.4,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open CHANEL GB product page to inspect live marketing tags.'}"
+      }
+    },
+    {
       "kind": "action",
-      "at_ms": 52214.1,
+      "at_ms": 30748.5,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
-        "target": "n34",
+        "target": null,
         "ok": false,
         "error_class": "stale_target"
       }
     },
     {
       "kind": "failure",
-      "at_ms": 52214.1,
+      "at_ms": 30748.5,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -231,28 +273,36 @@
     },
     {
       "kind": "route",
-      "at_ms": 52219.4,
+      "at_ms": 30751.8,
       "data": {
         "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
         "confidence": null
       }
     },
     {
+      "kind": "manager_decision",
+      "at_ms": 34344.7,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open CHANEL GB site to reach a product page for tag inspection.'}"
+      }
+    },
+    {
       "kind": "action",
-      "at_ms": 60225.6,
+      "at_ms": 34344.8,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
-        "target": "n34",
+        "target": null,
         "ok": false,
         "error_class": "stale_target"
       }
     },
     {
       "kind": "failure",
-      "at_ms": 60225.6,
+      "at_ms": 34344.8,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -260,364 +310,39 @@
     },
     {
       "kind": "route",
-      "at_ms": 60231.1,
+      "at_ms": 34347.8,
       "data": {
         "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
+        "route": "strong_manager",
+        "reason": "no cheaper route is calibrated for this class",
         "confidence": null
       }
     },
     {
-      "kind": "action",
-      "at_ms": 68237.0,
+      "kind": "manager_decision",
+      "at_ms": 38357.3,
       "data": {
         "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
+        "decision": "None"
       }
     },
     {
-      "kind": "failure",
-      "at_ms": 68237.0,
+      "kind": "verify",
+      "at_ms": 38360.3,
       "data": {
         "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 68242.9,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 76251.1,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 76251.2,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "subtask_failed",
-      "at_ms": 76252.2,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "manager_replan",
-      "at_ms": 76252.2,
-      "data": {
-        "attempt": 2,
-        "subtasks": [
-          "mb"
-        ]
-      }
-    },
-    {
-      "kind": "subtask_start",
-      "at_ms": 76252.7,
-      "data": {
-        "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
-        "task_class": "web-automation"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 76258.3,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 84263.5,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 84263.5,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 84267.2,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 92278.4,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 92278.4,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 92282.5,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 100287.7,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 100287.7,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 100292.1,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 108299.6,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 108299.6,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "subtask_failed",
-      "at_ms": 108300.5,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "manager_replan",
-      "at_ms": 108300.6,
-      "data": {
-        "attempt": 3,
-        "subtasks": [
-          "mb"
-        ]
-      }
-    },
-    {
-      "kind": "subtask_start",
-      "at_ms": 108301.1,
-      "data": {
-        "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
-        "task_class": "web-automation"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 108307.3,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 116314.2,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 116314.2,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 116319.6,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 124326.4,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 124326.4,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 124331.2,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 132335.8,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 132335.8,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 132339.8,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 140344.5,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n34",
-        "ok": false,
-        "error_class": "stale_target"
-      }
-    },
-    {
-      "kind": "failure",
-      "at_ms": 140344.5,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
-      }
-    },
-    {
-      "kind": "subtask_failed",
-      "at_ms": 140345.2,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "stale_target"
+        "passed": true,
+        "failure_class": null
       }
     },
     {
       "kind": "run_end",
-      "at_ms": 140346.0,
+      "at_ms": 38361.9,
       "data": {
-        "status": "failed",
-        "verified": false,
-        "failure_class": "stale_target",
-        "wall_ms": 140345.2
+        "status": "succeeded",
+        "verified": true,
+        "failure_class": null,
+        "wall_ms": 38361.0
       }
     }
   ],
@@ -625,38 +350,37 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.796,
-  "wall_s": 145.688,
-  "total_s": 145.688,
-  "run_id": "run-59cbf3604c6a",
-  "runtime_verified": false,
-  "runtime_status": "failed",
-  "runtime_failure_class": "stale_target",
+  "setup_s": 0.765,
+  "wall_s": 42.765,
+  "total_s": 42.765,
+  "run_id": "run-b12efa05363d",
+  "runtime_verified": true,
+  "runtime_status": "succeeded",
+  "runtime_failure_class": null,
   "metrics": {
-    "actions": 15,
-    "observations": 16,
+    "actions": 6,
+    "observations": 7,
     "verifications": 1,
     "jev_calls": 0,
     "fara_calls": 0,
     "showui_calls": 0,
-    "manager_calls": 1,
-    "fallbacks": 13,
+    "manager_calls": 6,
+    "fallbacks": 3,
     "recoveries": 3,
     "loops": 0,
-    "transport_commands": 15,
+    "transport_commands": 6,
     "failure_classes": {
-      "premature_done": 1,
-      "stale_target": 15
+      "stale_target": 6
     },
-    "replans": 3,
-    "observe_ms_p50": 5.2,
-    "observe_ms_p95": 6.2,
-    "verify_ms_p50": 11.3,
-    "verify_ms_p95": 11.3,
-    "wall_ms": 140345.2,
-    "manager_input_tokens": 1077,
-    "manager_output_tokens": 270,
-    "manager_latency_ms": 18677.9,
+    "replans": 1,
+    "observe_ms_p50": 2.6,
+    "observe_ms_p95": 3.2,
+    "verify_ms_p50": 2.9,
+    "verify_ms_p95": 2.9,
+    "wall_ms": 38361.0,
+    "manager_input_tokens": 7268,
+    "manager_output_tokens": 1429,
+    "manager_latency_ms": 33578.8,
     "jev_decision_ms": [],
     "fara_inference_ms": [],
     "showui_inference_ms": [],
@@ -681,26 +405,27 @@
     },
     "transport": "cdp-attached"
   },
-  "manager_calls": 1,
+  "manager_calls": 6,
   "jev_calls": 0,
   "fara_calls": 0,
   "showui_calls": 0,
-  "actions": 15,
-  "model_calls": 1,
-  "tool_calls": 15,
+  "actions": 6,
+  "model_calls": 6,
+  "tool_calls": 6,
   "tokens": {
-    "input": 1077,
-    "output": 270,
+    "input": 7268,
+    "output": 1429,
     "cached": 0,
     "reasoning": 0
   },
   "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
-  "cost": 0.00014827,
-  "done": false,
-  "verification": "{\"url\":\"https://www.chanel.com/gb/fine-jewellery/p/J13850/bouton-de-camelia-earrings/\",\"truth\":{\"gtm\":[\"GTM-5CXVSL2\",\"GTM-KNZ4RBR\"],\"aw\":[],\"pinterest\":false},\"finding\":null}",
+  "cost": 0.00090235,
+  "done": true,
+  "verification": "{\"url\":\"https://www.chanel.com/gb/fine-jewelry/p/J13850/bouton-de-camelia-earrings/\",\"truth\":{\"gtm\":[],\"aw\":[],\"pinterest\":false},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true,
+  "verdict_agreement": false,
   "runtime_finding": null,
-  "vacuous_self_pass": false
+  "vacuous_self_pass": true,
+  "disagreement_class": "vacuous_self_pass"
 }

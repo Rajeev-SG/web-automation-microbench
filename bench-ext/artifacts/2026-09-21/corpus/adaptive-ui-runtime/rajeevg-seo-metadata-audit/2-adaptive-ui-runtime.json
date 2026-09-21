@@ -6,7 +6,7 @@
   "events": [
     {
       "kind": "run_start",
-      "at_ms": 0.1,
+      "at_ms": 0.0,
       "data": {
         "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding wi\u2026",
         "mode": "adaptive",
@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 336.9,
+      "at_ms": 398.4,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 337.5,
+      "at_ms": 399.1,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding wi\u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 341.8,
+      "at_ms": 402.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 726.8,
+      "at_ms": 736.7,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "verify",
-      "at_ms": 739.1,
+      "at_ms": 744.4,
       "data": {
         "subtask": "mb",
         "passed": false,
@@ -64,47 +64,17 @@
     },
     {
       "kind": "route",
-      "at_ms": 740.7,
+      "at_ms": 746.2,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
         "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 785.4,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "click",
-        "target": "n2",
-        "ok": true,
-        "error_class": null
-      }
-    },
-    {
-      "kind": "verify",
-      "at_ms": 787.8,
-      "data": {
-        "subtask": "mb",
-        "passed": false,
-        "failure_class": "verifier_mismatch"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 792.3,
-      "data": {
-        "subtask": "mb",
-        "route": "strong_manager",
-        "reason": "ambiguous/failed state requires manager replan",
         "confidence": null
       }
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 817.5,
+      "at_ms": 1093.5,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -114,7 +84,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 818.1,
+      "at_ms": 1094.1,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -122,7 +92,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 818.1,
+      "at_ms": 1094.2,
       "data": {
         "attempt": 1,
         "subtasks": [
@@ -132,7 +102,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 818.5,
+      "at_ms": 1094.7,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding wi\u2026",
@@ -141,7 +111,37 @@
     },
     {
       "kind": "route",
-      "at_ms": 820.1,
+      "at_ms": 1103.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 1144.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 1146.9,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1148.3,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -151,17 +151,17 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 850.3,
+      "at_ms": 1176.2,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
         "target": "n2",
-        "repeats": 3
+        "repeats": 2
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 850.8,
+      "at_ms": 1176.8,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -169,7 +169,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 850.9,
+      "at_ms": 1176.9,
       "data": {
         "attempt": 2,
         "subtasks": [
@@ -179,7 +179,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 851.2,
+      "at_ms": 1177.2,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding wi\u2026",
@@ -188,7 +188,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 853.4,
+      "at_ms": 1178.9,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -198,17 +198,17 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 883.7,
+      "at_ms": 1209.6,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
         "target": "n2",
-        "repeats": 4
+        "repeats": 3
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 884.3,
+      "at_ms": 1210.2,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -216,7 +216,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 884.3,
+      "at_ms": 1210.3,
       "data": {
         "attempt": 3,
         "subtasks": [
@@ -226,7 +226,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 884.7,
+      "at_ms": 1210.7,
       "data": {
         "subtask": "mb",
         "goal": "Open the rajeevg.com homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding wi\u2026",
@@ -235,7 +235,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 886.4,
+      "at_ms": 1212.7,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -245,17 +245,17 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 916.8,
+      "at_ms": 1240.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
         "target": "n2",
-        "repeats": 5
+        "repeats": 4
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 917.4,
+      "at_ms": 1241.6,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -263,12 +263,12 @@
     },
     {
       "kind": "run_end",
-      "at_ms": 917.8,
+      "at_ms": 1242.0,
       "data": {
         "status": "failed",
         "verified": false,
         "failure_class": "repeated_action_loop",
-        "wall_ms": 917.4
+        "wall_ms": 1241.6
       }
     }
   ],
@@ -276,10 +276,10 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.769,
-  "wall_s": 3.003,
-  "total_s": 3.003,
-  "run_id": "run-fd26e9dc6994",
+  "setup_s": 0.775,
+  "wall_s": 3.688,
+  "total_s": 3.688,
+  "run_id": "run-c169c38d8160",
   "runtime_verified": false,
   "runtime_status": "failed",
   "runtime_failure_class": "repeated_action_loop",
@@ -301,10 +301,10 @@
     },
     "replans": 3,
     "observe_ms_p50": 1.7,
-    "observe_ms_p95": 4.5,
+    "observe_ms_p95": 8.3,
     "verify_ms_p50": 0.7,
-    "verify_ms_p95": 2.4,
-    "wall_ms": 917.4,
+    "verify_ms_p95": 1.7,
+    "wall_ms": 1241.6,
     "manager_input_tokens": 0,
     "manager_output_tokens": 0,
     "manager_latency_ms": 0.0,

@@ -58,9 +58,9 @@ the CLI/MCP invoke it — one `Engine.execute` — from its own venv
 The manager and Jev **did** engage on the decision classes — they are not uniformly
 zero. Across the 24 screened runs:
 
-| task | manager_calls (rep1/rep2) | jev_calls | manager tokens in/out |
+| task | manager_calls (rep1/rep2) | jev_calls (rep1/rep2) | manager tokens in/out |
 |---|---:|---:|---:|
-| `todomvc` | 6 / 7 | 0 | 2,814–3,283 / 171–204 |
+| `todomvc` | 6 / 7 | 0 / 0 | 2,811–3,283 / 160–260 |
 | `porsche-uk-script-inventory` | 3 / 7 | 5 | 3,497–8,957 / 838–1,730 |
 | `porsche-uk-tag-inspection` | 0 / 3 | 5 | 0–1,839 / 0–325 |
 | `chanel-gb-pdp-tag-inspection` | 0 / 1 | 0 | 0–1,077 / 0–270 |
@@ -159,3 +159,7 @@ carries `vacuous_self_pass` (true when the runtime reported success while the re
 `tldraw-three-shape-diagram`, where the runtime self-passed an empty structural truth.
 Read `runtime_verified` as the runtime's own opinion only; `independent_pass` is the
 score.
+
+## Artifact provenance
+
+Every run JSON under `bench-ext/artifacts/2026-09-21/corpus/adaptive-ui-runtime/` was produced by this adapter via `python3 bench-ext/corpus/screen_native.py --harness adaptive-ui-runtime`; none were edited by hand. The `vacuous_self_pass` / `disagreement_class` fields are emitted by the adapter itself.

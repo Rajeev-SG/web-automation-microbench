@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 24.2,
+      "at_ms": 24.0,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 24.5,
+      "at_ms": 24.3,
       "data": {
         "subtask": "mb",
         "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
@@ -34,149 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 27.4,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "route_cascade",
-      "at_ms": 3082.9,
-      "data": {
-        "subtask": "mb",
-        "from_route": "structured_browser",
-        "to_route": "jev"
-      }
-    },
-    {
-      "kind": "action",
-      "at_ms": 3082.9,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "inspect",
-        "target": "n1",
-        "ok": true,
-        "error_class": null
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 3088.0,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "route_cascade",
-      "at_ms": 5157.2,
-      "data": {
-        "subtask": "mb",
-        "from_route": "structured_browser",
-        "to_route": "jev"
-      }
-    },
-    {
-      "kind": "cycle_detected",
-      "at_ms": 5157.2,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "inspect",
-        "target": "n1",
-        "repeats": 2
-      }
-    },
-    {
-      "kind": "subtask_failed",
-      "at_ms": 5158.8,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "repeated_action_loop"
-      }
-    },
-    {
-      "kind": "manager_replan",
-      "at_ms": 5159.0,
-      "data": {
-        "attempt": 1,
-        "subtasks": [
-          "mb"
-        ]
-      }
-    },
-    {
-      "kind": "subtask_start",
-      "at_ms": 5159.9,
-      "data": {
-        "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
-        "task_class": "web-automation"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 5163.1,
-      "data": {
-        "subtask": "mb",
-        "route": "structured_browser",
-        "reason": "structured target resolved unambiguously",
-        "confidence": null
-      }
-    },
-    {
-      "kind": "route_cascade",
-      "at_ms": 7265.9,
-      "data": {
-        "subtask": "mb",
-        "from_route": "structured_browser",
-        "to_route": "jev"
-      }
-    },
-    {
-      "kind": "cycle_detected",
-      "at_ms": 7265.9,
-      "data": {
-        "subtask": "mb",
-        "action_kind": "inspect",
-        "target": "n1",
-        "repeats": 3
-      }
-    },
-    {
-      "kind": "subtask_failed",
-      "at_ms": 7266.8,
-      "data": {
-        "subtask": "mb",
-        "failure_class": "repeated_action_loop"
-      }
-    },
-    {
-      "kind": "manager_replan",
-      "at_ms": 7266.9,
-      "data": {
-        "attempt": 2,
-        "subtasks": [
-          "mb"
-        ]
-      }
-    },
-    {
-      "kind": "subtask_start",
-      "at_ms": 7267.3,
-      "data": {
-        "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
-        "task_class": "web-automation"
-      }
-    },
-    {
-      "kind": "route",
-      "at_ms": 7270.7,
+      "at_ms": 27.2,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -186,7 +44,7 @@
     },
     {
       "kind": "escalate",
-      "at_ms": 9285.0,
+      "at_ms": 1852.9,
       "data": {
         "subtask": "mb",
         "failure_class": "unexpected_state"
@@ -194,7 +52,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 9287.8,
+      "at_ms": 1858.7,
       "data": {
         "subtask": "mb",
         "route": "strong_manager",
@@ -204,24 +62,43 @@
     },
     {
       "kind": "manager_decision",
-      "at_ms": 16476.5,
+      "at_ms": 10199.8,
       "data": {
         "subtask": "mb",
-        "decision": "None"
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Navigate to Porsche UK homepage to begin inspection of live page tags.'}"
       }
     },
     {
-      "kind": "verify",
-      "at_ms": 16480.0,
+      "kind": "action",
+      "at_ms": 18211.8,
       "data": {
         "subtask": "mb",
-        "passed": false,
-        "failure_class": "verifier_mismatch"
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 18211.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "repair",
+      "at_ms": 18211.9,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
       }
     },
     {
       "kind": "route",
-      "at_ms": 16483.6,
+      "at_ms": 18215.2,
       "data": {
         "subtask": "mb",
         "route": "strong_manager",
@@ -231,24 +108,43 @@
     },
     {
       "kind": "manager_decision",
-      "at_ms": 19379.6,
+      "at_ms": 21599.7,
       "data": {
         "subtask": "mb",
-        "decision": "None"
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live page for marketing tags.'}"
       }
     },
     {
-      "kind": "verify",
-      "at_ms": 19381.7,
+      "kind": "action",
+      "at_ms": 29607.1,
       "data": {
         "subtask": "mb",
-        "passed": false,
-        "failure_class": "verifier_mismatch"
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 29607.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "repair",
+      "at_ms": 29607.2,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
       }
     },
     {
       "kind": "route",
-      "at_ms": 19383.0,
+      "at_ms": 29609.4,
       "data": {
         "subtask": "mb",
         "route": "strong_manager",
@@ -258,32 +154,333 @@
     },
     {
       "kind": "manager_decision",
-      "at_ms": 24186.7,
+      "at_ms": 35742.4,
       "data": {
         "subtask": "mb",
-        "decision": "None"
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live page for marketing tags before set\u2026"
       }
     },
     {
-      "kind": "verify",
-      "at_ms": 24190.3,
+      "kind": "action",
+      "at_ms": 43750.0,
       "data": {
         "subtask": "mb",
-        "passed": false,
-        "failure_class": "verifier_mismatch"
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 43750.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "repair",
+      "at_ms": 43750.1,
+      "data": {
+        "subtask": "mb",
+        "capability": "capability=reobserve_rebind",
+        "repaired": false
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 24197.7,
+      "at_ms": 43751.2,
       "data": {
         "subtask": "mb",
-        "failure_class": "premature_done"
+        "failure_class": "stale_target"
       }
     },
     {
       "kind": "manager_replan",
-      "at_ms": 24197.9,
+      "at_ms": 43751.3,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 43751.9,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 43754.4,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "escalate",
+      "at_ms": 45650.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 45655.1,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 49901.8,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live page for marketing tags.'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 57910.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 57910.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 57912.9,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 60551.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 60556.1,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 60558.6,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 64858.9,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live marketing tags.'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 72866.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 72866.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 72867.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 72867.4,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 72867.8,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 72869.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "escalate",
+      "at_ms": 74718.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 74722.3,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 80132.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 80136.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 80138.6,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 83594.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 83597.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 83600.4,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 87697.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live page for marketing tags.'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 95704.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 95704.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 95706.1,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 95706.2,
       "data": {
         "attempt": 3,
         "subtasks": [
@@ -293,7 +490,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 24198.6,
+      "at_ms": 95706.9,
       "data": {
         "subtask": "mb",
         "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
@@ -302,7 +499,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 24201.8,
+      "at_ms": 95710.1,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -311,40 +508,140 @@
       }
     },
     {
-      "kind": "route_cascade",
-      "at_ms": 27068.2,
+      "kind": "escalate",
+      "at_ms": 97354.0,
       "data": {
         "subtask": "mb",
-        "from_route": "structured_browser",
-        "to_route": "jev"
+        "failure_class": "unexpected_state"
       }
     },
     {
-      "kind": "cycle_detected",
-      "at_ms": 27068.2,
+      "kind": "route",
+      "at_ms": 97357.9,
       "data": {
         "subtask": "mb",
-        "action_kind": "inspect",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 101703.7,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live marketing tags.</think>{'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 109711.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
         "target": "n1",
-        "repeats": 4
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 109711.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 109714.4,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 114170.0,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live page for marketing tags.</think>{'\u2026"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 122180.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 122180.2,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 122182.7,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 126217.2,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live marketing tags in a later eval ste\u2026"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 134225.8,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": false,
+        "error_class": "stale_target"
+      }
+    },
+    {
+      "kind": "failure",
+      "at_ms": 134225.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "stale_target"
       }
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 27069.5,
+      "at_ms": 134226.8,
       "data": {
         "subtask": "mb",
-        "failure_class": "repeated_action_loop"
+        "failure_class": "stale_target"
       }
     },
     {
       "kind": "run_end",
-      "at_ms": 27070.8,
+      "at_ms": 134227.9,
       "data": {
         "status": "failed",
         "verified": false,
-        "failure_class": "repeated_action_loop",
-        "wall_ms": 27069.6
+        "failure_class": "stale_target",
+        "wall_ms": 134226.9
       }
     }
   ],
@@ -353,45 +650,40 @@
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
   "setup_s": 0.771,
-  "wall_s": 30.435,
-  "total_s": 30.435,
-  "run_id": "run-32f7c9e67c03",
+  "wall_s": 137.445,
+  "total_s": 137.445,
+  "run_id": "run-ffe7f05aa112",
   "runtime_verified": false,
   "runtime_status": "failed",
-  "runtime_failure_class": "repeated_action_loop",
+  "runtime_failure_class": "stale_target",
   "metrics": {
-    "actions": 4,
-    "observations": 8,
+    "actions": 9,
+    "observations": 16,
     "verifications": 3,
-    "jev_calls": 5,
-    "fara_calls": 1,
-    "showui_calls": 1,
-    "manager_calls": 3,
-    "fallbacks": 5,
-    "recoveries": 0,
-    "loops": 3,
-    "transport_commands": 4,
+    "jev_calls": 4,
+    "fara_calls": 4,
+    "showui_calls": 4,
+    "manager_calls": 10,
+    "fallbacks": 17,
+    "recoveries": 3,
+    "loops": 0,
+    "transport_commands": 9,
     "failure_classes": {
-      "repeated_action_loop": 3,
+      "stale_target": 9,
       "premature_done": 3
     },
     "replans": 3,
-    "observe_ms_p50": 3.1,
-    "observe_ms_p95": 5.0,
-    "jev_ms_p50": 2102.8,
-    "jev_ms_p95": 3055.5,
-    "verify_ms_p50": 3.4,
-    "verify_ms_p95": 3.5,
-    "wall_ms": 27069.6,
-    "manager_input_tokens": 1839,
-    "manager_output_tokens": 325,
-    "manager_latency_ms": 14622.8,
-    "jev_decision_ms": [
-      3055.46266696183,
-      2069.0125839901157,
-      2102.7706660097465,
-      2866.2291250075214
-    ],
+    "observe_ms_p50": 2.8,
+    "observe_ms_p95": 4.6,
+    "jev_ms_p50": 1848.2,
+    "jev_ms_p95": 1895.9,
+    "verify_ms_p50": 4.0,
+    "verify_ms_p95": 5.0,
+    "wall_ms": 134226.9,
+    "manager_input_tokens": 13620,
+    "manager_output_tokens": 2401,
+    "manager_latency_ms": 48462.0,
+    "jev_decision_ms": [],
     "fara_inference_ms": [],
     "showui_inference_ms": [],
     "config": {
@@ -415,21 +707,21 @@
     },
     "transport": "cdp-attached"
   },
-  "manager_calls": 3,
-  "jev_calls": 5,
-  "fara_calls": 1,
-  "showui_calls": 1,
-  "actions": 4,
-  "model_calls": 8,
-  "tool_calls": 4,
+  "manager_calls": 10,
+  "jev_calls": 4,
+  "fara_calls": 4,
+  "showui_calls": 4,
+  "actions": 9,
+  "model_calls": 14,
+  "tool_calls": 9,
   "tokens": {
-    "input": 1839,
-    "output": 325,
+    "input": 13620,
+    "output": 2401,
     "cached": 0,
     "reasoning": 0
   },
   "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
-  "cost": 0.00021917,
+  "cost": 0.00162175,
   "done": false,
   "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":null}",
   "independent_pass": false,

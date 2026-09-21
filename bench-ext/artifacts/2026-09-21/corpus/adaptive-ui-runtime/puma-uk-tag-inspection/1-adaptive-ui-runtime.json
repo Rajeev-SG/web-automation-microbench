@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 808.9,
+      "at_ms": 760.2,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 809.2,
+      "at_ms": 760.5,
       "data": {
         "subtask": "mb",
         "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 940.8,
+      "at_ms": 882.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 1111.5,
+      "at_ms": 1079.2,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "verify",
-      "at_ms": 1128.7,
+      "at_ms": 1098.2,
       "data": {
         "subtask": "mb",
         "passed": false,
@@ -64,7 +64,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1135.2,
+      "at_ms": 1108.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -74,7 +74,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1249.2,
+      "at_ms": 1225.5,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -84,7 +84,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1249.7,
+      "at_ms": 1226.0,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -92,7 +92,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1249.7,
+      "at_ms": 1226.1,
       "data": {
         "attempt": 1,
         "subtasks": [
@@ -102,7 +102,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1250.0,
+      "at_ms": 1226.3,
       "data": {
         "subtask": "mb",
         "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
@@ -111,7 +111,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1254.8,
+      "at_ms": 1298.4,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -121,7 +121,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1420.4,
+      "at_ms": 1390.4,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -131,7 +131,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1420.9,
+      "at_ms": 1390.8,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -139,7 +139,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1420.9,
+      "at_ms": 1390.9,
       "data": {
         "attempt": 2,
         "subtasks": [
@@ -149,7 +149,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1421.2,
+      "at_ms": 1391.1,
       "data": {
         "subtask": "mb",
         "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
@@ -158,7 +158,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1427.3,
+      "at_ms": 1396.5,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -168,7 +168,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1524.8,
+      "at_ms": 1598.5,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -178,7 +178,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1525.3,
+      "at_ms": 1599.1,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -186,7 +186,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 1525.3,
+      "at_ms": 1599.1,
       "data": {
         "attempt": 3,
         "subtasks": [
@@ -196,7 +196,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 1525.6,
+      "at_ms": 1599.4,
       "data": {
         "subtask": "mb",
         "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
@@ -205,7 +205,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 1633.7,
+      "at_ms": 1717.5,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -215,7 +215,7 @@
     },
     {
       "kind": "cycle_detected",
-      "at_ms": 1854.2,
+      "at_ms": 1810.4,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -225,7 +225,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 1854.8,
+      "at_ms": 1811.0,
       "data": {
         "subtask": "mb",
         "failure_class": "repeated_action_loop"
@@ -233,12 +233,12 @@
     },
     {
       "kind": "run_end",
-      "at_ms": 1855.8,
+      "at_ms": 1811.5,
       "data": {
         "status": "failed",
         "verified": false,
         "failure_class": "repeated_action_loop",
-        "wall_ms": 1854.8
+        "wall_ms": 1811.0
       }
     }
   ],
@@ -246,10 +246,10 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.769,
-  "wall_s": 7.508,
-  "total_s": 7.508,
-  "run_id": "run-34081612bac0",
+  "setup_s": 0.774,
+  "wall_s": 7.392,
+  "total_s": 7.392,
+  "run_id": "run-1b455e93375d",
   "runtime_verified": false,
   "runtime_status": "failed",
   "runtime_failure_class": "repeated_action_loop",
@@ -270,11 +270,11 @@
       "repeated_action_loop": 4
     },
     "replans": 3,
-    "observe_ms_p50": 6.5,
-    "observe_ms_p95": 131.5,
-    "verify_ms_p50": 9.6,
-    "verify_ms_p95": 9.6,
-    "wall_ms": 1854.8,
+    "observe_ms_p50": 72.0,
+    "observe_ms_p95": 122.1,
+    "verify_ms_p50": 9.9,
+    "verify_ms_p95": 9.9,
+    "wall_ms": 1811.0,
     "manager_input_tokens": 0,
     "manager_output_tokens": 0,
     "manager_latency_ms": 0.0,

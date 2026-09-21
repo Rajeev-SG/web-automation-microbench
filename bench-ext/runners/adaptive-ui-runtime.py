@@ -55,6 +55,19 @@ def _todo_pred_js():
     ) % json.dumps(benchlib.VERIFY_JS)
 
 
+def is_vacuous_self_pass(runtime_verified, independent_pass, finding) -> bool:
+    """True when the runtime reported success, the independent verifier failed, and
+    the recorded finding was empty in ANY shape (None, {}, [], '', 0, False).
+
+    A runtime that self-passes on an empty measurement is exactly the vacuous case
+    the independent verifier exists to catch, so cover every empty shape rather than
+    only dict/None.
+    """
+    # The recorded finding is the whole fact object for these tasks (always a dict
+    # in practice), so any falsy value — None, {}, [], "", 0, False — is empty.
+    return bool(runtime_verified) and not independent_pass and not finding
+
+
 def _compact_events(events, limit=400, str_cap=140):
     """Bounded event record for the committed run JSON (keeps the route/action/
     failure sequence; drops the repeated goal text and run ids that bloat the file).
@@ -196,10 +209,9 @@ def run_native(rep, task=None, name=NAME):
         # reader never treats the runtime's own verifier as an independent signal.
         parsed_v = benchlib.parse_verify(vout) or {}
         finding = parsed_v.get('finding')
-        vacuous = (not finding) if isinstance(finding, dict) else (finding is None)
         log['runtime_finding'] = finding
-        log['vacuous_self_pass'] = bool(log['runtime_verified'] and not log['independent_pass']
-                                        and vacuous)
+        log['vacuous_self_pass'] = is_vacuous_self_pass(
+            log['runtime_verified'], log['independent_pass'], finding)
         if log['vacuous_self_pass']:
             log['disagreement_class'] = 'vacuous_self_pass'
         try:

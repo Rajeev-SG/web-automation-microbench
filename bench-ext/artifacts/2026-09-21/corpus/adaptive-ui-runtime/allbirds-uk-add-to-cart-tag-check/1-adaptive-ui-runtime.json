@@ -6,7 +6,7 @@
   "events": [
     {
       "kind": "run_start",
-      "at_ms": 0.1,
+      "at_ms": 0.0,
       "data": {
         "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "mode": "adaptive",
@@ -15,7 +15,7 @@
     },
     {
       "kind": "plan",
-      "at_ms": 2047.7,
+      "at_ms": 2829.5,
       "data": {
         "subtasks": [
           "mb"
@@ -25,7 +25,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 2048.8,
+      "at_ms": 2830.7,
       "data": {
         "subtask": "mb",
         "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
@@ -34,7 +34,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2066.9,
+      "at_ms": 2848.8,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2129.6,
+      "at_ms": 2898.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "verify",
-      "at_ms": 2559.6,
+      "at_ms": 3230.4,
       "data": {
         "subtask": "mb",
         "passed": false,
@@ -64,7 +64,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2565.6,
+      "at_ms": 3237.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -74,7 +74,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2583.4,
+      "at_ms": 3254.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -85,7 +85,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2583.4,
+      "at_ms": 3254.9,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -93,7 +93,7 @@
     },
     {
       "kind": "repair",
-      "at_ms": 2583.4,
+      "at_ms": 3254.9,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
@@ -102,7 +102,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2587.0,
+      "at_ms": 3258.3,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -112,7 +112,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2596.2,
+      "at_ms": 3265.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -123,7 +123,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2596.3,
+      "at_ms": 3265.9,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -131,7 +131,7 @@
     },
     {
       "kind": "repair",
-      "at_ms": 2596.3,
+      "at_ms": 3265.9,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
@@ -140,7 +140,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2599.8,
+      "at_ms": 3268.7,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -150,7 +150,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2606.9,
+      "at_ms": 3275.3,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -161,7 +161,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2606.9,
+      "at_ms": 3275.3,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -169,7 +169,7 @@
     },
     {
       "kind": "repair",
-      "at_ms": 2606.9,
+      "at_ms": 3275.3,
       "data": {
         "subtask": "mb",
         "capability": "capability=reobserve_rebind",
@@ -178,7 +178,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2610.3,
+      "at_ms": 3277.9,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -188,7 +188,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2618.5,
+      "at_ms": 3284.1,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -199,7 +199,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2618.5,
+      "at_ms": 3284.1,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -207,7 +207,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 2619.1,
+      "at_ms": 3284.7,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -215,7 +215,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 2619.1,
+      "at_ms": 3284.7,
       "data": {
         "attempt": 1,
         "subtasks": [
@@ -225,7 +225,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 2619.5,
+      "at_ms": 3285.1,
       "data": {
         "subtask": "mb",
         "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
@@ -234,7 +234,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2622.8,
+      "at_ms": 3287.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -244,7 +244,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2628.8,
+      "at_ms": 3293.0,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -255,7 +255,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2628.9,
+      "at_ms": 3293.0,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -263,7 +263,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2631.6,
+      "at_ms": 3297.5,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -273,7 +273,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2637.5,
+      "at_ms": 3303.0,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -284,7 +284,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2637.6,
+      "at_ms": 3303.1,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -292,7 +292,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2640.8,
+      "at_ms": 3305.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -302,7 +302,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2646.5,
+      "at_ms": 3310.9,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -313,7 +313,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2646.5,
+      "at_ms": 3310.9,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -321,7 +321,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2649.2,
+      "at_ms": 3314.0,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -331,7 +331,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2655.0,
+      "at_ms": 3319.0,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -342,7 +342,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2655.0,
+      "at_ms": 3319.1,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -350,7 +350,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 2655.7,
+      "at_ms": 3319.6,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -358,7 +358,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 2655.7,
+      "at_ms": 3319.6,
       "data": {
         "attempt": 2,
         "subtasks": [
@@ -368,7 +368,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 2656.2,
+      "at_ms": 3319.9,
       "data": {
         "subtask": "mb",
         "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
@@ -377,7 +377,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2658.9,
+      "at_ms": 3322.2,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -387,7 +387,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2665.2,
+      "at_ms": 3328.4,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -398,7 +398,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2665.2,
+      "at_ms": 3328.4,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -406,7 +406,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2669.0,
+      "at_ms": 3333.8,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -416,7 +416,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2674.5,
+      "at_ms": 3338.7,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -427,7 +427,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2674.5,
+      "at_ms": 3338.7,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -435,7 +435,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2677.2,
+      "at_ms": 3340.7,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -445,7 +445,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2683.9,
+      "at_ms": 3345.4,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -456,7 +456,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2684.0,
+      "at_ms": 3345.4,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -464,7 +464,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2686.6,
+      "at_ms": 3347.6,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -474,7 +474,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2692.2,
+      "at_ms": 3352.6,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -485,7 +485,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2692.2,
+      "at_ms": 3352.6,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -493,7 +493,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 2692.6,
+      "at_ms": 3353.0,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -501,7 +501,7 @@
     },
     {
       "kind": "manager_replan",
-      "at_ms": 2692.7,
+      "at_ms": 3353.1,
       "data": {
         "attempt": 3,
         "subtasks": [
@@ -511,7 +511,7 @@
     },
     {
       "kind": "subtask_start",
-      "at_ms": 2693.0,
+      "at_ms": 3353.4,
       "data": {
         "subtask": "mb",
         "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
@@ -520,7 +520,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2695.7,
+      "at_ms": 3355.7,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -530,7 +530,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2701.2,
+      "at_ms": 3360.1,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -541,7 +541,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2701.2,
+      "at_ms": 3360.1,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -549,7 +549,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2703.8,
+      "at_ms": 3362.3,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -559,7 +559,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2710.8,
+      "at_ms": 3367.3,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -570,7 +570,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2710.8,
+      "at_ms": 3367.3,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -578,7 +578,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2713.2,
+      "at_ms": 3369.3,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -588,7 +588,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2718.4,
+      "at_ms": 3373.8,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -599,7 +599,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2718.4,
+      "at_ms": 3373.8,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -607,7 +607,7 @@
     },
     {
       "kind": "route",
-      "at_ms": 2720.6,
+      "at_ms": 3375.7,
       "data": {
         "subtask": "mb",
         "route": "structured_browser",
@@ -617,7 +617,7 @@
     },
     {
       "kind": "action",
-      "at_ms": 2726.2,
+      "at_ms": 3381.2,
       "data": {
         "subtask": "mb",
         "action_kind": "click",
@@ -628,7 +628,7 @@
     },
     {
       "kind": "failure",
-      "at_ms": 2726.2,
+      "at_ms": 3381.2,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -636,7 +636,7 @@
     },
     {
       "kind": "subtask_failed",
-      "at_ms": 2726.7,
+      "at_ms": 3381.6,
       "data": {
         "subtask": "mb",
         "failure_class": "stale_target"
@@ -644,12 +644,12 @@
     },
     {
       "kind": "run_end",
-      "at_ms": 2727.0,
+      "at_ms": 3381.9,
       "data": {
         "status": "failed",
         "verified": false,
         "failure_class": "stale_target",
-        "wall_ms": 2726.7
+        "wall_ms": 3381.6
       }
     }
   ],
@@ -657,10 +657,10 @@
   "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
   "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
   "independence": "benchlib verify_js + pass_rule over CDP, untimed",
-  "setup_s": 0.831,
-  "wall_s": 11.838,
-  "total_s": 11.838,
-  "run_id": "run-febf376bf7e5",
+  "setup_s": 0.788,
+  "wall_s": 14.566,
+  "total_s": 14.566,
+  "run_id": "run-eb0f9ac5e266",
   "runtime_verified": false,
   "runtime_status": "failed",
   "runtime_failure_class": "stale_target",
@@ -681,11 +681,11 @@
       "stale_target": 16
     },
     "replans": 3,
-    "observe_ms_p50": 2.7,
-    "observe_ms_p95": 5.9,
-    "verify_ms_p50": 427.1,
-    "verify_ms_p95": 427.1,
-    "wall_ms": 2726.7,
+    "observe_ms_p50": 2.5,
+    "observe_ms_p95": 7.1,
+    "verify_ms_p50": 328.9,
+    "verify_ms_p95": 328.9,
+    "wall_ms": 3381.6,
     "manager_input_tokens": 0,
     "manager_output_tokens": 0,
     "manager_latency_ms": 0.0,
