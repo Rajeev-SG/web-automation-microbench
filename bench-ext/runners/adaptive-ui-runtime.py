@@ -192,6 +192,16 @@ def run_native(rep, task=None, name=NAME):
         # pass = independent evidence only; the runtime's own flag is reported separately.
         log['pass'] = log['independent_pass']
         log['verdict_agreement'] = (log['independent_pass'] == log['runtime_verified'])
+        # F3: name the runtime self-passing an empty finding as a distinct class, so a
+        # reader never treats the runtime's own verifier as an independent signal.
+        parsed_v = benchlib.parse_verify(vout) or {}
+        finding = parsed_v.get('finding')
+        vacuous = (not finding) if isinstance(finding, dict) else (finding is None)
+        log['runtime_finding'] = finding
+        log['vacuous_self_pass'] = bool(log['runtime_verified'] and not log['independent_pass']
+                                        and vacuous)
+        if log['vacuous_self_pass']:
+            log['disagreement_class'] = 'vacuous_self_pass'
         try:
             subprocess.run(['node', CDP_MJS, str(port), 'shot', host,
                             str(benchlib.RES / f'{rid}.png')],

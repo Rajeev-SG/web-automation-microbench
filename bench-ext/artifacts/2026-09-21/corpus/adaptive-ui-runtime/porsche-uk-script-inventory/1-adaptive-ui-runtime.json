@@ -679,5 +679,7 @@
   "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.googletagmanager.com\",\"www.porsche.com\"]},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

@@ -321,5 +321,7 @@
   "verification": "{\"url\":\"https://uk.puma.com/uk/en/men\",\"truth\":{\"hosts\":[\"cdn.branch.io\",\"cdn.cookielaw.org\",\"eu.fw-cdn.com\",\"rapid-cdn.yottaa.com\",\"try.abtasty.com\",\"uk.puma.com\",\"www.googletagmanager.com\"]},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

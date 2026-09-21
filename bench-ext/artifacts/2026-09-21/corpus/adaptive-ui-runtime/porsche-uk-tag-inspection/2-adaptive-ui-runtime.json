@@ -434,5 +434,7 @@
   "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"gtm\":[\"GTM-W2NKNJZ\"],\"aw\":[],\"pinterest\":false},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

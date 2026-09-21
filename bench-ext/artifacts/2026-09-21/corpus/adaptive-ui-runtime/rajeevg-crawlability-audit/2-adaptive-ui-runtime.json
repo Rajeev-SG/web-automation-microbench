@@ -321,5 +321,7 @@
   "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":83,\"allSameHost\":true},\"finding\":null,\"error\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

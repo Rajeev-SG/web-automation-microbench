@@ -465,5 +465,7 @@
   "verification": "{\"url\":\"https://demo.playwright.dev/todomvc/#/\",\"items\":[],\"saved\":[]}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

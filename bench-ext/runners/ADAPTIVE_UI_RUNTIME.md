@@ -53,6 +53,29 @@ the CLI/MCP invoke it — one `Engine.execute` — from its own venv
    evidence only; the runtime's own verdict is recorded separately as
    `runtime_verified` so any disagreement is visible.
 
+## Model engagement across the screened runs (honest reading)
+
+The manager and Jev **did** engage on the decision classes — they are not uniformly
+zero. Across the 24 screened runs:
+
+| task | manager_calls (rep1/rep2) | jev_calls | manager tokens in/out |
+|---|---:|---:|---:|
+| `todomvc` | 6 / 7 | 0 | 2,814–3,283 / 171–204 |
+| `porsche-uk-script-inventory` | 3 / 7 | 5 | 3,497–8,957 / 838–1,730 |
+| `porsche-uk-tag-inspection` | 0 / 3 | 5 | 0–1,839 / 0–325 |
+| `chanel-gb-pdp-tag-inspection` | 0 / 1 | 0 | 0–1,077 / 0–270 |
+| `tldraw-three-shape-diagram` | 1 / 1 | 0–1 | 454 / 86–199 |
+| the 7 single-page audit tasks | 0 | 0 | 0 |
+
+So the configured manager/Jev paths executed and are reflected in the tokens/cost.
+The **single-page DOM/eval audit tasks made zero model calls** because the runtime's
+router sends them straight to its structured route ("structured target resolved
+unambiguously") and then fails there — no manager decision is ever requested for
+those classes. That is a routing outcome, not a credential failure: the same env
+produced manager calls on `todomvc` in the same screening pass. The token columns
+are therefore the manager usage only (Jev is classifier.dev, no tokens), as stated
+above.
+
 ## Comparability caveats (explicit)
 
 - **Manager calls go to OpenRouter; Jev calls go to classifier.dev.** `tokens` /
@@ -92,6 +115,26 @@ the CLI/MCP invoke it — one `Engine.execute` — from its own venv
   structurally unreachable for it (see results). This is a runtime capability gap,
   recorded, not a harness defect.
 
+### `stale_target` is the runtime's own binding, established by a reference-transport control
+
+The top failure class on the corpus (`stale_target`, e.g. 16 identical `click` attempts
+on node `n3` for `allbirds-uk-add-to-cart-tag-check`) is **not** an artifact of the
+adapter's CDP bridge. Control: re-running the same tasks through the runtime's **own
+native `IsolatedBrowserTransport`** (real launched Chromium, no CDP subclass, no adapter
+code at all) reproduces the same classes:
+
+```
+allbirds-uk-add-to-cart-tag-check  → status=failed  failure_class=stale_target        (12.0s, mgr=0 jev=0)
+porsche-uk-tag-inspection          → status=failed  failure_class=repeated_action_loop (32.6s, mgr=0 jev=5)
+```
+
+That is the same code path the runtime runs anywhere else; it resolves an ordinal node
+(`n3`) from one observation, acts without re-observing, and its stamp-revalidation
+(`IsolatedBrowserTransport._sel` → `_STAMP_JS`) fails closed when the first click
+navigated. The adapter only replaces the browser launcher and inherits all of this
+unchanged, so the failure class is attributable to the runtime, with this control as
+evidence.
+
 ## Results
 
 2-rep screening on the default `todomvc` task and on real harvested corpus tasks.
@@ -106,3 +149,13 @@ python3 bench-ext/corpus/screen_native.py --harness adaptive-ui-runtime --reps 1
 
 Per-rep run JSON (including every route/action/verify event) lands beside the
 summary; `independent_pass` and `runtime_verified` are both recorded.
+
+## Verdict-disagreement classes
+
+`runtime_verified` is recorded beside `independent_pass`, and the run JSON now also
+carries `vacuous_self_pass` (true when the runtime reported success while the recorded
+`finding` was null/empty and the independent verifier failed) and a named
+`disagreement_class`. On this screening that flagged **2** runs — both
+`tldraw-three-shape-diagram`, where the runtime self-passed an empty structural truth.
+Read `runtime_verified` as the runtime's own opinion only; `independent_pass` is the
+score.

@@ -145,5 +145,8 @@
   "verification": "{\"url\":\"https://www.tldraw.com/\",\"truth\":{\"labels\":[],\"nodes\":[],\"arrows\":0,\"overlap\":false},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": false
+  "verdict_agreement": false,
+  "runtime_finding": null,
+  "vacuous_self_pass": true,
+  "disagreement_class": "vacuous_self_pass"
 }

@@ -351,5 +351,7 @@
   "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"canonical\":\"https://rajeevg.com\",\"ogTitle\":\"Rajeev G.\",\"ogType\":\"website\",\"hasOgImage\":true,\"hasH1\":true,\"jsonldTypes\":[\"Person\"]},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

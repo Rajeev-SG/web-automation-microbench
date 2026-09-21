@@ -158,11 +158,16 @@ swap in a CDP attach — the runtime ships no CDP transport) and runs one `Engin
 Full notes, commit pin and comparability caveats:
 [`bench-ext/runners/ADAPTIVE_UI_RUNTIME.md`](bench-ext/runners/ADAPTIVE_UI_RUNTIME.md).
 
-**Result: 0/2 on TodoMVC and 0/22 across the 11-task harvested corpus.** Independent
-verification and the runtime's own verdict agreed on 20 of 22 runs; the 2 disagreements are
-`tldraw-three-shape-diagram`, where the runtime's own verifier reported success while the
-independent structural check found empty truth (`labels:[], nodes:[], arrows:0`) — exactly
-the self-pass the independent verifier exists to catch.
+**Result: 0/2 on TodoMVC and 0/22 across the 11-task harvested corpus.** The configured
+manager and Jev **did** run on the decision classes (29 manager calls, 21 Jev calls, ~22.4k
+manager input tokens across the 24 runs); the 7 single-page DOM/eval audit tasks made 0 model
+calls because the router sends them straight to its structured route and fails there.
+Independent verification and the runtime's own verdict agreed on 22 of 24 runs; the 2
+disagreements are `tldraw-three-shape-diagram`, flagged `vacuous_self_pass` — the runtime's own
+verifier reported success against empty structural truth (`labels:[], nodes:[], arrows:0`),
+exactly the self-pass the independent verifier exists to catch. The top corpus failure class,
+`stale_target`, is **the runtime's own binding, not the adapter's**: re-running the same tasks
+on the runtime's native `IsolatedBrowserTransport` (no CDP subclass) reproduces it.
 
 | Contender | TodoMVC pass | Median wall | Tokens in/out | Cost/run | Corpus pass |
 |---|---|---:|---:|---:|---:|

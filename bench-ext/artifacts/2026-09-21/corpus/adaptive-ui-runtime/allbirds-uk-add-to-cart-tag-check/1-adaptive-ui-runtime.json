@@ -732,5 +732,7 @@
   "verification": "{\"url\":\"https://www.allbirds.co.uk/collections/mens-shoes\",\"truth\":{\"consentAccepted\":true,\"cartItemCount\":0,\"tagsAfterAdd\":[\"www.googletagmanager.com\"]},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }

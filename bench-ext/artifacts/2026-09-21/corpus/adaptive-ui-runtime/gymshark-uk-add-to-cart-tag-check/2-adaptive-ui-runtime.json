@@ -351,5 +351,7 @@
   "verification": "{\"url\":\"https://uk.gymshark.com/collections/all-products\",\"truth\":{\"consentAccepted\":false,\"cartItemCount\":0,\"tagsAfterAdd\":[]},\"finding\":null}",
   "independent_pass": false,
   "pass": false,
-  "verdict_agreement": true
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
 }
