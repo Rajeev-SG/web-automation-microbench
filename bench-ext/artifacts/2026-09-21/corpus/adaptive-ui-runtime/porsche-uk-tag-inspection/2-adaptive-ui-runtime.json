@@ -5,19 +5,15 @@
   "task": "porsche-uk-tag-inspection",
   "events": [
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 24.2,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 24.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 4,
       "kind": "route",
       "at_ms": 27.4,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 5,
       "kind": "route_cascade",
       "at_ms": 3082.9,
       "data": {
@@ -62,8 +52,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 6,
       "kind": "action",
       "at_ms": 3082.9,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 7,
       "kind": "route",
       "at_ms": 3088.0,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 8,
       "kind": "route_cascade",
       "at_ms": 5157.2,
       "data": {
@@ -98,8 +82,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 9,
       "kind": "cycle_detected",
       "at_ms": 5157.2,
       "data": {
@@ -110,8 +92,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 10,
       "kind": "subtask_failed",
       "at_ms": 5158.8,
       "data": {
@@ -120,8 +100,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 11,
       "kind": "manager_replan",
       "at_ms": 5159.0,
       "data": {
@@ -132,19 +110,15 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 12,
       "kind": "subtask_start",
       "at_ms": 5159.9,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 13,
       "kind": "route",
       "at_ms": 5163.1,
       "data": {
@@ -155,8 +129,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 14,
       "kind": "route_cascade",
       "at_ms": 7265.9,
       "data": {
@@ -166,8 +138,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 15,
       "kind": "cycle_detected",
       "at_ms": 7265.9,
       "data": {
@@ -178,8 +148,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 16,
       "kind": "subtask_failed",
       "at_ms": 7266.8,
       "data": {
@@ -188,8 +156,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 17,
       "kind": "manager_replan",
       "at_ms": 7266.9,
       "data": {
@@ -200,19 +166,15 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 18,
       "kind": "subtask_start",
       "at_ms": 7267.3,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 19,
       "kind": "route",
       "at_ms": 7270.7,
       "data": {
@@ -223,8 +185,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 20,
       "kind": "escalate",
       "at_ms": 9285.0,
       "data": {
@@ -233,8 +193,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 21,
       "kind": "route",
       "at_ms": 9287.8,
       "data": {
@@ -245,8 +203,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 22,
       "kind": "manager_decision",
       "at_ms": 16476.5,
       "data": {
@@ -255,8 +211,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 23,
       "kind": "verify",
       "at_ms": 16480.0,
       "data": {
@@ -266,8 +220,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 24,
       "kind": "route",
       "at_ms": 16483.6,
       "data": {
@@ -278,8 +230,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 25,
       "kind": "manager_decision",
       "at_ms": 19379.6,
       "data": {
@@ -288,8 +238,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 26,
       "kind": "verify",
       "at_ms": 19381.7,
       "data": {
@@ -299,8 +247,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 27,
       "kind": "route",
       "at_ms": 19383.0,
       "data": {
@@ -311,8 +257,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 28,
       "kind": "manager_decision",
       "at_ms": 24186.7,
       "data": {
@@ -321,8 +265,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 29,
       "kind": "verify",
       "at_ms": 24190.3,
       "data": {
@@ -332,8 +274,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 30,
       "kind": "subtask_failed",
       "at_ms": 24197.7,
       "data": {
@@ -342,8 +282,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 31,
       "kind": "manager_replan",
       "at_ms": 24197.9,
       "data": {
@@ -354,19 +292,15 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 32,
       "kind": "subtask_start",
       "at_ms": 24198.6,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 33,
       "kind": "route",
       "at_ms": 24201.8,
       "data": {
@@ -377,8 +311,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 34,
       "kind": "route_cascade",
       "at_ms": 27068.2,
       "data": {
@@ -388,8 +320,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 35,
       "kind": "cycle_detected",
       "at_ms": 27068.2,
       "data": {
@@ -400,8 +330,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 36,
       "kind": "subtask_failed",
       "at_ms": 27069.5,
       "data": {
@@ -410,8 +338,6 @@
       }
     },
     {
-      "run_id": "run-32f7c9e67c03",
-      "seq": 37,
       "kind": "run_end",
       "at_ms": 27070.8,
       "data": {

@@ -5,19 +5,15 @@
   "task": "todomvc",
   "events": [
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.1,
       "data": {
-        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Re\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 15.6,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 16.4,
       "data": {
         "subtask": "mb",
-        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Re\u2026",
         "task_class": "live_site_audit"
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 4,
       "kind": "route",
       "at_ms": 19.2,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 5,
       "kind": "manager_decision",
       "at_ms": 3324.2,
       "data": {
@@ -61,8 +51,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 3326.5,
       "data": {
@@ -72,8 +60,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 7,
       "kind": "route",
       "at_ms": 3327.5,
       "data": {
@@ -84,8 +70,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 8,
       "kind": "manager_decision",
       "at_ms": 20329.1,
       "data": {
@@ -94,8 +78,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 9,
       "kind": "action",
       "at_ms": 20352.4,
       "data": {
@@ -107,8 +89,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 10,
       "kind": "verify",
       "at_ms": 20354.4,
       "data": {
@@ -118,8 +98,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 11,
       "kind": "route",
       "at_ms": 20355.5,
       "data": {
@@ -130,8 +108,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 12,
       "kind": "manager_decision",
       "at_ms": 22192.3,
       "data": {
@@ -140,8 +116,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 13,
       "kind": "action",
       "at_ms": 22196.8,
       "data": {
@@ -153,8 +127,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 14,
       "kind": "verify",
       "at_ms": 22198.5,
       "data": {
@@ -164,8 +136,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 15,
       "kind": "route",
       "at_ms": 22199.2,
       "data": {
@@ -176,8 +146,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 16,
       "kind": "manager_decision",
       "at_ms": 24466.8,
       "data": {
@@ -186,8 +154,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 17,
       "kind": "cycle_detected",
       "at_ms": 24471.7,
       "data": {
@@ -198,8 +164,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 18,
       "kind": "subtask_failed",
       "at_ms": 24472.2,
       "data": {
@@ -208,8 +172,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 19,
       "kind": "manager_replan",
       "at_ms": 24472.2,
       "data": {
@@ -220,19 +182,15 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 20,
       "kind": "subtask_start",
       "at_ms": 24472.5,
       "data": {
         "subtask": "mb",
-        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Re\u2026",
         "task_class": "live_site_audit"
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 21,
       "kind": "route",
       "at_ms": 24473.7,
       "data": {
@@ -243,8 +201,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 22,
       "kind": "manager_decision",
       "at_ms": 26331.0,
       "data": {
@@ -253,8 +209,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 23,
       "kind": "cycle_detected",
       "at_ms": 26335.4,
       "data": {
@@ -265,8 +219,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 24,
       "kind": "subtask_failed",
       "at_ms": 26335.8,
       "data": {
@@ -275,8 +227,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 25,
       "kind": "manager_replan",
       "at_ms": 26335.8,
       "data": {
@@ -287,19 +237,15 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 26,
       "kind": "subtask_start",
       "at_ms": 26336.0,
       "data": {
         "subtask": "mb",
-        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Re\u2026",
         "task_class": "live_site_audit"
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 27,
       "kind": "route",
       "at_ms": 26337.1,
       "data": {
@@ -310,8 +256,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 28,
       "kind": "manager_decision",
       "at_ms": 28538.2,
       "data": {
@@ -320,8 +264,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 29,
       "kind": "cycle_detected",
       "at_ms": 28542.7,
       "data": {
@@ -332,8 +274,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 30,
       "kind": "subtask_failed",
       "at_ms": 28543.2,
       "data": {
@@ -342,8 +282,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 31,
       "kind": "manager_replan",
       "at_ms": 28543.2,
       "data": {
@@ -354,19 +292,15 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 32,
       "kind": "subtask_start",
       "at_ms": 28543.8,
       "data": {
         "subtask": "mb",
-        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Review invoice\" is shown and 1 item left. Do not clear completed. Work efficiently with ONE logical UI action per response (adding a todo is one action); observe before next action. Finish only after observing the final state.",
+        "goal": "Add exactly two todos: \"Email supplier\" then \"Review invoice\". Mark ONLY \"Email supplier\" complete. Click the Active filter. Verify only \"Re\u2026",
         "task_class": "live_site_audit"
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 33,
       "kind": "route",
       "at_ms": 28545.1,
       "data": {
@@ -377,8 +311,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 34,
       "kind": "manager_decision",
       "at_ms": 30902.1,
       "data": {
@@ -387,8 +319,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 35,
       "kind": "cycle_detected",
       "at_ms": 30906.5,
       "data": {
@@ -399,8 +329,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 36,
       "kind": "subtask_failed",
       "at_ms": 30906.9,
       "data": {
@@ -409,8 +337,6 @@
       }
     },
     {
-      "run_id": "run-84f63707aa67",
-      "seq": 37,
       "kind": "run_end",
       "at_ms": 30907.6,
       "data": {

@@ -5,19 +5,15 @@
   "task": "porsche-uk-script-inventory",
   "events": [
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 22.5,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 22.8,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 4,
       "kind": "route",
       "at_ms": 26.5,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 5,
       "kind": "escalate",
       "at_ms": 3181.6,
       "data": {
@@ -61,8 +51,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 6,
       "kind": "route",
       "at_ms": 3187.4,
       "data": {
@@ -73,8 +61,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 7,
       "kind": "manager_decision",
       "at_ms": 7510.0,
       "data": {
@@ -83,8 +69,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 8,
       "kind": "verify",
       "at_ms": 7512.0,
       "data": {
@@ -94,8 +78,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 9,
       "kind": "route",
       "at_ms": 7513.3,
       "data": {
@@ -106,8 +88,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 10,
       "kind": "manager_decision",
       "at_ms": 11299.8,
       "data": {
@@ -116,8 +96,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 11,
       "kind": "verify",
       "at_ms": 11303.5,
       "data": {
@@ -127,8 +105,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 12,
       "kind": "route",
       "at_ms": 11306.6,
       "data": {
@@ -139,8 +115,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 13,
       "kind": "manager_decision",
       "at_ms": 15874.7,
       "data": {
@@ -149,8 +123,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 14,
       "kind": "verify",
       "at_ms": 15877.8,
       "data": {
@@ -160,8 +132,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 15,
       "kind": "subtask_failed",
       "at_ms": 15878.8,
       "data": {
@@ -170,8 +140,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 16,
       "kind": "manager_replan",
       "at_ms": 15879.0,
       "data": {
@@ -182,19 +150,15 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 17,
       "kind": "subtask_start",
       "at_ms": 15879.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 18,
       "kind": "route",
       "at_ms": 15882.4,
       "data": {
@@ -205,8 +169,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 19,
       "kind": "route_cascade",
       "at_ms": 28424.2,
       "data": {
@@ -216,8 +178,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 20,
       "kind": "action",
       "at_ms": 28424.3,
       "data": {
@@ -229,8 +189,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 21,
       "kind": "route",
       "at_ms": 28428.6,
       "data": {
@@ -241,8 +199,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 22,
       "kind": "escalate",
       "at_ms": 31440.1,
       "data": {
@@ -251,8 +207,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 23,
       "kind": "route",
       "at_ms": 31442.3,
       "data": {
@@ -263,18 +217,14 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 24,
       "kind": "manager_decision",
       "at_ms": 46870.6,
       "data": {
         "subtask": "mb",
-        "decision": "{'action': 'click', 'target': 'https://www.porsche.com/uk/', 'value': None, 'rationale': 'Open the Porsche UK homepage to inspect its live scripts.'}"
+        "decision": "{'action': 'click', 'target': 'https://www.porsche.com/uk/', 'value': None, 'rationale': 'Open the Porsche UK homepage to inspect its live s\u2026"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 25,
       "kind": "action",
       "at_ms": 46870.6,
       "data": {
@@ -286,8 +236,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 26,
       "kind": "failure",
       "at_ms": 46870.6,
       "data": {
@@ -296,8 +244,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 27,
       "kind": "repair",
       "at_ms": 46870.6,
       "data": {
@@ -307,8 +253,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 28,
       "kind": "route",
       "at_ms": 46872.2,
       "data": {
@@ -319,8 +263,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 29,
       "kind": "manager_decision",
       "at_ms": 49663.2,
       "data": {
@@ -329,8 +271,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 30,
       "kind": "verify",
       "at_ms": 49666.0,
       "data": {
@@ -340,8 +280,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 31,
       "kind": "route",
       "at_ms": 49668.6,
       "data": {
@@ -352,8 +290,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 32,
       "kind": "manager_decision",
       "at_ms": 64126.1,
       "data": {
@@ -362,8 +298,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 33,
       "kind": "verify",
       "at_ms": 64127.7,
       "data": {
@@ -373,8 +307,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 34,
       "kind": "subtask_failed",
       "at_ms": 64128.2,
       "data": {
@@ -383,8 +315,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 35,
       "kind": "manager_replan",
       "at_ms": 64128.2,
       "data": {
@@ -395,19 +325,15 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 36,
       "kind": "subtask_start",
       "at_ms": 64128.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 37,
       "kind": "route",
       "at_ms": 64130.1,
       "data": {
@@ -418,8 +344,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 38,
       "kind": "escalate",
       "at_ms": 66592.5,
       "data": {
@@ -428,8 +352,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 39,
       "kind": "route",
       "at_ms": 66596.3,
       "data": {
@@ -440,8 +362,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 40,
       "kind": "manager_decision",
       "at_ms": 70349.3,
       "data": {
@@ -450,8 +370,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 41,
       "kind": "verify",
       "at_ms": 70352.7,
       "data": {
@@ -461,8 +379,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 42,
       "kind": "route",
       "at_ms": 70354.9,
       "data": {
@@ -473,8 +389,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 43,
       "kind": "manager_decision",
       "at_ms": 84878.7,
       "data": {
@@ -483,8 +397,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 44,
       "kind": "verify",
       "at_ms": 84882.7,
       "data": {
@@ -494,8 +406,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 45,
       "kind": "route",
       "at_ms": 84886.2,
       "data": {
@@ -506,8 +416,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 46,
       "kind": "manager_decision",
       "at_ms": 89209.3,
       "data": {
@@ -516,8 +424,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 47,
       "kind": "verify",
       "at_ms": 89212.3,
       "data": {
@@ -527,8 +433,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 48,
       "kind": "subtask_failed",
       "at_ms": 89213.2,
       "data": {
@@ -537,8 +441,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 49,
       "kind": "manager_replan",
       "at_ms": 89213.3,
       "data": {
@@ -549,19 +451,15 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 50,
       "kind": "subtask_start",
       "at_ms": 89213.6,
       "data": {
         "subtask": "mb",
-        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 51,
       "kind": "route",
       "at_ms": 89216.0,
       "data": {
@@ -572,8 +470,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 52,
       "kind": "escalate",
       "at_ms": 92156.3,
       "data": {
@@ -582,8 +478,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 53,
       "kind": "route",
       "at_ms": 92158.9,
       "data": {
@@ -594,8 +488,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 54,
       "kind": "manager_decision",
       "at_ms": 96716.1,
       "data": {
@@ -604,8 +496,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 55,
       "kind": "verify",
       "at_ms": 96721.2,
       "data": {
@@ -615,8 +505,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 56,
       "kind": "route",
       "at_ms": 96724.4,
       "data": {
@@ -627,8 +515,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 57,
       "kind": "manager_decision",
       "at_ms": 104220.0,
       "data": {
@@ -637,8 +523,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 58,
       "kind": "verify",
       "at_ms": 104223.0,
       "data": {
@@ -648,8 +532,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 59,
       "kind": "route",
       "at_ms": 104226.1,
       "data": {
@@ -660,18 +542,14 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 60,
       "kind": "manager_decision",
       "at_ms": 112735.4,
       "data": {
         "subtask": "mb",
-        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts. Note: I will not use done until finding is set; this is a navigation step only, and I"
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts. Note: I will not use done\u2026"
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 61,
       "kind": "action",
       "at_ms": 120745.4,
       "data": {
@@ -683,8 +561,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 62,
       "kind": "failure",
       "at_ms": 120745.4,
       "data": {
@@ -693,8 +569,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 63,
       "kind": "repair",
       "at_ms": 120745.5,
       "data": {
@@ -704,8 +578,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 64,
       "kind": "subtask_failed",
       "at_ms": 120746.6,
       "data": {
@@ -714,8 +586,6 @@
       }
     },
     {
-      "run_id": "run-5409f473ee07",
-      "seq": 65,
       "kind": "run_end",
       "at_ms": 120747.4,
       "data": {

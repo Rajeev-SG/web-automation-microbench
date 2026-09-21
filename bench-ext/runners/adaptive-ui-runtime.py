@@ -55,6 +55,22 @@ def _todo_pred_js():
     ) % json.dumps(benchlib.VERIFY_JS)
 
 
+def _compact_events(events, limit=400, str_cap=140):
+    """Bounded event record for the committed run JSON (keeps the route/action/
+    failure sequence; drops the repeated goal text and run ids that bloat the file).
+    The full trace remains available from the runtime itself via `aur trace <run_id>`.
+    """
+    out = []
+    for e in (events or [])[:limit]:
+        data = {}
+        for k, v in (e.get("data") or {}).items():
+            if isinstance(v, str) and len(v) > str_cap:
+                v = v[:str_cap] + "…"
+            data[k] = v
+        out.append({"kind": e.get("kind"), "at_ms": e.get("at_ms"), "data": data})
+    return out
+
+
 def _spec_for(task_id):
     p = CORPUS / f'{task_id}.json'
     if p.is_file():
@@ -150,7 +166,7 @@ def run_native(rep, task=None, name=NAME):
         log['runtime_verified'] = bool(m.get('verified'))
         log['runtime_status'] = m.get('status')
         log['runtime_failure_class'] = m.get('failure_class') or m.get('error')
-        log['events'] = m.get('events') or []
+        log['events'] = _compact_events(m.get('events'))
         metrics = m.get('metrics') or {}
         log['metrics'] = metrics
         log['manager_calls'] = metrics.get('manager_calls', 0)

@@ -5,19 +5,15 @@
   "task": "puma-uk-script-inventory",
   "events": [
     {
-      "run_id": "run-1444221afb92",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with \u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 350.8,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 351.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 4,
       "kind": "route",
       "at_ms": 481.5,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 5,
       "kind": "action",
       "at_ms": 640.3,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 649.4,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 7,
       "kind": "route",
       "at_ms": 652.3,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 8,
       "kind": "cycle_detected",
       "at_ms": 688.6,
       "data": {
@@ -99,8 +83,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 9,
       "kind": "subtask_failed",
       "at_ms": 689.0,
       "data": {
@@ -109,8 +91,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 10,
       "kind": "manager_replan",
       "at_ms": 689.1,
       "data": {
@@ -121,19 +101,15 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 11,
       "kind": "subtask_start",
       "at_ms": 689.3,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 12,
       "kind": "route",
       "at_ms": 692.4,
       "data": {
@@ -144,8 +120,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 13,
       "kind": "cycle_detected",
       "at_ms": 722.2,
       "data": {
@@ -156,8 +130,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 14,
       "kind": "subtask_failed",
       "at_ms": 722.6,
       "data": {
@@ -166,8 +138,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 15,
       "kind": "manager_replan",
       "at_ms": 722.6,
       "data": {
@@ -178,19 +148,15 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 16,
       "kind": "subtask_start",
       "at_ms": 722.9,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 17,
       "kind": "route",
       "at_ms": 725.3,
       "data": {
@@ -201,8 +167,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 18,
       "kind": "cycle_detected",
       "at_ms": 832.4,
       "data": {
@@ -213,8 +177,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 19,
       "kind": "subtask_failed",
       "at_ms": 832.8,
       "data": {
@@ -223,8 +185,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 20,
       "kind": "manager_replan",
       "at_ms": 832.9,
       "data": {
@@ -235,19 +195,15 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 21,
       "kind": "subtask_start",
       "at_ms": 833.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with a src attribute), counting the site's own host once if it serves scripts itself. Record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly this key: {\"hosts\": [each distinct hostname, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element with \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 22,
       "kind": "route",
       "at_ms": 863.4,
       "data": {
@@ -258,8 +214,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 23,
       "kind": "cycle_detected",
       "at_ms": 905.8,
       "data": {
@@ -270,8 +224,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 24,
       "kind": "subtask_failed",
       "at_ms": 906.2,
       "data": {
@@ -280,8 +232,6 @@
       }
     },
     {
-      "run_id": "run-1444221afb92",
-      "seq": 25,
       "kind": "run_end",
       "at_ms": 906.7,
       "data": {

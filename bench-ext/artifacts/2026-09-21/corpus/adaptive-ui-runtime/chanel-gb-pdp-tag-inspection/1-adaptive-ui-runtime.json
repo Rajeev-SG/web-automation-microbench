@@ -5,19 +5,15 @@
   "task": "chanel-gb-pdp-tag-inspection",
   "events": [
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 487.6,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 487.9,
       "data": {
         "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 4,
       "kind": "route",
       "at_ms": 490.3,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 5,
       "kind": "manager_decision",
       "at_ms": 4647.9,
       "data": {
@@ -61,8 +51,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 6149.2,
       "data": {
@@ -72,8 +60,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 7,
       "kind": "route",
       "at_ms": 6165.1,
       "data": {
@@ -84,8 +70,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 8,
       "kind": "manager_decision",
       "at_ms": 15130.1,
       "data": {
@@ -94,8 +78,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 9,
       "kind": "verify",
       "at_ms": 15134.6,
       "data": {
@@ -105,8 +87,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 10,
       "kind": "route",
       "at_ms": 15138.9,
       "data": {
@@ -117,8 +97,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 11,
       "kind": "action",
       "at_ms": 23143.3,
       "data": {
@@ -130,8 +108,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 12,
       "kind": "failure",
       "at_ms": 23143.3,
       "data": {
@@ -140,8 +116,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 13,
       "kind": "repair",
       "at_ms": 23143.3,
       "data": {
@@ -151,8 +125,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 14,
       "kind": "route",
       "at_ms": 23147.3,
       "data": {
@@ -163,8 +135,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 15,
       "kind": "action",
       "at_ms": 31151.3,
       "data": {
@@ -176,8 +146,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 16,
       "kind": "failure",
       "at_ms": 31151.3,
       "data": {
@@ -186,8 +154,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 17,
       "kind": "repair",
       "at_ms": 31151.3,
       "data": {
@@ -197,8 +163,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 18,
       "kind": "subtask_failed",
       "at_ms": 31152.1,
       "data": {
@@ -207,8 +171,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 19,
       "kind": "manager_replan",
       "at_ms": 31152.2,
       "data": {
@@ -219,19 +181,15 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 20,
       "kind": "subtask_start",
       "at_ms": 31152.7,
       "data": {
         "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 21,
       "kind": "route",
       "at_ms": 31158.6,
       "data": {
@@ -242,8 +200,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 22,
       "kind": "action",
       "at_ms": 39166.0,
       "data": {
@@ -255,8 +211,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 23,
       "kind": "failure",
       "at_ms": 39166.1,
       "data": {
@@ -265,8 +219,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 24,
       "kind": "repair",
       "at_ms": 39166.1,
       "data": {
@@ -276,8 +228,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 25,
       "kind": "route",
       "at_ms": 39171.6,
       "data": {
@@ -288,8 +238,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 26,
       "kind": "action",
       "at_ms": 47180.5,
       "data": {
@@ -301,8 +249,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 27,
       "kind": "failure",
       "at_ms": 47180.5,
       "data": {
@@ -311,8 +257,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 28,
       "kind": "route",
       "at_ms": 47186.1,
       "data": {
@@ -323,8 +267,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 29,
       "kind": "action",
       "at_ms": 55190.6,
       "data": {
@@ -336,8 +278,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 30,
       "kind": "failure",
       "at_ms": 55190.6,
       "data": {
@@ -346,8 +286,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 31,
       "kind": "route",
       "at_ms": 55193.6,
       "data": {
@@ -358,8 +296,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 32,
       "kind": "action",
       "at_ms": 63199.7,
       "data": {
@@ -371,8 +307,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 33,
       "kind": "failure",
       "at_ms": 63199.7,
       "data": {
@@ -381,8 +315,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 34,
       "kind": "subtask_failed",
       "at_ms": 63200.7,
       "data": {
@@ -391,8 +323,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 35,
       "kind": "manager_replan",
       "at_ms": 63200.7,
       "data": {
@@ -403,19 +333,15 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 36,
       "kind": "subtask_start",
       "at_ms": 63201.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 37,
       "kind": "route",
       "at_ms": 63205.7,
       "data": {
@@ -426,8 +352,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 38,
       "kind": "action",
       "at_ms": 71208.9,
       "data": {
@@ -439,8 +363,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 39,
       "kind": "failure",
       "at_ms": 71208.9,
       "data": {
@@ -449,8 +371,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 40,
       "kind": "route",
       "at_ms": 71212.5,
       "data": {
@@ -461,8 +381,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 41,
       "kind": "action",
       "at_ms": 79218.0,
       "data": {
@@ -474,8 +392,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 42,
       "kind": "failure",
       "at_ms": 79218.0,
       "data": {
@@ -484,8 +400,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 43,
       "kind": "route",
       "at_ms": 79222.9,
       "data": {
@@ -496,8 +410,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 44,
       "kind": "action",
       "at_ms": 87227.8,
       "data": {
@@ -509,8 +421,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 45,
       "kind": "failure",
       "at_ms": 87227.9,
       "data": {
@@ -519,8 +429,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 46,
       "kind": "route",
       "at_ms": 87232.9,
       "data": {
@@ -531,8 +439,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 47,
       "kind": "action",
       "at_ms": 95239.9,
       "data": {
@@ -544,8 +450,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 48,
       "kind": "failure",
       "at_ms": 95239.9,
       "data": {
@@ -554,8 +458,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 49,
       "kind": "subtask_failed",
       "at_ms": 95240.9,
       "data": {
@@ -564,8 +466,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 50,
       "kind": "manager_replan",
       "at_ms": 95241.0,
       "data": {
@@ -576,19 +476,15 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 51,
       "kind": "subtask_start",
       "at_ms": 95241.6,
       "data": {
         "subtask": "mb",
-        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"googleAds\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the CHANEL GB product page. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 52,
       "kind": "route",
       "at_ms": 95247.3,
       "data": {
@@ -599,8 +495,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 53,
       "kind": "action",
       "at_ms": 103254.0,
       "data": {
@@ -612,8 +506,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 54,
       "kind": "failure",
       "at_ms": 103254.0,
       "data": {
@@ -622,8 +514,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 55,
       "kind": "route",
       "at_ms": 103259.7,
       "data": {
@@ -634,8 +524,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 56,
       "kind": "action",
       "at_ms": 111266.1,
       "data": {
@@ -647,8 +535,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 57,
       "kind": "failure",
       "at_ms": 111266.1,
       "data": {
@@ -657,8 +543,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 58,
       "kind": "route",
       "at_ms": 111271.1,
       "data": {
@@ -669,8 +553,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 59,
       "kind": "action",
       "at_ms": 119275.9,
       "data": {
@@ -682,8 +564,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 60,
       "kind": "failure",
       "at_ms": 119276.0,
       "data": {
@@ -692,8 +572,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 61,
       "kind": "route",
       "at_ms": 119281.0,
       "data": {
@@ -704,8 +582,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 62,
       "kind": "action",
       "at_ms": 127286.7,
       "data": {
@@ -717,8 +593,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 63,
       "kind": "failure",
       "at_ms": 127286.7,
       "data": {
@@ -727,8 +601,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 64,
       "kind": "subtask_failed",
       "at_ms": 127287.6,
       "data": {
@@ -737,8 +609,6 @@
       }
     },
     {
-      "run_id": "run-05ec7ffe81cf",
-      "seq": 65,
       "kind": "run_end",
       "at_ms": 127288.4,
       "data": {

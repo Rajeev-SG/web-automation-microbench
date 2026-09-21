@@ -5,19 +5,15 @@
   "task": "gymshark-uk-add-to-cart-tag-check",
   "events": [
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 990.0,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 990.4,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 4,
       "kind": "route",
       "at_ms": 1118.8,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 5,
       "kind": "action",
       "at_ms": 1222.4,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 1228.9,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 7,
       "kind": "route",
       "at_ms": 1232.0,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 8,
       "kind": "action",
       "at_ms": 1309.0,
       "data": {
@@ -100,8 +84,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 9,
       "kind": "verify",
       "at_ms": 1314.2,
       "data": {
@@ -111,8 +93,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 10,
       "kind": "route",
       "at_ms": 1316.8,
       "data": {
@@ -123,8 +103,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 11,
       "kind": "cycle_detected",
       "at_ms": 1528.0,
       "data": {
@@ -135,8 +113,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 12,
       "kind": "subtask_failed",
       "at_ms": 1528.6,
       "data": {
@@ -145,8 +121,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 13,
       "kind": "manager_replan",
       "at_ms": 1528.6,
       "data": {
@@ -157,19 +131,15 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 14,
       "kind": "subtask_start",
       "at_ms": 1529.0,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 15,
       "kind": "route",
       "at_ms": 1535.8,
       "data": {
@@ -180,8 +150,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 16,
       "kind": "cycle_detected",
       "at_ms": 1607.8,
       "data": {
@@ -192,8 +160,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 17,
       "kind": "subtask_failed",
       "at_ms": 1608.4,
       "data": {
@@ -202,8 +168,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 18,
       "kind": "manager_replan",
       "at_ms": 1608.5,
       "data": {
@@ -214,19 +178,15 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 19,
       "kind": "subtask_start",
       "at_ms": 1608.9,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 20,
       "kind": "route",
       "at_ms": 1611.5,
       "data": {
@@ -237,8 +197,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 21,
       "kind": "cycle_detected",
       "at_ms": 1671.2,
       "data": {
@@ -249,8 +207,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 22,
       "kind": "subtask_failed",
       "at_ms": 1671.7,
       "data": {
@@ -259,8 +215,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 23,
       "kind": "manager_replan",
       "at_ms": 1671.8,
       "data": {
@@ -271,19 +225,15 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 24,
       "kind": "subtask_start",
       "at_ms": 1672.1,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 25,
       "kind": "route",
       "at_ms": 1675.0,
       "data": {
@@ -294,8 +244,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 26,
       "kind": "cycle_detected",
       "at_ms": 1738.3,
       "data": {
@@ -306,8 +254,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 27,
       "kind": "subtask_failed",
       "at_ms": 1738.8,
       "data": {
@@ -316,8 +262,6 @@
       }
     },
     {
-      "run_id": "run-8a22b58696a8",
-      "seq": 28,
       "kind": "run_end",
       "at_ms": 1739.2,
       "data": {

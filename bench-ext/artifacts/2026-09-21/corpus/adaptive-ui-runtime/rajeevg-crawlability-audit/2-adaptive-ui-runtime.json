@@ -5,19 +5,15 @@
   "task": "rajeevg-crawlability-audit",
   "events": [
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"robotsPresent\": true if /robots.txt responded ok, \"robotsSitemaps\": [every Sitemap: URL declared in robots.txt, absolute and sorted], \"sitemapUrlCount\": the number of <loc> entries in the sitemap XML, \"allSameHost\": true if every <loc> entry is on the site's own hostname}. Do not change the site. Finish only after window.__bench_finding is set.",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 344.1,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 345.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"robotsPresent\": true if /robots.txt responded ok, \"robotsSitemaps\": [every Sitemap: URL declared in robots.txt, absolute and sorted], \"sitemapUrlCount\": the number of <loc> entries in the sitemap XML, \"allSameHost\": true if every <loc> entry is on the site's own hostname}. Do not change the site. Finish only after window.__bench_finding is set.",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 4,
       "kind": "route",
       "at_ms": 356.1,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 5,
       "kind": "action",
       "at_ms": 420.1,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 1205.7,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 7,
       "kind": "route",
       "at_ms": 1209.4,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 8,
       "kind": "cycle_detected",
       "at_ms": 1226.1,
       "data": {
@@ -99,8 +83,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 9,
       "kind": "subtask_failed",
       "at_ms": 1226.9,
       "data": {
@@ -109,8 +91,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 10,
       "kind": "manager_replan",
       "at_ms": 1227.0,
       "data": {
@@ -121,19 +101,15 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 11,
       "kind": "subtask_start",
       "at_ms": 1227.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"robotsPresent\": true if /robots.txt responded ok, \"robotsSitemaps\": [every Sitemap: URL declared in robots.txt, absolute and sorted], \"sitemapUrlCount\": the number of <loc> entries in the sitemap XML, \"allSameHost\": true if every <loc> entry is on the site's own hostname}. Do not change the site. Finish only after window.__bench_finding is set.",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 12,
       "kind": "route",
       "at_ms": 1229.8,
       "data": {
@@ -144,8 +120,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 13,
       "kind": "cycle_detected",
       "at_ms": 1258.7,
       "data": {
@@ -156,8 +130,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 14,
       "kind": "subtask_failed",
       "at_ms": 1259.5,
       "data": {
@@ -166,8 +138,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 15,
       "kind": "manager_replan",
       "at_ms": 1259.5,
       "data": {
@@ -178,19 +148,15 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 16,
       "kind": "subtask_start",
       "at_ms": 1260.0,
       "data": {
         "subtask": "mb",
-        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"robotsPresent\": true if /robots.txt responded ok, \"robotsSitemaps\": [every Sitemap: URL declared in robots.txt, absolute and sorted], \"sitemapUrlCount\": the number of <loc> entries in the sitemap XML, \"allSameHost\": true if every <loc> entry is on the site's own hostname}. Do not change the site. Finish only after window.__bench_finding is set.",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 17,
       "kind": "route",
       "at_ms": 1261.9,
       "data": {
@@ -201,8 +167,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 18,
       "kind": "cycle_detected",
       "at_ms": 1291.2,
       "data": {
@@ -213,8 +177,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 19,
       "kind": "subtask_failed",
       "at_ms": 1291.8,
       "data": {
@@ -223,8 +185,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 20,
       "kind": "manager_replan",
       "at_ms": 1291.8,
       "data": {
@@ -235,19 +195,15 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 21,
       "kind": "subtask_start",
       "at_ms": 1292.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"robotsPresent\": true if /robots.txt responded ok, \"robotsSitemaps\": [every Sitemap: URL declared in robots.txt, absolute and sorted], \"sitemapUrlCount\": the number of <loc> entries in the sitemap XML, \"allSameHost\": true if every <loc> entry is on the site's own hostname}. Do not change the site. Finish only after window.__bench_finding is set.",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 22,
       "kind": "route",
       "at_ms": 1294.0,
       "data": {
@@ -258,8 +214,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 23,
       "kind": "cycle_detected",
       "at_ms": 1324.5,
       "data": {
@@ -270,8 +224,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 24,
       "kind": "subtask_failed",
       "at_ms": 1325.2,
       "data": {
@@ -280,8 +232,6 @@
       }
     },
     {
-      "run_id": "run-4ba40d1ee7b7",
-      "seq": 25,
       "kind": "run_end",
       "at_ms": 1325.6,
       "data": {

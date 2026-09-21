@@ -5,19 +5,15 @@
   "task": "tldraw-three-shape-diagram",
   "events": [
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.1,
       "data": {
-        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 773.6,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 774.1,
       "data": {
         "subtask": "mb",
-        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 4,
       "kind": "route",
       "at_ms": 776.4,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 5,
       "kind": "manager_decision",
       "at_ms": 4940.6,
       "data": {
@@ -61,8 +51,6 @@
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 4944.2,
       "data": {
@@ -72,8 +60,6 @@
       }
     },
     {
-      "run_id": "run-73ec308804d0",
-      "seq": 7,
       "kind": "run_end",
       "at_ms": 4946.0,
       "data": {

@@ -5,19 +5,15 @@
   "task": "allbirds-uk-add-to-cart-tag-check",
   "events": [
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 2274.9,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 2275.7,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 4,
       "kind": "route",
       "at_ms": 2300.1,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 5,
       "kind": "action",
       "at_ms": 2369.1,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 2706.3,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 7,
       "kind": "route",
       "at_ms": 2711.6,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 8,
       "kind": "action",
       "at_ms": 2728.2,
       "data": {
@@ -100,8 +84,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 9,
       "kind": "failure",
       "at_ms": 2728.2,
       "data": {
@@ -110,8 +92,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 10,
       "kind": "repair",
       "at_ms": 2728.2,
       "data": {
@@ -121,8 +101,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 11,
       "kind": "route",
       "at_ms": 2731.7,
       "data": {
@@ -133,8 +111,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 12,
       "kind": "action",
       "at_ms": 2739.4,
       "data": {
@@ -146,8 +122,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 13,
       "kind": "failure",
       "at_ms": 2739.4,
       "data": {
@@ -156,8 +130,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 14,
       "kind": "repair",
       "at_ms": 2739.4,
       "data": {
@@ -167,8 +139,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 15,
       "kind": "route",
       "at_ms": 2742.3,
       "data": {
@@ -179,8 +149,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 16,
       "kind": "action",
       "at_ms": 2749.6,
       "data": {
@@ -192,8 +160,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 17,
       "kind": "failure",
       "at_ms": 2749.6,
       "data": {
@@ -202,8 +168,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 18,
       "kind": "repair",
       "at_ms": 2749.6,
       "data": {
@@ -213,8 +177,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 19,
       "kind": "route",
       "at_ms": 2752.3,
       "data": {
@@ -225,8 +187,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 20,
       "kind": "action",
       "at_ms": 2758.7,
       "data": {
@@ -238,8 +198,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 21,
       "kind": "failure",
       "at_ms": 2758.7,
       "data": {
@@ -248,8 +206,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 22,
       "kind": "subtask_failed",
       "at_ms": 2759.3,
       "data": {
@@ -258,8 +214,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 23,
       "kind": "manager_replan",
       "at_ms": 2759.4,
       "data": {
@@ -270,19 +224,15 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 24,
       "kind": "subtask_start",
       "at_ms": 2759.8,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 25,
       "kind": "route",
       "at_ms": 2762.8,
       "data": {
@@ -293,8 +243,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 26,
       "kind": "action",
       "at_ms": 2770.2,
       "data": {
@@ -306,8 +254,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 27,
       "kind": "failure",
       "at_ms": 2770.2,
       "data": {
@@ -316,8 +262,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 28,
       "kind": "route",
       "at_ms": 2773.0,
       "data": {
@@ -328,8 +272,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 29,
       "kind": "action",
       "at_ms": 2779.1,
       "data": {
@@ -341,8 +283,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 30,
       "kind": "failure",
       "at_ms": 2779.1,
       "data": {
@@ -351,8 +291,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 31,
       "kind": "route",
       "at_ms": 2782.2,
       "data": {
@@ -363,8 +301,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 32,
       "kind": "action",
       "at_ms": 2787.6,
       "data": {
@@ -376,8 +312,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 33,
       "kind": "failure",
       "at_ms": 2787.6,
       "data": {
@@ -386,8 +320,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 34,
       "kind": "route",
       "at_ms": 2789.9,
       "data": {
@@ -398,8 +330,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 35,
       "kind": "action",
       "at_ms": 2795.0,
       "data": {
@@ -411,8 +341,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 36,
       "kind": "failure",
       "at_ms": 2795.0,
       "data": {
@@ -421,8 +349,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 37,
       "kind": "subtask_failed",
       "at_ms": 2795.5,
       "data": {
@@ -431,8 +357,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 38,
       "kind": "manager_replan",
       "at_ms": 2795.6,
       "data": {
@@ -443,19 +367,15 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 39,
       "kind": "subtask_start",
       "at_ms": 2796.0,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 40,
       "kind": "route",
       "at_ms": 2798.6,
       "data": {
@@ -466,8 +386,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 41,
       "kind": "action",
       "at_ms": 2804.9,
       "data": {
@@ -479,8 +397,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 42,
       "kind": "failure",
       "at_ms": 2804.9,
       "data": {
@@ -489,8 +405,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 43,
       "kind": "route",
       "at_ms": 2808.5,
       "data": {
@@ -501,8 +415,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 44,
       "kind": "action",
       "at_ms": 2813.8,
       "data": {
@@ -514,8 +426,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 45,
       "kind": "failure",
       "at_ms": 2813.9,
       "data": {
@@ -524,8 +434,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 46,
       "kind": "route",
       "at_ms": 2816.2,
       "data": {
@@ -536,8 +444,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 47,
       "kind": "action",
       "at_ms": 2821.6,
       "data": {
@@ -549,8 +455,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 48,
       "kind": "failure",
       "at_ms": 2821.6,
       "data": {
@@ -559,8 +463,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 49,
       "kind": "route",
       "at_ms": 2823.8,
       "data": {
@@ -571,8 +473,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 50,
       "kind": "action",
       "at_ms": 2828.8,
       "data": {
@@ -584,8 +484,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 51,
       "kind": "failure",
       "at_ms": 2828.8,
       "data": {
@@ -594,8 +492,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 52,
       "kind": "subtask_failed",
       "at_ms": 2829.4,
       "data": {
@@ -604,8 +500,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 53,
       "kind": "manager_replan",
       "at_ms": 2829.4,
       "data": {
@@ -616,19 +510,15 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 54,
       "kind": "subtask_start",
       "at_ms": 2829.7,
       "data": {
         "subtask": "mb",
-        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; (3) select an available size using the size control (its text may include a suffix, e.g. \"M (10-12)\" or \"UK 9\"); (4) set window.__bench_marker = performance.now() IMMEDIATELY before clicking add-to-cart, then click add-to-cart once; (5) wait about 5 seconds for the cart and tags to settle - do NOT re-click or re-poll repeatedly; (6) in ONE eval set window.__bench_report_at = performance.now() and window.__bench_finding to a JSON object with exactly these keys: {\"consentAccepted\": true if you accepted the banner, \"productTitle\": the product you added, \"cartItemCount\": the number of items now in the cart (read it from the \\\"cart\\\" field of your most recent observation after adding; it changes from 0/empty to the new count), \"tagsAfterAdd\": [every distinct hostname of a marketing tag (Google/GTM, DoubleClick/Floodlight, Facebook, TikTok, Snapchat, Pinterest, Criteo, Clarity and similar) that loaded between your marker and report time, sorted]}. Do not enter payment or checkout. Finish only after window.__bench_finding is set.",
+        "goal": "You are on the Allbirds UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 55,
       "kind": "route",
       "at_ms": 2832.6,
       "data": {
@@ -639,8 +529,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 56,
       "kind": "action",
       "at_ms": 2837.6,
       "data": {
@@ -652,8 +540,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 57,
       "kind": "failure",
       "at_ms": 2837.6,
       "data": {
@@ -662,8 +548,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 58,
       "kind": "route",
       "at_ms": 2839.9,
       "data": {
@@ -674,8 +558,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 59,
       "kind": "action",
       "at_ms": 2844.9,
       "data": {
@@ -687,8 +569,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 60,
       "kind": "failure",
       "at_ms": 2844.9,
       "data": {
@@ -697,8 +577,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 61,
       "kind": "route",
       "at_ms": 2847.4,
       "data": {
@@ -709,8 +587,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 62,
       "kind": "action",
       "at_ms": 2852.3,
       "data": {
@@ -722,8 +598,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 63,
       "kind": "failure",
       "at_ms": 2852.3,
       "data": {
@@ -732,8 +606,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 64,
       "kind": "route",
       "at_ms": 2854.4,
       "data": {
@@ -744,8 +616,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 65,
       "kind": "action",
       "at_ms": 2859.3,
       "data": {
@@ -757,8 +627,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 66,
       "kind": "failure",
       "at_ms": 2859.3,
       "data": {
@@ -767,8 +635,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 67,
       "kind": "subtask_failed",
       "at_ms": 2859.8,
       "data": {
@@ -777,8 +643,6 @@
       }
     },
     {
-      "run_id": "run-714ee94755d1",
-      "seq": 68,
       "kind": "run_end",
       "at_ms": 2860.2,
       "data": {

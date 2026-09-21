@@ -5,19 +5,15 @@
   "task": "puma-uk-tag-inspection",
   "events": [
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 502.9,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 503.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 4,
       "kind": "route",
       "at_ms": 635.8,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 5,
       "kind": "action",
       "at_ms": 761.7,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 825.4,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 7,
       "kind": "route",
       "at_ms": 879.7,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 8,
       "kind": "cycle_detected",
       "at_ms": 994.1,
       "data": {
@@ -99,8 +83,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 9,
       "kind": "subtask_failed",
       "at_ms": 994.6,
       "data": {
@@ -109,8 +91,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 10,
       "kind": "manager_replan",
       "at_ms": 994.7,
       "data": {
@@ -121,19 +101,15 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 11,
       "kind": "subtask_start",
       "at_ms": 995.0,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 12,
       "kind": "route",
       "at_ms": 1001.2,
       "data": {
@@ -144,8 +120,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 13,
       "kind": "cycle_detected",
       "at_ms": 1083.0,
       "data": {
@@ -156,8 +130,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 14,
       "kind": "subtask_failed",
       "at_ms": 1083.4,
       "data": {
@@ -166,8 +138,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 15,
       "kind": "manager_replan",
       "at_ms": 1083.4,
       "data": {
@@ -178,19 +148,15 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 16,
       "kind": "subtask_start",
       "at_ms": 1083.7,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 17,
       "kind": "route",
       "at_ms": 1090.7,
       "data": {
@@ -201,8 +167,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 18,
       "kind": "cycle_detected",
       "at_ms": 1318.3,
       "data": {
@@ -213,8 +177,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 19,
       "kind": "subtask_failed",
       "at_ms": 1318.9,
       "data": {
@@ -223,8 +185,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 20,
       "kind": "manager_replan",
       "at_ms": 1318.9,
       "data": {
@@ -235,19 +195,15 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 21,
       "kind": "subtask_start",
       "at_ms": 1319.2,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"gtm\": [every GTM container id found anywhere in the page, each matching /GTM-[A-Z0-9]+/], \"aw\": [every Google Ads id matching /AW-[0-9]{6,}/], \"pinterest\": true if a Pinterest tag is present (window.pintrk is defined, or a ct.pinterest.com / pintrk reference exists), else false}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page (page HTML, script tags, window globals) for marketing tags, then record your finding by se\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 22,
       "kind": "route",
       "at_ms": 1439.7,
       "data": {
@@ -258,8 +214,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 23,
       "kind": "cycle_detected",
       "at_ms": 1585.3,
       "data": {
@@ -270,8 +224,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 24,
       "kind": "subtask_failed",
       "at_ms": 1585.7,
       "data": {
@@ -280,8 +232,6 @@
       }
     },
     {
-      "run_id": "run-9a28a97d1740",
-      "seq": 25,
       "kind": "run_end",
       "at_ms": 1586.2,
       "data": {

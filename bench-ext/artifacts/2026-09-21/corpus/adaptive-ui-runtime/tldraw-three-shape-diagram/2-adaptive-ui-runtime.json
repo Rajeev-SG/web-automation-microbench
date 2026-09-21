@@ -5,19 +5,15 @@
   "task": "tldraw-three-shape-diagram",
   "events": [
     {
-      "run_id": "run-764081c3740c",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 679.8,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 680.5,
       "data": {
         "subtask": "mb",
-        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two arrows (Runner->Browser, Browser->Verifier). Node regions must not overlap. Then record your result by setting window.__bench_finding with ONE eval to a JSON object: {\"labels\": [the text of each rectangle, left to right], \"nodes\": [{\"label\": \"<label>\", \"x\": <left>, \"y\": <top>, \"w\": <width>, \"h\": <height>}, ...], \"arrows\": <number of arrow shapes>, \"overlap\": <true if any two node rectangles overlap, else false>}. Finish only after window.__bench_finding is set.",
+        "goal": "Open tldraw. Create three rectangles and label them exactly Runner, Browser and Verifier, placed left to right, then connect them with two a\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 4,
       "kind": "route",
       "at_ms": 685.1,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 5,
       "kind": "manager_decision",
       "at_ms": 3478.6,
       "data": {
@@ -61,8 +51,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 6,
       "kind": "action",
       "at_ms": 3478.6,
       "data": {
@@ -74,8 +62,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 7,
       "kind": "failure",
       "at_ms": 3478.6,
       "data": {
@@ -84,8 +70,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 8,
       "kind": "repair",
       "at_ms": 3478.7,
       "data": {
@@ -95,8 +79,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 9,
       "kind": "route",
       "at_ms": 3482.9,
       "data": {
@@ -107,8 +89,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 10,
       "kind": "escalate",
       "at_ms": 4883.1,
       "data": {
@@ -117,8 +97,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 11,
       "kind": "route",
       "at_ms": 4891.0,
       "data": {
@@ -129,8 +107,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 12,
       "kind": "manager_decision",
       "at_ms": 8886.2,
       "data": {
@@ -139,8 +115,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 13,
       "kind": "verify",
       "at_ms": 8890.6,
       "data": {
@@ -150,8 +124,6 @@
       }
     },
     {
-      "run_id": "run-764081c3740c",
-      "seq": 14,
       "kind": "run_end",
       "at_ms": 8892.7,
       "data": {

@@ -5,19 +5,15 @@
   "task": "puma-uk-seo-metadata-audit",
   "events": [
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 1,
       "kind": "run_start",
       "at_ms": 0.0,
       "data": {
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with O\u2026",
         "mode": "adaptive",
         "durability": "file"
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 2,
       "kind": "plan",
       "at_ms": 709.5,
       "data": {
@@ -28,19 +24,15 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 3,
       "kind": "subtask_start",
       "at_ms": 710.0,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with O\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 4,
       "kind": "route",
       "at_ms": 835.6,
       "data": {
@@ -51,8 +43,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 5,
       "kind": "action",
       "at_ms": 974.7,
       "data": {
@@ -64,8 +54,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 6,
       "kind": "verify",
       "at_ms": 982.6,
       "data": {
@@ -75,8 +63,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 7,
       "kind": "route",
       "at_ms": 987.3,
       "data": {
@@ -87,8 +73,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 8,
       "kind": "cycle_detected",
       "at_ms": 1021.3,
       "data": {
@@ -99,8 +83,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 9,
       "kind": "subtask_failed",
       "at_ms": 1021.9,
       "data": {
@@ -109,8 +91,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 10,
       "kind": "manager_replan",
       "at_ms": 1021.9,
       "data": {
@@ -121,19 +101,15 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 11,
       "kind": "subtask_start",
       "at_ms": 1022.3,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with O\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 12,
       "kind": "route",
       "at_ms": 1025.2,
       "data": {
@@ -144,8 +120,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 13,
       "kind": "cycle_detected",
       "at_ms": 1055.0,
       "data": {
@@ -156,8 +130,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 14,
       "kind": "subtask_failed",
       "at_ms": 1055.5,
       "data": {
@@ -166,8 +138,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 15,
       "kind": "manager_replan",
       "at_ms": 1055.5,
       "data": {
@@ -178,19 +148,15 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 16,
       "kind": "subtask_start",
       "at_ms": 1055.9,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with O\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 17,
       "kind": "route",
       "at_ms": 1058.2,
       "data": {
@@ -201,8 +167,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 18,
       "kind": "cycle_detected",
       "at_ms": 1088.5,
       "data": {
@@ -213,8 +177,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 19,
       "kind": "subtask_failed",
       "at_ms": 1089.0,
       "data": {
@@ -223,8 +185,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 20,
       "kind": "manager_replan",
       "at_ms": 1089.0,
       "data": {
@@ -235,19 +195,15 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 21,
       "kind": "subtask_start",
       "at_ms": 1089.4,
       "data": {
         "subtask": "mb",
-        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with ONE eval to a JSON object with exactly these keys: {\"canonical\": the href of link[rel=canonical] or null, \"ogTitle\": the content of meta[property='og:title'] or null, \"ogType\": the content of meta[property='og:type'] or null, \"hasOgImage\": true if meta[property='og:image'] has content, \"hasH1\": true if the page has an h1 element with text, \"jsonldTypes\": [every distinct schema.org @type declared in script[type='application/ld+json'] blocks, sorted]}. Do not change the page. Finish only after window.__bench_finding is set.",
+        "goal": "Open the PUMA UK homepage. Inspect the LIVE page head and structured data, then record your finding by setting window.__bench_finding with O\u2026",
         "task_class": "web-automation"
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 22,
       "kind": "route",
       "at_ms": 1091.8,
       "data": {
@@ -258,8 +214,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 23,
       "kind": "cycle_detected",
       "at_ms": 1142.8,
       "data": {
@@ -270,8 +224,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 24,
       "kind": "subtask_failed",
       "at_ms": 1143.4,
       "data": {
@@ -280,8 +232,6 @@
       }
     },
     {
-      "run_id": "run-165a8c65b0d7",
-      "seq": 25,
       "kind": "run_end",
       "at_ms": 1143.8,
       "data": {
