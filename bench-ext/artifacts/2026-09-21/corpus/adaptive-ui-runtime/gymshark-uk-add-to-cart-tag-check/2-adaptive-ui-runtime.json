@@ -1,0 +1,357 @@
+{
+  "id": "2-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "2",
+  "task": "gymshark-uk-add-to-cart-tag-check",
+  "events": [
+    {
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "kind": "plan",
+      "at_ms": 858.8,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task gymshark-uk-add-to-cart-tag-check"
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 859.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 996.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 1087.7,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 1091.7,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1094.1,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 1173.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 1177.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1179.8,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 1291.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 2
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 1291.9,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 1291.9,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 1292.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1299.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 1373.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 3
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 1373.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 1373.7,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 1374.2,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1378.2,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 1439.1,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 4
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 1439.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 1439.7,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 1440.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "You are on the Gymshark UK product listing. Steps: (1) accept the cookie banner if shown; (2) click through to any one purchasable product; \u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1442.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 1504.8,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n20",
+        "repeats": 5
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 1505.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "run_end",
+      "at_ms": 1505.7,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 1505.3
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.767,
+  "wall_s": 6.642,
+  "total_s": 6.642,
+  "run_id": "run-e072ad451a02",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 6,
+    "observations": 8,
+    "verifications": 2,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 0,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 6,
+    "failure_classes": {
+      "verifier_mismatch": 2,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 2.7,
+    "observe_ms_p95": 137.6,
+    "verify_ms_p50": 1.0,
+    "verify_ms_p95": 1.3,
+    "wall_ms": 1505.3,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 6,
+  "model_calls": 0,
+  "tool_calls": 6,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://uk.gymshark.com/collections/all-products\",\"truth\":{\"consentAccepted\":false,\"cartItemCount\":0,\"tagsAfterAdd\":[]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
+}

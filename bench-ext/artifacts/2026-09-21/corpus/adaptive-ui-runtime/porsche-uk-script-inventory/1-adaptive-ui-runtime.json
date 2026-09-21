@@ -1,0 +1,692 @@
+{
+  "id": "1-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "1",
+  "task": "porsche-uk-script-inventory",
+  "events": [
+    {
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "kind": "plan",
+      "at_ms": 27.4,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task porsche-uk-script-inventory"
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 27.6,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 32.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "escalate",
+      "at_ms": 2285.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "unexpected_state"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2292.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 5023.6,
+      "data": {
+        "subtask": "mb",
+        "decision": "{'action': 'click', 'target': None, 'value': None, 'rationale': 'Open Porsche UK homepage to inspect live scripts.'}"
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 5072.5,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n1",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 5074.9,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 5075.9,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 9644.5,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 9647.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 9650.4,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 12102.6,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 12106.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 12109.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "manager_decision",
+      "at_ms": 17984.1,
+      "data": {
+        "subtask": "mb",
+        "decision": "None"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 17986.8,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 17988.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "premature_done"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 17988.1,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 17989.0,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 17992.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 19611.5,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 19615.2,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 19617.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 21260.0,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 21263.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 21266.4,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 23021.0,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 23023.4,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 23025.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 24521.6,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 24525.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 24526.3,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "premature_done"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 24526.4,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 24526.9,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 24529.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 26223.8,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 26227.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 26229.7,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 29528.5,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 29532.4,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 29535.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 31351.0,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 31354.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 31357.9,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 32687.7,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 32691.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 32692.5,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "premature_done"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 32692.5,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 32693.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the Porsche UK homepage. Inspect the LIVE page and list every distinct hostname that supplies an executable script (a script element wi\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 32696.3,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 34332.8,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 34335.4,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 34337.5,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 37022.7,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 37026.2,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 37029.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 40341.1,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 40344.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 40347.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "route_cascade",
+      "at_ms": 41905.5,
+      "data": {
+        "subtask": "mb",
+        "from_route": "structured_browser",
+        "to_route": "jev"
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 41908.7,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 41909.7,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "premature_done"
+      }
+    },
+    {
+      "kind": "run_end",
+      "at_ms": 41910.6,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "premature_done",
+        "wall_ms": 41909.7
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.776,
+  "wall_s": 44.817,
+  "total_s": 44.817,
+  "run_id": "run-e2450d5e3f4b",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "premature_done",
+  "metrics": {
+    "actions": 1,
+    "observations": 18,
+    "verifications": 16,
+    "jev_calls": 1,
+    "fara_calls": 1,
+    "showui_calls": 1,
+    "manager_calls": 3,
+    "fallbacks": 17,
+    "recoveries": 0,
+    "loops": 0,
+    "transport_commands": 1,
+    "failure_classes": {
+      "verifier_mismatch": 1,
+      "premature_done": 15
+    },
+    "replans": 3,
+    "observe_ms_p50": 2.7,
+    "observe_ms_p95": 5.2,
+    "jev_ms_p50": 1694.2,
+    "jev_ms_p95": 3298.7,
+    "verify_ms_p50": 3.5,
+    "verify_ms_p95": 3.8,
+    "wall_ms": 41909.7,
+    "manager_input_tokens": 1667,
+    "manager_output_tokens": 429,
+    "manager_latency_ms": 12779.7,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 3,
+  "jev_calls": 1,
+  "fara_calls": 1,
+  "showui_calls": 1,
+  "actions": 1,
+  "model_calls": 4,
+  "tool_calls": 1,
+  "tokens": {
+    "input": 1667,
+    "output": 429,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.00023227,
+  "done": false,
+  "verification": "{\"url\":\"https://www.porsche.com/uk/\",\"truth\":{\"hosts\":[\"cdn.ui.porsche.com\",\"cookie.porsche.com\",\"www.googletagmanager.com\",\"www.porsche.com\"]},\"finding\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
+}

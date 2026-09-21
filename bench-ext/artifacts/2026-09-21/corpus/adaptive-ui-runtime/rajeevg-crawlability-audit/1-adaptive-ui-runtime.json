@@ -1,0 +1,357 @@
+{
+  "id": "1-adaptive-ui-runtime",
+  "contender": "adaptive-ui-runtime",
+  "rep": "1",
+  "task": "rajeevg-crawlability-audit",
+  "events": [
+    {
+      "kind": "run_start",
+      "at_ms": 0.0,
+      "data": {
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
+        "mode": "adaptive",
+        "durability": "file"
+      }
+    },
+    {
+      "kind": "plan",
+      "at_ms": 398.2,
+      "data": {
+        "subtasks": [
+          "mb"
+        ],
+        "rationale": "microbench task rajeevg-crawlability-audit"
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 398.7,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 402.6,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 741.0,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 1603.6,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 1608.5,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "action",
+      "at_ms": 1671.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "ok": true,
+        "error_class": null
+      }
+    },
+    {
+      "kind": "verify",
+      "at_ms": 2309.3,
+      "data": {
+        "subtask": "mb",
+        "passed": false,
+        "failure_class": "verifier_mismatch"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2311.2,
+      "data": {
+        "subtask": "mb",
+        "route": "strong_manager",
+        "reason": "ambiguous/failed state requires manager replan",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 2333.9,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 2
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 2334.6,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 2334.6,
+      "data": {
+        "attempt": 1,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 2335.1,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2336.8,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 2368.3,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 3
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 2368.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 2368.9,
+      "data": {
+        "attempt": 2,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 2369.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2371.5,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 2401.2,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 4
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 2401.8,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "manager_replan",
+      "at_ms": 2401.9,
+      "data": {
+        "attempt": 3,
+        "subtasks": [
+          "mb"
+        ]
+      }
+    },
+    {
+      "kind": "subtask_start",
+      "at_ms": 2402.3,
+      "data": {
+        "subtask": "mb",
+        "goal": "Open the rajeevg.com homepage. From that page, fetch /robots.txt and /sitemap.xml (same origin), then record your finding by setting window.\u2026",
+        "task_class": "web-automation"
+      }
+    },
+    {
+      "kind": "route",
+      "at_ms": 2404.0,
+      "data": {
+        "subtask": "mb",
+        "route": "structured_browser",
+        "reason": "structured target resolved unambiguously",
+        "confidence": null
+      }
+    },
+    {
+      "kind": "cycle_detected",
+      "at_ms": 2434.4,
+      "data": {
+        "subtask": "mb",
+        "action_kind": "click",
+        "target": "n2",
+        "repeats": 5
+      }
+    },
+    {
+      "kind": "subtask_failed",
+      "at_ms": 2435.0,
+      "data": {
+        "subtask": "mb",
+        "failure_class": "repeated_action_loop"
+      }
+    },
+    {
+      "kind": "run_end",
+      "at_ms": 2435.4,
+      "data": {
+        "status": "failed",
+        "verified": false,
+        "failure_class": "repeated_action_loop",
+        "wall_ms": 2435.0
+      }
+    }
+  ],
+  "runtimes": "own-loop (Engine.execute, one run per rep)",
+  "browser_mode": "chrome-for-testing (microbench-launched, CDP attach)",
+  "model_config": "openrouter:z-ai/glm-5.3-flash (strong manager), temperature 0, classifier.dev Jev",
+  "independence": "benchlib verify_js + pass_rule over CDP, untimed",
+  "setup_s": 0.772,
+  "wall_s": 5.809,
+  "total_s": 5.809,
+  "run_id": "run-0744f8dd1349",
+  "runtime_verified": false,
+  "runtime_status": "failed",
+  "runtime_failure_class": "repeated_action_loop",
+  "metrics": {
+    "actions": 6,
+    "observations": 8,
+    "verifications": 2,
+    "jev_calls": 0,
+    "fara_calls": 0,
+    "showui_calls": 0,
+    "manager_calls": 0,
+    "fallbacks": 0,
+    "recoveries": 0,
+    "loops": 4,
+    "transport_commands": 6,
+    "failure_classes": {
+      "verifier_mismatch": 2,
+      "repeated_action_loop": 4
+    },
+    "replans": 3,
+    "observe_ms_p50": 1.9,
+    "observe_ms_p95": 4.8,
+    "verify_ms_p50": 635.9,
+    "verify_ms_p95": 854.1,
+    "wall_ms": 2435.0,
+    "manager_input_tokens": 0,
+    "manager_output_tokens": 0,
+    "manager_latency_ms": 0.0,
+    "jev_decision_ms": [],
+    "fara_inference_ms": [],
+    "showui_inference_ms": [],
+    "config": {
+      "mode": "adaptive",
+      "jev_confidence_threshold": 0.6,
+      "enable_jev": true,
+      "enable_fara": true,
+      "enable_showui": true,
+      "enable_strong_manager": true,
+      "max_escalations": 3,
+      "shadow_mode": false,
+      "shadow_sample": 0.0,
+      "transports": [
+        "isolated",
+        "relay",
+        "playwriter",
+        "fake"
+      ],
+      "allow_fara_9b": false,
+      "durable": true
+    },
+    "transport": "cdp-attached"
+  },
+  "manager_calls": 0,
+  "jev_calls": 0,
+  "fara_calls": 0,
+  "showui_calls": 0,
+  "actions": 6,
+  "model_calls": 0,
+  "tool_calls": 6,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cached": 0,
+    "reasoning": 0
+  },
+  "tokens_source": "runtime manager usage (Jev is a classifier.dev call, no tokens)",
+  "cost": 0.0,
+  "done": false,
+  "verification": "{\"url\":\"https://rajeevg.com/\",\"truth\":{\"robotsPresent\":true,\"robotsSitemaps\":[\"https://rajeevg.com/sitemap.xml\"],\"sitemapUrlCount\":83,\"allSameHost\":true},\"finding\":null,\"error\":null}",
+  "independent_pass": false,
+  "pass": false,
+  "verdict_agreement": true,
+  "runtime_finding": null,
+  "vacuous_self_pass": false
+}
